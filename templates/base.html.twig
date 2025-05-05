@@ -2,16 +2,429 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
-        {% block stylesheets %}
-        {% endblock %}
+        <title>{% block title %}Bienvenue{% endblock %}</title>
+        <!-- Meta data -->
+		<meta charset="UTF-8">
+		<meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+		<meta content="Hospitov" name="description">
+		<meta content="Spruko Private Limited" name="author">
+		<meta name="keywords" content="admin, admin template, dashboard, admin dashboard, responsive, bootstrap, bootstrap 5, admin theme, admin themes, bootstrap admin template, scss, ui, crm, modern, flat">
 
-        {% block javascripts %}
-            {% block importmap %}{{ importmap('app') }}{% endblock %}
-        {% endblock %}
+
+		<!--Favicon -->
+		<link rel="icon" href="{{ asset ('assets/images/logoLucelle.png')}}" type="image/x-icon"/>
+
+
+			<!-- *************
+			************ CSS Files *************
+		************* -->
+		<link rel="stylesheet" href="{{ asset ('assets/fonts/remix/remixicon.css')}}">
+		<link rel="stylesheet" href="{{ asset ('assets/css/main.min.css')}}">
+
+		<!-- *************
+			************ Vendor Css Files *************
+		************ -->
+
+		<!-- Scrollbar CSS -->
+		<link rel="stylesheet" href="{{ asset ('assets/vendor/overlay-scroll/OverlayScrollbars.min.css')}}">
+
+		<!-- Data Tables -->
+		<link rel="stylesheet" href="{{ asset ('assets/vendor/datatables/dataTables.bs5.css')}}">
+		<link rel="stylesheet" href="{{ asset ('assets/vendor/datatables/dataTables.bs5-custom.css')}}">
+		<link rel="stylesheet" href="{{ asset ('assets/vendor/datatables/buttons/dataTables.bs5-custom.css')}}">
+
+    	<!-- Uploader CSS -->
+    	<link rel="stylesheet" href="{{ asset ('assets/vendor/dropzone/dropzone.min.css')}}">
+
+		<!-- INTERNAL File Uploads css-->
+        <link href="{{ asset ('assets/plugins/fileupload/css/fileupload.css')}}" rel="stylesheet" type="text/css" />
+
+		<!-- INTERNAL File Uploads css -->
+		<link href="{{ asset ('assets/plugins/fancyuploder/fancy_fileupload.css') }}" rel="stylesheet" />
+
+		<!--- INTERNAL Sweetalert css-->
+		<link href="{{ asset ('assetsold/plugins/sweet-alert/jquery.sweet-modal.min.css') }}" rel="stylesheet" />
+		<link href="{{ asset ('assetsold/plugins/sweet-alert/sweetalert.css') }}" rel="stylesheet" />
+
+		<script src="{{ asset ('js/jquery.js')}}"></script>
+		<script src="{{ asset ('assets/js/jquery.min.js') }}"></script>
+		<script src="{{ asset ('js/sweetalert.js')}}"></script>
+
+		{# <link data-require="sweet-alert@*" data-semver="0.4.2" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" /> #}
+
+		<!-- INTERNAL Notifications  Css -->
+		{# <link href="{{ asset ('assetsold/plugins/notify/css/jquery.growl.css')}}" rel="stylesheet" /> #}
+		
+		{% set maSession = app.session %}
+		{% if maSession.get('ajout') is defined 
+		or maSession.get('misAjour') is defined 
+		or maSession.get('suppression') is defined  %}
+		
+			<link href="{{ asset ('assetsold/plugins/notify/css/notifIt.css')}}" rel="stylesheet" />
+		{% endif %}
+		<script src="{{ asset ('js/swal.js') }}"></script>
+		<script src="{{ asset ('js/popupPanier.js') }}"></script>
     </head>
     <body>
-        {% block body %}{% endblock %}
+
+		{% if route == 'accueil' %}
+			<!-- Loading starts -->
+			<div id="loading-wrapper">
+				<div class='spin-wrapper'>
+					<div class='spin'>
+					<div class='inner'></div>
+					</div>
+					<div class='spin'>
+					<div class='inner'></div>
+					</div>
+					<div class='spin'>
+					<div class='inner'></div>
+					</div>
+					<div class='spin'>
+					<div class='inner'></div>
+					</div>
+					<div class='spin'>
+					<div class='inner'></div>
+					</div>
+					<div class='spin'>
+					<div class='inner'></div>
+					</div>
+				</div>
+			</div>
+			<!-- Loading ends -->
+		{% endif %}
+
+		<!-- Page -->
+		<!-- Page wrapper starts -->
+    		<div class="page-wrapper">
+
+				{% include "includes/_entete.html.twig" %}
+				
+				<!-- Main container starts -->
+				<div class="main-container">
+					{% if is_granted('ROLE_ADMINISTRATEUR') %}
+						{% include "includes/_menuAdmin.html.twig" %}
+					{% endif %}
+
+					{% if is_granted('ROLE_CAISSIERE') %}
+						{% include "includes/_menuCaissiere.html.twig" %}
+					{% endif %}
+
+					{% if is_granted('ROLE_CAISSIERE_PHARMACIE') %}
+						{% include "includes/_menuCaissierePharmacie.html.twig" %}
+					{% endif %}
+
+					{% if is_granted('ROLE_DIRECTEUR') %}
+						{% include "includes/_menuCaissierePharmacie.html.twig" %}
+					{% endif %}
+
+					{% if is_granted('ROLE_PARAMETRES_VITAUX') %}
+						{% include "includes/_menuParametresVitaux.html.twig" %}
+					{% endif %}
+
+					{% if is_granted('ROLE_MEDECIN') %}
+						{% include "includes/_menuMedecin.html.twig" %}
+					{% endif %}
+
+					{% if is_granted('ROLE_LABORANTIN') %}
+						{% include "includes/_menuLaborantin.html.twig" %}
+					{% endif %}
+
+					{% if is_granted('ROLE_COMPTABLE') %}
+						{% include "includes/_menuComptable.html.twig" %}
+					{% endif %}
+
+					<!-- App container starts -->
+					<div class="app-container">
+
+						<!-- App hero header starts -->
+						<div class="app-hero-header d-flex align-items-center">
+
+							<!-- Breadcrumb starts -->
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item">
+									<i class="ri-home-8-line lh-1 pe-3 me-3 border-end"></i>
+									<a href="{{ path ('accueil') }}">{% trans %}Accueil{% endtrans %}</a>
+								</li>
+								{% if route != 'accueil' %}
+									<li class="breadcrumb-item text-primary" aria-current="page">
+										{{ dossier }}
+									</li>
+									<li class="breadcrumb-item text-primary" aria-current="page">
+										{{ route }}
+									</li>
+								{% endif %}
+							</ol>
+							<!-- Breadcrumb ends -->
+
+							<!-- Sales stats starts -->
+							<div class="ms-auto d-lg-flex d-none flex-row">
+								<div class="d-flex flex-row gap-1 day-sorting">
+									{# <button class="btn btn-sm btn-primary">{% trans %}Vous êtes connecté sous : {% endtrans %} {{ app.user.nom }} </button> #}
+									<button class="btn btn-sm">
+										<a href="{{ path ('afficher_profil') }}">{% trans %}Profil{% endtrans %}</a> 
+									</button>
+									<button class="btn btn-sm">
+										<a href="{{ path ('affichage_modification_mot_de_passe')}}">{% trans %}Modifier mon mot de passe{% endtrans %}</a> 
+									</button>
+									<button class="btn btn-sm btn-danger">
+										<a href="{{ path ('app_logout')}}">{% trans %}Déconnexion{% endtrans %}</a> 
+									</button>
+								</div>
+							</div>
+							<!-- Sales stats ends -->
+
+						</div>
+						<!-- App Hero header ends -->
+
+						<!-- App body starts -->
+    					<div class="app-body">
+				
+						{% block stylesheets %}
+							{# {{ encore_entry_link_tags('app') }} #}
+						{% endblock %}
+
+						{% block javascripts %}
+							{# {{ encore_entry_script_tags('app') }}
+							{% block importmap %}{{ importmap('app') }}{% endblock %} #}
+						{% endblock %}
+					
+						{% block body %}
+							
+						{% endblock %}
+
+						{% if app.user and app.user.etat %}
+					
+							<script>
+								// Exemple d'utilisation de SweetAlert2
+								Swal.fire({
+									title: 'Votre compte désactivé',
+									text: "Veuillez contacter l'administrateur.",
+									icon: 'error',
+									allowOutsideClick: false,
+									allowEscapeKey: false,
+									allowEnterKey: false,
+									showConfirmButton: true,
+									confirmButtonText: "D'accord",
+								}).then((result) => {
+									if (result.isConfirmed) {
+										// Redirection vers une autre page ou rafraîchissement de la page actuelle
+										window.location.href = '{{ path ('app_logout') }}'; // Exemple de redirection
+									}
+								});
+								// Empêcher toute interaction utilisateur
+								
+							</script>
+																	
+						{% endif %}
+
+        			{% include "includes/_footer.html.twig" %}
+
+
+			<!-- *************
+			************ JavaScript Files *************
+			************* -->
+		<!-- Required jQuery first, then Bootstrap Bundle JS -->
+		<script src="{{ asset ('assets/js/bootstrap.bundle.min.js') }}"></script>
+		<script src="{{ asset ('assets/js/moment.min.js') }}"></script>
+
+
+		<!-- *************
+				************ Vendor Js Files *************
+			************* -->
+
+		<!-- Overlay Scroll JS -->
+		<script src="{{ asset ('assets/vendor/overlay-scroll/jquery.overlayScrollbars.min.js') }}"></script>
+		<script src="{{ asset ('assets/vendor/overlay-scroll/custom-scrollbar.js') }}"></script>
+
+		
+		<!-- Validations -->
+		<script src="{{ asset ('assets/js/validations.js') }}"></script>
+
+		<!-- Apex Charts -->
+		<script src="{{ asset ('assets/vendor/apex/apexcharts.min.js') }}"></script>
+		<script src="{{ asset ('assets/vendor/apex/custom/home/patients.js') }}"></script>
+		<script src="{{ asset ('assets/vendor/apex/custom/home/treatment.js') }}"></script>
+		<script src="{{ asset ('assets/vendor/apex/custom/home/available-beds.js') }}"></script>
+		<script src="{{ asset ('assets/vendor/apex/custom/home/earnings.js') }}"></script>
+		<script src="{{ asset ('assets/vendor/apex/custom/home/gender-age.js') }}"></script>
+		<script src="{{ asset ('assets/vendor/apex/custom/home/claims.js') }}"></script>
+
+		<!-- Custom JS files -->
+		<script src="{{ asset ('assets/js/custom.js') }}"></script>
+
+
+		<!-- Apex Charts -->
+		<script src="{{ asset ('assets/vendor/apex/apexcharts.min.js') }}"></script>
+		<script src="{{ asset ('assets/vendor/apex/custom/department/department-list.js') }}"></script>
+		<script src="{{ asset ('assets/vendor/apex/custom/department/employees.js') }}"></script>
+
+		<!-- Data Tables -->
+		<script src="{{ asset ('assets/vendor/datatables/dataTables.min.js') }}"></script>
+		<script src="{{ asset ('assets/vendor/datatables/dataTables.bootstrap.min.js') }}"></script>
+		<script src="{{ asset ('assets/vendor/datatables/custom/custom-datatables.js') }}"></script>
+
+ 		
+		<!-- Show Password -->
+		<script src="{{ asset ('assetsold/js/bootstrap-show-password.min.js') }}"></script>
+		
+
+		<!-- Jquery js-->
+		<script src="{{ asset ('js/lienActif.js')}}"></script>
+
+		
+		<!-- INTERNAL File uploads js -->
+        <script src="{{ asset ('assetsold/plugins/fileupload/js/dropify.js') }}"></script>
+		<script src="{{ asset ('assetsold/js/filupload.js') }}"></script>
+
+		<script src="{{ asset ('assetsold/plugins/notify/js/notifIt.js')}}"></script>
+		
+		<!-- INTERNAL Sweet alert js -->
+		<script src="{{ asset ('assetsold/plugins/sweet-alert/jquery.sweet-modal.min.js') }}"></script>
+		<script src="{{ asset ('assetsold/plugins/sweet-alert/sweetalert.min.js') }}"></script>
+		<script src="{{ asset ('assetsold/js/sweet-alert.js') }}"></script>
+
+		<!-- Dropzone JS -->
+    	<script src="{{ asset ('assets/vendor/dropzone/dropzone.min.js') }}"></script>
+
+		<!-- Apex js -->
+		<script src="{{ asset ('assets/vendor/apex/apexcharts.min.js') }}"></script>
+		<script src="{{ asset ('assets/vendor/apex/custom/patients/sparklines.js') }}"></script>
+		<script src="{{ asset ('assets/vendor/apex/custom/patients/insuranceClaims.js') }}"></script>
+		<script src="{{ asset ('assets/vendor/apex/custom/patients/medicalExpenses.js') }}"></script>
+		<script src="{{ asset ('assets/vendor/apex/custom/patients/healthActivity.js') }}"></script>
+
+<!-- INTERNAL File-Uploads Js-->
+		<script src="{{ asset ('assets/plugins/fancyuploder/jquery.ui.widget.js') }}"></script>
+        <script src="{{ asset ('assets/plugins/fancyuploder/jquery.fileupload.js') }}"></script>
+        <script src="{{ asset ('assets/plugins/fancyuploder/jquery.iframe-transport.js') }}"></script>
+        <script src="{{ asset ('assets/plugins/fancyuploder/jquery.fancy-fileupload.js') }}"></script>
+        <script src="{{ asset ('assets/plugins/fancyuploder/fancy-uploader.js') }}"></script>
+
+		<!-- INTERNAL File uploads js -->
+        <script src="{{ asset ('assets/plugins/fileupload/js/dropify.js') }}"></script>
+		<script src="{{ asset ('assets/js/filupload.js') }}"></script>
+		
+    	<script src="{{ asset ('assets/vendor/apex/apexcharts.min.js') }}"></script>
+    	<script src="{{ asset ('assets/vendor/apex/custom/rooms/admissions.js') }}"></script>
+
+
+		<!-- DataTable Buttons -->
+		<script src="{{ asset ('assets/vendor/datatables/buttons/dataTables.buttons.min.js') }}"></script>
+		<script src="{{ asset ('assets/vendor/datatables/buttons/jszip.min.js') }}"></script>
+		<script src="{{ asset ('assets/vendor/datatables/buttons/dataTables.buttons.min.js') }}"></script>
+		<script src="{{ asset ('assets/vendor/datatables/buttons/pdfmake.min.js') }}"></script>
+		<script src="{{ asset ('assets/vendor/datatables/buttons/vfs_fonts.js') }}"></script>
+		<script src="{{ asset ('assets/vendor/datatables/buttons/buttons.html5.min.js') }}"></script>
+		<script src="{{ asset ('assets/vendor/datatables/buttons/buttons.print.min.js') }}"></script>
+		<script src="{{ asset ('assets/vendor/datatables/buttons/buttons.colVis.min.js') }}"></script>
+
+		{# <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> #}
+
+		{# NOTIFICATIONS  #}
+		{# On recupère la session #}
+		{% set maSession = app.session %}
+
+		{% if maSession.get('ajout') is defined %}
+			<!-- NOTIFICATIONS js-->
+			<script src="{{ asset ('assetsold/js/notifications.js')}}"></script>
+
+			<!-- INTERNAL Notifications js -->
+			<script src="{{ asset ('assetsold/plugins/notify/js/rainbow.js')}}"></script>
+			<script src="{{ asset ('assetsold/plugins/notify/js/sample.js')}}"></script>
+			<script src="{{ asset ('assetsold/plugins/notify/js/notifIt.js')}}"></script>
+
+			{% if maSession.get('ajout') == 1 %}
+				{% set notificationSuccess = "" %}
+
+				{% for message in app.flashes('info') %}
+					{% set notificationSuccess = message %}
+				{% endfor %}
+
+				<script>
+
+					{# swal('Success !', '{{ notificationSuccess }}', 'success'); #}
+					window.onload = () => {
+						notif({
+						msg: "<b>   {{ notificationSuccess }}</b>",
+						type: "success",
+						position: "left",
+						width: 500,
+						height: 60,
+						autohide: true
+						});
+						}
+				</script>
+			{% endif %}
+		{% endif %}
+
+		{% if maSession.get('misAjour') is defined %}
+			<!-- NOTIFICATIONS js-->
+			<script src="{{ asset ('assetsold/js/notifications.js')}}"></script>
+
+			<!-- INTERNAL Notifications js -->
+			<script src="{{ asset ('assetsold/plugins/notify/js/rainbow.js')}}"></script>
+			<script src="{{ asset ('assetsold/plugins/notify/js/sample.js')}}"></script>
+			{# <script src="{{asset('assetsold/plugins/notify/js/jquery.growl.js')}}"></script> #}
+			<script src="{{ asset ('assetsold/plugins/notify/js/notifIt.js')}}"></script>
+			
+			{% if maSession.get('misAjour') == 1 %}
+				{% set notificationSuccess = "" %}
+
+				{% for message in app.flashes('info') %}
+					{% set notificationSuccess = message %}
+				{% endfor %}
+
+				<script>
+
+					{# swal('Success !', '{{ notificationSuccess }}', 'success'); #}
+					window.onload = () => {
+						notif({
+						msg: "<b>   {{ notificationSuccess }}</b>",
+						type: "info",
+						position: "left",
+						width: 500,
+						height: 60,
+						autohide: true
+						});
+						}
+				</script>
+			{% endif %}
+		{% endif %}
+
+		{% if maSession.get('suppression') is defined %}
+			<!-- NOTIFICATIONS js-->
+			<script src="{{ asset ('assetsold/js/notifications.js')}}"></script>
+
+			<!-- INTERNAL Notifications js -->
+			<script src="{{ asset ('assetsold/plugins/notify/js/rainbow.js')}}"></script>
+			<script src="{{ asset ('assetsold/plugins/notify/js/sample.js')}}"></script>
+			{# <script src="{{asset('assetsold/plugins/notify/js/jquery.growl.js')}}"></script> #}
+			<script src="{{ asset ('assetsold/plugins/notify/js/notifIt.js')}}"></script>
+			{% if maSession.get('suppression') == 1 %}
+				{% set notificationSuppression = "" %}
+
+				{% for message in app.flashes('info') %}
+					{% set notificationSuppression = message %}
+				{% endfor %}
+
+				<script>
+					{# swal({
+						title: "{% trans %}Suppression{% endtrans %}",
+						text: "{{ notificationSuccess }}",
+						type: "error",
+						showCancelButton: false,
+						confirmButtonText: 'OK',
+						cancelButtonText: 'Stay on the page'
+					}); #}
+
+					notif({
+						msg: "<b>{{ notificationSuppression }}</b>",
+						type: "error",
+						position: "center"
+					});
+				</script>
+			{% endif %}
+		{% endif %}
     </body>
 </html>

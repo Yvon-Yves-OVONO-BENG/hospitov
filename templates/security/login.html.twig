@@ -1,0 +1,133 @@
+{% extends 'baseConnexion.html.twig' %}
+
+{% block title %}Connexion{% endblock %}
+{% block stylesheets %}
+	<link href="{{ asset ('assetsold/iconfonts/feather/feather.css')}}" rel="stylesheet"/>
+	<link rel="stylesheet" href="{{ asset ('assetsold/plugins/notify/css/notifIt.css')}}">
+
+	<style>
+		/*.login-bg {
+			width: 100%;
+			height: 100%;
+			background-size: cover;
+			background-position: center;
+			animation: slide 30s infinite;
+		}
+
+		@keyframes slide {
+			25% { background-image: url({{ asset ('assets/images/1.png')}}); }
+			50% { background-image: url({{ asset ('assets/images/2.jpeg')}}); }
+			75% { background-image: url({{ asset ('assets/images/6.png')}}); }
+			100% { background-image: url({{ asset ('assets/images/1.jpg')}}); }
+			
+		}*/
+	</style>
+{% endblock %}
+{% block body %}
+{% for message in app.flashes('info')  %}
+	{# <div class="alert alert-danger">{{ message }}</div> #}
+	<!-- NOTIFICATIONS js-->
+	<script src="{{ asset ('assetsold/js/notifications.js')}}"></script>
+
+	<!-- INTERNAL Notifications js -->
+	<script src="{{ asset ('assetsold/plugins/notify/js/rainbow.js')}}"></script>
+	<script src="{{ asset ('assetsold/plugins/notify/js/sample.js')}}"></script>
+	<script src="{{ asset ('assetsold/plugins/notify/js/notifIt.js')}}"></script>
+	<script>
+		notif({
+				type: "success",
+				msg: "<b>{{ message }}</b>",
+				position: "center",
+				width: 500,
+				height: 60,
+				autohide: true
+			});
+	</script>
+
+{% endfor %}
+
+{% if error %}
+	<script src="{{ asset ('assetsold/js/notifications.js')}}"></script>
+
+	<!-- INTERNAL Notifications js -->
+	<script src="{{ asset ('assetsold/plugins/notify/js/rainbow.js')}}"></script>
+	<script src="{{ asset ('assetsold/plugins/notify/js/sample.js')}}"></script>
+	<script src="{{ asset ('assetsold/plugins/notify/js/notifIt.js')}}"></script>
+	<script>
+		notif({type: 'error', position: 'left', msg: "<b>{{ error.messageKey|trans(error.messageData, 'security') }}<b>"});
+	</script>
+{% endif %}
+
+
+<body class="login-bg" style="
+	background: #0f1115 url({{ asset ('assets/images/2.jpeg')}}) no-repeat;
+	background-size: cover;
+	background-position: bottom center;
+	background-attachment: fixed;
+	">
+
+    <!-- Container starts -->
+    <div class="container">
+
+		<!-- Auth wrapper starts -->
+		<div class="auth-wrapper border-primary">
+
+			<!-- Form starts -->
+			<form method="post" class="mt-5">
+				
+				{% if app.user %}
+					<div class="mb-3">
+						{% trans %}Vous êtes connectés sous {% endtrans %} : {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">{% trans %}Déconnexion{% endtrans %}</a>
+					</div>
+				{% endif %}
+
+				<div class="auth-box">
+					{# <a href="javascript:void(0);" class="auth-logo mb-4">
+						<img src="{{ asset('assets/images/logo2.png')}}" alt="Bootstrap Gallery">
+					</a> #}
+
+					<h4 class="mb-4">{% trans %}Connexion{% endtrans %}</h4>
+						{% if error %}
+							<div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+						{% endif %}
+					<div class="mb-3">
+						<label class="form-label" for="email">{% trans %}Nom utilisateur{% endtrans %}<span class="text-danger">*</span></label>
+						<input type="text" value="{{ last_username }}" name="username" id="inputUsername" class="form-control" autocomplete="username" required autofocus placeholder="Nom de connexion">
+																
+					</div>
+
+					<div class="mb-2">
+						<label class="form-label" for="pwd">{% trans %}Mot de passe{% endtrans %}<span class="text-danger">*</span></label>
+						<div class="input-group">   
+							<input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required placeholder="Mot de passe">
+																		
+							<button class="btn btn-outline-secondary" type="button">
+								<i class="ri-eye-line text-primary"></i>
+							</button>
+						</div>
+					</div>
+					<input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+																
+					<div class="d-flex justify-content-end mb-3">
+						<a href="{{ path ('mot_de_passe_oublie') }}" class="text-decoration-underline">{% trans %}Mot de passe oublié ?{% endtrans %}</a>
+					</div>
+
+					<div class="mb-3 d-grid gap-2">
+						<button type="submit" class="btn btn-primary">{% trans %}Connexion{% endtrans %}</button>
+						{# <a href="signup.html" class="btn btn-secondary">Not registered? Signup</a> #}
+					</div>
+
+				</div>
+
+			</form>
+			<!-- Form ends -->
+
+		</div>
+		<!-- Auth wrapper ends -->
+
+    </div>
+    <!-- Container ends -->
+
+  </body>
+
+{% endblock %}

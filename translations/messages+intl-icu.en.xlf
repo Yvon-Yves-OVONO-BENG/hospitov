@@ -1,0 +1,3418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="fr" target-language="en" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="UzFhc1Y" resname="Accueil">
+        <source>Accueil</source>
+        <target>Home</target>
+      </trans-unit>
+      <trans-unit id="X2uqtNv" resname="Langue">
+        <source>Langue</source>
+        <target>Language</target>
+      </trans-unit>
+      <trans-unit id="5JXVO5Z" resname="Français">
+        <source>Français</source>
+        <target>French</target>
+      </trans-unit>
+      <trans-unit id="VTZ47tP" resname="Anglais">
+        <source>Anglais</source>
+        <target>English</target>
+      </trans-unit>
+      <trans-unit id="WOGlOwF" resname="Vous êtes connectés sous">
+        <source>Vous êtes connectés sous</source>
+        <target>You are logged as</target>
+      </trans-unit>
+      <trans-unit id="_1_eksG" resname="Déconnexion">
+        <source>Déconnexion</source>
+        <target>Logout</target>
+      </trans-unit>
+      <trans-unit id="yrFEeRj" resname="Se souvenir de moi">
+        <source>Se souvenir de moi</source>
+        <target>Remember me</target>
+      </trans-unit>
+      <trans-unit id="YdaVBBA" resname="Connexion">
+        <source>Connexion</source>
+        <target>Connexion</target>
+      </trans-unit>
+      <trans-unit id="PmAJAA_" resname="Ambulance ajoutée avec succès !">
+        <source>Ambulance ajoutée avec succès !</source>
+        <target>__Ambulance ajoutée avec succès !</target>
+      </trans-unit>
+      <trans-unit id="616kKuF" resname="Ambulance modifiée avec succès !">
+        <source>Ambulance modifiée avec succès !</source>
+        <target>__Ambulance modifiée avec succès !</target>
+      </trans-unit>
+      <trans-unit id="0xTmWxj" resname="Ambulance supprimée avec succès !">
+        <source>Ambulance supprimée avec succès !</source>
+        <target>__Ambulance supprimée avec succès !</target>
+      </trans-unit>
+      <trans-unit id="672j8mO" resname="Attribution Ambulance ajoutée avec succès !">
+        <source>Attribution Ambulance ajoutée avec succès !</source>
+        <target>__Attribution Ambulance ajoutée avec succès !</target>
+      </trans-unit>
+      <trans-unit id="GaDVknz" resname="Attribution Ambulance modifiée avec succès !">
+        <source>Attribution Ambulance modifiée avec succès !</source>
+        <target>__Attribution Ambulance modifiée avec succès !</target>
+      </trans-unit>
+      <trans-unit id="ysrH6pC" resname="Attribution Ambulance supprimée avec succès !">
+        <source>Attribution Ambulance supprimée avec succès !</source>
+        <target>__Attribution Ambulance supprimée avec succès !</target>
+      </trans-unit>
+      <trans-unit id="hhfIjo7" resname="Batiment ajoutée avec succès !">
+        <source>Batiment ajoutée avec succès !</source>
+        <target>__Batiment ajoutée avec succès !</target>
+      </trans-unit>
+      <trans-unit id="pGhx.0W" resname="Batiment modifiée avec succès !">
+        <source>Batiment modifiée avec succès !</source>
+        <target>__Batiment modifiée avec succès !</target>
+      </trans-unit>
+      <trans-unit id="9zJCNpS" resname="Batiment supprimé avec succès !">
+        <source>Batiment supprimé avec succès !</source>
+        <target>__Batiment supprimé avec succès !</target>
+      </trans-unit>
+      <trans-unit id="b0UTTZp" resname="Billet de session ajouté avec succès !">
+        <source>Billet de session ajouté avec succès !</source>
+        <target>__Billet de session ajouté avec succès !</target>
+      </trans-unit>
+      <trans-unit id="GTS0f_4" resname="Billet de session mise à jour avec succès !">
+        <source>Billet de session mise à jour avec succès !</source>
+        <target>__Billet de session mise à jour avec succès !</target>
+      </trans-unit>
+      <trans-unit id="yQ4fGTT" resname="Billet de session supprimé avec succès !">
+        <source>Billet de session supprimé avec succès !</source>
+        <target>__Billet de session supprimé avec succès !</target>
+      </trans-unit>
+      <trans-unit id="kYCGar." resname="Categorie ajoutée avec succès !">
+        <source>Categorie ajoutée avec succès !</source>
+        <target>__Categorie ajoutée avec succès !</target>
+      </trans-unit>
+      <trans-unit id="ILW2Nn4" resname="Catégorie mise à jour avec succès !">
+        <source>Catégorie mise à jour avec succès !</source>
+        <target>__Catégorie mise à jour avec succès !</target>
+      </trans-unit>
+      <trans-unit id="vWeqqS8" resname="Catégorie supprimée avec succès !">
+        <source>Catégorie supprimée avec succès !</source>
+        <target>__Catégorie supprimée avec succès !</target>
+      </trans-unit>
+      <trans-unit id="FeKfren" resname="Chambre ajoutée avec succès !">
+        <source>Chambre ajoutée avec succès !</source>
+        <target>__Chambre ajoutée avec succès !</target>
+      </trans-unit>
+      <trans-unit id="4rnv3Rw" resname="Chambre modifiée avec succès !">
+        <source>Chambre modifiée avec succès !</source>
+        <target>__Chambre modifiée avec succès !</target>
+      </trans-unit>
+      <trans-unit id="dFEEDOP" resname="Chambre supprimé avec succès !">
+        <source>Chambre supprimé avec succès !</source>
+        <target>__Chambre supprimé avec succès !</target>
+      </trans-unit>
+      <trans-unit id="yUz9eoC" resname="Commande ajoutée avec succès !">
+        <source>Commande ajoutée avec succès !</source>
+        <target>__Commande ajoutée avec succès !</target>
+      </trans-unit>
+      <trans-unit id="FSd1WcL" resname="Commande livrée avec succès !">
+        <source>Commande livrée avec succès !</source>
+        <target>__Commande livrée avec succès !</target>
+      </trans-unit>
+      <trans-unit id="SJ6V6pF" resname="Commande modifiée avec succès !">
+        <source>Commande modifiée avec succès !</source>
+        <target>__Commande modifiée avec succès !</target>
+      </trans-unit>
+      <trans-unit id="zdzjCYL" resname="Commande supprimée avec succès !">
+        <source>Commande supprimée avec succès !</source>
+        <target>__Commande supprimée avec succès !</target>
+      </trans-unit>
+      <trans-unit id="m.ohd1U" resname="Consultation enregistrée avec succès !">
+        <source>Consultation enregistrée avec succès !</source>
+        <target>__Consultation enregistrée avec succès !</target>
+      </trans-unit>
+      <trans-unit id="sNo_WbM" resname="Résultat examens envoyés avec succès !">
+        <source>Résultat examens envoyés avec succès !</source>
+        <target>__Résultat examens envoyés avec succès !</target>
+      </trans-unit>
+      <trans-unit id="uwYcrkO" resname="Parametres mise à jour avec succès !">
+        <source>Parametres mise à jour avec succès !</source>
+        <target>__Parametres mise à jour avec succès !</target>
+      </trans-unit>
+      <trans-unit id="NDC5jXR" resname="Consultation ajoutée avec succès !">
+        <source>Consultation ajoutée avec succès !</source>
+        <target>__Consultation ajoutée avec succès !</target>
+      </trans-unit>
+      <trans-unit id="GAJZi8d" resname="Consultation supprimée avec succès !">
+        <source>Consultation supprimée avec succès !</source>
+        <target>__Consultation supprimée avec succès !</target>
+      </trans-unit>
+      <trans-unit id="CR9HkSg" resname="Echographie ajoutée avec succès !">
+        <source>Echographie ajoutée avec succès !</source>
+        <target>__Echographie ajoutée avec succès !</target>
+      </trans-unit>
+      <trans-unit id="o8M.MZ3" resname="Echographie mise à jour avec succès !">
+        <source>Echographie mise à jour avec succès !</source>
+        <target>__Echographie mise à jour avec succès !</target>
+      </trans-unit>
+      <trans-unit id="gltPmnM" resname="Echographie supprimée avec succès !">
+        <source>Echographie supprimée avec succès !</source>
+        <target>__Echographie supprimée avec succès !</target>
+      </trans-unit>
+      <trans-unit id="kYNN5qb" resname="Examen ajoutée avec succès !">
+        <source>Examen ajoutée avec succès !</source>
+        <target>__Examen ajoutée avec succès !</target>
+      </trans-unit>
+      <trans-unit id="aTCbVqy" resname="Examen modifiée avec succès !">
+        <source>Examen modifiée avec succès !</source>
+        <target>__Examen modifiée avec succès !</target>
+      </trans-unit>
+      <trans-unit id="e.PVK1Q" resname="Examen supprimé avec succès !">
+        <source>Examen supprimé avec succès !</source>
+        <target>__Examen supprimé avec succès !</target>
+      </trans-unit>
+      <trans-unit id="PXsffpL" resname="Facture enregistrée avec succès !">
+        <source>Facture enregistrée avec succès !</source>
+        <target>__Facture enregistrée avec succès !</target>
+      </trans-unit>
+      <trans-unit id="U30EXLL" resname="Facture payée avec succès !">
+        <source>Facture payée avec succès !</source>
+        <target>__Facture payée avec succès !</target>
+      </trans-unit>
+      <trans-unit id="ZfwaxrM" resname="Fournisseur ajouté avec succès !">
+        <source>Fournisseur ajouté avec succès !</source>
+        <target>__Fournisseur ajouté avec succès !</target>
+      </trans-unit>
+      <trans-unit id="_C_MkRR" resname="Fournisseur mise à jour avec succès !">
+        <source>Fournisseur mise à jour avec succès !</source>
+        <target>__Fournisseur mise à jour avec succès !</target>
+      </trans-unit>
+      <trans-unit id="yoCl50z" resname="Fournisseur supprimée avec succès !">
+        <source>Fournisseur supprimée avec succès !</source>
+        <target>__Fournisseur supprimée avec succès !</target>
+      </trans-unit>
+      <trans-unit id="IGl8ziA" resname="Kit ajoutée avec succès !">
+        <source>Kit ajoutée avec succès !</source>
+        <target>__Kit ajoutée avec succès !</target>
+      </trans-unit>
+      <trans-unit id="l4sk0MB" resname="Kit modifiée avec succès !">
+        <source>Kit modifiée avec succès !</source>
+        <target>__Kit modifiée avec succès !</target>
+      </trans-unit>
+      <trans-unit id="mHV_XLd" resname="Kit supprimé avec succès !">
+        <source>Kit supprimé avec succès !</source>
+        <target>__Kit supprimé avec succès !</target>
+      </trans-unit>
+      <trans-unit id="RIhXguM" resname="Produit supprimé avec succès !">
+        <source>Produit supprimé avec succès !</source>
+        <target>__Produit supprimé avec succès !</target>
+      </trans-unit>
+      <trans-unit id="OoiaCxR" resname="Lot ajoutée avec succès !">
+        <source>Lot ajoutée avec succès !</source>
+        <target>__Lot ajoutée avec succès !</target>
+      </trans-unit>
+      <trans-unit id="xOg3AY0" resname="Lot mis à jour avec succès !">
+        <source>Lot mis à jour avec succès !</source>
+        <target>__Lot mis à jour avec succès !</target>
+      </trans-unit>
+      <trans-unit id="5kPhVCG" resname="Lot supprimé avec succès !">
+        <source>Lot supprimé avec succès !</source>
+        <target>__Lot supprimé avec succès !</target>
+      </trans-unit>
+      <trans-unit id="kj1abP7" resname="Marque ajouté avec succès !">
+        <source>Marque ajouté avec succès !</source>
+        <target>__Marque ajouté avec succès !</target>
+      </trans-unit>
+      <trans-unit id="btwyGbG" resname="Marque mise à jour avec succès !">
+        <source>Marque mise à jour avec succès !</source>
+        <target>__Marque mise à jour avec succès !</target>
+      </trans-unit>
+      <trans-unit id="KXfv1vl" resname="Marque supprimée avec succès !">
+        <source>Marque supprimée avec succès !</source>
+        <target>__Marque supprimée avec succès !</target>
+      </trans-unit>
+      <trans-unit id="jlBJWUd" resname="Modele ajoutée avec succès !">
+        <source>Modele ajoutée avec succès !</source>
+        <target>__Modele ajoutée avec succès !</target>
+      </trans-unit>
+      <trans-unit id="Sy0m8oa" resname="Modele modifiée avec succès !">
+        <source>Modele modifiée avec succès !</source>
+        <target>__Modele modifiée avec succès !</target>
+      </trans-unit>
+      <trans-unit id="Ghqi3GW" resname="Modele supprimé avec succès !">
+        <source>Modele supprimé avec succès !</source>
+        <target>__Modele supprimé avec succès !</target>
+      </trans-unit>
+      <trans-unit id="DLEce8v" resname="Produit ajouté dans le panier avec succès !">
+        <source>Produit ajouté dans le panier avec succès !</source>
+        <target>__Produit ajouté dans le panier avec succès !</target>
+      </trans-unit>
+      <trans-unit id="mdi66AQ" resname="Kit ajouté dans le panier avec succès !">
+        <source>Kit ajouté dans le panier avec succès !</source>
+        <target>__Kit ajouté dans le panier avec succès !</target>
+      </trans-unit>
+      <trans-unit id="s8S9xWn" resname="Panier mis à jour avec succès !">
+        <source>Panier mis à jour avec succès !</source>
+        <target>__Panier mis à jour avec succès !</target>
+      </trans-unit>
+      <trans-unit id="9zj9lBE" resname="Produit retiré du panier avec succès !">
+        <source>Produit retiré du panier avec succès !</source>
+        <target>__Produit retiré du panier avec succès !</target>
+      </trans-unit>
+      <trans-unit id=".KPZQPM" resname="Patient ajoutée avec succès !">
+        <source>Patient ajoutée avec succès !</source>
+        <target>__Patient ajoutée avec succès !</target>
+      </trans-unit>
+      <trans-unit id="b8ZAhWh" resname="Patient mise à jour avec succès !">
+        <source>Patient mise à jour avec succès !</source>
+        <target>__Patient mise à jour avec succès !</target>
+      </trans-unit>
+      <trans-unit id="873pR4G" resname="Patient supprimée avec succès !">
+        <source>Patient supprimée avec succès !</source>
+        <target>__Patient supprimée avec succès !</target>
+      </trans-unit>
+      <trans-unit id="TKEvQoi" resname="Produit ajoutée avec succès !">
+        <source>Produit ajoutée avec succès !</source>
+        <target>__Produit ajoutée avec succès !</target>
+      </trans-unit>
+      <trans-unit id="_aiij1W" resname="Produit mise à jour avec succès !">
+        <source>Produit mise à jour avec succès !</source>
+        <target>__Produit mise à jour avec succès !</target>
+      </trans-unit>
+      <trans-unit id=".dactcj" resname="Profil mis à jour avec succès !">
+        <source>Profil mis à jour avec succès !</source>
+        <target>__Profil mis à jour avec succès !</target>
+      </trans-unit>
+      <trans-unit id="UNgx9g0" resname="Mot de passe modifié avec succès !">
+        <source>Mot de passe modifié avec succès !</source>
+        <target>__Mot de passe modifié avec succès !</target>
+      </trans-unit>
+      <trans-unit id="W7lBOyP" resname="Bonne réponse ! Réinitialiser votre mot de passe ! ">
+        <source>Bonne réponse ! Réinitialiser votre mot de passe ! </source>
+        <target>__Bonne réponse ! Réinitialiser votre mot de passe ! </target>
+      </trans-unit>
+      <trans-unit id="seZ7D96" resname="L'une des trois informations n'est pas correcte ">
+        <source>L'une des trois informations n'est pas correcte </source>
+        <target>__L'une des trois informations n'est pas correcte </target>
+      </trans-unit>
+      <trans-unit id="hDgznoC" resname="Mot de passe réinitialisé avec succèss ! ">
+        <source>Mot de passe réinitialisé avec succèss ! </source>
+        <target>__Mot de passe réinitialisé avec succèss ! </target>
+      </trans-unit>
+      <trans-unit id="uLs.h3e" resname="Question secrète enregistrée avec succès !">
+        <source>Question secrète enregistrée avec succès !</source>
+        <target>__Question secrète enregistrée avec succès !</target>
+      </trans-unit>
+      <trans-unit id="f5lWCd_" resname="Radio ajoutée avec succès !">
+        <source>Radio ajoutée avec succès !</source>
+        <target>__Radio ajoutée avec succès !</target>
+      </trans-unit>
+      <trans-unit id="uXIJkS6" resname="Radio mise à jour avec succès !">
+        <source>Radio mise à jour avec succès !</source>
+        <target>__Radio mise à jour avec succès !</target>
+      </trans-unit>
+      <trans-unit id="t10m4JD" resname="Radio supprimée avec succès !">
+        <source>Radio supprimée avec succès !</source>
+        <target>__Radio supprimée avec succès !</target>
+      </trans-unit>
+      <trans-unit id="CqgRLbh" resname="Societe ajoutée avec succès !">
+        <source>Societe ajoutée avec succès !</source>
+        <target>__Societe ajoutée avec succès !</target>
+      </trans-unit>
+      <trans-unit id="nFgIZVX" resname="Sous Catégorie ajoutée avec succès !">
+        <source>Sous Catégorie ajoutée avec succès !</source>
+        <target>__Sous Catégorie ajoutée avec succès !</target>
+      </trans-unit>
+      <trans-unit id="eRMo8U8" resname="Sous Catégorie supprimée avec succès !">
+        <source>Sous Catégorie supprimée avec succès !</source>
+        <target>__Sous Catégorie supprimée avec succès !</target>
+      </trans-unit>
+      <trans-unit id="BAMxclI" resname="Spécialité ajouté avec succès !">
+        <source>Spécialité ajouté avec succès !</source>
+        <target>__Spécialité ajouté avec succès !</target>
+      </trans-unit>
+      <trans-unit id="Ua6je82" resname="Spécialité mise à jour avec succès !">
+        <source>Spécialité mise à jour avec succès !</source>
+        <target>__Spécialité mise à jour avec succès !</target>
+      </trans-unit>
+      <trans-unit id="FW9Wze9" resname="Spécialité supprimée avec succès !">
+        <source>Spécialité supprimée avec succès !</source>
+        <target>__Spécialité supprimée avec succès !</target>
+      </trans-unit>
+      <trans-unit id="58pWEIx" resname="Type Chambre ajouté avec succès !">
+        <source>Type Chambre ajouté avec succès !</source>
+        <target>__Type Chambre ajouté avec succès !</target>
+      </trans-unit>
+      <trans-unit id="yvc.Gt8" resname="Type Chambre modifié avec succès !">
+        <source>Type Chambre modifié avec succès !</source>
+        <target>__Type Chambre modifié avec succès !</target>
+      </trans-unit>
+      <trans-unit id="N9C3bjo" resname="Type Chambre supprimé avec succès !">
+        <source>Type Chambre supprimé avec succès !</source>
+        <target>__Type Chambre supprimé avec succès !</target>
+      </trans-unit>
+      <trans-unit id="uh06oy4" resname="Type utilisateur ajouté avec succès !">
+        <source>Type utilisateur ajouté avec succès !</source>
+        <target>__Type utilisateur ajouté avec succès !</target>
+      </trans-unit>
+      <trans-unit id="Yg4bNeh" resname="Type utilisateur mise à jour avec succès !">
+        <source>Type utilisateur mise à jour avec succès !</source>
+        <target>__Type utilisateur mise à jour avec succès !</target>
+      </trans-unit>
+      <trans-unit id="Te1BSdM" resname="Utilisateur ajoutée avec succès !">
+        <source>Utilisateur ajoutée avec succès !</source>
+        <target>__Utilisateur ajoutée avec succès !</target>
+      </trans-unit>
+      <trans-unit id="X3OmtWA" resname="Utilisateur mise à jour avec succès !">
+        <source>Utilisateur mise à jour avec succès !</source>
+        <target>__Utilisateur mise à jour avec succès !</target>
+      </trans-unit>
+      <trans-unit id="XbLw6gB" resname="Ambulance">
+        <source>Ambulance</source>
+        <target>__Ambulance</target>
+      </trans-unit>
+      <trans-unit id="Ek0ncgD" resname="Immatriculation">
+        <source>Immatriculation</source>
+        <target>__Immatriculation</target>
+      </trans-unit>
+      <trans-unit id="hdSAXHb" resname="- - -">
+        <source>- - -</source>
+        <target>__- - -</target>
+      </trans-unit>
+      <trans-unit id="VhQI.8p" resname="Année">
+        <source>Année</source>
+        <target>__Année</target>
+      </trans-unit>
+      <trans-unit id="I98XUxB" resname="L'avance doit être &gt;= 0 et &lt;= à ">
+        <source>L'avance doit être &gt;= 0 et &lt;= à </source>
+        <target><![CDATA[__L'avance doit être >= 0 et <= à ]]></target>
+      </trans-unit>
+      <trans-unit id="Mu7TEnJ" resname="L'avance ne peut pas être vide!">
+        <source>L'avance ne peut pas être vide!</source>
+        <target>__L'avance ne peut pas être vide!</target>
+      </trans-unit>
+      <trans-unit id="dt1wNeU" resname="L'avance doit être inférieure ou égale à ">
+        <source>L'avance doit être inférieure ou égale à </source>
+        <target>__L'avance doit être inférieure ou égale à </target>
+      </trans-unit>
+      <trans-unit id="QfVWCRy" resname="Bâtiment">
+        <source>Bâtiment</source>
+        <target>__Bâtiment</target>
+      </trans-unit>
+      <trans-unit id="YTpMx7m" resname="Intitulé du billet de session">
+        <source>Intitulé du billet de session</source>
+        <target>__Intitulé du billet de session</target>
+      </trans-unit>
+      <trans-unit id="VMMk9sE" resname="Prix">
+        <source>Prix</source>
+        <target>__Prix</target>
+      </trans-unit>
+      <trans-unit id="YiaS08q" resname="Nom de la catégorie :">
+        <source>Nom de la catégorie :</source>
+        <target>__Nom de la catégorie :</target>
+      </trans-unit>
+      <trans-unit id="a3wiUW." resname="Nom de la catégorie">
+        <source>Nom de la catégorie</source>
+        <target>__Nom de la catégorie</target>
+      </trans-unit>
+      <trans-unit id="TRFJzt8" resname="Nom de la chambre">
+        <source>Nom de la chambre</source>
+        <target>__Nom de la chambre</target>
+      </trans-unit>
+      <trans-unit id="A_Uy83F" resname="Le nombre de lit doit être &gt;= à 1">
+        <source>Le nombre de lit doit être &gt;= à 1</source>
+        <target><![CDATA[__Le nombre de lit doit être >= à 1]]></target>
+      </trans-unit>
+      <trans-unit id="Har6sb3" resname="Le nombre de lit doit être &gt;= à 1 ">
+        <source>Le nombre de lit doit être &gt;= à 1 </source>
+        <target><![CDATA[__Le nombre de lit doit être >= à 1 ]]></target>
+      </trans-unit>
+      <trans-unit id="2ozK5AZ" resname="Nom pour la facture">
+        <source>Nom pour la facture</source>
+        <target>__Nom pour la facture</target>
+      </trans-unit>
+      <trans-unit id="NvDqjbl" resname="Numéro de téléphone">
+        <source>Numéro de téléphone</source>
+        <target>__Numéro de téléphone</target>
+      </trans-unit>
+      <trans-unit id="fUavwOL" resname="L'avance doit être &gt;= 0 ou &lt;= à ">
+        <source>L'avance doit être &gt;= 0 ou &lt;= à </source>
+        <target><![CDATA[__L'avance doit être >= 0 ou <= à ]]></target>
+      </trans-unit>
+      <trans-unit id="v2UCIq4" resname="Choisir un mode de paiement">
+        <source>Choisir un mode de paiement</source>
+        <target>__Choisir un mode de paiement</target>
+      </trans-unit>
+      <trans-unit id="v.68JM2" resname="Sélectionner un patient">
+        <source>Sélectionner un patient</source>
+        <target>__Sélectionner un patient</target>
+      </trans-unit>
+      <trans-unit id="J82aFcg" resname="Anamneses">
+        <source>Anamneses</source>
+        <target>__Anamneses</target>
+      </trans-unit>
+      <trans-unit id="bFy8JXq" resname="Anamnèses du patient">
+        <source>Anamnèses du patient</source>
+        <target>__Anamnèses du patient</target>
+      </trans-unit>
+      <trans-unit id="r6gqB8U" resname="Diagnistics">
+        <source>Diagnistics</source>
+        <target>__Diagnistics</target>
+      </trans-unit>
+      <trans-unit id="sfqHipi" resname="Diagnostic">
+        <source>Diagnostic</source>
+        <target>__Diagnostic</target>
+      </trans-unit>
+      <trans-unit id="6ibr1xn" resname="Ordonnance">
+        <source>Ordonnance</source>
+        <target>__Ordonnance</target>
+      </trans-unit>
+      <trans-unit id="_E3dH_6" resname="Intitulé de l'Echographie">
+        <source>Intitulé de l'Echographie</source>
+        <target>__Intitulé de l'Echographie</target>
+      </trans-unit>
+      <trans-unit id="cWjCMex" resname="Examen">
+        <source>Examen</source>
+        <target>__Examen</target>
+      </trans-unit>
+      <trans-unit id="YgJwR7m" resname="Prix examen">
+        <source>Prix examen</source>
+        <target>__Prix examen</target>
+      </trans-unit>
+      <trans-unit id="CObZxNj" resname="Fournisseur">
+        <source>Fournisseur</source>
+        <target>__Fournisseur</target>
+      </trans-unit>
+      <trans-unit id="_NmYnQ9" resname="Contact du fournisseur">
+        <source>Contact du fournisseur</source>
+        <target>__Contact du fournisseur</target>
+      </trans-unit>
+      <trans-unit id="tBFOAXC" resname="Adresse du fournisseur">
+        <source>Adresse du fournisseur</source>
+        <target>__Adresse du fournisseur</target>
+      </trans-unit>
+      <trans-unit id="h11g7SD" resname="Kit">
+        <source>Kit</source>
+        <target>__Kit</target>
+      </trans-unit>
+      <trans-unit id="olio7wM" resname="Quantité">
+        <source>Quantité</source>
+        <target>__Quantité</target>
+      </trans-unit>
+      <trans-unit id="ZBbbbF2" resname="Prix d'achat">
+        <source>Prix d'achat</source>
+        <target>__Prix d'achat</target>
+      </trans-unit>
+      <trans-unit id="VvitA5y" resname="Prix d'achat du produit">
+        <source>Prix d'achat du produit</source>
+        <target>__Prix d'achat du produit</target>
+      </trans-unit>
+      <trans-unit id="5UaZJnw" resname="Coefficient du produit">
+        <source>Coefficient du produit</source>
+        <target>__Coefficient du produit</target>
+      </trans-unit>
+      <trans-unit id="mrbuLIN" resname="Coefficient">
+        <source>Coefficient</source>
+        <target>__Coefficient</target>
+      </trans-unit>
+      <trans-unit id="5XhvIQB" resname="Référence du lot">
+        <source>Référence du lot</source>
+        <target>__Référence du lot</target>
+      </trans-unit>
+      <trans-unit id="hsa6tLB" resname="Veuillez saisir la référence">
+        <source>Veuillez saisir la référence</source>
+        <target>__Veuillez saisir la référence</target>
+      </trans-unit>
+      <trans-unit id="xZGN7Cd" resname="Quantité du lot">
+        <source>Quantité du lot</source>
+        <target>__Quantité du lot</target>
+      </trans-unit>
+      <trans-unit id="4Op6F1K" resname="Coef">
+        <source>Coef</source>
+        <target>__Coef</target>
+      </trans-unit>
+      <trans-unit id="7ldFVIs" resname="Marque">
+        <source>Marque</source>
+        <target>__Marque</target>
+      </trans-unit>
+      <trans-unit id="5hu7g57" resname="Modèle">
+        <source>Modèle</source>
+        <target>__Modèle</target>
+      </trans-unit>
+      <trans-unit id="o9ZcpWl" resname="Nouveau mot de passe">
+        <source>Nouveau mot de passe</source>
+        <target>__Nouveau mot de passe</target>
+      </trans-unit>
+      <trans-unit id="p9Fl6LD" resname="Température">
+        <source>Température</source>
+        <target>__Température</target>
+      </trans-unit>
+      <trans-unit id="tTBpqDg" resname="Tension">
+        <source>Tension</source>
+        <target>__Tension</target>
+      </trans-unit>
+      <trans-unit id="r3UMoX_" resname="Poids">
+        <source>Poids</source>
+        <target>__Poids</target>
+      </trans-unit>
+      <trans-unit id="xG28Ovq" resname="Nom du patient">
+        <source>Nom du patient</source>
+        <target>__Nom du patient</target>
+      </trans-unit>
+      <trans-unit id="I0WM7bM" resname="Veuillez saisir le nom du patient">
+        <source>Veuillez saisir le nom du patient</source>
+        <target>__Veuillez saisir le nom du patient</target>
+      </trans-unit>
+      <trans-unit id="Z7QW8Ku" resname="Ville résidence">
+        <source>Ville résidence</source>
+        <target>__Ville résidence</target>
+      </trans-unit>
+      <trans-unit id="qQGxuhq" resname="Veuillez saisir la ville de résidence">
+        <source>Veuillez saisir la ville de résidence</source>
+        <target>__Veuillez saisir la ville de résidence</target>
+      </trans-unit>
+      <trans-unit id="7zLEoxO" resname="Sélectionner une société">
+        <source>Sélectionner une société</source>
+        <target>__Sélectionner une société</target>
+      </trans-unit>
+      <trans-unit id="aCAXTd1" resname="Sélectionner un pays">
+        <source>Sélectionner un pays</source>
+        <target>__Sélectionner un pays</target>
+      </trans-unit>
+      <trans-unit id="fiq5ySD" resname="Libellé du produit :">
+        <source>Libellé du produit :</source>
+        <target>__Libellé du produit :</target>
+      </trans-unit>
+      <trans-unit id="Yj7P4cN" resname="Désignation du produit">
+        <source>Désignation du produit</source>
+        <target>__Désignation du produit</target>
+      </trans-unit>
+      <trans-unit id="Bs51NI8" resname="Quantite">
+        <source>Quantite</source>
+        <target>__Quantite</target>
+      </trans-unit>
+      <trans-unit id="yK9uKfu" resname="Nom complet">
+        <source>Nom complet</source>
+        <target>__Nom complet</target>
+      </trans-unit>
+      <trans-unit id="uApaQNW" resname="Nom complet de l'utilisateur">
+        <source>Nom complet de l'utilisateur</source>
+        <target>__Nom complet de l'utilisateur</target>
+      </trans-unit>
+      <trans-unit id="K1w9JnI" resname="Contact">
+        <source>Contact</source>
+        <target>__Contact</target>
+      </trans-unit>
+      <trans-unit id="tJ9qhss" resname="Contact utilisateur">
+        <source>Contact utilisateur</source>
+        <target>__Contact utilisateur</target>
+      </trans-unit>
+      <trans-unit id="lpzL089" resname="Email">
+        <source>Email</source>
+        <target>__Email</target>
+      </trans-unit>
+      <trans-unit id="oPt21Gu" resname="Votre email">
+        <source>Votre email</source>
+        <target>__Votre email</target>
+      </trans-unit>
+      <trans-unit id="eeXPIN4" resname="Adresse">
+        <source>Adresse</source>
+        <target>__Adresse</target>
+      </trans-unit>
+      <trans-unit id="0EMh5Rq" resname="Votre adresse">
+        <source>Votre adresse</source>
+        <target>__Votre adresse</target>
+      </trans-unit>
+      <trans-unit id="Xwn1pSv" resname="Intitulé de la radio">
+        <source>Intitulé de la radio</source>
+        <target>__Intitulé de la radio</target>
+      </trans-unit>
+      <trans-unit id=".Db1zhr" resname="Réponse de la question">
+        <source>Réponse de la question</source>
+        <target>__Réponse de la question</target>
+      </trans-unit>
+      <trans-unit id="mMaUKZN" resname="Nom de la société :">
+        <source>Nom de la société :</source>
+        <target>__Nom de la société :</target>
+      </trans-unit>
+      <trans-unit id="XxAg8EF" resname="Nom de la société">
+        <source>Nom de la société</source>
+        <target>__Nom de la société</target>
+      </trans-unit>
+      <trans-unit id="7pHMo8X" resname="Nom de la sous catégorie :">
+        <source>Nom de la sous catégorie :</source>
+        <target>__Nom de la sous catégorie :</target>
+      </trans-unit>
+      <trans-unit id="cLMpshM" resname="Veuillez saisir le nom de la sous catégorie">
+        <source>Veuillez saisir le nom de la sous catégorie</source>
+        <target>__Veuillez saisir le nom de la sous catégorie</target>
+      </trans-unit>
+      <trans-unit id="0jbd.fc" resname="Spécialité">
+        <source>Spécialité</source>
+        <target>__Spécialité</target>
+      </trans-unit>
+      <trans-unit id="IJYK763" resname="Type Chambre">
+        <source>Type Chambre</source>
+        <target>__Type Chambre</target>
+      </trans-unit>
+      <trans-unit id="b2DYUiZ" resname="Type utilisateur">
+        <source>Type utilisateur</source>
+        <target>__Type utilisateur</target>
+      </trans-unit>
+      <trans-unit id="Wl2ABzl" resname="Nom utilisateur">
+        <source>Nom utilisateur</source>
+        <target>__Nom utilisateur</target>
+      </trans-unit>
+      <trans-unit id=".5yLjAZ" resname="Mot de passe">
+        <source>Mot de passe</source>
+        <target>__Mot de passe</target>
+      </trans-unit>
+      <trans-unit id="6oC8cai" resname="Numéro permis de conduire">
+        <source>Numéro permis de conduire</source>
+        <target>__Numéro permis de conduire</target>
+      </trans-unit>
+      <trans-unit id="e6psb7C" resname="Connexion réussie !">
+        <source>Connexion réussie !</source>
+        <target>__Connexion réussie !</target>
+      </trans-unit>
+      <trans-unit id="G4S6W2e" resname="Ajouter un ambulance">
+        <source>Ajouter un ambulance</source>
+        <target>__Ajouter un ambulance</target>
+      </trans-unit>
+      <trans-unit id="6e94Nyx" resname="Modification d'un ambulance">
+        <source>Modification d'un ambulance</source>
+        <target>__Modification d'un ambulance</target>
+      </trans-unit>
+      <trans-unit id="Fx.oASX" resname="Enregistrement d'un ambulance">
+        <source>Enregistrement d'un ambulance</source>
+        <target>__Enregistrement d'un ambulance</target>
+      </trans-unit>
+      <trans-unit id="_SQ2T1P" resname="Afficher les ambulances">
+        <source>Afficher les ambulances</source>
+        <target>__Afficher les ambulances</target>
+      </trans-unit>
+      <trans-unit id="dkT0Z21" resname="Modification du ambulance :">
+        <source>Modification du ambulance :</source>
+        <target>__Modification du ambulance :</target>
+      </trans-unit>
+      <trans-unit id=".dFM9if" resname="Nom du ambulance">
+        <source>Nom du ambulance</source>
+        <target>__Nom du ambulance</target>
+      </trans-unit>
+      <trans-unit id="AxVnT4L" resname="Veuillez saisir le nom du ambulance !">
+        <source>Veuillez saisir le nom du ambulance !</source>
+        <target>__Veuillez saisir le nom du ambulance !</target>
+      </trans-unit>
+      <trans-unit id="SHDAYi_" resname="Veuillez saisir l'immatriculation">
+        <source>Veuillez saisir l'immatriculation</source>
+        <target>__Veuillez saisir l'immatriculation</target>
+      </trans-unit>
+      <trans-unit id="iqcInK2" resname="Marques">
+        <source>Marques</source>
+        <target>__Marques</target>
+      </trans-unit>
+      <trans-unit id="kfJTEWE" resname="--Choisir la marque--">
+        <source>--Choisir la marque--</source>
+        <target>__--Choisir la marque--</target>
+      </trans-unit>
+      <trans-unit id="OqiV_mZ" resname="Veuillez sélectionner la marque">
+        <source>Veuillez sélectionner la marque</source>
+        <target>__Veuillez sélectionner la marque</target>
+      </trans-unit>
+      <trans-unit id="yePraDF" resname="Modèles">
+        <source>Modèles</source>
+        <target>__Modèles</target>
+      </trans-unit>
+      <trans-unit id="tZyzjlP" resname="--Choisir le modèle--">
+        <source>--Choisir le modèle--</source>
+        <target>__--Choisir le modèle--</target>
+      </trans-unit>
+      <trans-unit id="l2ynjiv" resname="Veuillez sélectionner le modèle">
+        <source>Veuillez sélectionner le modèle</source>
+        <target>__Veuillez sélectionner le modèle</target>
+      </trans-unit>
+      <trans-unit id="WNM8a3N" resname="Etat">
+        <source>Etat</source>
+        <target>__Etat</target>
+      </trans-unit>
+      <trans-unit id="9rYXoGm" resname="Veuillez sélectionner l'état !">
+        <source>Veuillez sélectionner l'état !</source>
+        <target>__Veuillez sélectionner l'état !</target>
+      </trans-unit>
+      <trans-unit id="WACacGU" resname="Veuillez saisir l'année !">
+        <source>Veuillez saisir l'année !</source>
+        <target>__Veuillez saisir l'année !</target>
+      </trans-unit>
+      <trans-unit id="GiHJjli" resname="Photo du ambulance">
+        <source>Photo du ambulance</source>
+        <target>__Photo du ambulance</target>
+      </trans-unit>
+      <trans-unit id="czWhPUg" resname="Veuillez choisir la photo du ambulance !">
+        <source>Veuillez choisir la photo du ambulance !</source>
+        <target>__Veuillez choisir la photo du ambulance !</target>
+      </trans-unit>
+      <trans-unit id="cdx0hz4" resname="Enregistrer">
+        <source>Enregistrer</source>
+        <target>__Enregistrer</target>
+      </trans-unit>
+      <trans-unit id="RZUfasG" resname="Enregistrer les modifications">
+        <source>Enregistrer les modifications</source>
+        <target>__Enregistrer les modifications</target>
+      </trans-unit>
+      <trans-unit id="2__1GlP" resname="Liste des ambulances">
+        <source>Liste des ambulances</source>
+        <target>__Liste des ambulances</target>
+      </trans-unit>
+      <trans-unit id="AyvmocP" resname="Liste des ambulances enregistrés">
+        <source>Liste des ambulances enregistrés</source>
+        <target>__Liste des ambulances enregistrés</target>
+      </trans-unit>
+      <trans-unit id="ZtOzTxI" resname="Afficher produit">
+        <source>Afficher produit</source>
+        <target>__Afficher produit</target>
+      </trans-unit>
+      <trans-unit id="wlRys_M" resname="Ambulance(s) enregistrée(s)">
+        <source>Ambulance(s) enregistrée(s)</source>
+        <target>__Ambulance(s) enregistrée(s)</target>
+      </trans-unit>
+      <trans-unit id=".IAvNuR" resname="ambulance(s) enregistrée(s)">
+        <source>ambulance(s) enregistrée(s)</source>
+        <target>__ambulance(s) enregistrée(s)</target>
+      </trans-unit>
+      <trans-unit id=".qeI.Qn" resname="N°">
+        <source>N°</source>
+        <target>__N°</target>
+      </trans-unit>
+      <trans-unit id="2E7rrak" resname="Photo">
+        <source>Photo</source>
+        <target>__Photo</target>
+      </trans-unit>
+      <trans-unit id="BQEAwSh" resname="Attribuée ?">
+        <source>Attribuée ?</source>
+        <target>__Attribuée ?</target>
+      </trans-unit>
+      <trans-unit id="OZIadAv" resname="Switch">
+        <source>Switch</source>
+        <target>__Switch</target>
+      </trans-unit>
+      <trans-unit id="9oF5Iv0" resname="Responsables">
+        <source>Responsables</source>
+        <target>__Responsables</target>
+      </trans-unit>
+      <trans-unit id="_k8.Udi" resname="Opérations">
+        <source>Opérations</source>
+        <target>__Opérations</target>
+      </trans-unit>
+      <trans-unit id="i_LQehQ" resname="Pas attribuée">
+        <source>Pas attribuée</source>
+        <target>__Pas attribuée</target>
+      </trans-unit>
+      <trans-unit id="UgoR13w" resname="Attribuéé">
+        <source>Attribuéé</source>
+        <target>__Attribuéé</target>
+      </trans-unit>
+      <trans-unit id="QuN2BLY" resname="Modifier">
+        <source>Modifier</source>
+        <target>__Modifier</target>
+      </trans-unit>
+      <trans-unit id="Xl0CFs4" resname="Supprimer">
+        <source>Supprimer</source>
+        <target>__Supprimer</target>
+      </trans-unit>
+      <trans-unit id="L.ZIGk0" resname="Attribuer une ambulance">
+        <source>Attribuer une ambulance</source>
+        <target>__Attribuer une ambulance</target>
+      </trans-unit>
+      <trans-unit id="khkWIsS" resname="Modification d'une attribution">
+        <source>Modification d'une attribution</source>
+        <target>__Modification d'une attribution</target>
+      </trans-unit>
+      <trans-unit id="uUXCqTR" resname="Enregistrement d'une attribution d'une ambulance">
+        <source>Enregistrement d'une attribution d'une ambulance</source>
+        <target>__Enregistrement d'une attribution d'une ambulance</target>
+      </trans-unit>
+      <trans-unit id="fQCkUfD" resname="Modification d'une attribution ambulance">
+        <source>Modification d'une attribution ambulance</source>
+        <target>__Modification d'une attribution ambulance</target>
+      </trans-unit>
+      <trans-unit id="Md7U47G" resname="Afficher les attributions des ambulances">
+        <source>Afficher les attributions des ambulances</source>
+        <target>__Afficher les attributions des ambulances</target>
+      </trans-unit>
+      <trans-unit id="d2XKXuI" resname="Attribuer une ambulance à un chauffeur">
+        <source>Attribuer une ambulance à un chauffeur</source>
+        <target>__Attribuer une ambulance à un chauffeur</target>
+      </trans-unit>
+      <trans-unit id="zK4iIVn" resname="Modification d'une attribution d'une ambulance :">
+        <source>Modification d'une attribution d'une ambulance :</source>
+        <target>__Modification d'une attribution d'une ambulance :</target>
+      </trans-unit>
+      <trans-unit id="AmOJzaV" resname="Nom de l'ambulance">
+        <source>Nom de l'ambulance</source>
+        <target>__Nom de l'ambulance</target>
+      </trans-unit>
+      <trans-unit id="rB.Tzyl" resname="Veuillez sélectionner une ambulance !">
+        <source>Veuillez sélectionner une ambulance !</source>
+        <target>__Veuillez sélectionner une ambulance !</target>
+      </trans-unit>
+      <trans-unit id="9riZ7Ed" resname="Chauffeur">
+        <source>Chauffeur</source>
+        <target>__Chauffeur</target>
+      </trans-unit>
+      <trans-unit id="KlvFBpa" resname="Veuillez sélectionner un chaufffeur">
+        <source>Veuillez sélectionner un chaufffeur</source>
+        <target>__Veuillez sélectionner un chaufffeur</target>
+      </trans-unit>
+      <trans-unit id="7xtqM_u" resname="Liste des attributions des ambulance">
+        <source>Liste des attributions des ambulance</source>
+        <target>__Liste des attributions des ambulance</target>
+      </trans-unit>
+      <trans-unit id="9tUx0PP" resname="Liste des attributions des ambulance enregistrés">
+        <source>Liste des attributions des ambulance enregistrés</source>
+        <target>__Liste des attributions des ambulance enregistrés</target>
+      </trans-unit>
+      <trans-unit id="q4v4l1c" resname="attribution(s) ambulance(s)">
+        <source>attribution(s) ambulance(s)</source>
+        <target>__attribution(s) ambulance(s)</target>
+      </trans-unit>
+      <trans-unit id="YsGuxP." resname="Responsable">
+        <source>Responsable</source>
+        <target>__Responsable</target>
+      </trans-unit>
+      <trans-unit id="E0GZQpz" resname="Permis">
+        <source>Permis</source>
+        <target>__Permis</target>
+      </trans-unit>
+      <trans-unit id="BQ7qYjH" resname="Vous êtes connecté sous :">
+        <source>Vous êtes connecté sous :</source>
+        <target>__Vous êtes connecté sous :</target>
+      </trans-unit>
+      <trans-unit id="4A9Q_qc" resname="Mon Profil">
+        <source>Mon Profil</source>
+        <target>__Mon Profil</target>
+      </trans-unit>
+      <trans-unit id="nKRkbF." resname="Modifier mon mot de passe">
+        <source>Modifier mon mot de passe</source>
+        <target>__Modifier mon mot de passe</target>
+      </trans-unit>
+      <trans-unit id="sbzwMbh" resname="Ajouter un bâtiment">
+        <source>Ajouter un bâtiment</source>
+        <target>__Ajouter un bâtiment</target>
+      </trans-unit>
+      <trans-unit id="lFCZUAs" resname="Modification d'un bâtiment">
+        <source>Modification d'un bâtiment</source>
+        <target>__Modification d'un bâtiment</target>
+      </trans-unit>
+      <trans-unit id="xewJXuo" resname="Enregistrement d'un bâtiment">
+        <source>Enregistrement d'un bâtiment</source>
+        <target>__Enregistrement d'un bâtiment</target>
+      </trans-unit>
+      <trans-unit id="Zywt1pq" resname="Afficher les bâtiments">
+        <source>Afficher les bâtiments</source>
+        <target>__Afficher les bâtiments</target>
+      </trans-unit>
+      <trans-unit id="Gx67wg0" resname="Modification du bâtiment :">
+        <source>Modification du bâtiment :</source>
+        <target>__Modification du bâtiment :</target>
+      </trans-unit>
+      <trans-unit id="oIyVkdJ" resname="Nom du bâtiment">
+        <source>Nom du bâtiment</source>
+        <target>__Nom du bâtiment</target>
+      </trans-unit>
+      <trans-unit id="4jI2p6_" resname="Veuillez saisir le nom du bâtiment !">
+        <source>Veuillez saisir le nom du bâtiment !</source>
+        <target>__Veuillez saisir le nom du bâtiment !</target>
+      </trans-unit>
+      <trans-unit id="1vLLqYY" resname="Photo du batiment">
+        <source>Photo du batiment</source>
+        <target>__Photo du batiment</target>
+      </trans-unit>
+      <trans-unit id="n_lXdjR" resname="Veuillez choisir la photo du batiment !">
+        <source>Veuillez choisir la photo du batiment !</source>
+        <target>__Veuillez choisir la photo du batiment !</target>
+      </trans-unit>
+      <trans-unit id="uJ34OVI" resname="Liste des bâtiments">
+        <source>Liste des bâtiments</source>
+        <target>__Liste des bâtiments</target>
+      </trans-unit>
+      <trans-unit id="8yuP0Cn" resname="Liste des bâtiments enregistrés">
+        <source>Liste des bâtiments enregistrés</source>
+        <target>__Liste des bâtiments enregistrés</target>
+      </trans-unit>
+      <trans-unit id="Uw2o865" resname="Ajouter un batiment">
+        <source>Ajouter un batiment</source>
+        <target>__Ajouter un batiment</target>
+      </trans-unit>
+      <trans-unit id="XQK2foC" resname="Bâtiment(s) enregistré(s)">
+        <source>Bâtiment(s) enregistré(s)</source>
+        <target>__Bâtiment(s) enregistré(s)</target>
+      </trans-unit>
+      <trans-unit id="P92iWY3" resname="bâtiment(s) enregistré(s)">
+        <source>bâtiment(s) enregistré(s)</source>
+        <target>__bâtiment(s) enregistré(s)</target>
+      </trans-unit>
+      <trans-unit id="orQVOT0" resname="Etat service">
+        <source>Etat service</source>
+        <target>__Etat service</target>
+      </trans-unit>
+      <trans-unit id="bXY1IWQ" resname="Chambres">
+        <source>Chambres</source>
+        <target>__Chambres</target>
+      </trans-unit>
+      <trans-unit id="v6tfsy6" resname="Pas en service">
+        <source>Pas en service</source>
+        <target>__Pas en service</target>
+      </trans-unit>
+      <trans-unit id="IhNKatO" resname="En service">
+        <source>En service</source>
+        <target>__En service</target>
+      </trans-unit>
+      <trans-unit id="A53SmOr" resname="Liste des billets de session">
+        <source>Liste des billets de session</source>
+        <target>__Liste des billets de session</target>
+      </trans-unit>
+      <trans-unit id="DbN1j8m" resname="Les billets de session">
+        <source>Les billets de session</source>
+        <target>__Les billets de session</target>
+      </trans-unit>
+      <trans-unit id="h7yRpyf" resname="Ajouter un billet de session">
+        <source>Ajouter un billet de session</source>
+        <target>__Ajouter un billet de session</target>
+      </trans-unit>
+      <trans-unit id="QwxyW3R" resname="Billet(s) de session enregistré(s)">
+        <source>Billet(s) de session enregistré(s)</source>
+        <target>__Billet(s) de session enregistré(s)</target>
+      </trans-unit>
+      <trans-unit id="cMGTcxo" resname="billet(s) de session enregistré(s)">
+        <source>billet(s) de session enregistré(s)</source>
+        <target>__billet(s) de session enregistré(s)</target>
+      </trans-unit>
+      <trans-unit id="8Z4poiM" resname="Billet de session">
+        <source>Billet de session</source>
+        <target>__Billet de session</target>
+      </trans-unit>
+      <trans-unit id="APnFM0V" resname="Ajouter">
+        <source>Ajouter</source>
+        <target>__Ajouter</target>
+      </trans-unit>
+      <trans-unit id="teUC5rO" resname="dans la facture">
+        <source>dans la facture</source>
+        <target>__dans la facture</target>
+      </trans-unit>
+      <trans-unit id="hc76GrZ" resname="Ajouter dans la facture">
+        <source>Ajouter dans la facture</source>
+        <target>__Ajouter dans la facture</target>
+      </trans-unit>
+      <trans-unit id="F42zvIQ" resname="Modification d'un billet de session">
+        <source>Modification d'un billet de session</source>
+        <target>__Modification d'un billet de session</target>
+      </trans-unit>
+      <trans-unit id="QHdHLVt" resname="Enregistrement d'un billet de session">
+        <source>Enregistrement d'un billet de session</source>
+        <target>__Enregistrement d'un billet de session</target>
+      </trans-unit>
+      <trans-unit id="1BuNba2" resname="Afficher les billets de session">
+        <source>Afficher les billets de session</source>
+        <target>__Afficher les billets de session</target>
+      </trans-unit>
+      <trans-unit id="NNc1IOL" resname="Modification d'un billet de session :">
+        <source>Modification d'un billet de session :</source>
+        <target>__Modification d'un billet de session :</target>
+      </trans-unit>
+      <trans-unit id="dcR2lkb" resname="Veuillez saisir un billet de session !">
+        <source>Veuillez saisir un billet de session !</source>
+        <target>__Veuillez saisir un billet de session !</target>
+      </trans-unit>
+      <trans-unit id="3h2kod6" resname="Veuillez saisir le prix!">
+        <source>Veuillez saisir le prix!</source>
+        <target>__Veuillez saisir le prix!</target>
+      </trans-unit>
+      <trans-unit id="6xVqpS2" resname="Veuillez sélectionner une spécialité !">
+        <source>Veuillez sélectionner une spécialité !</source>
+        <target>__Veuillez sélectionner une spécialité !</target>
+      </trans-unit>
+      <trans-unit id="__o5v7f" resname="Recettes des produits du jour">
+        <source>Recettes des produits du jour</source>
+        <target>__Recettes des produits du jour</target>
+      </trans-unit>
+      <trans-unit id="iDKKlS6" resname="Recettes des produits d'aujourd'hui">
+        <source>Recettes des produits d'aujourd'hui</source>
+        <target>__Recettes des produits d'aujourd'hui</target>
+      </trans-unit>
+      <trans-unit id="1e7.Rwk" resname="enregistrée(s)">
+        <source>enregistrée(s)</source>
+        <target>__enregistrée(s)</target>
+      </trans-unit>
+      <trans-unit id="TjVgQxs" resname="Caissière">
+        <source>Caissière</source>
+        <target>__Caissière</target>
+      </trans-unit>
+      <trans-unit id="_kYlngv" resname="Type Produit">
+        <source>Type Produit</source>
+        <target>__Type Produit</target>
+      </trans-unit>
+      <trans-unit id="ViuxV1e" resname="Nombre">
+        <source>Nombre</source>
+        <target>__Nombre</target>
+      </trans-unit>
+      <trans-unit id="lHzAfis" resname="Montant">
+        <source>Montant</source>
+        <target>__Montant</target>
+      </trans-unit>
+      <trans-unit id="9iOXrqu" resname="Recettes des kits du jour">
+        <source>Recettes des kits du jour</source>
+        <target>__Recettes des kits du jour</target>
+      </trans-unit>
+      <trans-unit id="K8KwmAR" resname="Recettes des kits d'aujourd'hui">
+        <source>Recettes des kits d'aujourd'hui</source>
+        <target>__Recettes des kits d'aujourd'hui</target>
+      </trans-unit>
+      <trans-unit id="og4J6of" resname="Les factures du jour">
+        <source>Les factures du jour</source>
+        <target>__Les factures du jour</target>
+      </trans-unit>
+      <trans-unit id="AuE7zXQ" resname="Factures d'aujourd'hui">
+        <source>Factures d'aujourd'hui</source>
+        <target>__Factures d'aujourd'hui</target>
+      </trans-unit>
+      <trans-unit id="A90kHPO" resname="facture(s) enregistrée(s)">
+        <source>facture(s) enregistrée(s)</source>
+        <target>__facture(s) enregistrée(s)</target>
+      </trans-unit>
+      <trans-unit id="OTyiarE" resname="Référence">
+        <source>Référence</source>
+        <target>__Référence</target>
+      </trans-unit>
+      <trans-unit id="g1BD7I5" resname="Patient">
+        <source>Patient</source>
+        <target>__Patient</target>
+      </trans-unit>
+      <trans-unit id="XZ6eROG" resname="Paiement">
+        <source>Paiement</source>
+        <target>__Paiement</target>
+      </trans-unit>
+      <trans-unit id="3uN3z9j" resname="Statut">
+        <source>Statut</source>
+        <target>__Statut</target>
+      </trans-unit>
+      <trans-unit id="s.yd5Sb" resname="à">
+        <source>à</source>
+        <target>__à</target>
+      </trans-unit>
+      <trans-unit id="EClUiRX" resname="Recettes d'aujourd'hui">
+        <source>Recettes d'aujourd'hui</source>
+        <target>__Recettes d'aujourd'hui</target>
+      </trans-unit>
+      <trans-unit id="YTTV3Dh" resname="Net à payer">
+        <source>Net à payer</source>
+        <target>__Net à payer</target>
+      </trans-unit>
+      <trans-unit id="o6CeGI4" resname="Avance">
+        <source>Avance</source>
+        <target>__Avance</target>
+      </trans-unit>
+      <trans-unit id="6zvUgSe" resname="Reste">
+        <source>Reste</source>
+        <target>__Reste</target>
+      </trans-unit>
+      <trans-unit id="BnEUA2U" resname="Veuillez saisir la date du jour dont vous voulez afficher les recettes">
+        <source>Veuillez saisir la date du jour dont vous voulez afficher les recettes</source>
+        <target>__Veuillez saisir la date du jour dont vous voulez afficher les recettes</target>
+      </trans-unit>
+      <trans-unit id="Gd8Mdsu" resname="Veuillez Saisir la période dont vous voulez afficher les recettes">
+        <source>Veuillez Saisir la période dont vous voulez afficher les recettes</source>
+        <target>__Veuillez Saisir la période dont vous voulez afficher les recettes</target>
+      </trans-unit>
+      <trans-unit id="0p4fIRy" resname="Veuillez siair la date de début">
+        <source>Veuillez siair la date de début</source>
+        <target>__Veuillez siair la date de début</target>
+      </trans-unit>
+      <trans-unit id="Pi_r2A9" resname="Veuillez saisir la date de fin">
+        <source>Veuillez saisir la date de fin</source>
+        <target>__Veuillez saisir la date de fin</target>
+      </trans-unit>
+      <trans-unit id="5a2_gei" resname="Afficher">
+        <source>Afficher</source>
+        <target>__Afficher</target>
+      </trans-unit>
+      <trans-unit id="Yxeo71E" resname="Veuillez Saisir la date dont vous voulez afficher les recettes">
+        <source>Veuillez Saisir la date dont vous voulez afficher les recettes</source>
+        <target>__Veuillez Saisir la date dont vous voulez afficher les recettes</target>
+      </trans-unit>
+      <trans-unit id="GurAbZf" resname="Veuillez saisir le date du jour donné">
+        <source>Veuillez saisir le date du jour donné</source>
+        <target>__Veuillez saisir le date du jour donné</target>
+      </trans-unit>
+      <trans-unit id="7BkZ03h" resname="Liste des catégories">
+        <source>Liste des catégories</source>
+        <target>__Liste des catégories</target>
+      </trans-unit>
+      <trans-unit id="q0hLjGE" resname="Tableau de bord de :">
+        <source>Tableau de bord de :</source>
+        <target>__Tableau de bord de :</target>
+      </trans-unit>
+      <trans-unit id="kiNWOKu" resname="Ajouter une categorie">
+        <source>Ajouter une categorie</source>
+        <target>__Ajouter une categorie</target>
+      </trans-unit>
+      <trans-unit id="evdmJFL" resname="Catégorie(s) enregistrée(s)">
+        <source>Catégorie(s) enregistrée(s)</source>
+        <target>__Catégorie(s) enregistrée(s)</target>
+      </trans-unit>
+      <trans-unit id="6BxD.3W" resname="catégorie(s) enregistrée(s)">
+        <source>catégorie(s) enregistrée(s)</source>
+        <target>__catégorie(s) enregistrée(s)</target>
+      </trans-unit>
+      <trans-unit id="SxUSCLz" resname="Catégories">
+        <source>Catégories</source>
+        <target>__Catégories</target>
+      </trans-unit>
+      <trans-unit id="LIu..zj" resname="Nombre de sous-catégories">
+        <source>Nombre de sous-catégories</source>
+        <target>__Nombre de sous-catégories</target>
+      </trans-unit>
+      <trans-unit id="tTDHutC" resname="Voulez-vous vraiment supprimer cette catégorie ?">
+        <source>Voulez-vous vraiment supprimer cette catégorie ?</source>
+        <target>__Voulez-vous vraiment supprimer cette catégorie ?</target>
+      </trans-unit>
+      <trans-unit id="UIePHsP" resname="Avertissement !">
+        <source>Avertissement !</source>
+        <target>__Avertissement !</target>
+      </trans-unit>
+      <trans-unit id="CpBAdjn" resname="Oui">
+        <source>Oui</source>
+        <target>__Oui</target>
+      </trans-unit>
+      <trans-unit id="f2JJawy" resname="Non">
+        <source>Non</source>
+        <target>__Non</target>
+      </trans-unit>
+      <trans-unit id="usiU3bR" resname="Modification d'une categorie">
+        <source>Modification d'une categorie</source>
+        <target>__Modification d'une categorie</target>
+      </trans-unit>
+      <trans-unit id="ZVT28x5" resname="Enregistrement d'une categorie">
+        <source>Enregistrement d'une categorie</source>
+        <target>__Enregistrement d'une categorie</target>
+      </trans-unit>
+      <trans-unit id="YTYeaou" resname="Afficher les catégories">
+        <source>Afficher les catégories</source>
+        <target>__Afficher les catégories</target>
+      </trans-unit>
+      <trans-unit id="0jGf9yw" resname="Modification de la catégorie :">
+        <source>Modification de la catégorie :</source>
+        <target>__Modification de la catégorie :</target>
+      </trans-unit>
+      <trans-unit id="aKU0H8a" resname="Catégorie">
+        <source>Catégorie</source>
+        <target>__Catégorie</target>
+      </trans-unit>
+      <trans-unit id="MwTKyrz" resname="Veuillez saisir une catégorie !">
+        <source>Veuillez saisir une catégorie !</source>
+        <target>__Veuillez saisir une catégorie !</target>
+      </trans-unit>
+      <trans-unit id="utmRLWD" resname="Ajouter une chambre">
+        <source>Ajouter une chambre</source>
+        <target>__Ajouter une chambre</target>
+      </trans-unit>
+      <trans-unit id="NboSzok" resname="Modification d'une chambre">
+        <source>Modification d'une chambre</source>
+        <target>__Modification d'une chambre</target>
+      </trans-unit>
+      <trans-unit id="U43_s_m" resname="Enregistrement d'une chambre">
+        <source>Enregistrement d'une chambre</source>
+        <target>__Enregistrement d'une chambre</target>
+      </trans-unit>
+      <trans-unit id="xM874O0" resname="Afficher les chambres">
+        <source>Afficher les chambres</source>
+        <target>__Afficher les chambres</target>
+      </trans-unit>
+      <trans-unit id="EyOaQqb" resname="Modification d'une chambre :">
+        <source>Modification d'une chambre :</source>
+        <target>__Modification d'une chambre :</target>
+      </trans-unit>
+      <trans-unit id="wUV1V3p" resname="Intitulé de la chambre">
+        <source>Intitulé de la chambre</source>
+        <target>__Intitulé de la chambre</target>
+      </trans-unit>
+      <trans-unit id="d6tPI_n" resname="Veuillez saisir l'intitulé de la chambre !">
+        <source>Veuillez saisir l'intitulé de la chambre !</source>
+        <target>__Veuillez saisir l'intitulé de la chambre !</target>
+      </trans-unit>
+      <trans-unit id="uq3fcPt" resname="Type">
+        <source>Type</source>
+        <target>__Type</target>
+      </trans-unit>
+      <trans-unit id="VdaTjoK" resname="Veuillez sélectionner le type">
+        <source>Veuillez sélectionner le type</source>
+        <target>__Veuillez sélectionner le type</target>
+      </trans-unit>
+      <trans-unit id="ZRY8wiE" resname="Batiment">
+        <source>Batiment</source>
+        <target>__Batiment</target>
+      </trans-unit>
+      <trans-unit id="Yhy6PXx" resname="Veuillez sélectionner le bâtiment">
+        <source>Veuillez sélectionner le bâtiment</source>
+        <target>__Veuillez sélectionner le bâtiment</target>
+      </trans-unit>
+      <trans-unit id="K1EE9fw" resname="Niveau">
+        <source>Niveau</source>
+        <target>__Niveau</target>
+      </trans-unit>
+      <trans-unit id="ljoVjeS" resname="Veuillez sélectionner le niveau">
+        <source>Veuillez sélectionner le niveau</source>
+        <target>__Veuillez sélectionner le niveau</target>
+      </trans-unit>
+      <trans-unit id="XkWWrp2" resname="Département">
+        <source>Département</source>
+        <target>__Département</target>
+      </trans-unit>
+      <trans-unit id="Q0nKqBS" resname="Veuillez sélectionner le département">
+        <source>Veuillez sélectionner le département</source>
+        <target>__Veuillez sélectionner le département</target>
+      </trans-unit>
+      <trans-unit id="M4olpSD" resname="Nombre de lit">
+        <source>Nombre de lit</source>
+        <target>__Nombre de lit</target>
+      </trans-unit>
+      <trans-unit id="cG0mKsR" resname="Veuillez saisir le nombre de lit">
+        <source>Veuillez saisir le nombre de lit</source>
+        <target>__Veuillez saisir le nombre de lit</target>
+      </trans-unit>
+      <trans-unit id="ETncfHF" resname="Liste des chambres">
+        <source>Liste des chambres</source>
+        <target>__Liste des chambres</target>
+      </trans-unit>
+      <trans-unit id="sn_l9TE" resname="Les chambres">
+        <source>Les chambres</source>
+        <target>__Les chambres</target>
+      </trans-unit>
+      <trans-unit id="o557p6i" resname="Chambre(s) enregistrée(s)">
+        <source>Chambre(s) enregistrée(s)</source>
+        <target>__Chambre(s) enregistrée(s)</target>
+      </trans-unit>
+      <trans-unit id="qqmLvP4" resname="chambre(s) enregistrée(s)">
+        <source>chambre(s) enregistrée(s)</source>
+        <target>__chambre(s) enregistrée(s)</target>
+      </trans-unit>
+      <trans-unit id="poho7pP" resname="Chambre">
+        <source>Chambre</source>
+        <target>__Chambre</target>
+      </trans-unit>
+      <trans-unit id="0NuLXjZ" resname="Options">
+        <source>Options</source>
+        <target>__Options</target>
+      </trans-unit>
+      <trans-unit id="gPsjJ.J" resname="Lits disponibles">
+        <source>Lits disponibles</source>
+        <target>__Lits disponibles</target>
+      </trans-unit>
+      <trans-unit id="F00NMMM" resname="Ajouter une commande">
+        <source>Ajouter une commande</source>
+        <target>__Ajouter une commande</target>
+      </trans-unit>
+      <trans-unit id="CLkX.0y" resname="Modification d'une commande">
+        <source>Modification d'une commande</source>
+        <target>__Modification d'une commande</target>
+      </trans-unit>
+      <trans-unit id="wGlxyKJ" resname="Enregistrement d'une commande">
+        <source>Enregistrement d'une commande</source>
+        <target>__Enregistrement d'une commande</target>
+      </trans-unit>
+      <trans-unit id="IMl3xnJ" resname="Afficher les commandes">
+        <source>Afficher les commandes</source>
+        <target>__Afficher les commandes</target>
+      </trans-unit>
+      <trans-unit id="vE1cwhG" resname="Modification de la commande :">
+        <source>Modification de la commande :</source>
+        <target>__Modification de la commande :</target>
+      </trans-unit>
+      <trans-unit id="6QrP4TL" resname="Veuillez sélectionner un fournisseur !">
+        <source>Veuillez sélectionner un fournisseur !</source>
+        <target>__Veuillez sélectionner un fournisseur !</target>
+      </trans-unit>
+      <trans-unit id="qwm2pTq" resname="Nos commandes">
+        <source>Nos commandes</source>
+        <target>__Nos commandes</target>
+      </trans-unit>
+      <trans-unit id="XnghDli" resname="Imprimer cette commande">
+        <source>Imprimer cette commande</source>
+        <target>__Imprimer cette commande</target>
+      </trans-unit>
+      <trans-unit id="hIhLzsM" resname="Date d'entrée de la commande">
+        <source>Date d'entrée de la commande</source>
+        <target>__Date d'entrée de la commande</target>
+      </trans-unit>
+      <trans-unit id="NG66rZi" resname="Etat de la commande">
+        <source>Etat de la commande</source>
+        <target>__Etat de la commande</target>
+      </trans-unit>
+      <trans-unit id="ASu3DHF" resname="Livrée">
+        <source>Livrée</source>
+        <target>__Livrée</target>
+      </trans-unit>
+      <trans-unit id="7DACWV_" resname="Pas encore livrée">
+        <source>Pas encore livrée</source>
+        <target>__Pas encore livrée</target>
+      </trans-unit>
+      <trans-unit id="RoQr.m_" resname="Commande de l'Centre de Santé Privé Lucelle">
+        <source>Commande de l'Centre de Santé Privé Lucelle</source>
+        <target>__Commande de l'Centre de Santé Privé Lucelle</target>
+      </trans-unit>
+      <trans-unit id="zExCS1c" resname="Téléphone">
+        <source>Téléphone</source>
+        <target>__Téléphone</target>
+      </trans-unit>
+      <trans-unit id="SbPPeKx" resname="Produits">
+        <source>Produits</source>
+        <target>__Produits</target>
+      </trans-unit>
+      <trans-unit id="YAY0qzp" resname="P.A.">
+        <source>P.A.</source>
+        <target>__P.A.</target>
+      </trans-unit>
+      <trans-unit id="p63327r" resname="P.V.">
+        <source>P.V.</source>
+        <target>__P.V.</target>
+      </trans-unit>
+      <trans-unit id="4TFZ715" resname="Date Préremption">
+        <source>Date Préremption</source>
+        <target>__Date Préremption</target>
+      </trans-unit>
+      <trans-unit id="czkQllh" resname="Prix Total">
+        <source>Prix Total</source>
+        <target>__Prix Total</target>
+      </trans-unit>
+      <trans-unit id="7prt1KP" resname="Liste des commandes">
+        <source>Liste des commandes</source>
+        <target>__Liste des commandes</target>
+      </trans-unit>
+      <trans-unit id="y29sWEA" resname="Liste des commandes enregistrées">
+        <source>Liste des commandes enregistrées</source>
+        <target>__Liste des commandes enregistrées</target>
+      </trans-unit>
+      <trans-unit id="bWdvb4Z" resname="Imprimer toutes les commandes">
+        <source>Imprimer toutes les commandes</source>
+        <target>__Imprimer toutes les commandes</target>
+      </trans-unit>
+      <trans-unit id="qFsSr_j" resname="Commande(s) enregistrée(s)">
+        <source>Commande(s) enregistrée(s)</source>
+        <target>__Commande(s) enregistrée(s)</target>
+      </trans-unit>
+      <trans-unit id="Uh6QKPp" resname="commande(s) enregistrée(s)">
+        <source>commande(s) enregistrée(s)</source>
+        <target>__commande(s) enregistrée(s)</target>
+      </trans-unit>
+      <trans-unit id="MShTKhq" resname="Date Entrée">
+        <source>Date Entrée</source>
+        <target>__Date Entrée</target>
+      </trans-unit>
+      <trans-unit id="1nQlgWf" resname="Imprimer">
+        <source>Imprimer</source>
+        <target>__Imprimer</target>
+      </trans-unit>
+      <trans-unit id="F_ruSJs" resname="Détails">
+        <source>Détails</source>
+        <target>__Détails</target>
+      </trans-unit>
+      <trans-unit id="11RQEUO" resname="Liste des consultations du jour">
+        <source>Liste des consultations du jour</source>
+        <target>__Liste des consultations du jour</target>
+      </trans-unit>
+      <trans-unit id="YbmEtcM" resname="Liste des consultations">
+        <source>Liste des consultations</source>
+        <target>__Liste des consultations</target>
+      </trans-unit>
+      <trans-unit id="ZcvtHp1" resname="Les consultations du jour">
+        <source>Les consultations du jour</source>
+        <target>__Les consultations du jour</target>
+      </trans-unit>
+      <trans-unit id=".8CFqWK" resname="Les consultations">
+        <source>Les consultations</source>
+        <target>__Les consultations</target>
+      </trans-unit>
+      <trans-unit id="vlrWKcB" resname="Ajouter une consultation">
+        <source>Ajouter une consultation</source>
+        <target>__Ajouter une consultation</target>
+      </trans-unit>
+      <trans-unit id="PUsEHFa" resname="Consultation(s) enregistrée(s)">
+        <source>Consultation(s) enregistrée(s)</source>
+        <target>__Consultation(s) enregistrée(s)</target>
+      </trans-unit>
+      <trans-unit id="nt7hOh5" resname="consultation(s) enregistrée(s)">
+        <source>consultation(s) enregistrée(s)</source>
+        <target>__consultation(s) enregistrée(s)</target>
+      </trans-unit>
+      <trans-unit id="NA9GMDP" resname="Code">
+        <source>Code</source>
+        <target>__Code</target>
+      </trans-unit>
+      <trans-unit id="nxkM0Ey" resname="Médécin">
+        <source>Médécin</source>
+        <target>__Médécin</target>
+      </trans-unit>
+      <trans-unit id="H5MYkMJ" resname="Prochain RDV">
+        <source>Prochain RDV</source>
+        <target>__Prochain RDV</target>
+      </trans-unit>
+      <trans-unit id="Svqp8eV" resname="Consultation de">
+        <source>Consultation de</source>
+        <target>__Consultation de</target>
+      </trans-unit>
+      <trans-unit id="6og.Oz6" resname="Enregistrement d'une consultation">
+        <source>Enregistrement d'une consultation</source>
+        <target>__Enregistrement d'une consultation</target>
+      </trans-unit>
+      <trans-unit id="69FA11g" resname="Consultation de :">
+        <source>Consultation de :</source>
+        <target>__Consultation de :</target>
+      </trans-unit>
+      <trans-unit id="Xh4ryxY" resname="Examens prescrits">
+        <source>Examens prescrits</source>
+        <target>__Examens prescrits</target>
+      </trans-unit>
+      <trans-unit id="R6loHAb" resname="Anamnèse du patient">
+        <source>Anamnèse du patient</source>
+        <target>__Anamnèse du patient</target>
+      </trans-unit>
+      <trans-unit id="zuyecGI" resname="Veuillez saisir l'anamnèse!">
+        <source>Veuillez saisir l'anamnèse!</source>
+        <target>__Veuillez saisir l'anamnèse!</target>
+      </trans-unit>
+      <trans-unit id="hN0gzx3" resname="Examens">
+        <source>Examens</source>
+        <target>__Examens</target>
+      </trans-unit>
+      <trans-unit id="YhMr5SI" resname="Veuillez sélectionner les examens">
+        <source>Veuillez sélectionner les examens</source>
+        <target>__Veuillez sélectionner les examens</target>
+      </trans-unit>
+      <trans-unit id="OCnJ1u5" resname="Résultats des examens">
+        <source>Résultats des examens</source>
+        <target>__Résultats des examens</target>
+      </trans-unit>
+      <trans-unit id="vZbAb82" resname="Veuillez saisir le résultats des examens !">
+        <source>Veuillez saisir le résultats des examens !</source>
+        <target>__Veuillez saisir le résultats des examens !</target>
+      </trans-unit>
+      <trans-unit id="1wWs4S_" resname="Veuillez saisir le diagnostic !">
+        <source>Veuillez saisir le diagnostic !</source>
+        <target>__Veuillez saisir le diagnostic !</target>
+      </trans-unit>
+      <trans-unit id="TbK.HEs" resname="Veuillez saisir l'ordonnance !">
+        <source>Veuillez saisir l'ordonnance !</source>
+        <target>__Veuillez saisir l'ordonnance !</target>
+      </trans-unit>
+      <trans-unit id="Pv2cFf9" resname="Details de la consultation :">
+        <source>Details de la consultation :</source>
+        <target>__Details de la consultation :</target>
+      </trans-unit>
+      <trans-unit id="a4dl4C_" resname="Prendre les parametres">
+        <source>Prendre les parametres</source>
+        <target>__Prendre les parametres</target>
+      </trans-unit>
+      <trans-unit id="g1OMWXk" resname="Anamnèse">
+        <source>Anamnèse</source>
+        <target>__Anamnèse</target>
+      </trans-unit>
+      <trans-unit id="G4l.6ro" resname="Envoie res résultats de">
+        <source>Envoie res résultats de</source>
+        <target>__Envoie res résultats de</target>
+      </trans-unit>
+      <trans-unit id="h.M6Ghi" resname="Envoie des résultats">
+        <source>Envoie des résultats</source>
+        <target>__Envoie des résultats</target>
+      </trans-unit>
+      <trans-unit id="xOX_Quk" resname="Envoie des résultats de :">
+        <source>Envoie des résultats de :</source>
+        <target>__Envoie des résultats de :</target>
+      </trans-unit>
+      <trans-unit id="HHzSBWh" resname="Veuillez séletionner le fichier des résultats !">
+        <source>Veuillez séletionner le fichier des résultats !</source>
+        <target>__Veuillez séletionner le fichier des résultats !</target>
+      </trans-unit>
+      <trans-unit id="eQdSCfK" resname="Envoyer">
+        <source>Envoyer</source>
+        <target>__Envoyer</target>
+      </trans-unit>
+      <trans-unit id="s0WCsaJ" resname="Les examens du jour">
+        <source>Les examens du jour</source>
+        <target>__Les examens du jour</target>
+      </trans-unit>
+      <trans-unit id="BWRO4RP" resname="Liste des examens">
+        <source>Liste des examens</source>
+        <target>__Liste des examens</target>
+      </trans-unit>
+      <trans-unit id="uhwEdRi" resname="Les examens">
+        <source>Les examens</source>
+        <target>__Les examens</target>
+      </trans-unit>
+      <trans-unit id="SOvYmZC" resname="Ajouter une examen">
+        <source>Ajouter une examen</source>
+        <target>__Ajouter une examen</target>
+      </trans-unit>
+      <trans-unit id="jcXYkxb" resname="examen(s) enregistrée(s)">
+        <source>examen(s) enregistrée(s)</source>
+        <target>__examen(s) enregistrée(s)</target>
+      </trans-unit>
+      <trans-unit id="qwM2tZD" resname="Paramètres pris par :">
+        <source>Paramètres pris par :</source>
+        <target>__Paramètres pris par :</target>
+      </trans-unit>
+      <trans-unit id="yEvWBe5" resname="Consulté par :">
+        <source>Consulté par :</source>
+        <target>__Consulté par :</target>
+      </trans-unit>
+      <trans-unit id="Ksf0IZL" resname="Télécharger les résultats">
+        <source>Télécharger les résultats</source>
+        <target>__Télécharger les résultats</target>
+      </trans-unit>
+      <trans-unit id="ro._9E2" resname="Déposer les résultats des examens">
+        <source>Déposer les résultats des examens</source>
+        <target>__Déposer les résultats des examens</target>
+      </trans-unit>
+      <trans-unit id="ee0u3Sy" resname="Parcours de :">
+        <source>Parcours de :</source>
+        <target>__Parcours de :</target>
+      </trans-unit>
+      <trans-unit id="Y.qjuEN" resname="Imprimer le dossier">
+        <source>Imprimer le dossier</source>
+        <target>__Imprimer le dossier</target>
+      </trans-unit>
+      <trans-unit id="MdNHlSF" resname="Date prise des paramètres">
+        <source>Date prise des paramètres</source>
+        <target>__Date prise des paramètres</target>
+      </trans-unit>
+      <trans-unit id="_nGvmFJ" resname="Pas encore consulté(e)">
+        <source>Pas encore consulté(e)</source>
+        <target>__Pas encore consulté(e)</target>
+      </trans-unit>
+      <trans-unit id="mcQKtAW" resname="Date">
+        <source>Date</source>
+        <target>__Date</target>
+      </trans-unit>
+      <trans-unit id="6slvHvA" resname="Afficher les résultats">
+        <source>Afficher les résultats</source>
+        <target>__Afficher les résultats</target>
+      </trans-unit>
+      <trans-unit id="NhQ9qLq" resname="Résultats examen encore attendus !">
+        <source>Résultats examen encore attendus !</source>
+        <target>__Résultats examen encore attendus !</target>
+      </trans-unit>
+      <trans-unit id="pBtXX7x" resname="Prise de paramètres et Consultations">
+        <source>Prise de paramètres et Consultations</source>
+        <target>__Prise de paramètres et Consultations</target>
+      </trans-unit>
+      <trans-unit id="Ifm9DJN" resname="Modification d'une consultation">
+        <source>Modification d'une consultation</source>
+        <target>__Modification d'une consultation</target>
+      </trans-unit>
+      <trans-unit id="m2M5kmG" resname="Afficher les consultations jour">
+        <source>Afficher les consultations jour</source>
+        <target>__Afficher les consultations jour</target>
+      </trans-unit>
+      <trans-unit id="DqnL7VC" resname="Afficher les consultations">
+        <source>Afficher les consultations</source>
+        <target>__Afficher les consultations</target>
+      </trans-unit>
+      <trans-unit id="FqD7MyO" resname="Modification d'une consultation :">
+        <source>Modification d'une consultation :</source>
+        <target>__Modification d'une consultation :</target>
+      </trans-unit>
+      <trans-unit id="Q.FTFiu" resname="Veuillez sélectionner un patient !">
+        <source>Veuillez sélectionner un patient !</source>
+        <target>__Veuillez sélectionner un patient !</target>
+      </trans-unit>
+      <trans-unit id="baeVqGZ" resname="Genre">
+        <source>Genre</source>
+        <target>__Genre</target>
+      </trans-unit>
+      <trans-unit id="00AKstj" resname="--Choisir le genre--">
+        <source>--Choisir le genre--</source>
+        <target>__--Choisir le genre--</target>
+      </trans-unit>
+      <trans-unit id="jWefTKH" resname="Veuillez sélectionner le genre">
+        <source>Veuillez sélectionner le genre</source>
+        <target>__Veuillez sélectionner le genre</target>
+      </trans-unit>
+      <trans-unit id="gJMzXlY" resname="Veuillez saisir la température !">
+        <source>Veuillez saisir la température !</source>
+        <target>__Veuillez saisir la température !</target>
+      </trans-unit>
+      <trans-unit id="FnRWn0e" resname="Veuillez saisir la tension !">
+        <source>Veuillez saisir la tension !</source>
+        <target>__Veuillez saisir la tension !</target>
+      </trans-unit>
+      <trans-unit id="3.L772b" resname="Veuillez saisir le poids !">
+        <source>Veuillez saisir le poids !</source>
+        <target>__Veuillez saisir le poids !</target>
+      </trans-unit>
+      <trans-unit id="ETODCOv" resname="Sera consulté par">
+        <source>Sera consulté par</source>
+        <target>__Sera consulté par</target>
+      </trans-unit>
+      <trans-unit id="9yeMs.n" resname="Sélectionner un médecin">
+        <source>Sélectionner un médecin</source>
+        <target>__Sélectionner un médecin</target>
+      </trans-unit>
+      <trans-unit id="br0tJgA" resname="Veuillez sélectionner un medecin">
+        <source>Veuillez sélectionner un medecin</source>
+        <target>__Veuillez sélectionner un medecin</target>
+      </trans-unit>
+      <trans-unit id="idcquLK" resname="Liste des échographies">
+        <source>Liste des échographies</source>
+        <target>__Liste des échographies</target>
+      </trans-unit>
+      <trans-unit id="J1bBm.i" resname="Les échographies">
+        <source>Les échographies</source>
+        <target>__Les échographies</target>
+      </trans-unit>
+      <trans-unit id="k4Z8jWH" resname="Ajouter une échographie">
+        <source>Ajouter une échographie</source>
+        <target>__Ajouter une échographie</target>
+      </trans-unit>
+      <trans-unit id="PcWE1zW" resname="Echographie(s) enregistrée(s)">
+        <source>Echographie(s) enregistrée(s)</source>
+        <target>__Echographie(s) enregistrée(s)</target>
+      </trans-unit>
+      <trans-unit id="oLp8u_S" resname="échographie(s) enregistrée(s)">
+        <source>échographie(s) enregistrée(s)</source>
+        <target>__échographie(s) enregistrée(s)</target>
+      </trans-unit>
+      <trans-unit id="xcXtixT" resname="Echographie">
+        <source>Echographie</source>
+        <target>__Echographie</target>
+      </trans-unit>
+      <trans-unit id="7a6Fs8u" resname="Modification d'une échographie">
+        <source>Modification d'une échographie</source>
+        <target>__Modification d'une échographie</target>
+      </trans-unit>
+      <trans-unit id="L8pMBEx" resname="Enregistrement d'une échographie">
+        <source>Enregistrement d'une échographie</source>
+        <target>__Enregistrement d'une échographie</target>
+      </trans-unit>
+      <trans-unit id="ezCmCv2" resname="Afficher les échographies">
+        <source>Afficher les échographies</source>
+        <target>__Afficher les échographies</target>
+      </trans-unit>
+      <trans-unit id="JFh.UVC" resname="Modification d'une échographie :">
+        <source>Modification d'une échographie :</source>
+        <target>__Modification d'une échographie :</target>
+      </trans-unit>
+      <trans-unit id="91LmqQn" resname="Intitulé de échographie">
+        <source>Intitulé de échographie</source>
+        <target>__Intitulé de échographie</target>
+      </trans-unit>
+      <trans-unit id="6btViAK" resname="Veuillez saisir une échographie !">
+        <source>Veuillez saisir une échographie !</source>
+        <target>__Veuillez saisir une échographie !</target>
+      </trans-unit>
+      <trans-unit id="f2ticfW" resname="Ajouter un examen">
+        <source>Ajouter un examen</source>
+        <target>__Ajouter un examen</target>
+      </trans-unit>
+      <trans-unit id="idynoXQ" resname="Modification d'un examen">
+        <source>Modification d'un examen</source>
+        <target>__Modification d'un examen</target>
+      </trans-unit>
+      <trans-unit id="VCEbsXT" resname="Enregistrement d'un examen">
+        <source>Enregistrement d'un examen</source>
+        <target>__Enregistrement d'un examen</target>
+      </trans-unit>
+      <trans-unit id="FaJbnc4" resname="Afficher les examens">
+        <source>Afficher les examens</source>
+        <target>__Afficher les examens</target>
+      </trans-unit>
+      <trans-unit id="zyBLCqs" resname="Modification de l'examen :">
+        <source>Modification de l'examen :</source>
+        <target>__Modification de l'examen :</target>
+      </trans-unit>
+      <trans-unit id="Tm9Npxz" resname="Nom de l'examen">
+        <source>Nom de l'examen</source>
+        <target>__Nom de l'examen</target>
+      </trans-unit>
+      <trans-unit id="JlNps1_" resname="Veuillez saisir le nom de l'examen !">
+        <source>Veuillez saisir le nom de l'examen !</source>
+        <target>__Veuillez saisir le nom de l'examen !</target>
+      </trans-unit>
+      <trans-unit id="t8O0NGY" resname="Prix de l'examen">
+        <source>Prix de l'examen</source>
+        <target>__Prix de l'examen</target>
+      </trans-unit>
+      <trans-unit id="z9d9w26" resname="Veuillez saisir le prix de l'examen !">
+        <source>Veuillez saisir le prix de l'examen !</source>
+        <target>__Veuillez saisir le prix de l'examen !</target>
+      </trans-unit>
+      <trans-unit id="D6pmCjf" resname="Examen(s) enregistré(s)">
+        <source>Examen(s) enregistré(s)</source>
+        <target>__Examen(s) enregistré(s)</target>
+      </trans-unit>
+      <trans-unit id="5FeLQyT" resname="Imprimer tous les examens">
+        <source>Imprimer tous les examens</source>
+        <target>__Imprimer tous les examens</target>
+      </trans-unit>
+      <trans-unit id="bQjEmz1" resname="examen(s) enregistré(s)">
+        <source>examen(s) enregistré(s)</source>
+        <target>__examen(s) enregistré(s)</target>
+      </trans-unit>
+      <trans-unit id="QeV_Tht" resname="Ajout avance à la facture :">
+        <source>Ajout avance à la facture :</source>
+        <target>__Ajout avance à la facture :</target>
+      </trans-unit>
+      <trans-unit id="lZpF1E5" resname="de">
+        <source>de</source>
+        <target>__de</target>
+      </trans-unit>
+      <trans-unit id="ScLYsBw" resname="Les factures">
+        <source>Les factures</source>
+        <target>__Les factures</target>
+      </trans-unit>
+      <trans-unit id="97W9axB" resname="Les produits">
+        <source>Les produits</source>
+        <target>__Les produits</target>
+      </trans-unit>
+      <trans-unit id="XSjHOR1" resname="Net à payer :">
+        <source>Net à payer :</source>
+        <target>__Net à payer :</target>
+      </trans-unit>
+      <trans-unit id="KKOyFbD" resname="Avance :">
+        <source>Avance :</source>
+        <target>__Avance :</target>
+      </trans-unit>
+      <trans-unit id="JQJzOV6" resname="Reste :">
+        <source>Reste :</source>
+        <target>__Reste :</target>
+      </trans-unit>
+      <trans-unit id="C0iF0hr" resname="Avance de la facture">
+        <source>Avance de la facture</source>
+        <target>__Avance de la facture</target>
+      </trans-unit>
+      <trans-unit id="w0EYVVc" resname="Veuillez saisir l'avance">
+        <source>Veuillez saisir l'avance</source>
+        <target>__Veuillez saisir l'avance</target>
+      </trans-unit>
+      <trans-unit id="y6MXo6s" resname="Verser l'avance">
+        <source>Verser l'avance</source>
+        <target>__Verser l'avance</target>
+      </trans-unit>
+      <trans-unit id="wTr4cNN" resname="Confirmation Facture">
+        <source>Confirmation Facture</source>
+        <target>__Confirmation Facture</target>
+      </trans-unit>
+      <trans-unit id="qqF9XXm" resname="Confirmation facture">
+        <source>Confirmation facture</source>
+        <target>__Confirmation facture</target>
+      </trans-unit>
+      <trans-unit id="H3SOvCR" resname="Nom du patient pris en charge">
+        <source>Nom du patient pris en charge</source>
+        <target>__Nom du patient pris en charge</target>
+      </trans-unit>
+      <trans-unit id="_dNVw5g" resname="Veuillez sélectionner le nom du patien pris en charge">
+        <source>Veuillez sélectionner le nom du patien pris en charge</source>
+        <target>__Veuillez sélectionner le nom du patien pris en charge</target>
+      </trans-unit>
+      <trans-unit id="KF7QN3u" resname="Contact du client">
+        <source>Contact du client</source>
+        <target>__Contact du client</target>
+      </trans-unit>
+      <trans-unit id="ow9C6Ju" resname="Veuillez saisir le contact du client">
+        <source>Veuillez saisir le contact du client</source>
+        <target>__Veuillez saisir le contact du client</target>
+      </trans-unit>
+      <trans-unit id="ugcmOS2" resname="Mode de paiement">
+        <source>Mode de paiement</source>
+        <target>__Mode de paiement</target>
+      </trans-unit>
+      <trans-unit id=".aZZrNC" resname="Payer">
+        <source>Payer</source>
+        <target>__Payer</target>
+      </trans-unit>
+      <trans-unit id="_do2Q.S" resname="AVANCE">
+        <source>AVANCE</source>
+        <target>__AVANCE</target>
+      </trans-unit>
+      <trans-unit id="1se6dvD" resname="RESTE">
+        <source>RESTE</source>
+        <target>__RESTE</target>
+      </trans-unit>
+      <trans-unit id="IXwHDCi" resname="Nos factures">
+        <source>Nos factures</source>
+        <target>__Nos factures</target>
+      </trans-unit>
+      <trans-unit id="mEIZc2A" resname="Factures annulées">
+        <source>Factures annulées</source>
+        <target>__Factures annulées</target>
+      </trans-unit>
+      <trans-unit id="cyRMGaj" resname="Les Factures">
+        <source>Les Factures</source>
+        <target>__Les Factures</target>
+      </trans-unit>
+      <trans-unit id="hVfIlkM" resname="Facture(s) annulée(s)">
+        <source>Facture(s) annulée(s)</source>
+        <target>__Facture(s) annulée(s)</target>
+      </trans-unit>
+      <trans-unit id="CSZLOMC" resname="Imprimer les factures du jour">
+        <source>Imprimer les factures du jour</source>
+        <target>__Imprimer les factures du jour</target>
+      </trans-unit>
+      <trans-unit id="iMXURSJ" resname="Imprimer toutes les factures">
+        <source>Imprimer toutes les factures</source>
+        <target>__Imprimer toutes les factures</target>
+      </trans-unit>
+      <trans-unit id="0HsjCSn" resname="facture(s) annulée(s)">
+        <source>facture(s) annulée(s)</source>
+        <target>__facture(s) annulée(s)</target>
+      </trans-unit>
+      <trans-unit id="_a2PdWY" resname="--Imprimer un etat des factures--">
+        <source>--Imprimer un etat des factures--</source>
+        <target>__--Imprimer un etat des factures--</target>
+      </trans-unit>
+      <trans-unit id="IGU2Kmj" resname="Champ requis">
+        <source>Champ requis</source>
+        <target>__Champ requis</target>
+      </trans-unit>
+      <trans-unit id="z3KPpvw" resname="Factures">
+        <source>Factures</source>
+        <target>__Factures</target>
+      </trans-unit>
+      <trans-unit id="hlocxfF" resname="Liste des fournisseurs">
+        <source>Liste des fournisseurs</source>
+        <target>__Liste des fournisseurs</target>
+      </trans-unit>
+      <trans-unit id="CnC6oqR" resname="Fournisseurs enregistrés">
+        <source>Fournisseurs enregistrés</source>
+        <target>__Fournisseurs enregistrés</target>
+      </trans-unit>
+      <trans-unit id="gh.SPwX" resname="Ajouter un fournisseur">
+        <source>Ajouter un fournisseur</source>
+        <target>__Ajouter un fournisseur</target>
+      </trans-unit>
+      <trans-unit id="SFcDABS" resname="Fournisseur(s) enregistrée(s)">
+        <source>Fournisseur(s) enregistrée(s)</source>
+        <target>__Fournisseur(s) enregistrée(s)</target>
+      </trans-unit>
+      <trans-unit id="UZr0MLZ" resname="fournisseur(s) enregistré(s)">
+        <source>fournisseur(s) enregistré(s)</source>
+        <target>__fournisseur(s) enregistré(s)</target>
+      </trans-unit>
+      <trans-unit id="AW7FhQY" resname="Fournisseurs">
+        <source>Fournisseurs</source>
+        <target>__Fournisseurs</target>
+      </trans-unit>
+      <trans-unit id="DjEYoku" resname="Commandes">
+        <source>Commandes</source>
+        <target>__Commandes</target>
+      </trans-unit>
+      <trans-unit id="zndrc1A" resname="commande(s)">
+        <source>commande(s)</source>
+        <target>__commande(s)</target>
+      </trans-unit>
+      <trans-unit id="bdJwfYG" resname="Modification d'un fournisseur">
+        <source>Modification d'un fournisseur</source>
+        <target>__Modification d'un fournisseur</target>
+      </trans-unit>
+      <trans-unit id=".M4H6vN" resname="Enregistrement d'un fournisseur">
+        <source>Enregistrement d'un fournisseur</source>
+        <target>__Enregistrement d'un fournisseur</target>
+      </trans-unit>
+      <trans-unit id="gCSRd77" resname="Afficher les fournisseurs">
+        <source>Afficher les fournisseurs</source>
+        <target>__Afficher les fournisseurs</target>
+      </trans-unit>
+      <trans-unit id="H6bwhvF" resname="Modification du fournisseur :">
+        <source>Modification du fournisseur :</source>
+        <target>__Modification du fournisseur :</target>
+      </trans-unit>
+      <trans-unit id="J6JnG4h" resname="Veuillez saisir le nom du fournisseur !">
+        <source>Veuillez saisir le nom du fournisseur !</source>
+        <target>__Veuillez saisir le nom du fournisseur !</target>
+      </trans-unit>
+      <trans-unit id="lCSoHW6" resname="Veuillez saisir l'adresse du fournisseur !">
+        <source>Veuillez saisir l'adresse du fournisseur !</source>
+        <target>__Veuillez saisir l'adresse du fournisseur !</target>
+      </trans-unit>
+      <trans-unit id="PoKFeqg" resname="Veuillez saisir le contact du fournisseur">
+        <source>Veuillez saisir le contact du fournisseur</source>
+        <target>__Veuillez saisir le contact du fournisseur</target>
+      </trans-unit>
+      <trans-unit id="m4a7cYV" resname="Impression">
+        <source>Impression</source>
+        <target>__Impression</target>
+      </trans-unit>
+      <trans-unit id="kXLo7sm" resname="Bonjour">
+        <source>Bonjour</source>
+        <target>__Bonjour</target>
+      </trans-unit>
+      <trans-unit id="YsoFdux" resname="Recettes du jour">
+        <source>Recettes du jour</source>
+        <target>__Recettes du jour</target>
+      </trans-unit>
+      <trans-unit id="8SPj4ao" resname="Régler une facture">
+        <source>Régler une facture</source>
+        <target>__Régler une facture</target>
+      </trans-unit>
+      <trans-unit id="J8Hh6.N" resname="Imprimer la fiche de vente">
+        <source>Imprimer la fiche de vente</source>
+        <target>__Imprimer la fiche de vente</target>
+      </trans-unit>
+      <trans-unit id="s1CZ3JI" resname="Manuel d'utilisation">
+        <source>Manuel d'utilisation</source>
+        <target>__Manuel d'utilisation</target>
+      </trans-unit>
+      <trans-unit id="3B9r.in" resname="Nombre :">
+        <source>Nombre :</source>
+        <target>__Nombre :</target>
+      </trans-unit>
+      <trans-unit id="jMZJXG_" resname="Recette :">
+        <source>Recette :</source>
+        <target>__Recette :</target>
+      </trans-unit>
+      <trans-unit id="N1lZQmD" resname="PRIS EN CHARGE">
+        <source>PRIS EN CHARGE</source>
+        <target>__PRIS EN CHARGE</target>
+      </trans-unit>
+      <trans-unit id="cKIilHo" resname="CRÉDIT">
+        <source>CRÉDIT</source>
+        <target>__CRÉDIT</target>
+      </trans-unit>
+      <trans-unit id="v4scONo" resname="Toutes les factures">
+        <source>Toutes les factures</source>
+        <target>__Toutes les factures</target>
+      </trans-unit>
+      <trans-unit id="rA5fyTa" resname="Tableau de bord">
+        <source>Tableau de bord</source>
+        <target>__Tableau de bord</target>
+      </trans-unit>
+      <trans-unit id="MaqsJAO" resname="Il vous reste">
+        <source>Il vous reste</source>
+        <target>__Il vous reste</target>
+      </trans-unit>
+      <trans-unit id="wD2xEMw" resname="jours d'utilisation">
+        <source>jours d'utilisation</source>
+        <target>__jours d'utilisation</target>
+      </trans-unit>
+      <trans-unit id="jVYcTGo" resname="Toutes les recettes">
+        <source>Toutes les recettes</source>
+        <target>__Toutes les recettes</target>
+      </trans-unit>
+      <trans-unit id="uj5blBY" resname="Imprimer l'état du stock">
+        <source>Imprimer l'état du stock</source>
+        <target>__Imprimer l'état du stock</target>
+      </trans-unit>
+      <trans-unit id="xpICbnd" resname="Total commandes">
+        <source>Total commandes</source>
+        <target>__Total commandes</target>
+      </trans-unit>
+      <trans-unit id="Vfz32Mr" resname="Produits périmés nas 3 mois">
+        <source>Produits périmés nas 3 mois</source>
+        <target>__Produits périmés nas 3 mois</target>
+      </trans-unit>
+      <trans-unit id="AiYi3_t" resname="Produits périmés">
+        <source>Produits périmés</source>
+        <target>__Produits périmés</target>
+      </trans-unit>
+      <trans-unit id="YSHyAf3" resname="Bienvenue">
+        <source>Bienvenue</source>
+        <target>__Bienvenue</target>
+      </trans-unit>
+      <trans-unit id="Yh5ZTAs" resname="Total Lots">
+        <source>Total Lots</source>
+        <target>__Total Lots</target>
+      </trans-unit>
+      <trans-unit id="2liNevT" resname="Total Commandes">
+        <source>Total Commandes</source>
+        <target>__Total Commandes</target>
+      </trans-unit>
+      <trans-unit id="vi4uZVp" resname="Produits périmés dans 3 mois">
+        <source>Produits périmés dans 3 mois</source>
+        <target>__Produits périmés dans 3 mois</target>
+      </trans-unit>
+      <trans-unit id="zTNOCE." resname="Ajouter un produit">
+        <source>Ajouter un produit</source>
+        <target>__Ajouter un produit</target>
+      </trans-unit>
+      <trans-unit id="IvqidwL" resname="Nos Produits">
+        <source>Nos Produits</source>
+        <target>__Nos Produits</target>
+      </trans-unit>
+      <trans-unit id="OudPcER" resname="Nombre de produits">
+        <source>Nombre de produits</source>
+        <target>__Nombre de produits</target>
+      </trans-unit>
+      <trans-unit id="qeYLWtL" resname="Recettes des produits du">
+        <source>Recettes des produits du</source>
+        <target>__Recettes des produits du</target>
+      </trans-unit>
+      <trans-unit id="1h4nhBt" resname="Recettes des produits allant du">
+        <source>Recettes des produits allant du</source>
+        <target>__Recettes des produits allant du</target>
+      </trans-unit>
+      <trans-unit id="YyzS.qc" resname="au">
+        <source>au</source>
+        <target>__au</target>
+      </trans-unit>
+      <trans-unit id="cpYm_Ri" resname="Recettes des kits du">
+        <source>Recettes des kits du</source>
+        <target>__Recettes des kits du</target>
+      </trans-unit>
+      <trans-unit id="jD4v7Fx" resname="Recettes des kits allant du">
+        <source>Recettes des kits allant du</source>
+        <target>__Recettes des kits allant du</target>
+      </trans-unit>
+      <trans-unit id="3TZ6zvm" resname="Les factures du">
+        <source>Les factures du</source>
+        <target>__Les factures du</target>
+      </trans-unit>
+      <trans-unit id="DwEspkw" resname="Les factures allant du">
+        <source>Les factures allant du</source>
+        <target>__Les factures allant du</target>
+      </trans-unit>
+      <trans-unit id="1On9JvD" resname="Factures du">
+        <source>Factures du</source>
+        <target>__Factures du</target>
+      </trans-unit>
+      <trans-unit id="CvJO6br" resname="oPital">
+        <source>oPital</source>
+        <target>__oPital</target>
+      </trans-unit>
+      <trans-unit id="DfXMIED" resname="Lots">
+        <source>Lots</source>
+        <target>__Lots</target>
+      </trans-unit>
+      <trans-unit id="NFsr0Q2" resname="Ajouter un lot">
+        <source>Ajouter un lot</source>
+        <target>__Ajouter un lot</target>
+      </trans-unit>
+      <trans-unit id="vaHWKAR" resname="Afficher les lots">
+        <source>Afficher les lots</source>
+        <target>__Afficher les lots</target>
+      </trans-unit>
+      <trans-unit id="Hzq39R." resname="Afficher les produits">
+        <source>Afficher les produits</source>
+        <target>__Afficher les produits</target>
+      </trans-unit>
+      <trans-unit id="hCHQQix" resname="Afficher les produits seuils">
+        <source>Afficher les produits seuils</source>
+        <target>__Afficher les produits seuils</target>
+      </trans-unit>
+      <trans-unit id="HNk2CN6" resname="Kits">
+        <source>Kits</source>
+        <target>__Kits</target>
+      </trans-unit>
+      <trans-unit id="YEOAGUo" resname="Ajouter un kit">
+        <source>Ajouter un kit</source>
+        <target>__Ajouter un kit</target>
+      </trans-unit>
+      <trans-unit id="mRmq1IK" resname="Afficher les kits">
+        <source>Afficher les kits</source>
+        <target>__Afficher les kits</target>
+      </trans-unit>
+      <trans-unit id="xjEOkJ5" resname="Impressions">
+        <source>Impressions</source>
+        <target>__Impressions</target>
+      </trans-unit>
+      <trans-unit id="ufmpFeQ" resname="Recettes">
+        <source>Recettes</source>
+        <target>__Recettes</target>
+      </trans-unit>
+      <trans-unit id="FDdwUXE" resname="Afficher les recettes">
+        <source>Afficher les recettes</source>
+        <target>__Afficher les recettes</target>
+      </trans-unit>
+      <trans-unit id="LCi2Y1P" resname="Caisses séparées">
+        <source>Caisses séparées</source>
+        <target>__Caisses séparées</target>
+      </trans-unit>
+      <trans-unit id="tnSdt_s" resname="Sociétés, patients &amp; Utilisateurs">
+        <source>Sociétés, patients &amp; Utilisateurs</source>
+        <target><![CDATA[__Sociétés, patients & Utilisateurs]]></target>
+      </trans-unit>
+      <trans-unit id="hm3xaw7" resname="Afficher les sociétés">
+        <source>Afficher les sociétés</source>
+        <target>__Afficher les sociétés</target>
+      </trans-unit>
+      <trans-unit id="LpiYM6M" resname="Afficher les patients">
+        <source>Afficher les patients</source>
+        <target>__Afficher les patients</target>
+      </trans-unit>
+      <trans-unit id="46CSHBL" resname="Lots &amp; produits">
+        <source>Lots &amp; produits</source>
+        <target><![CDATA[__Lots & produits]]></target>
+      </trans-unit>
+      <trans-unit id="QXbUwbN" resname="Fournisseurs &amp; Commandes">
+        <source>Fournisseurs &amp; Commandes</source>
+        <target><![CDATA[__Fournisseurs & Commandes]]></target>
+      </trans-unit>
+      <trans-unit id="XLHoSZ8" resname="Factures &amp; recettes">
+        <source>Factures &amp; recettes</source>
+        <target><![CDATA[__Factures & recettes]]></target>
+      </trans-unit>
+      <trans-unit id="44PBbFL" resname="Afficher les factures">
+        <source>Afficher les factures</source>
+        <target>__Afficher les factures</target>
+      </trans-unit>
+      <trans-unit id="E11RLtt" resname="Afficher les factures annulées">
+        <source>Afficher les factures annulées</source>
+        <target>__Afficher les factures annulées</target>
+      </trans-unit>
+      <trans-unit id="F7ml5X_" resname="Afficher les utilisateurs">
+        <source>Afficher les utilisateurs</source>
+        <target>__Afficher les utilisateurs</target>
+      </trans-unit>
+      <trans-unit id="WpsO9Vw" resname="Tous droits réservés.">
+        <source>Tous droits réservés.</source>
+        <target>__Tous droits réservés.</target>
+      </trans-unit>
+      <trans-unit id="bPzIBk5" resname="Vous êtes connecté(e) sous :">
+        <source>Vous êtes connecté(e) sous :</source>
+        <target>__Vous êtes connecté(e) sous :</target>
+      </trans-unit>
+      <trans-unit id="REWs2yY" resname="Fiches de vente">
+        <source>Fiches de vente</source>
+        <target>__Fiches de vente</target>
+      </trans-unit>
+      <trans-unit id="fIfysRk" resname="Les Produits">
+        <source>Les Produits</source>
+        <target>__Les Produits</target>
+      </trans-unit>
+      <trans-unit id="r67zlDC" resname="Impression des fiches de vente">
+        <source>Impression des fiches de vente</source>
+        <target>__Impression des fiches de vente</target>
+      </trans-unit>
+      <trans-unit id="Hz5DsLB" resname="Fiche de vente du jour">
+        <source>Fiche de vente du jour</source>
+        <target>__Fiche de vente du jour</target>
+      </trans-unit>
+      <trans-unit id="4w6nken" resname="Fiche de vente d'une période donnée">
+        <source>Fiche de vente d'une période donnée</source>
+        <target>__Fiche de vente d'une période donnée</target>
+      </trans-unit>
+      <trans-unit id="l2As5h_" resname="Impression des fiches">
+        <source>Impression des fiches</source>
+        <target>__Impression des fiches</target>
+      </trans-unit>
+      <trans-unit id="fPm9f0_" resname="Les commandes">
+        <source>Les commandes</source>
+        <target>__Les commandes</target>
+      </trans-unit>
+      <trans-unit id="ptRUChZ" resname="Etat du stock">
+        <source>Etat du stock</source>
+        <target>__Etat du stock</target>
+      </trans-unit>
+      <trans-unit id="RLxSz6v" resname="Fiche d'état de vente">
+        <source>Fiche d'état de vente</source>
+        <target>__Fiche d'état de vente</target>
+      </trans-unit>
+      <trans-unit id="eBl9ufH" resname="Imprimer la fiche d'état de vente">
+        <source>Imprimer la fiche d'état de vente</source>
+        <target>__Imprimer la fiche d'état de vente</target>
+      </trans-unit>
+      <trans-unit id="qKBr38c" resname="Fiche d'entrée">
+        <source>Fiche d'entrée</source>
+        <target>__Fiche d'entrée</target>
+      </trans-unit>
+      <trans-unit id="O_79Ap3" resname="Imprimer le fiche d'entrée">
+        <source>Imprimer le fiche d'entrée</source>
+        <target>__Imprimer le fiche d'entrée</target>
+      </trans-unit>
+      <trans-unit id="NCpl6sM" resname="Fiche d'entrée d'une période">
+        <source>Fiche d'entrée d'une période</source>
+        <target>__Fiche d'entrée d'une période</target>
+      </trans-unit>
+      <trans-unit id="Bgklccl" resname="Fiche de vente">
+        <source>Fiche de vente</source>
+        <target>__Fiche de vente</target>
+      </trans-unit>
+      <trans-unit id="Ze9L2Ky" resname="Imprimer le fiche de vente">
+        <source>Imprimer le fiche de vente</source>
+        <target>__Imprimer le fiche de vente</target>
+      </trans-unit>
+      <trans-unit id="FohQim1" resname="Fiche de vente d'une période">
+        <source>Fiche de vente d'une période</source>
+        <target>__Fiche de vente d'une période</target>
+      </trans-unit>
+      <trans-unit id="k.BENQ1" resname="Fiche des produits presque périmés">
+        <source>Fiche des produits presque périmés</source>
+        <target>__Fiche des produits presque périmés</target>
+      </trans-unit>
+      <trans-unit id="tO8AJ1j" resname="Imprimer les produits presque périmés">
+        <source>Imprimer les produits presque périmés</source>
+        <target>__Imprimer les produits presque périmés</target>
+      </trans-unit>
+      <trans-unit id="au3XB3M" resname="Imprimer la fiche des produits périmés">
+        <source>Imprimer la fiche des produits périmés</source>
+        <target>__Imprimer la fiche des produits périmés</target>
+      </trans-unit>
+      <trans-unit id="pQ6SN1p" resname="VOTRE LICENCE A EXPIREE">
+        <source>VOTRE LICENCE A EXPIREE</source>
+        <target>__VOTRE LICENCE A EXPIREE</target>
+      </trans-unit>
+      <trans-unit id="6heMPjc" resname="Consultations du jour">
+        <source>Consultations du jour</source>
+        <target>__Consultations du jour</target>
+      </trans-unit>
+      <trans-unit id="Vgrf1bh" resname="Toutes les consultations">
+        <source>Toutes les consultations</source>
+        <target>__Toutes les consultations</target>
+      </trans-unit>
+      <trans-unit id="pljtJ7A" resname="Mes consultations du jour">
+        <source>Mes consultations du jour</source>
+        <target>__Mes consultations du jour</target>
+      </trans-unit>
+      <trans-unit id="z.1IbeQ" resname="Toutes mes consultations">
+        <source>Toutes mes consultations</source>
+        <target>__Toutes mes consultations</target>
+      </trans-unit>
+      <trans-unit id="gq7huh1" resname="Examens du jour">
+        <source>Examens du jour</source>
+        <target>__Examens du jour</target>
+      </trans-unit>
+      <trans-unit id="bKSkwHc" resname="Tous les Examens">
+        <source>Tous les Examens</source>
+        <target>__Tous les Examens</target>
+      </trans-unit>
+      <trans-unit id="uE.DVRM" resname="Billets de session">
+        <source>Billets de session</source>
+        <target>__Billets de session</target>
+      </trans-unit>
+      <trans-unit id="Kn3_svK" resname="Radio">
+        <source>Radio</source>
+        <target>__Radio</target>
+      </trans-unit>
+      <trans-unit id="wNC26IP" resname="Echographies">
+        <source>Echographies</source>
+        <target>__Echographies</target>
+      </trans-unit>
+      <trans-unit id="VnnfNZh" resname="Caisses séparées du jour">
+        <source>Caisses séparées du jour</source>
+        <target>__Caisses séparées du jour</target>
+      </trans-unit>
+      <trans-unit id="G70bcKY" resname="Caisses séparées d'un jour particulier">
+        <source>Caisses séparées d'un jour particulier</source>
+        <target>__Caisses séparées d'un jour particulier</target>
+      </trans-unit>
+      <trans-unit id="g8HbjV4" resname="Caisses séparées d'une période">
+        <source>Caisses séparées d'une période</source>
+        <target>__Caisses séparées d'une période</target>
+      </trans-unit>
+      <trans-unit id="AVV_Ee1" resname="Afficher les pris en charge">
+        <source>Afficher les pris en charge</source>
+        <target>__Afficher les pris en charge</target>
+      </trans-unit>
+      <trans-unit id="VMGVdPg" resname="D'un jour particulier">
+        <source>D'un jour particulier</source>
+        <target>__D'un jour particulier</target>
+      </trans-unit>
+      <trans-unit id="QWPf6tf" resname="D'une période donnée">
+        <source>D'une période donnée</source>
+        <target>__D'une période donnée</target>
+      </trans-unit>
+      <trans-unit id="bvTbPB3" resname="Données">
+        <source>Données</source>
+        <target>__Données</target>
+      </trans-unit>
+      <trans-unit id="ga_CHeR" resname="Spécialités / Département">
+        <source>Spécialités / Département</source>
+        <target>__Spécialités / Département</target>
+      </trans-unit>
+      <trans-unit id="WTl3OCw" resname="Les utilisateur">
+        <source>Les utilisateur</source>
+        <target>__Les utilisateur</target>
+      </trans-unit>
+      <trans-unit id="U8d4kuq" resname="Les Patients">
+        <source>Les Patients</source>
+        <target>__Les Patients</target>
+      </trans-unit>
+      <trans-unit id="3y4Q_YP" resname="Bâtiments">
+        <source>Bâtiments</source>
+        <target>__Bâtiments</target>
+      </trans-unit>
+      <trans-unit id="jK.RaPI" resname="Types chambre">
+        <source>Types chambre</source>
+        <target>__Types chambre</target>
+      </trans-unit>
+      <trans-unit id="TC2edMF" resname="Modèles véhicules">
+        <source>Modèles véhicules</source>
+        <target>__Modèles véhicules</target>
+      </trans-unit>
+      <trans-unit id="UUVA67G" resname="Ambulances">
+        <source>Ambulances</source>
+        <target>__Ambulances</target>
+      </trans-unit>
+      <trans-unit id="fsAWHdv" resname="Attribution ambulances">
+        <source>Attribution ambulances</source>
+        <target>__Attribution ambulances</target>
+      </trans-unit>
+      <trans-unit id="P9dkQzi" resname="Lots, Produits &amp; Kits">
+        <source>Lots, Produits &amp; Kits</source>
+        <target><![CDATA[__Lots, Produits & Kits]]></target>
+      </trans-unit>
+      <trans-unit id="pPuzvpA" resname="Sociétés">
+        <source>Sociétés</source>
+        <target>__Sociétés</target>
+      </trans-unit>
+      <trans-unit id="LJFF1M." resname="Départements">
+        <source>Départements</source>
+        <target>__Départements</target>
+      </trans-unit>
+      <trans-unit id="Wm0jCIW" resname="Les utilisateurs">
+        <source>Les utilisateurs</source>
+        <target>__Les utilisateurs</target>
+      </trans-unit>
+      <trans-unit id="Jac3onr" resname="Les patients">
+        <source>Les patients</source>
+        <target>__Les patients</target>
+      </trans-unit>
+      <trans-unit id="Y8qgzZR" resname="Les Echographies">
+        <source>Les Echographies</source>
+        <target>__Les Echographies</target>
+      </trans-unit>
+      <trans-unit id="nAUuj0m" resname="Les radios">
+        <source>Les radios</source>
+        <target>__Les radios</target>
+      </trans-unit>
+      <trans-unit id="WSamPQL" resname="Les Examens">
+        <source>Les Examens</source>
+        <target>__Les Examens</target>
+      </trans-unit>
+      <trans-unit id="ltMjvJX" resname="Les bâtiments">
+        <source>Les bâtiments</source>
+        <target>__Les bâtiments</target>
+      </trans-unit>
+      <trans-unit id="Xx9yrgX" resname="Type chambre">
+        <source>Type chambre</source>
+        <target>__Type chambre</target>
+      </trans-unit>
+      <trans-unit id="O0UuPFn" resname="Produis">
+        <source>Produis</source>
+        <target>__Produis</target>
+      </trans-unit>
+      <trans-unit id="s_DJM5K" resname="Four. &amp; Com.">
+        <source>Four. &amp; Com.</source>
+        <target><![CDATA[__Four. & Com.]]></target>
+      </trans-unit>
+      <trans-unit id="fFryPWV" resname="Du jour">
+        <source>Du jour</source>
+        <target>__Du jour</target>
+      </trans-unit>
+      <trans-unit id="7dibZQf" resname="Urgence">
+        <source>Urgence</source>
+        <target>__Urgence</target>
+      </trans-unit>
+      <trans-unit id="IwPsL_." resname="Qté seuil">
+        <source>Qté seuil</source>
+        <target>__Qté seuil</target>
+      </trans-unit>
+      <trans-unit id="OEn50qj" resname="Qté">
+        <source>Qté</source>
+        <target>__Qté</target>
+      </trans-unit>
+      <trans-unit id="wxU15BH" resname="Ce produit est déja périmé">
+        <source>Ce produit est déja périmé</source>
+        <target>__Ce produit est déja périmé</target>
+      </trans-unit>
+      <trans-unit id="mL4ATgG" resname="Seuil atteind !">
+        <source>Seuil atteind !</source>
+        <target>__Seuil atteind !</target>
+      </trans-unit>
+      <trans-unit id="YsvX678" resname="Veuillez passez la commande !">
+        <source>Veuillez passez la commande !</source>
+        <target>__Veuillez passez la commande !</target>
+      </trans-unit>
+      <trans-unit id="VFKZmIy" resname="Etagère">
+        <source>Etagère</source>
+        <target>__Etagère</target>
+      </trans-unit>
+      <trans-unit id="pKcs1sZ" resname="Quantité en stock">
+        <source>Quantité en stock</source>
+        <target>__Quantité en stock</target>
+      </trans-unit>
+      <trans-unit id="kAKkIT6" resname="Modification d'un kit">
+        <source>Modification d'un kit</source>
+        <target>__Modification d'un kit</target>
+      </trans-unit>
+      <trans-unit id="dmteN.C" resname="Enregistrement d'un kit">
+        <source>Enregistrement d'un kit</source>
+        <target>__Enregistrement d'un kit</target>
+      </trans-unit>
+      <trans-unit id="TyLjyeb" resname="Modification du kit :">
+        <source>Modification du kit :</source>
+        <target>__Modification du kit :</target>
+      </trans-unit>
+      <trans-unit id="zb_kT4H" resname="Nom du kit">
+        <source>Nom du kit</source>
+        <target>__Nom du kit</target>
+      </trans-unit>
+      <trans-unit id="whmVu_t" resname="Veuillez saisir le nom du kit !">
+        <source>Veuillez saisir le nom du kit !</source>
+        <target>__Veuillez saisir le nom du kit !</target>
+      </trans-unit>
+      <trans-unit id="hmg9qgY" resname="Soin">
+        <source>Soin</source>
+        <target>__Soin</target>
+      </trans-unit>
+      <trans-unit id="1x9kNFR" resname="Veuillez saisir un soin !">
+        <source>Veuillez saisir un soin !</source>
+        <target>__Veuillez saisir un soin !</target>
+      </trans-unit>
+      <trans-unit id="KXLERDG" resname="Acte">
+        <source>Acte</source>
+        <target>__Acte</target>
+      </trans-unit>
+      <trans-unit id="fKumKmP" resname="Veuillez saisir un acte !">
+        <source>Veuillez saisir un acte !</source>
+        <target>__Veuillez saisir un acte !</target>
+      </trans-unit>
+      <trans-unit id="JVGV_Pa" resname="Nos kits">
+        <source>Nos kits</source>
+        <target>__Nos kits</target>
+      </trans-unit>
+      <trans-unit id="DYfJiRm" resname="Contenu du kit">
+        <source>Contenu du kit</source>
+        <target>__Contenu du kit</target>
+      </trans-unit>
+      <trans-unit id="ybPDgkf" resname="Total">
+        <source>Total</source>
+        <target>__Total</target>
+      </trans-unit>
+      <trans-unit id="cX.pEKF" resname="Liste des kits">
+        <source>Liste des kits</source>
+        <target>__Liste des kits</target>
+      </trans-unit>
+      <trans-unit id="P4AfHsv" resname="Liste des kits enregistrés">
+        <source>Liste des kits enregistrés</source>
+        <target>__Liste des kits enregistrés</target>
+      </trans-unit>
+      <trans-unit id="7kTVX37" resname="Imprimer tous les kits">
+        <source>Imprimer tous les kits</source>
+        <target>__Imprimer tous les kits</target>
+      </trans-unit>
+      <trans-unit id="yTg20Fj" resname="kit(s) enregistré(s)">
+        <source>kit(s) enregistré(s)</source>
+        <target>__kit(s) enregistré(s)</target>
+      </trans-unit>
+      <trans-unit id="eXUqiop" resname="kits enregistré(s)">
+        <source>kits enregistré(s)</source>
+        <target>__kits enregistré(s)</target>
+      </trans-unit>
+      <trans-unit id="._vK_ow" resname="Nom du produit">
+        <source>Nom du produit</source>
+        <target>__Nom du produit</target>
+      </trans-unit>
+      <trans-unit id="f0OhPvq" resname="Prix total">
+        <source>Prix total</source>
+        <target>__Prix total</target>
+      </trans-unit>
+      <trans-unit id="HVW1DWD" resname="Liste des lots">
+        <source>Liste des lots</source>
+        <target>__Liste des lots</target>
+      </trans-unit>
+      <trans-unit id="zOIIG6N" resname="Lot(s) enregistré(s)">
+        <source>Lot(s) enregistré(s)</source>
+        <target>__Lot(s) enregistré(s)</target>
+      </trans-unit>
+      <trans-unit id="9HffTma" resname="Imprimer les lots">
+        <source>Imprimer les lots</source>
+        <target>__Imprimer les lots</target>
+      </trans-unit>
+      <trans-unit id="90IMVIl" resname="Imprimer les lots d'une période">
+        <source>Imprimer les lots d'une période</source>
+        <target>__Imprimer les lots d'une période</target>
+      </trans-unit>
+      <trans-unit id="PHIYoAg" resname="lot(s) enregistré(s)">
+        <source>lot(s) enregistré(s)</source>
+        <target>__lot(s) enregistré(s)</target>
+      </trans-unit>
+      <trans-unit id="qV0q7Nh" resname="Vendu">
+        <source>Vendu</source>
+        <target>__Vendu</target>
+      </trans-unit>
+      <trans-unit id="fABTPJB" resname="Date Exp.">
+        <source>Date Exp.</source>
+        <target>__Date Exp.</target>
+      </trans-unit>
+      <trans-unit id="AInb.HJ" resname="Quatité">
+        <source>Quatité</source>
+        <target>__Quatité</target>
+      </trans-unit>
+      <trans-unit id="V69HpWO" resname="Modification d'un lot">
+        <source>Modification d'un lot</source>
+        <target>__Modification d'un lot</target>
+      </trans-unit>
+      <trans-unit id="XvLWNAe" resname="Enregistrement d'un lot">
+        <source>Enregistrement d'un lot</source>
+        <target>__Enregistrement d'un lot</target>
+      </trans-unit>
+      <trans-unit id="JADy9C7" resname="Modification du lot :">
+        <source>Modification du lot :</source>
+        <target>__Modification du lot :</target>
+      </trans-unit>
+      <trans-unit id="33DXssA" resname="Veuillez saisir une référence !">
+        <source>Veuillez saisir une référence !</source>
+        <target>__Veuillez saisir une référence !</target>
+      </trans-unit>
+      <trans-unit id="jXMsp9O" resname="Veuillez saisir le prix d'achat !">
+        <source>Veuillez saisir le prix d'achat !</source>
+        <target>__Veuillez saisir le prix d'achat !</target>
+      </trans-unit>
+      <trans-unit id="kY2y3Xs" resname="Veuillez saisir le coefficient !">
+        <source>Veuillez saisir le coefficient !</source>
+        <target>__Veuillez saisir le coefficient !</target>
+      </trans-unit>
+      <trans-unit id="myTaVNE" resname="Veuillez saisir une quantité !">
+        <source>Veuillez saisir une quantité !</source>
+        <target>__Veuillez saisir une quantité !</target>
+      </trans-unit>
+      <trans-unit id="xD57Xdq" resname="Date péremption">
+        <source>Date péremption</source>
+        <target>__Date péremption</target>
+      </trans-unit>
+      <trans-unit id="r5nUBL4" resname="Veuillez saisir une date de péremption !">
+        <source>Veuillez saisir une date de péremption !</source>
+        <target>__Veuillez saisir une date de péremption !</target>
+      </trans-unit>
+      <trans-unit id="tT5XqD5" resname="Type produit">
+        <source>Type produit</source>
+        <target>__Type produit</target>
+      </trans-unit>
+      <trans-unit id="qEyuXS3" resname="Veuillez sélectionner le type de produit !">
+        <source>Veuillez sélectionner le type de produit !</source>
+        <target>__Veuillez sélectionner le type de produit !</target>
+      </trans-unit>
+      <trans-unit id="bPbG0lT" resname="Liste des marques">
+        <source>Liste des marques</source>
+        <target>__Liste des marques</target>
+      </trans-unit>
+      <trans-unit id="uUK0Dr_" resname="Les marques">
+        <source>Les marques</source>
+        <target>__Les marques</target>
+      </trans-unit>
+      <trans-unit id="yLP7OIz" resname="Ajouter une marque">
+        <source>Ajouter une marque</source>
+        <target>__Ajouter une marque</target>
+      </trans-unit>
+      <trans-unit id="Da6JLeu" resname="Marque(s) enregistrée(s)">
+        <source>Marque(s) enregistrée(s)</source>
+        <target>__Marque(s) enregistrée(s)</target>
+      </trans-unit>
+      <trans-unit id="1H0CFJS" resname="marque(s) enregistrée(s)">
+        <source>marque(s) enregistrée(s)</source>
+        <target>__marque(s) enregistrée(s)</target>
+      </trans-unit>
+      <trans-unit id="1wfcLxk" resname="Logo">
+        <source>Logo</source>
+        <target>__Logo</target>
+      </trans-unit>
+      <trans-unit id="2KHyst6" resname="Pas supprimée">
+        <source>Pas supprimée</source>
+        <target>__Pas supprimée</target>
+      </trans-unit>
+      <trans-unit id="HPIkeLb" resname="Supprimée">
+        <source>Supprimée</source>
+        <target>__Supprimée</target>
+      </trans-unit>
+      <trans-unit id="3IIZxP8" resname="Restaurer">
+        <source>Restaurer</source>
+        <target>__Restaurer</target>
+      </trans-unit>
+      <trans-unit id="YX_zhNP" resname="Modification d'une marque">
+        <source>Modification d'une marque</source>
+        <target>__Modification d'une marque</target>
+      </trans-unit>
+      <trans-unit id="St6ES.H" resname="Enregistrement d'une marque">
+        <source>Enregistrement d'une marque</source>
+        <target>__Enregistrement d'une marque</target>
+      </trans-unit>
+      <trans-unit id=".dVD33E" resname="Afficher les marques">
+        <source>Afficher les marques</source>
+        <target>__Afficher les marques</target>
+      </trans-unit>
+      <trans-unit id="2JndOO4" resname="Modification d'une marque :">
+        <source>Modification d'une marque :</source>
+        <target>__Modification d'une marque :</target>
+      </trans-unit>
+      <trans-unit id="w9PS_fg" resname="Veuillez saisir une marque !">
+        <source>Veuillez saisir une marque !</source>
+        <target>__Veuillez saisir une marque !</target>
+      </trans-unit>
+      <trans-unit id="safyPbJ" resname="Veuillez choisir une photo !">
+        <source>Veuillez choisir une photo !</source>
+        <target>__Veuillez choisir une photo !</target>
+      </trans-unit>
+      <trans-unit id="FkdxYTB" resname="Ajouter un modèle">
+        <source>Ajouter un modèle</source>
+        <target>__Ajouter un modèle</target>
+      </trans-unit>
+      <trans-unit id="oTIuE5y" resname="Modification d'un modèle">
+        <source>Modification d'un modèle</source>
+        <target>__Modification d'un modèle</target>
+      </trans-unit>
+      <trans-unit id="5lGtdTj" resname="Enregistrement d'un modèle">
+        <source>Enregistrement d'un modèle</source>
+        <target>__Enregistrement d'un modèle</target>
+      </trans-unit>
+      <trans-unit id="OvrNiBH" resname="Afficher les modèles">
+        <source>Afficher les modèles</source>
+        <target>__Afficher les modèles</target>
+      </trans-unit>
+      <trans-unit id="qe5s.Vl" resname="Modification du modèle :">
+        <source>Modification du modèle :</source>
+        <target>__Modification du modèle :</target>
+      </trans-unit>
+      <trans-unit id="10X9HWS" resname="Nom du modèle">
+        <source>Nom du modèle</source>
+        <target>__Nom du modèle</target>
+      </trans-unit>
+      <trans-unit id="MI_30SO" resname="Veuillez saisir le nom du modèle !">
+        <source>Veuillez saisir le nom du modèle !</source>
+        <target>__Veuillez saisir le nom du modèle !</target>
+      </trans-unit>
+      <trans-unit id="oJjaZ63" resname="Veuillez choisir la marque !">
+        <source>Veuillez choisir la marque !</source>
+        <target>__Veuillez choisir la marque !</target>
+      </trans-unit>
+      <trans-unit id="twryIIl" resname="Liste des modèles">
+        <source>Liste des modèles</source>
+        <target>__Liste des modèles</target>
+      </trans-unit>
+      <trans-unit id="Jc7UPFi" resname="Liste des modèles enregistrés">
+        <source>Liste des modèles enregistrés</source>
+        <target>__Liste des modèles enregistrés</target>
+      </trans-unit>
+      <trans-unit id=".hJOVtB" resname="Ajouter un modele">
+        <source>Ajouter un modele</source>
+        <target>__Ajouter un modele</target>
+      </trans-unit>
+      <trans-unit id="fzTFClN" resname="Modèle(s) enregistrée(s)">
+        <source>Modèle(s) enregistrée(s)</source>
+        <target>__Modèle(s) enregistrée(s)</target>
+      </trans-unit>
+      <trans-unit id="AwAFIJm" resname="modèle(s) enregistré(s)">
+        <source>modèle(s) enregistré(s)</source>
+        <target>__modèle(s) enregistré(s)</target>
+      </trans-unit>
+      <trans-unit id="hBH1q7T" resname="Visible">
+        <source>Visible</source>
+        <target>__Visible</target>
+      </trans-unit>
+      <trans-unit id="7hfv7Pi" resname="Pas en visible">
+        <source>Pas en visible</source>
+        <target>__Pas en visible</target>
+      </trans-unit>
+      <trans-unit id="Ok7Ezbm" resname="Panier">
+        <source>Panier</source>
+        <target>__Panier</target>
+      </trans-unit>
+      <trans-unit id="L1bu2TA" resname="Etat de la facture">
+        <source>Etat de la facture</source>
+        <target>__Etat de la facture</target>
+      </trans-unit>
+      <trans-unit id="tMix3Xr" resname="Appliquer">
+        <source>Appliquer</source>
+        <target>__Appliquer</target>
+      </trans-unit>
+      <trans-unit id="zVuDKsX" resname="Libellé">
+        <source>Libellé</source>
+        <target>__Libellé</target>
+      </trans-unit>
+      <trans-unit id="JaI7H5z" resname="Pas de produits dans la facture">
+        <source>Pas de produits dans la facture</source>
+        <target>__Pas de produits dans la facture</target>
+      </trans-unit>
+      <trans-unit id="9HXoz2v" resname="Mettre à jour">
+        <source>Mettre à jour</source>
+        <target>__Mettre à jour</target>
+      </trans-unit>
+      <trans-unit id="SD.bxKB" resname="Total Facture">
+        <source>Total Facture</source>
+        <target>__Total Facture</target>
+      </trans-unit>
+      <trans-unit id="O8OAfyJ" resname="Continuer">
+        <source>Continuer</source>
+        <target>__Continuer</target>
+      </trans-unit>
+      <trans-unit id="eT7s5xF" resname="Séléctionner un patient">
+        <source>Séléctionner un patient</source>
+        <target>__Séléctionner un patient</target>
+      </trans-unit>
+      <trans-unit id="l7ixYuA" resname="Veuillez sélectionner le nom du patient">
+        <source>Veuillez sélectionner le nom du patient</source>
+        <target>__Veuillez sélectionner le nom du patient</target>
+      </trans-unit>
+      <trans-unit id="4L4fnOE" resname="Saisir le nom du patient">
+        <source>Saisir le nom du patient</source>
+        <target>__Saisir le nom du patient</target>
+      </trans-unit>
+      <trans-unit id="9qU8Ca." resname="Veuillez choisir le mode de paiement">
+        <source>Veuillez choisir le mode de paiement</source>
+        <target>__Veuillez choisir le mode de paiement</target>
+      </trans-unit>
+      <trans-unit id="FfLYl84" resname="Bouton payer">
+        <source>Bouton payer</source>
+        <target>__Bouton payer</target>
+      </trans-unit>
+      <trans-unit id="bqUMC1K" resname="Liste des patients">
+        <source>Liste des patients</source>
+        <target>__Liste des patients</target>
+      </trans-unit>
+      <trans-unit id="k1ml_Fn" resname="Patients enregistrés">
+        <source>Patients enregistrés</source>
+        <target>__Patients enregistrés</target>
+      </trans-unit>
+      <trans-unit id="li1ZYeV" resname="Ajouter un patient">
+        <source>Ajouter un patient</source>
+        <target>__Ajouter un patient</target>
+      </trans-unit>
+      <trans-unit id="UxXlUsF" resname="Patient(s) enregistré(s)">
+        <source>Patient(s) enregistré(s)</source>
+        <target>__Patient(s) enregistré(s)</target>
+      </trans-unit>
+      <trans-unit id="wa.Q1Vc" resname="patient(s) enregistré(s)">
+        <source>patient(s) enregistré(s)</source>
+        <target>__patient(s) enregistré(s)</target>
+      </trans-unit>
+      <trans-unit id="vf0.I4H" resname="Patients">
+        <source>Patients</source>
+        <target>__Patients</target>
+      </trans-unit>
+      <trans-unit id="5AjAjGu" resname="Société">
+        <source>Société</source>
+        <target>__Société</target>
+      </trans-unit>
+      <trans-unit id="g8Rzzv_" resname="Terminé(e)">
+        <source>Terminé(e)</source>
+        <target>__Terminé(e)</target>
+      </trans-unit>
+      <trans-unit id="hBLAcAJ" resname="Danger">
+        <source>Danger</source>
+        <target>__Danger</target>
+      </trans-unit>
+      <trans-unit id=".9yTYH1" resname="Vous ne pouvez pas supprimer ce pris en charge, car il/elle a les factures !">
+        <source>Vous ne pouvez pas supprimer ce pris en charge, car il/elle a les factures !</source>
+        <target>__Vous ne pouvez pas supprimer ce pris en charge, car il/elle a les factures !</target>
+      </trans-unit>
+      <trans-unit id="UZjruIk" resname="Liste des prises en charge de :">
+        <source>Liste des prises en charge de :</source>
+        <target>__Liste des prises en charge de :</target>
+      </trans-unit>
+      <trans-unit id="3MwTHFy" resname="Prises en charge de :">
+        <source>Prises en charge de :</source>
+        <target>__Prises en charge de :</target>
+      </trans-unit>
+      <trans-unit id="gep9rV3" resname="Nombres de prise en charges">
+        <source>Nombres de prise en charges</source>
+        <target>__Nombres de prise en charges</target>
+      </trans-unit>
+      <trans-unit id="FWm6T2s" resname="Reférence">
+        <source>Reférence</source>
+        <target>__Reférence</target>
+      </trans-unit>
+      <trans-unit id="Rlazu9H" resname="Modification d'un patient">
+        <source>Modification d'un patient</source>
+        <target>__Modification d'un patient</target>
+      </trans-unit>
+      <trans-unit id="VkUdsPU" resname="Enregistrement d'un patient">
+        <source>Enregistrement d'un patient</source>
+        <target>__Enregistrement d'un patient</target>
+      </trans-unit>
+      <trans-unit id="GVvVx_z" resname="Afficher les Patients">
+        <source>Afficher les Patients</source>
+        <target>__Afficher les Patients</target>
+      </trans-unit>
+      <trans-unit id="M9vxe3J" resname="Modification du patient :">
+        <source>Modification du patient :</source>
+        <target>__Modification du patient :</target>
+      </trans-unit>
+      <trans-unit id="zWuJ.jx" resname="Veuillez saisir le nom du client patient !">
+        <source>Veuillez saisir le nom du client patient !</source>
+        <target>__Veuillez saisir le nom du client patient !</target>
+      </trans-unit>
+      <trans-unit id="Rkn0tV4" resname="Date de naissance">
+        <source>Date de naissance</source>
+        <target>__Date de naissance</target>
+      </trans-unit>
+      <trans-unit id="gtK_dLa" resname="Veuillez saisir la date de naissance du patient !">
+        <source>Veuillez saisir la date de naissance du patient !</source>
+        <target>__Veuillez saisir la date de naissance du patient !</target>
+      </trans-unit>
+      <trans-unit id="GgDII.6" resname="Ville de résidence">
+        <source>Ville de résidence</source>
+        <target>__Ville de résidence</target>
+      </trans-unit>
+      <trans-unit id="lz5sL1n" resname="Veuillez saisir la ville de résidence du patient !">
+        <source>Veuillez saisir la ville de résidence du patient !</source>
+        <target>__Veuillez saisir la ville de résidence du patient !</target>
+      </trans-unit>
+      <trans-unit id="cQG2jQE" resname="Veuillez sélectionner la société du patient !">
+        <source>Veuillez sélectionner la société du patient !</source>
+        <target>__Veuillez sélectionner la société du patient !</target>
+      </trans-unit>
+      <trans-unit id=".nU._5u" resname="Pays">
+        <source>Pays</source>
+        <target>__Pays</target>
+      </trans-unit>
+      <trans-unit id="_QBfvbv" resname="Veuillez sélectionner le pays du patient !">
+        <source>Veuillez sélectionner le pays du patient !</source>
+        <target>__Veuillez sélectionner le pays du patient !</target>
+      </trans-unit>
+      <trans-unit id=".J3UROe" resname="Liste des produits seuils">
+        <source>Liste des produits seuils</source>
+        <target>__Liste des produits seuils</target>
+      </trans-unit>
+      <trans-unit id="5bNQ7F9" resname="Liste des produits">
+        <source>Liste des produits</source>
+        <target>__Liste des produits</target>
+      </trans-unit>
+      <trans-unit id="aUpTlS4" resname="Liste des produits enregistrés">
+        <source>Liste des produits enregistrés</source>
+        <target>__Liste des produits enregistrés</target>
+      </trans-unit>
+      <trans-unit id="YFZuG74" resname="Imprimer l'état des produits seuils">
+        <source>Imprimer l'état des produits seuils</source>
+        <target>__Imprimer l'état des produits seuils</target>
+      </trans-unit>
+      <trans-unit id="8apCPjP" resname="Produit(s) enregistré(s)">
+        <source>Produit(s) enregistré(s)</source>
+        <target>__Produit(s) enregistré(s)</target>
+      </trans-unit>
+      <trans-unit id="pzjtpD8" resname="produit(s) enregistré(s) enregistré(s)">
+        <source>produit(s) enregistré(s) enregistré(s)</source>
+        <target>__produit(s) enregistré(s) enregistré(s)</target>
+      </trans-unit>
+      <trans-unit id="pYJSN4i" resname="Produits Seuils">
+        <source>Produits Seuils</source>
+        <target>__Produits Seuils</target>
+      </trans-unit>
+      <trans-unit id="ONUCF6I" resname="Nombres de produits seuils">
+        <source>Nombres de produits seuils</source>
+        <target>__Nombres de produits seuils</target>
+      </trans-unit>
+      <trans-unit id="0HiMYPy" resname="Modification d'un produit">
+        <source>Modification d'un produit</source>
+        <target>__Modification d'un produit</target>
+      </trans-unit>
+      <trans-unit id="fPIGywS" resname="Enregistrement d'un produit">
+        <source>Enregistrement d'un produit</source>
+        <target>__Enregistrement d'un produit</target>
+      </trans-unit>
+      <trans-unit id="sXzujYT" resname="Modification du produit :">
+        <source>Modification du produit :</source>
+        <target>__Modification du produit :</target>
+      </trans-unit>
+      <trans-unit id="x4fCxRk" resname="Lot du produit">
+        <source>Lot du produit</source>
+        <target>__Lot du produit</target>
+      </trans-unit>
+      <trans-unit id="abbVkJf" resname="Veuillez sélectionner le lot !">
+        <source>Veuillez sélectionner le lot !</source>
+        <target>__Veuillez sélectionner le lot !</target>
+      </trans-unit>
+      <trans-unit id="j_85xfz" resname="Désignation">
+        <source>Désignation</source>
+        <target>__Désignation</target>
+      </trans-unit>
+      <trans-unit id="WPe0ZPB" resname="Veuillez saisir la désignation !">
+        <source>Veuillez saisir la désignation !</source>
+        <target>__Veuillez saisir la désignation !</target>
+      </trans-unit>
+      <trans-unit id="y3DKUQq" resname="Quantité seuil">
+        <source>Quantité seuil</source>
+        <target>__Quantité seuil</target>
+      </trans-unit>
+      <trans-unit id="fgrXesx" resname="Veuillez saisir la quentité seuil !">
+        <source>Veuillez saisir la quentité seuil !</source>
+        <target>__Veuillez saisir la quentité seuil !</target>
+      </trans-unit>
+      <trans-unit id="EFH7.S1" resname="Photo du produit">
+        <source>Photo du produit</source>
+        <target>__Photo du produit</target>
+      </trans-unit>
+      <trans-unit id="kOCuLTD" resname="Veuillez choisir la photo du produit !">
+        <source>Veuillez choisir la photo du produit !</source>
+        <target>__Veuillez choisir la photo du produit !</target>
+      </trans-unit>
+      <trans-unit id="q0Uca0i" resname="Mon profil">
+        <source>Mon profil</source>
+        <target>__Mon profil</target>
+      </trans-unit>
+      <trans-unit id="DzVWenS" resname="Modifier mon profil">
+        <source>Modifier mon profil</source>
+        <target>__Modifier mon profil</target>
+      </trans-unit>
+      <trans-unit id="uhX9RKc" resname="Question Secrète">
+        <source>Question Secrète</source>
+        <target>__Question Secrète</target>
+      </trans-unit>
+      <trans-unit id="L5.Z3_S" resname="Edition de mon profil">
+        <source>Edition de mon profil</source>
+        <target>__Edition de mon profil</target>
+      </trans-unit>
+      <trans-unit id="RGgfSFW" resname="Edition du  Profil">
+        <source>Edition du  Profil</source>
+        <target>__Edition du  Profil</target>
+      </trans-unit>
+      <trans-unit id="eA7iFRs" resname="Nom Complet">
+        <source>Nom Complet</source>
+        <target>__Nom Complet</target>
+      </trans-unit>
+      <trans-unit id="vpnFggN" resname="Nom de connexion">
+        <source>Nom de connexion</source>
+        <target>__Nom de connexion</target>
+      </trans-unit>
+      <trans-unit id="Rq05Fva" resname="Annuler">
+        <source>Annuler</source>
+        <target>__Annuler</target>
+      </trans-unit>
+      <trans-unit id="863HaeM" resname="Modification de mon mot de passe">
+        <source>Modification de mon mot de passe</source>
+        <target>__Modification de mon mot de passe</target>
+      </trans-unit>
+      <trans-unit id="pc8.ZVb" resname="Modification du mot de passe">
+        <source>Modification du mot de passe</source>
+        <target>__Modification du mot de passe</target>
+      </trans-unit>
+      <trans-unit id="yYwgOc2" resname="Quelle est votre secrète ?">
+        <source>Quelle est votre secrète ?</source>
+        <target>__Quelle est votre secrète ?</target>
+      </trans-unit>
+      <trans-unit id="7Mo0wK_" resname="Vous êtes ?">
+        <source>Vous êtes ?</source>
+        <target>__Vous êtes ?</target>
+      </trans-unit>
+      <trans-unit id="YGJCCXP" resname="Question secrète">
+        <source>Question secrète</source>
+        <target>__Question secrète</target>
+      </trans-unit>
+      <trans-unit id="HSnhN1R" resname="Edition de la question secrète">
+        <source>Edition de la question secrète</source>
+        <target>__Edition de la question secrète</target>
+      </trans-unit>
+      <trans-unit id="5oRf1Gn" resname="Veuillez sélectionner une question secrète !">
+        <source>Veuillez sélectionner une question secrète !</source>
+        <target>__Veuillez sélectionner une question secrète !</target>
+      </trans-unit>
+      <trans-unit id="lSPZH6A" resname="Votre réponse">
+        <source>Votre réponse</source>
+        <target>__Votre réponse</target>
+      </trans-unit>
+      <trans-unit id="Vv_hP1n" resname="Veuillez saisir une réponse secrète">
+        <source>Veuillez saisir une réponse secrète</source>
+        <target>__Veuillez saisir une réponse secrète</target>
+      </trans-unit>
+      <trans-unit id="oTVT6Xd" resname="Réinitialiser votre mot de passe">
+        <source>Réinitialiser votre mot de passe</source>
+        <target>__Réinitialiser votre mot de passe</target>
+      </trans-unit>
+      <trans-unit id="M_Sd1Kk" resname="Réinitialiser mon mot de passe">
+        <source>Réinitialiser mon mot de passe</source>
+        <target>__Réinitialiser mon mot de passe</target>
+      </trans-unit>
+      <trans-unit id="kTSJuSd" resname="Liste des radios">
+        <source>Liste des radios</source>
+        <target>__Liste des radios</target>
+      </trans-unit>
+      <trans-unit id="KO_QS8C" resname="Ajouter une radio">
+        <source>Ajouter une radio</source>
+        <target>__Ajouter une radio</target>
+      </trans-unit>
+      <trans-unit id="UvLfPb3" resname="Radio(s) enregistrée(s)">
+        <source>Radio(s) enregistrée(s)</source>
+        <target>__Radio(s) enregistrée(s)</target>
+      </trans-unit>
+      <trans-unit id="fSdmwF1" resname="radio(s) enregistrée(s)">
+        <source>radio(s) enregistrée(s)</source>
+        <target>__radio(s) enregistrée(s)</target>
+      </trans-unit>
+      <trans-unit id="jIaZ0a1" resname="Modification d'une radio">
+        <source>Modification d'une radio</source>
+        <target>__Modification d'une radio</target>
+      </trans-unit>
+      <trans-unit id="dME3a5N" resname="Enregistrement d'une radio">
+        <source>Enregistrement d'une radio</source>
+        <target>__Enregistrement d'une radio</target>
+      </trans-unit>
+      <trans-unit id="xeYA4ZM" resname="Afficher les radios">
+        <source>Afficher les radios</source>
+        <target>__Afficher les radios</target>
+      </trans-unit>
+      <trans-unit id="5n.bmY8" resname="Modification d'une radio :">
+        <source>Modification d'une radio :</source>
+        <target>__Modification d'une radio :</target>
+      </trans-unit>
+      <trans-unit id="XJZjfrz" resname="Veuillez saisir une radio !">
+        <source>Veuillez saisir une radio !</source>
+        <target>__Veuillez saisir une radio !</target>
+      </trans-unit>
+      <trans-unit id="KZ1qnh2" resname="Liste des recettes du jour">
+        <source>Liste des recettes du jour</source>
+        <target>__Liste des recettes du jour</target>
+      </trans-unit>
+      <trans-unit id="zuhEOO5" resname="Nombres de recettes soldés du jour">
+        <source>Nombres de recettes soldés du jour</source>
+        <target>__Nombres de recettes soldés du jour</target>
+      </trans-unit>
+      <trans-unit id="0NK7JQZ" resname="Recettes du jour soldés">
+        <source>Recettes du jour soldés</source>
+        <target>__Recettes du jour soldés</target>
+      </trans-unit>
+      <trans-unit id="e8GHZhy" resname="Recette du jour">
+        <source>Recette du jour</source>
+        <target>__Recette du jour</target>
+      </trans-unit>
+      <trans-unit id="6oOO6qr" resname="Recette">
+        <source>Recette</source>
+        <target>__Recette</target>
+      </trans-unit>
+      <trans-unit id="IXy2OT." resname="Mode paiement">
+        <source>Mode paiement</source>
+        <target>__Mode paiement</target>
+      </trans-unit>
+      <trans-unit id="sOaR7UK" resname="Recettes du jour non soldés">
+        <source>Recettes du jour non soldés</source>
+        <target>__Recettes du jour non soldés</target>
+      </trans-unit>
+      <trans-unit id="WT6vQda" resname="Recette du jour non soldé">
+        <source>Recette du jour non soldé</source>
+        <target>__Recette du jour non soldé</target>
+      </trans-unit>
+      <trans-unit id="lQLXlS5" resname="Nombres de recettes">
+        <source>Nombres de recettes</source>
+        <target>__Nombres de recettes</target>
+      </trans-unit>
+      <trans-unit id="i3VyOvE" resname="Liste des recettes d'une période">
+        <source>Liste des recettes d'une période</source>
+        <target>__Liste des recettes d'une période</target>
+      </trans-unit>
+      <trans-unit id="6JiIgfJ" resname="Imprimer toutes les recettes">
+        <source>Imprimer toutes les recettes</source>
+        <target>__Imprimer toutes les recettes</target>
+      </trans-unit>
+      <trans-unit id="fshZGyv" resname="Recettes de la période du :">
+        <source>Recettes de la période du :</source>
+        <target>__Recettes de la période du :</target>
+      </trans-unit>
+      <trans-unit id=".sIpuLh" resname="Mot de passe oublié ?">
+        <source>Mot de passe oublié ?</source>
+        <target>__Mot de passe oublié ?</target>
+      </trans-unit>
+      <trans-unit id="aZiqeYF" resname="Liste des sociétés">
+        <source>Liste des sociétés</source>
+        <target>__Liste des sociétés</target>
+      </trans-unit>
+      <trans-unit id="jb6TY4Y" resname="Les sociétés enregistrées">
+        <source>Les sociétés enregistrées</source>
+        <target>__Les sociétés enregistrées</target>
+      </trans-unit>
+      <trans-unit id="cA_z90D" resname="Ajouter une société">
+        <source>Ajouter une société</source>
+        <target>__Ajouter une société</target>
+      </trans-unit>
+      <trans-unit id="UPO4GXT" resname="Imprimer les prises en charges">
+        <source>Imprimer les prises en charges</source>
+        <target>__Imprimer les prises en charges</target>
+      </trans-unit>
+      <trans-unit id="FoPOi8c" resname="Société(s) enregistrée(s)">
+        <source>Société(s) enregistrée(s)</source>
+        <target>__Société(s) enregistrée(s)</target>
+      </trans-unit>
+      <trans-unit id="v.JkZo2" resname="société(s) enregistrée(s)">
+        <source>société(s) enregistrée(s)</source>
+        <target>__société(s) enregistrée(s)</target>
+      </trans-unit>
+      <trans-unit id="OdqdCWP" resname="Nombre de pris en charge">
+        <source>Nombre de pris en charge</source>
+        <target>__Nombre de pris en charge</target>
+      </trans-unit>
+      <trans-unit id="WlnqfJW" resname="Modification d'une société">
+        <source>Modification d'une société</source>
+        <target>__Modification d'une société</target>
+      </trans-unit>
+      <trans-unit id="2ex4_4s" resname="Enregistrement d'une société">
+        <source>Enregistrement d'une société</source>
+        <target>__Enregistrement d'une société</target>
+      </trans-unit>
+      <trans-unit id="gSy0mUy" resname="Modification de la société :">
+        <source>Modification de la société :</source>
+        <target>__Modification de la société :</target>
+      </trans-unit>
+      <trans-unit id="KMu9FGH" resname="Veuillez saisir une société !">
+        <source>Veuillez saisir une société !</source>
+        <target>__Veuillez saisir une société !</target>
+      </trans-unit>
+      <trans-unit id="IMEcaJk" resname="Liste des sous catégories">
+        <source>Liste des sous catégories</source>
+        <target>__Liste des sous catégories</target>
+      </trans-unit>
+      <trans-unit id="F2aGnhs" resname="Ajouter une sous categorie">
+        <source>Ajouter une sous categorie</source>
+        <target>__Ajouter une sous categorie</target>
+      </trans-unit>
+      <trans-unit id="fWxlAhT" resname="Sous catégorie(s) enregistrée(s)">
+        <source>Sous catégorie(s) enregistrée(s)</source>
+        <target>__Sous catégorie(s) enregistrée(s)</target>
+      </trans-unit>
+      <trans-unit id="b9tC1v5" resname="sous catégorie(s) enregistrée(s)">
+        <source>sous catégorie(s) enregistrée(s)</source>
+        <target>__sous catégorie(s) enregistrée(s)</target>
+      </trans-unit>
+      <trans-unit id="Jr4apOQ" resname="Sous Catégories">
+        <source>Sous Catégories</source>
+        <target>__Sous Catégories</target>
+      </trans-unit>
+      <trans-unit id="SSi4jo3" resname="Modification d'une sous categorie">
+        <source>Modification d'une sous categorie</source>
+        <target>__Modification d'une sous categorie</target>
+      </trans-unit>
+      <trans-unit id="XU.9Mj4" resname="Enregistrement d'une sous categorie">
+        <source>Enregistrement d'une sous categorie</source>
+        <target>__Enregistrement d'une sous categorie</target>
+      </trans-unit>
+      <trans-unit id="qgnIdwq" resname="Afficher les sous catégories">
+        <source>Afficher les sous catégories</source>
+        <target>__Afficher les sous catégories</target>
+      </trans-unit>
+      <trans-unit id="s9GwdKY" resname="Modification de la sous catégorie :">
+        <source>Modification de la sous catégorie :</source>
+        <target>__Modification de la sous catégorie :</target>
+      </trans-unit>
+      <trans-unit id="z.6cfeM" resname="Sous Catégorie">
+        <source>Sous Catégorie</source>
+        <target>__Sous Catégorie</target>
+      </trans-unit>
+      <trans-unit id="FU8rjtF" resname="Veuillez saisir une sous catégorie !">
+        <source>Veuillez saisir une sous catégorie !</source>
+        <target>__Veuillez saisir une sous catégorie !</target>
+      </trans-unit>
+      <trans-unit id="u3254Eh" resname="Veuillez sélectionner une catégorie !">
+        <source>Veuillez sélectionner une catégorie !</source>
+        <target>__Veuillez sélectionner une catégorie !</target>
+      </trans-unit>
+      <trans-unit id="dIomy65" resname="Liste des spécialités / départements">
+        <source>Liste des spécialités / départements</source>
+        <target>__Liste des spécialités / départements</target>
+      </trans-unit>
+      <trans-unit id="EwGekIS" resname="Les spécialités / Départements">
+        <source>Les spécialités / Départements</source>
+        <target>__Les spécialités / Départements</target>
+      </trans-unit>
+      <trans-unit id="m0nttUW" resname="Ajouter une spécialité">
+        <source>Ajouter une spécialité</source>
+        <target>__Ajouter une spécialité</target>
+      </trans-unit>
+      <trans-unit id="9t7V90Q" resname="Spécialité(s) / Département(s) enregistré(e)s">
+        <source>Spécialité(s) / Département(s) enregistré(e)s</source>
+        <target>__Spécialité(s) / Département(s) enregistré(e)s</target>
+      </trans-unit>
+      <trans-unit id="Hzli5.r" resname="spécialité(s) / Département(s) enregistré(s)">
+        <source>spécialité(s) / Département(s) enregistré(s)</source>
+        <target>__spécialité(s) / Département(s) enregistré(s)</target>
+      </trans-unit>
+      <trans-unit id="oex8h.a" resname="Chef de département">
+        <source>Chef de département</source>
+        <target>__Chef de département</target>
+      </trans-unit>
+      <trans-unit id="kxvmBka" resname="Effectif">
+        <source>Effectif</source>
+        <target>__Effectif</target>
+      </trans-unit>
+      <trans-unit id="vTNbIj." resname="Ajouter un département / une spécialité">
+        <source>Ajouter un département / une spécialité</source>
+        <target>__Ajouter un département / une spécialité</target>
+      </trans-unit>
+      <trans-unit id="bGQqi7L" resname="Modification d'un département / d'une spécialité">
+        <source>Modification d'un département / d'une spécialité</source>
+        <target>__Modification d'un département / d'une spécialité</target>
+      </trans-unit>
+      <trans-unit id="XHrgC6d" resname="Enregistrement d'un département / d'une spécialité">
+        <source>Enregistrement d'un département / d'une spécialité</source>
+        <target>__Enregistrement d'un département / d'une spécialité</target>
+      </trans-unit>
+      <trans-unit id="OA4zNEQ" resname="Afficher les départements / les spécialités">
+        <source>Afficher les départements / les spécialités</source>
+        <target>__Afficher les départements / les spécialités</target>
+      </trans-unit>
+      <trans-unit id="ZZ82rul" resname="Modification d'un département  / d'une spécialité :">
+        <source>Modification d'un département  / d'une spécialité :</source>
+        <target>__Modification d'un département  / d'une spécialité :</target>
+      </trans-unit>
+      <trans-unit id="AI5.kd2" resname="Département / Spécialité">
+        <source>Département / Spécialité</source>
+        <target>__Département / Spécialité</target>
+      </trans-unit>
+      <trans-unit id="SYaMleR" resname="Veuillez saisir le nom du département / de la spécialité !">
+        <source>Veuillez saisir le nom du département / de la spécialité !</source>
+        <target>__Veuillez saisir le nom du département / de la spécialité !</target>
+      </trans-unit>
+      <trans-unit id="15iz4lD" resname="Ajouter un type chambre">
+        <source>Ajouter un type chambre</source>
+        <target>__Ajouter un type chambre</target>
+      </trans-unit>
+      <trans-unit id="dsmPHZd" resname="Modification d'un type chambre">
+        <source>Modification d'un type chambre</source>
+        <target>__Modification d'un type chambre</target>
+      </trans-unit>
+      <trans-unit id="N9ss0n6" resname="Enregistrement d'un type de chambre">
+        <source>Enregistrement d'un type de chambre</source>
+        <target>__Enregistrement d'un type de chambre</target>
+      </trans-unit>
+      <trans-unit id="_4pZcCt" resname="Modification d'un type de chambre">
+        <source>Modification d'un type de chambre</source>
+        <target>__Modification d'un type de chambre</target>
+      </trans-unit>
+      <trans-unit id="JFzQrfy" resname="Afficher les types de chambres">
+        <source>Afficher les types de chambres</source>
+        <target>__Afficher les types de chambres</target>
+      </trans-unit>
+      <trans-unit id="ST.gtOM" resname="Modification du type de chambre :">
+        <source>Modification du type de chambre :</source>
+        <target>__Modification du type de chambre :</target>
+      </trans-unit>
+      <trans-unit id="pKeZMID" resname="Intitulé type chambre">
+        <source>Intitulé type chambre</source>
+        <target>__Intitulé type chambre</target>
+      </trans-unit>
+      <trans-unit id="a9MkmMS" resname="Veuillez saisir l'intitulé du type de chambre !">
+        <source>Veuillez saisir l'intitulé du type de chambre !</source>
+        <target>__Veuillez saisir l'intitulé du type de chambre !</target>
+      </trans-unit>
+      <trans-unit id="7WmgCHX" resname="Veuillez saisir le prix du type de la Chambre !">
+        <source>Veuillez saisir le prix du type de la Chambre !</source>
+        <target>__Veuillez saisir le prix du type de la Chambre !</target>
+      </trans-unit>
+      <trans-unit id="0vJYgR2" resname="Liste des types chambre">
+        <source>Liste des types chambre</source>
+        <target>__Liste des types chambre</target>
+      </trans-unit>
+      <trans-unit id="1pWHPkq" resname="Liste des typeChambres enregistrés">
+        <source>Liste des typeChambres enregistrés</source>
+        <target>__Liste des typeChambres enregistrés</target>
+      </trans-unit>
+      <trans-unit id="_z.LM7g" resname="Type chambre enregistré(s)">
+        <source>Type chambre enregistré(s)</source>
+        <target>__Type chambre enregistré(s)</target>
+      </trans-unit>
+      <trans-unit id="_Bq9q1I" resname="type(s) de chambre enregistré(s) enregistré(s)">
+        <source>type(s) de chambre enregistré(s) enregistré(s)</source>
+        <target>__type(s) de chambre enregistré(s) enregistré(s)</target>
+      </trans-unit>
+      <trans-unit id="lDDxmEZ" resname="Pas en service / Supprimé">
+        <source>Pas en service / Supprimé</source>
+        <target>__Pas en service / Supprimé</target>
+      </trans-unit>
+      <trans-unit id="JYWCWhZ" resname="Liste des types utilisateurs">
+        <source>Liste des types utilisateurs</source>
+        <target>__Liste des types utilisateurs</target>
+      </trans-unit>
+      <trans-unit id="q6aoi.p" resname="Les types utilisateurs">
+        <source>Les types utilisateurs</source>
+        <target>__Les types utilisateurs</target>
+      </trans-unit>
+      <trans-unit id="CVxW4Ds" resname="Ajouter un type utilisateur">
+        <source>Ajouter un type utilisateur</source>
+        <target>__Ajouter un type utilisateur</target>
+      </trans-unit>
+      <trans-unit id="5oeX3_x" resname="Type(s) utilisateur enregistré(s)">
+        <source>Type(s) utilisateur enregistré(s)</source>
+        <target>__Type(s) utilisateur enregistré(s)</target>
+      </trans-unit>
+      <trans-unit id="TStCQCi" resname="type utilisateur(s) enregistré(s)">
+        <source>type utilisateur(s) enregistré(s)</source>
+        <target>__type utilisateur(s) enregistré(s)</target>
+      </trans-unit>
+      <trans-unit id="Uiu7jaq" resname="Modification d'un type utilisateur">
+        <source>Modification d'un type utilisateur</source>
+        <target>__Modification d'un type utilisateur</target>
+      </trans-unit>
+      <trans-unit id="GenBLPF" resname="Enregistrement d'un type utilisateur">
+        <source>Enregistrement d'un type utilisateur</source>
+        <target>__Enregistrement d'un type utilisateur</target>
+      </trans-unit>
+      <trans-unit id="OFEBF47" resname="Afficher les types utilisateurs">
+        <source>Afficher les types utilisateurs</source>
+        <target>__Afficher les types utilisateurs</target>
+      </trans-unit>
+      <trans-unit id="1IdVeau" resname="Modification d'un type utilisateur :">
+        <source>Modification d'un type utilisateur :</source>
+        <target>__Modification d'un type utilisateur :</target>
+      </trans-unit>
+      <trans-unit id="d0cqGYM" resname="Veuillez saisir un type utilisateur !">
+        <source>Veuillez saisir un type utilisateur !</source>
+        <target>__Veuillez saisir un type utilisateur !</target>
+      </trans-unit>
+      <trans-unit id="NGdqgWZ" resname="Liste des utilisateurs">
+        <source>Liste des utilisateurs</source>
+        <target>__Liste des utilisateurs</target>
+      </trans-unit>
+      <trans-unit id="gQ0Qzhj" resname="Ajouter un utilisateur">
+        <source>Ajouter un utilisateur</source>
+        <target>__Ajouter un utilisateur</target>
+      </trans-unit>
+      <trans-unit id="skrX7ey" resname="Utilisateur(s) enregistré(s)">
+        <source>Utilisateur(s) enregistré(s)</source>
+        <target>__Utilisateur(s) enregistré(s)</target>
+      </trans-unit>
+      <trans-unit id="undlS5d" resname="utilisateur(s) enregistré(s)">
+        <source>utilisateur(s) enregistré(s)</source>
+        <target>__utilisateur(s) enregistré(s)</target>
+      </trans-unit>
+      <trans-unit id="ofyWfFW" resname="Rôle">
+        <source>Rôle</source>
+        <target>__Rôle</target>
+      </trans-unit>
+      <trans-unit id="BHRymkI" resname="Modification d'un utilisateur">
+        <source>Modification d'un utilisateur</source>
+        <target>__Modification d'un utilisateur</target>
+      </trans-unit>
+      <trans-unit id="tIo9ESF" resname="Enregistrement d'un utilisateur">
+        <source>Enregistrement d'un utilisateur</source>
+        <target>__Enregistrement d'un utilisateur</target>
+      </trans-unit>
+      <trans-unit id="Ya6j.d1" resname="Modification de l' utilisateur :">
+        <source>Modification de l' utilisateur :</source>
+        <target>__Modification de l' utilisateur :</target>
+      </trans-unit>
+      <trans-unit id="y1Gq09A" resname="Veuillez saisir un nom de connexion !">
+        <source>Veuillez saisir un nom de connexion !</source>
+        <target>__Veuillez saisir un nom de connexion !</target>
+      </trans-unit>
+      <trans-unit id="fpBSFzF" resname="Veuillez saisir un nom !">
+        <source>Veuillez saisir un nom !</source>
+        <target>__Veuillez saisir un nom !</target>
+      </trans-unit>
+      <trans-unit id="xj3Yhoc" resname="Veuillez sélectionner un genre !">
+        <source>Veuillez sélectionner un genre !</source>
+        <target>__Veuillez sélectionner un genre !</target>
+      </trans-unit>
+      <trans-unit id="sd03cU2" resname="Veuillez saisir un mot de passe !">
+        <source>Veuillez saisir un mot de passe !</source>
+        <target>__Veuillez saisir un mot de passe !</target>
+      </trans-unit>
+      <trans-unit id="zUpufEF" resname="Veuillez saisir une adresse email !">
+        <source>Veuillez saisir une adresse email !</source>
+        <target>__Veuillez saisir une adresse email !</target>
+      </trans-unit>
+      <trans-unit id="PW44Wxb" resname="Veuillez saisir un contact !">
+        <source>Veuillez saisir un contact !</source>
+        <target>__Veuillez saisir un contact !</target>
+      </trans-unit>
+      <trans-unit id="DpZssbX" resname="Veuillez sélectionner un type utilisateur !">
+        <source>Veuillez sélectionner un type utilisateur !</source>
+        <target>__Veuillez sélectionner un type utilisateur !</target>
+      </trans-unit>
+      <trans-unit id="lb3VsVF" resname="Département / Spécialité / Service">
+        <source>Département / Spécialité / Service</source>
+        <target>__Département / Spécialité / Service</target>
+      </trans-unit>
+      <trans-unit id="holydiw" resname="Permis de conduire">
+        <source>Permis de conduire</source>
+        <target>__Permis de conduire</target>
+      </trans-unit>
+      <trans-unit id="QSYyTRj" resname="Numéro du permis de conduire">
+        <source>Numéro du permis de conduire</source>
+        <target>__Numéro du permis de conduire</target>
+      </trans-unit>
+      <trans-unit id="LuHznhS" resname="Veuillez saisir le numéro du permis !">
+        <source>Veuillez saisir le numéro du permis !</source>
+        <target>__Veuillez saisir le numéro du permis !</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
