@@ -115,25 +115,34 @@
                                     </thead>
                                     
                                     <tbody>
-                                        
+                                                
                                         {% set i = 1 %}
                                         <form action="{{ path('ajout_quantite_produit_panier')}}" method="post">
                                             
-                                            <input type="hidden" name="nombreProduits" value="{{ produits|length }}">
+                                            <input type="hidden" name="nombreProduits" value="{{ produits|length|number_format }}">
                                             {% for produit in produits %}
                                                             
                                                 <tr class="cart-table attach-supportfiles">
-                                                    <td class="infoTable"><span class="tag tag-primary">{{ i }}</span></td>
+                                                    <td class="infoTable"><span class="badge  bg-primary rounded-pill">{{ i }}</span> </td>
                                                     <td class="infoTable"><img class="img-shadow img-3x me-3 rounded-5" src="{{ produit.produit.photo ? asset('images/photoProduits/' ~ produit.produit.photo) : asset('assets/images/logoLucelle.png')}}" alt="img"></td>
-                                                    <td class="infoTable"><span class="tag tag-dark">{{ produit.produit.libelle ? produit.produit.libelle : produit.produit.libelle }}</span></td>
-                                                    <td class="infoTable"><span class="tag tag-blue">{{ produit.produit.prixVente|number_format }} FCFA</span></td>
+                                                    <td class="infoTable">{{ produit.produit.libelle ? produit.produit.libelle : produit.produit.libelle }}</td>
+                                                    <td class="infoTable">{{ produit.produit.prixVente|number_format }} FCFA</td>
                                                     <td class="infoTable">
 
-                                                        <input type="number" name="qte{{i}}" min="1" step="1" value="{{ produit.qte }}" class="form-control text-center quantite">
+                                                        {# <a href="{{ path('panier_decrementer', {'slug': produit.produit.slug })}}"  class="btn btn-sm btn-primary"><i class="fe fe-minus"></i></a> #}
+                                                        <div class="row">
+                                                            <div class="col-md-4">
+                                                            </div>
+                                                            <div class="col-md-8">
+                                                                <input type="number" name="qte{{i}}" min="1" step="1" value="{{ produit.qte }}" class="form-control text-center quantite">
+                                                            </div>
+                                                                {# <input type="hidden" name="produit" min="1" value="{{ produit.id }}" class="form-control text-center">
+                                                                    #}
+                                                        </div>
                                                             
                                                     </td>
 
-                                                    <td class="infoTable"><span class="tag tag-green">{{ produit.total|number_format }} FCFA</span></td>
+                                                    <td class="infoTable"><span> {{ produit.total|number_format }} FCFA</span></td>
                                                     <td class="infoTable">
                                                         {# <a href="{{ path('details_produit', {'slug': produit.produit.slug })}}">
                                                             <span class="text-primary fs-18 me-3">
@@ -141,7 +150,7 @@
                                                             </span>
                                                         </a> #}
                                                         
-                                                        <a href="{{ path('supprimer_produit_du_panier', {'slug': produit.produit.slug })}}" class="btn btn-outline-danger">  
+                                                        <a href="{{ path('supprimer_produit_du_panier', {'slug': produit.produit.slug })}}" class="btn btn-danger">  
                                                             <i class="ri-delete-bin-5-line"></i>
                                                         </a>
                                                     </td>
@@ -155,28 +164,28 @@
                                                 </td>
                                                 <td class="text-right">
                                                     
-                                                    <button type="submit" id="mettreAjour" name="mettreAjour" class="btn btn-md btn-outline-primary">
+                                                    <button type="submit" id="mettreAjour" name="mettreAjour" class="btn btn-md btn-outline-primary text-end">
                                                         <i class="fe fe-refresh-cw me-2"></i>{% trans %}Mettre à jour{% endtrans %}
                                                     </button>
                                                     
                                                 </td>
                                                 </form>
-                                                <td style="font-weight: bold !important;font-size: 20px !important; text-align:right !important" class="font-weight-bold text-uppercase text-end h4 mb-0">
+                                                <td style="font-weight: bold !important;font-size: 16px !important; text-align:right !important" class="font-weight-bold text-uppercase text-end h4 mb-0">
                                                     {% trans %}Total Facture{% endtrans %} :
                                                 </td>
-                                                <td style="font-weight: bold !important;font-size: 20px !important; text-align:right !important" class="font-weight-bold text-uppercase text-end h4 mb-0">{{ total|number_format }} FCFA</td>
+                                                <td style="font-weight: bold !important;font-size: 16px !important; text-align:right !important" class="font-weight-bold text-uppercase text-end h4 mb-0">{{ total|number_format }} FCFA</td>
                                                 
                                             </tr>
                                             
-                                            {# <tr>
+                                            <tr>
                                                 <td colspan="6"></td>
                                                 <td style="font-weight: bold !important;font-size: 20px !important; text-align:center !important">
-                                                    <a href="{{path('afficher_produit')}}" class="btn btn-outline-primary btn-md mt-3" role="button"><i class="si si-basket-loaded"></i> {% trans %}Continuer{% endtrans %} <i class="fe fe-arrow-right ms-2"></i></a>
+                                                    <a href="{{path('afficher_produits')}}" class="btn btn-outline-primary btn-md mt-3" role="button"><i class="si si-basket-loaded"></i> {% trans %}Continuer{% endtrans %} <i class="fe fe-arrow-right ms-2"></i></a>
                                                 </td>
-                                                <td style="font-weight: bold !important;font-size: 20px !important; text-align:center !important">
+                                                {# <td style="font-weight: bold !important;font-size: 20px !important; text-align:center !important">
                                                     <a href="{{path('confirmer_facture')}}" class="btn btn-outline-primary btn-md mt-3" role="button"><i class="si si-wallet"></i> {% trans %}Valider la facture{% endtrans %}</a>
-                                                </td>
-                                            </tr> #}
+                                                </td> #}
+                                            </tr>
                                                 
                                         </tfoot>
                                     </tbody>
@@ -274,7 +283,7 @@
 
 
 <script src="{{ asset ('js/verificationQuantiteNegativePanier.js')}}"></script>
-{# <script src="{{ asset ('js/confirmerFacture1.js')}}"></script> #}
+{# <script src="{{ asset ('js/supprimerProduitDuPanier.js')}}"></script> #}
 <script src="{{ asset ('js/remplissageChampContact.js')}}"></script>
 {% endblock %}
 

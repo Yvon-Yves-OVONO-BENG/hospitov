@@ -20,8 +20,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class AfficherMarqueController extends AbstractController
 {
     public function __construct(
-        protected TranslatorInterface $translator,
-        protected MarqueRepository $marqueRepository,
+        private TranslatorInterface $translator,
+        private MarqueRepository $marqueRepository,
     )
     {}
 

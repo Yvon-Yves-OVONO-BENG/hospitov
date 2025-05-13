@@ -19,9 +19,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class ActiverTypeChambreController extends AbstractController
 {
     public function __construct(
-        protected EntityManagerInterface $em,
-        protected TranslatorInterface $translator,
-        protected TypeChambreRepository $typeChambreRepository
+        private EntityManagerInterface $em,
+        private TranslatorInterface $translator,
+        private TypeChambreRepository $typeChambreRepository
     )
     {}
 

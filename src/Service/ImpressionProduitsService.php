@@ -10,7 +10,7 @@ use DateTime;
 class ImpressionProduitsService extends FPDF
 {
     public function __construct(
-        protected EntetePaysagePaginantion $entetePaysagePaginantion,
+        private EntetePaysagePaginantion $entetePaysagePaginantion,
         )
     {}
 

@@ -19,8 +19,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class AfficherTypeUtilisateurController extends AbstractController
 {
     public function __construct(
-        protected TranslatorInterface $translator,
-        protected TypeUtilisateurRepository $typeUtilisateurRepository
+        private TranslatorInterface $translator,
+        private TypeUtilisateurRepository $typeUtilisateurRepository
     )
     {}
 

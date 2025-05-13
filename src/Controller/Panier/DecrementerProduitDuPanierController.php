@@ -11,8 +11,8 @@ use Symfony\Component\Routing\Annotation\Route;
 class DecrementerProduitDuPanierController extends AbstractController
 {
     public function __construct(
-        protected ProduitRepository $produitRepository, 
-        protected PanierService $panierService)
+        private ProduitRepository $produitRepository, 
+        private PanierService $panierService)
     {}
 
     #[Route('/panier-decrementer/{slug}', name: 'panier_decrementer')]

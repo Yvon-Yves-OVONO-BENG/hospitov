@@ -25,12 +25,12 @@ use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
 class MotDePasseOublieController extends AbstractController
 {
     public function __construct(
-        protected EntityManagerInterface $em,
-        protected UserRepository $userRepository,
-        protected TranslatorInterface $translator,
+        private EntityManagerInterface $em,
+        private UserRepository $userRepository,
+        private TranslatorInterface $translator,
         private ParameterBagInterface $parametres,
-        protected ReponseQuestionRepository $reponseQuestionRepository,
-        protected QuestionSecreteRepository $questionSecreteRepository,
+        private ReponseQuestionRepository $reponseQuestionRepository,
+        private QuestionSecreteRepository $questionSecreteRepository,
     )
     {}
 

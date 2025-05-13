@@ -19,9 +19,9 @@ use Symfony\Component\HttpFoundation\Request;
 class ImprimerKitController extends AbstractController
 {
     public function __construct(
-        protected ImpressionKitService $impressionKitService,
-        protected ImpressionDesKitsService $impressionDesKitsService,
-        protected ProduitRepository $produitRepository)
+        private ImpressionKitService $impressionKitService,
+        private ImpressionDesKitsService $impressionDesKitsService,
+        private ProduitRepository $produitRepository)
     {}
 
     #[Route('/imprimer-kit/{slug}', name: 'imprimer_kit')]

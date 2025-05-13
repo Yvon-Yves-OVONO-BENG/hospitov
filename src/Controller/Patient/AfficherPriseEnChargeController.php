@@ -19,8 +19,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class AfficherPriseEnChargeController extends AbstractController
 {
     public function __construct(
-        protected PatientRepository $patientRepository,
-        protected FactureRepository $factureRepository
+        private PatientRepository $patientRepository,
+        private FactureRepository $factureRepository
     )
     {}
 

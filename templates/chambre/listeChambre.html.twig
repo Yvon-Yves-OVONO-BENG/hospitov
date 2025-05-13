@@ -147,7 +147,7 @@
 														<i class="ri-edit-box-line"></i>
 													</a>
 													
-													{% if chambre.hospitalisations|length == 0 %}
+													{% if chambre.lits|length == 0 %}
 														<a class="btn btn-outline-danger btn-sm rounded-5" href="javascript:void(0);"
 															data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="{% trans %}Supprimer{% endtrans %} : {{ chambre.chambre }}"
 															onclick="swal({

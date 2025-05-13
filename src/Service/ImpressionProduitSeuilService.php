@@ -13,8 +13,8 @@ use DateTime;
 class ImpressionProduitSeuilService extends FPDF
 {
     public function __construct(
-        protected EntetePaysage $entetePaysage, 
-        protected EntetePortrait $entetePortrait,
+        private EntetePaysage $entetePaysage, 
+        private EntetePortrait $entetePortrait,
         ){}
 
     /**

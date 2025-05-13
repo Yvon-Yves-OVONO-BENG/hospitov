@@ -19,8 +19,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class AfficherLotController extends AbstractController
 {
     public function __construct(
-        protected LotRepository $lotRepository,
-        protected TranslatorInterface $translator,
+        private LotRepository $lotRepository,
+        private TranslatorInterface $translator,
     )
     {}
 

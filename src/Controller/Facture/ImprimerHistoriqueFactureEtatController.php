@@ -20,10 +20,10 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class ImprimerHistoriqueFactureEtatController extends AbstractController
 {
     public function __construct(
-        protected ImpressionHistoriqueService $impressionHistoriqueService, 
-        protected FactureRepository $commandeRepository, 
-        protected UserRepository $userRepository, 
-        protected EtatFactureRepository $etatFactureRepository)
+        private ImpressionHistoriqueService $impressionHistoriqueService, 
+        private FactureRepository $commandeRepository, 
+        private UserRepository $userRepository, 
+        private EtatFactureRepository $etatFactureRepository)
     {
         
     }

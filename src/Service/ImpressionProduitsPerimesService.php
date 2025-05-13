@@ -11,7 +11,7 @@ use DateTime;
 class ImpressionProduitsPerimesService extends FPDF
 {
     public function __construct(
-        protected EntetePaysagePaginantion $entetePaysagePaginantion,
+        private EntetePaysagePaginantion $entetePaysagePaginantion,
         )
     {}
 

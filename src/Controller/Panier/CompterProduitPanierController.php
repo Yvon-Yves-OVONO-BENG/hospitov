@@ -16,7 +16,7 @@ use Symfony\Component\HttpFoundation\Request;
 class CompterProduitPanierController extends AbstractController
 {
     public function __construct(
-        protected PanierService $panierService,  
+        private PanierService $panierService,  
         )
     {}
 

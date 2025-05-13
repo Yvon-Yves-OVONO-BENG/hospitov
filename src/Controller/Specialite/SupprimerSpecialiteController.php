@@ -19,9 +19,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class SupprimerSpecialiteController extends AbstractController
 {
     public function __construct(
-        protected EntityManagerInterface $em,
-        protected TranslatorInterface $translator,
-        protected SpecialiteRepository $specialiteRepository
+        private EntityManagerInterface $em,
+        private TranslatorInterface $translator,
+        private SpecialiteRepository $specialiteRepository
     ){}
 
     #[Route('/supprimer-specialite/{slug}', name: 'supprimer_specialite')]

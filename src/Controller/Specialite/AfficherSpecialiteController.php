@@ -18,8 +18,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class AfficherSpecialiteController extends AbstractController
 {
     public function __construct(
-        protected TranslatorInterface $translator,
-        protected SpecialiteRepository $specialiteRepository,
+        private TranslatorInterface $translator,
+        private SpecialiteRepository $specialiteRepository,
     )
     {}
 

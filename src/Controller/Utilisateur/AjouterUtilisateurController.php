@@ -25,10 +25,10 @@ use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 class AjouterUtilisateurController extends AbstractController
 {
     public function __construct(
-        protected StrService $strService,
-        protected EntityManagerInterface $em,
-        protected UserRepository $userRepository,
-        protected TranslatorInterface $translator,
+        private StrService $strService,
+        private EntityManagerInterface $em,
+        private UserRepository $userRepository,
+        private TranslatorInterface $translator,
     )
     {}
     
@@ -121,8 +121,12 @@ class AjouterUtilisateurController extends AbstractController
                     $utilisateur->setRoles([ConstantsClass::ROLE_SECRETAIRE]);
                     break;
 
-                case ConstantsClass::CAISSIERE:
-                    $utilisateur->setRoles([ConstantsClass::ROLE_CAISSIERE]);
+                case ConstantsClass::CAISSIERE_ACCUEIL:
+                    $utilisateur->setRoles([ConstantsClass::ROLE_CAISSIERE_ACCUEIL]);
+                    break;
+                
+                case ConstantsClass::CAISSIERE_PHARMACIE:
+                    $utilisateur->setRoles([ConstantsClass::ROLE_CAISSIERE_PHARMACIE]);
                     break;
 
                 case ConstantsClass::PARAMETRES_VITAUX:

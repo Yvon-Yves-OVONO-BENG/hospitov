@@ -18,7 +18,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 class RecuperePatientController extends AbstractController
 {
     public function __construct(
-        protected PatientRepository $patientRepository,
+        private PatientRepository $patientRepository,
     )
     {}
 

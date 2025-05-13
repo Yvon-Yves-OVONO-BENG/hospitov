@@ -130,6 +130,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\OneToMany(targetEntity: Facture::class, mappedBy: 'prescripteur')]
     private Collection $prescripteurs;
 
+    #[ORM\OneToMany(targetEntity: Hospitalisation::class, mappedBy: 'enregistrePar')]
+    private Collection $hospitalisations;
+
     public function __construct()
     {
         $this->factures = new ArrayCollection();
@@ -146,6 +149,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         $this->resultatExamens = new ArrayCollection();
         $this->billetDeSessions = new ArrayCollection();
         $this->prescripteurs = new ArrayCollection();
+        $this->hospitalisations = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -853,6 +857,36 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
             // set the owning side to null (unless already changed)
             if ($prescripteur->getPrescripteur() === $this) {
                 $prescripteur->setPrescripteur(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Hospitalisation>
+     */
+    public function getHospitalisations(): Collection
+    {
+        return $this->hospitalisations;
+    }
+
+    public function addHospitalisation(Hospitalisation $hospitalisation): static
+    {
+        if (!$this->hospitalisations->contains($hospitalisation)) {
+            $this->hospitalisations->add($hospitalisation);
+            $hospitalisation->setEnregistrePar($this);
+        }
+
+        return $this;
+    }
+
+    public function removeHospitalisation(Hospitalisation $hospitalisation): static
+    {
+        if ($this->hospitalisations->removeElement($hospitalisation)) {
+            // set the owning side to null (unless already changed)
+            if ($hospitalisation->getEnregistrePar() === $this) {
+                $hospitalisation->setEnregistrePar(null);
             }
         }
 

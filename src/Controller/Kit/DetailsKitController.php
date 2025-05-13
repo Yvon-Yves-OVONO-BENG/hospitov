@@ -18,8 +18,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class DetailsKitController extends AbstractController
 {
     public function __construct(
-        protected TranslatorInterface $translator,
-        protected ProduitRepository $produitRepository,
+        private TranslatorInterface $translator,
+        private ProduitRepository $produitRepository,
     )
     {}
 

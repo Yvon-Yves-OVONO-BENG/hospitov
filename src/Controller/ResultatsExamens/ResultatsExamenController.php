@@ -36,10 +36,6 @@ class ResultatsExamenController extends AbstractController
         $maSession->set('ajout', null);
         $maSession->set('misAjour', null);
         $maSession->set('suppression', null);
-
-        $tousLesExamen = 0;
-        $examensFait = 0;
-        $pasEncoreFait = 0;
         
         switch ($resultatExamen) 
         {

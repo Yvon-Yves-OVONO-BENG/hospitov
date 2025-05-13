@@ -45,12 +45,12 @@ class Chambre
     #[ORM\Column(nullable: true)]
     private ?int $nombreLitOccupe = null;
 
-    #[ORM\OneToMany(targetEntity: Hospitalisation::class, mappedBy: 'chambre')]
-    private Collection $hospitalisations;
+    #[ORM\OneToMany(targetEntity: Lit::class, mappedBy: 'chambre')]
+    private Collection $lits;
 
     public function __construct()
     {
-        $this->hospitalisations = new ArrayCollection();
+        $this->lits = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -179,29 +179,29 @@ class Chambre
     }
 
     /**
-     * @return Collection<int, Hospitalisation>
+     * @return Collection<int, Lit>
      */
-    public function getHospitalisations(): Collection
+    public function getLits(): Collection
     {
-        return $this->hospitalisations;
+        return $this->lits;
     }
 
-    public function addHospitalisation(Hospitalisation $hospitalisation): static
+    public function addLit(Lit $lit): static
     {
-        if (!$this->hospitalisations->contains($hospitalisation)) {
-            $this->hospitalisations->add($hospitalisation);
-            $hospitalisation->setChambre($this);
+        if (!$this->lits->contains($lit)) {
+            $this->lits->add($lit);
+            $lit->setChambre($this);
         }
 
         return $this;
     }
 
-    public function removeHospitalisation(Hospitalisation $hospitalisation): static
+    public function removeLit(Lit $lit): static
     {
-        if ($this->hospitalisations->removeElement($hospitalisation)) {
+        if ($this->lits->removeElement($lit)) {
             // set the owning side to null (unless already changed)
-            if ($hospitalisation->getChambre() === $this) {
-                $hospitalisation->setChambre(null);
+            if ($lit->getChambre() === $this) {
+                $lit->setChambre(null);
             }
         }
 

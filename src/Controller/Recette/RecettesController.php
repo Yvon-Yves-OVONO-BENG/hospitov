@@ -20,7 +20,7 @@ class RecettesController extends AbstractController
 {
     public function __construct(
         private TranslatorInterface $translator,
-        protected FactureRepository $factureRepository
+        private FactureRepository $factureRepository
     )
     {}
 

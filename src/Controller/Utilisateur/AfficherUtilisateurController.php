@@ -17,8 +17,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class AfficherUtilisateurController extends AbstractController
 {
     public function __construct(
-        protected TranslatorInterface $translator,
-        protected UserRepository $userRepository,
+        private TranslatorInterface $translator,
+        private UserRepository $userRepository,
     )
     {}
 

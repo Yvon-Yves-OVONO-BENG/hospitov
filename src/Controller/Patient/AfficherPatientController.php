@@ -20,8 +20,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class AfficherPatientController extends AbstractController
 {
     public function __construct(
-        protected TranslatorInterface $translator,
-        protected PatientRepository $patientRepository,
+        private TranslatorInterface $translator,
+        private PatientRepository $patientRepository,
         private EntityManagerInterface $em,
     )
     {}

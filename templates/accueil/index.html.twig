@@ -32,8 +32,12 @@
 <!-- App-Content -->
 
 		{% if licence == 1 %}
-			{% if is_granted('ROLE_CAISSIERE') %}
-                {% include "includes/_accueilCaissiere.html.twig" %}
+			{% if is_granted('ROLE_CAISSIERE_ACCUEIL') %}
+                {% include "includes/_accueilCaissiereAccueil.html.twig" %}
+            {% endif %}
+
+			{% if is_granted('ROLE_CAISSIERE_PHARMACIE') %}
+                {% include "includes/_accueilCaissierePharmacie.html.twig" %}
             {% endif %}
 
 			{% if is_granted('ROLE_REGIES_DES_RECETTES') %}
@@ -62,6 +66,10 @@
 
 			{% if is_granted('ROLE_LABORANTIN') %}
                 {% include "includes/_accueilLaborantin.html.twig" %}
+            {% endif %}
+
+			{% if is_granted('ROLE_HOSPITALISATION') %}
+                {% include "includes/_accueilHospitalisation.html.twig" %}
             {% endif %}
 
 			{% else %}

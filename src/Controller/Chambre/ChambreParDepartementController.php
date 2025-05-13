@@ -4,6 +4,7 @@ namespace App\Controller\Chambre;
 
 use App\Entity\ConstantsClass;
 use App\Repository\ChambreRepository;
+use App\Repository\SpecialiteRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
@@ -19,8 +20,9 @@ use Symfony\Contracts\Translation\TranslatorInterface;
 class ChambreParDepartementController extends AbstractController
 {
     public function __construct(
-        protected TranslatorInterface $translator,
-        protected ChambreRepository $chambreRepository
+        private TranslatorInterface $translator,
+        private ChambreRepository $chambreRepository,
+        private SpecialiteRepository $specialiteRepository,
     )
     {}
 
@@ -60,8 +62,14 @@ class ChambreParDepartementController extends AbstractController
             
         }
 
+        #les départements
+        $specialites = $this->specialiteRepository->findBy([
+            'supprime' => 0
+        ], ['specialite' => 'ASC']);
+
         return $this->render('chambre/chambreParDepartement.html.twig', [
             'licence' => 1,
+            'specialites' => $specialites,
             'dossier' => $this->translator->trans("Chambre"),
             'route' => $this->translator->trans("Chambres par département"),
         ]);

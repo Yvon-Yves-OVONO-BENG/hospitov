@@ -12,8 +12,8 @@ use App\Entity\ElementsPiedDePage\PaginationPortrait;
 class ImpressionDesFactureService extends FPDF
 {
     public function __construct(
-        protected EntetePaysage $entetePaysage, 
-        protected EntetePortrait $entetePortrait,
+        private EntetePaysage $entetePaysage, 
+        private EntetePortrait $entetePortrait,
         )
     {
     }
@@ -42,7 +42,6 @@ class ImpressionDesFactureService extends FPDF
             // $pdf->Image('../public/images/qrcode/'.$facture->getQrCode(), 10, 40, 500);
             // $pdf->Image('../public/images/qrcode/'.$facture->getQrCode(), 165, 67, 34, 34);
             
-            $pdf->Ln(5);
             $pdf->SetFont('Arial', 'B', 12);
             $pdf->Cell(100, 5, 'DETAILS DE LA FACTURE : '.$factur->getReference(), 0, 0, 'L', 0);
 

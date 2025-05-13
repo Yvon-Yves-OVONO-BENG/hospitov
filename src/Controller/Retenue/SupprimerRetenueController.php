@@ -19,9 +19,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class SupprimerRetenueController extends AbstractController
 {
     public function __construct(
-        protected EntityManagerInterface $em,
-        protected TranslatorInterface $translator,
-        protected RetenueRepository $retenueRepository
+        private EntityManagerInterface $em,
+        private TranslatorInterface $translator,
+        private RetenueRepository $retenueRepository
     )
     {}
 

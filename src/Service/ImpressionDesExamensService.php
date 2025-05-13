@@ -9,8 +9,8 @@ use App\Service\EntetePortraitPagination;
 class ImpressionDesExamensService extends FPDF
 {
     public function __construct( 
-        protected BlocChiffreService $blocChiffreService,
-        protected EntetePortraitPagination $entetePortraitPagination,
+        private BlocChiffreService $blocChiffreService,
+        private EntetePortraitPagination $entetePortraitPagination,
         )
     {}
 

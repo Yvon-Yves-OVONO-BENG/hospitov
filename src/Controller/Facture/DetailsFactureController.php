@@ -20,10 +20,10 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class DetailsFactureController extends AbstractController
 {
     public function __construct(
-        protected EntityManagerInterface $em,
-        protected TranslatorInterface $translator,
-        protected FactureRepository $factureRepository, 
-        protected LigneDeFactureRepository $ligneDeFactureRepository, 
+        private EntityManagerInterface $em,
+        private TranslatorInterface $translator,
+        private FactureRepository $factureRepository, 
+        private LigneDeFactureRepository $ligneDeFactureRepository, 
         )
     {}
 

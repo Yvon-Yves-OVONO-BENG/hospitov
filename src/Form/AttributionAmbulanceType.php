@@ -16,7 +16,7 @@ use Symfony\Contracts\Translation\TranslatorInterface;
 class AttributionAmbulanceType extends AbstractType
 {
     public function __construct(
-        protected TranslatorInterface $translator,
+        private TranslatorInterface $translator,
         )
     {}
     

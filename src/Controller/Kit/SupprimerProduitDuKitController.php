@@ -20,9 +20,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class SupprimerProduitDuKitController extends AbstractController
 {
     public function __construct(
-        protected EntityManagerInterface $em,
-        protected TranslatorInterface $translator,
-        protected LigneDeKitRepository $ligneDeKitRepository,
+        private EntityManagerInterface $em,
+        private TranslatorInterface $translator,
+        private LigneDeKitRepository $ligneDeKitRepository,
     )
     {}
     

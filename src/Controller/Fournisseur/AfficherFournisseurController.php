@@ -18,8 +18,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class AfficherFournisseurController extends AbstractController
 {
     public function __construct(
-        protected TranslatorInterface $translator,
-        protected FournisseurRepository $fournisseurRepository
+        private TranslatorInterface $translator,
+        private FournisseurRepository $fournisseurRepository
     )
     {}
 

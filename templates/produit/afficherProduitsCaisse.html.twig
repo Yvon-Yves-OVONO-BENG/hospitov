@@ -122,66 +122,92 @@
 					{% endif %}
 
 					<div class="card">
-						<div class="card-header d-flex align-items-center justify-content-between">
+						<div class="card-header">
+							<div class="row">
+								<div class="col-md-4">
+									<h3 class="card-title">
+										{% if billet is defined %}
+											<span> {% trans %}Billet(s) enregistré(s){% endtrans %}</span>
+										{% endif %}
+										{% if carnet is defined %}
+											<span> {% trans %}Carnet(s) enregistré(s){% endtrans %}</span>
+										{% endif %}
+										{% if echographie is defined %}
+											<span> {% trans %}Echographie(s) enregistré(s){% endtrans %}</span>
+										{% endif %}
+										{% if examen is defined %}
+											<span> {% trans %}Examen(s) enregistré(s){% endtrans %}</span>
+										{% endif %}
+										{% if kit is defined %}
+											<span> {% trans %}Kit(s) enregistré(s){% endtrans %}</span>
+										{% endif %}
+										{% if radio is defined %}
+											<span> {% trans %}Radio(s) enregistrée(s){% endtrans %}</span>
+										{% endif %}
+									</h4>
+								</div>
+								<div class="col-md-4">
+								</div>
+								<div class="col-md-4">
+									<button type="button" class="btn btn-primary mt-1 mb-1 me-3">
+										<span class="badge bg-white text-dark">{{ produits|length|number_format }}</span>
+										{% if billet is defined %}
+											<span> {% trans %}billet(s) enregistré(s){% endtrans %}</span>
+										{% endif %}
+										{% if carnet is defined %}
+											<span> {% trans %}carnet(s) enregistré(s){% endtrans %}</span>
+										{% endif %}
+										{% if echographie is defined %}
+											<span> {% trans %}echographie(s) enregistré(s){% endtrans %}</span>
+										{% endif %}
+										{% if examen is defined %}
+											<span> {% trans %}examen(s) enregistré(s){% endtrans %}</span>
+										{% endif %}
+										{% if kit is defined %}
+											<span> {% trans %}kit(s) enregistré(s){% endtrans %}</span>
+										{% endif %}
+										{% if radio is defined %}
+											<span> {% trans %}radio(s) enregistrée(s){% endtrans %}</span>
+										{% endif %}
+									</button>
+								</div>
 							
-							<h5 class="card-title">
-								<button type="button" class="btn btn-primary mt-1 mb-1 me-3">
-									<span class="badge bg-white text-dark">{{ produits|length|number_format }}</span>
-									{% if billet is defined %}
-										<span> {% trans %}billet(s) enregistré(s){% endtrans %}</span>
-									{% endif %}
-									{% if carnet is defined %}
-										<span> {% trans %}carnet(s) enregistré(s){% endtrans %}</span>
-									{% endif %}
-									{% if echographie is defined %}
-										<span> {% trans %}echographie(s) enregistré(s){% endtrans %}</span>
-									{% endif %}
-									{% if examen is defined %}
-										<span> {% trans %}examen(s) enregistré(s){% endtrans %}</span>
-									{% endif %}
-									{% if kit is defined %}
-										<span> {% trans %}kit(s) enregistré(s){% endtrans %}</span>
-									{% endif %}
-									{% if radio is defined %}
-										<span> {% trans %}radio(s) enregistrée(s){% endtrans %}</span>
-									{% endif %}
-								</button>
-							</h5>
-							{% if is_granted('ROLE_PHARMACIEN') or is_granted('ROLE_DIRECTEUR') or is_granted('ROLE_ADMINISTRATEUR') or is_granted('ROLE_SECRETAIRE')  %}
-								{% if seuil == 0 %}
-									<a href="{{ path ('ajouter_produit') }}" class="btn btn-primary ms-auto">
-										<i class="ri-add-box-line"></i>
-										{% trans %}Ajouter un produit{% endtrans %}
-									</a>
+							
+								{% if is_granted('ROLE_PHARMACIEN') or is_granted('ROLE_DIRECTEUR') or is_granted('ROLE_ADMINISTRATEUR') or is_granted('ROLE_SECRETAIRE')  %}
+									{% if seuil == 0 %}
+										<a href="{{ path ('ajouter_produit') }}" class="btn btn-primary ms-auto">
+											<i class="ri-add-box-line"></i>
+											{% trans %}Ajouter un produit{% endtrans %}
+										</a>
 
-									<a href="{{ path ('impression_produits') }}" class="btn btn-primary ms-auto" target="_blank">
-										<i class="ri-printer-line"></i>
-										{% trans %}Imprimer tous les produits{% endtrans %}
-									</a>
+										<a href="{{ path ('impression_produits') }}" class="btn btn-primary ms-auto" target="_blank">
+											<i class="ri-printer-line"></i>
+											{% trans %}Imprimer tous les produits{% endtrans %}
+										</a>
+									{% endif %}
+
+									{% if seuil == 1 %}
+										<a href="{{ path ('impression_produit_seuil') }}" target="_blank" class="btn btn-outline-danger btn-pill">
+											<i class="ri-printer-line"></i>
+											{% trans %}Imprimer les produits seuils{% endtrans %}
+										</a>
+									{% endif %}
+
+									{% if seuil == 2 %}
+										<a href="{{ path ('impression_produits_perimes') }}" target="_blank" class="btn btn-outline-danger btn-pill">
+											<i class="ri-printer-line"></i>
+											{% trans %}Imprimer les produits périmés{% endtrans %}
+										</a>
+									{% endif %}
+
 								{% endif %}
-
-								{% if seuil == 1 %}
-									<a href="{{ path ('impression_produit_seuil') }}" target="_blank" class="btn btn-outline-danger btn-pill">
-										<i class="ri-printer-line"></i>
-										{% trans %}Imprimer les produits seuils{% endtrans %}
-									</a>
-								{% endif %}
-
-								{% if seuil == 2 %}
-									<a href="{{ path ('impression_produits_perimes') }}" target="_blank" class="btn btn-outline-danger btn-pill">
-										<i class="ri-printer-line"></i>
-										{% trans %}Imprimer les produits périmés{% endtrans %}
-									</a>
-								{% endif %}
-
-							{% endif %}
-								
+							</div>
 						</div>
-					<div class="card-body">
-						<div class="table-responsive" id="table-responsive">
-							{% include "includes/_tableProduitsCaisse.html.twig" %}
+						<div class="card-body">
+							<div class="table-responsive" id="table-responsive">
+								{% include "includes/_tableProduitsCaisse.html.twig" %}
+							</div>
 						</div>
-					</div>
 				</div>
 			</div>
 		</div>

@@ -21,11 +21,11 @@ use Symfony\Component\Security\Csrf\CsrfTokenManagerInterface;
 class ModifierGainController extends AbstractController
 {
     public function __construct(
-        protected StrService $strService,
-        protected EntityManagerInterface $em,
-        protected TranslatorInterface $translator,
-        protected GainRepository $gainRepository,
-        protected CsrfTokenManagerInterface $csrfTokenManager,
+        private StrService $strService,
+        private EntityManagerInterface $em,
+        private TranslatorInterface $translator,
+        private GainRepository $gainRepository,
+        private CsrfTokenManagerInterface $csrfTokenManager,
     )
     {}
 

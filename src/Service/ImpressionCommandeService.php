@@ -11,7 +11,7 @@ use App\Service\EntetePortraitPagination;
 class ImpressionCommandeService extends FPDF
 {
     public function __construct( 
-        protected EntetePortraitPagination $entetePortraitPagination,
+        private EntetePortraitPagination $entetePortraitPagination,
         )
     {
     }

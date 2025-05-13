@@ -19,9 +19,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class SupprimerLotController extends AbstractController
 {
     public function __construct(
-        protected EntityManagerInterface $em,
-        protected TranslatorInterface $translator,
-        protected LotRepository $lotRepository
+        private EntityManagerInterface $em,
+        private TranslatorInterface $translator,
+        private LotRepository $lotRepository
     )
     {}
 

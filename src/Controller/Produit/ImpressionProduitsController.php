@@ -17,8 +17,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class ImpressionProduitsController extends AbstractController
 {
     public function __construct(
-        protected ProduitRepository $produitRepository,
-        protected ImpressionProduitsService $impressionProduitsService
+        private ProduitRepository $produitRepository,
+        private ImpressionProduitsService $impressionProduitsService
     )
     {}
 

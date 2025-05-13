@@ -19,9 +19,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class ActiverPrimeSpecialeController extends AbstractController
 {
     public function __construct(
-        protected EntityManagerInterface $em,
-        protected TranslatorInterface $translator,
-        protected PrimeSpecialeRepository $retenueRepository
+        private EntityManagerInterface $em,
+        private TranslatorInterface $translator,
+        private PrimeSpecialeRepository $retenueRepository
     )
     {}
 

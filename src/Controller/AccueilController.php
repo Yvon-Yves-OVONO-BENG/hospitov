@@ -8,6 +8,7 @@ use App\Repository\BilletDeSessionRepository;
 use App\Repository\CommandeRepository;
 use App\Repository\ConsultationRepository;
 use App\Repository\FactureRepository;
+use App\Repository\HospitalisationRepository;
 use App\Repository\LicenceRepository;
 use App\Repository\LigneDeFactureRepository;
 use App\Repository\LotRepository;
@@ -46,6 +47,7 @@ class AccueilController extends AbstractController
         private ResultatExamenRepository $resultatExamenRepository,
         private LigneDeFactureRepository $ligneDeFactureRepository,
         private BilletDeSessionRepository $billetDeSessionRepository,
+        private HospitalisationRepository $hospitalisationRepository,
         private StatsProduitsCaissiereService $statsProduitsCaissiereService,
     )
     {}
@@ -114,7 +116,7 @@ class AccueilController extends AbstractController
             $this->em->flush();
 
             #POUR LA CAISSIERE ACCUEIL
-            if (in_array(ConstantsClass::ROLE_CAISSIERE, $user->getRoles()))
+            if (in_array(ConstantsClass::ROLE_CAISSIERE_ACCUEIL, $user->getRoles()))
             {
                 #Les factures du jour
                 $facturesDuJour = $this->factureRepository->findBy([
@@ -147,6 +149,182 @@ class AccueilController extends AbstractController
                 ]);
             }
 
+            #POUR LA CAISSIERE PHARMACIE
+            if(in_array(ConstantsClass::ROLE_CAISSIERE_PHARMACIE, $user->getRoles()))
+            {
+                #ses factures du jours
+                $facturesDuJour = $this->factureRepository->findBy([
+                    'dateFactureAt' => $aujourdhui,
+                    'annulee' => 0,
+                    'caissiere' => $this->userRepository->find($user->getId())
+                ], ['dateFactureAt' => 'DESC']);
+
+                $factures = $this->factureRepository->findBy([
+                    'annulee' => 0,
+                    'caissiere' => $user
+                ], ['id' => 'DESC']);
+
+                #je recupère tous les produits
+                $tousLesProduits = $this->produitRepository->findBy([
+                    'kit' => 0,
+                    'supprime' => 0,
+                ]);
+
+                #je récupère les produits dont la date de premption est non nulle
+                $produits = $this->produitRepository->produits();
+
+                #je calcul les produits périmés dans moins de 90 jours
+                $produitsBientotPerimes = [];
+
+                foreach ($produits as $produit) 
+                {
+                    $aujourdhui = date_format(new DateTime('now'), 'Y-m-d');
+                    $aujourdhui = new DateTime($aujourdhui);
+
+                    $datePeremption = date_format($produit->getLot()->getDatePeremptionAt(), ('Y-m-d'));
+                    $datePeremption = new DateTime($datePeremption);
+
+                    $dateDiff = $aujourdhui->diff($datePeremption);
+                    
+                    if ((int)$dateDiff->format('%R%a') <= 90 && ((int)$dateDiff->format('%R%a') > 0) && ($produit->isSupprime() == 0)) 
+                    {
+                        $produitsBientotPerimes[] = $produit;
+                    }
+                
+                }
+
+                #je calcul les produits périmés
+                $produitsPerimes = [];
+
+                foreach ($produits as $produit) 
+                {
+                    #je récupère le nombre de jour entre la date du jour et la date de peremption du produit
+                    $aujourdhui = date_format(new DateTime('now'), 'Y-m-d');
+                    $aujourdhui = new DateTime($aujourdhui);
+
+                    $datePeremption = date_format($produit->getLot()->getDatePeremptionAt(), ('Y-m-d'));
+                    $datePeremption = new DateTime($datePeremption);
+
+                    $dateDiff = $aujourdhui->diff($datePeremption);
+                    
+                    if ((int)$dateDiff->format('%R%a') <= 0 && $produit->isSupprime() == 0) 
+                    {
+                        $produitsPerimes[] = $produit;
+                    }
+                
+                }
+
+                #les commandes
+                #je recupère toutes les commandes pour compter
+                // $commandes = $this->commandeRepository->findBy([], ['id' => 'DESC' ]);
+                $commandes = $this->commandeRepository->findAll();
+
+                ###############################
+                #mes variables
+                $nombreCash = 0;
+                $montantCash = 0;
+
+                $nombrePrisEnCharge = 0;
+                $montantPrisEnCharge = 0;
+
+                $nombreCredit = 0;
+                $montantCredit = 0;
+                foreach ($factures as $facture) 
+                {
+                    switch ($facture->getModePaiement()->getModePaiement()) {
+                        case 'CASH':
+                            $nombreCash = $nombreCash + 1;
+                            $montantCash += $facture->getAvance();
+                            break;
+
+                        case 'PRIS EN CHARGE':
+                            $nombrePrisEnCharge = $nombrePrisEnCharge + 1;
+                            $montantPrisEnCharge += $facture->getAvance();
+                            break;
+
+                        case 'CRÉDIT':
+                            $nombreCredit = $nombreCredit + 1;
+                            $montantCredit += $facture->getAvance();
+                            break;
+                        
+                    }
+                }
+
+                ###################
+                #mes variables
+                $nombreCashDuJour = 0;
+                $montantCashDuJour = 0;
+
+                $nombrePrisEnChargeDuJour = 0;
+                $montantPrisEnChargeDuJour = 0;
+
+                $nombreCreditDuJour = 0;
+                $montantCreditDuJour = 0;
+
+                foreach ($facturesDuJour as $factureDuJour) 
+                {
+                    switch ($factureDuJour->getModePaiement()->getModePaiement()) {
+                        case ConstantsClass::CASH:
+                            $nombreCashDuJour = $nombreCashDuJour + 1;
+                            $montantCashDuJour += $factureDuJour->getAvance();
+                            break;
+
+                        case ConstantsClass::PRIS_EN_CHARGE:
+                            $nombrePrisEnChargeDuJour = $nombrePrisEnChargeDuJour + 1;
+                            $montantPrisEnChargeDuJour += $factureDuJour->getAvance();
+                            break;
+
+                        case ConstantsClass::CREDIT:
+                            $nombreCreditDuJour = $nombreCreditDuJour + 1;
+                            $montantCreditDuJour += $factureDuJour->getAvance();
+                            break;
+                        
+                    }
+                }
+
+                #je recupère les lots
+                $lots = $this->lotRepository->findAll();
+
+                return $this->render('accueil/index.html.twig', [
+                    'licence' => 1,
+                    'route' => 'accueil',
+                    'nombreDeJoursRestants' => $nombreJoursRestant, 
+                    'aujourdhui' => $aujourdhui,
+                    'factures' => compact("factures"),
+                    'factureAnnulee' => 0,
+                    'nombreDeJoursRestants' => $nombreJoursRestant, 
+                    'tousLesProduits' => $tousLesProduits,
+                    'commandes' => $commandes,
+                    // 'facturesDuJourCaissiere' => $facturesDuJourCaissiere,
+    
+                    'nombreCash' => $nombreCash,
+                    'montantCash' => $montantCash,
+                    'nombrePrisEnCharge' => $nombrePrisEnCharge,
+                    'montantPrisEnCharge' => $montantPrisEnCharge,
+                    'nombreCredit' => $nombreCredit,
+                    'montantCredit' => $montantCredit,
+    
+                    'nombreCashDuJour' => $nombreCashDuJour,
+                    'montantCashDuJour' => $montantCashDuJour,
+                    'nombrePrisEnChargeDuJour' => $nombrePrisEnChargeDuJour,
+                    'montantPrisEnChargeDuJour' => $montantPrisEnChargeDuJour,
+                    'nombreCreditDuJour' => $nombreCreditDuJour,
+                    'montantCreditDuJour' => $montantCreditDuJour,
+    
+                    'aujourdhui' => $aujourdhui,
+                    'factures' => $factures,
+                    
+                    'produitsPerimes' => $produitsPerimes,
+                    'produitsBientotPerimes' => $produitsBientotPerimes,
+    
+                    ##########################
+                    'lots' => $lots,
+                    'produits' => $produits,
+                    'factureAnnulee' => 0,
+    
+                ]);
+            }
+
             #POUR LES PARAMETRES VITAUX
             if (in_array(ConstantsClass::ROLE_PARAMETRES_VITAUX, $user->getRoles()))
             {
@@ -164,7 +342,7 @@ class AccueilController extends AbstractController
 
                 return $this->render('accueil/index.html.twig', [
                     'licence' => 1,
-                    'route' => 'accueil',
+                    'route' => 'Accueil',
                     'factureAnnulee' => 0,
                     'sessions' => $sessionsDuJour, 
                     'toutesLesSessions' => $toutesLesSessions, 
@@ -220,15 +398,40 @@ class AccueilController extends AbstractController
                 ]);
             }
 
+
+            #POUR HOSPITALISATION
+            if(in_array(ConstantsClass::ROLE_HOSPITALISATION, $this->getUser()->getRoles()))
+            {
+                #Les hospitalisations du jour 
+                $hospitalisationsDuJour = $this->hospitalisationRepository->findAll();
+
+                #Les hospitalisations sorties
+                $hospitalisationsSorties = $this->hospitalisationRepository->findAll();
+
+                #toutes les hospitalisations
+                $toutesLesHospitalisations = $this->hospitalisationRepository->findAll();
+                // dd($examensDuJour);
+
+                return $this->render('accueil/index.html.twig', [
+                    'licence' => 1,
+                    'route' => 'accueil',
+                    'hospitalisations' => $toutesLesHospitalisations,
+                    'hospitalisationsDuJour' => $hospitalisationsDuJour,
+                    'hospitalisationsSorties' => $hospitalisationsSorties,
+                ]);
+            }
+
             if (in_array(ConstantsClass::ROLE_REGIES_DES_RECETTES, $user->getRoles()) || 
             in_array(ConstantsClass::ROLE_ADMINISTRATEUR, $user->getRoles()) || 
-            in_array(ConstantsClass::ROLE_SECRETAIRE, $user->getRoles())
+            in_array(ConstantsClass::ROLE_SECRETAIRE, $user->getRoles()) || 
+            in_array(ConstantsClass::ROLE_PHARMACIEN, $user->getRoles())
             ) 
             {
                 //2. Toutes Ses factures
                 if (in_array(ConstantsClass::ROLE_REGIES_DES_RECETTES, $user->getRoles()) || 
                 in_array(ConstantsClass::ROLE_ADMINISTRATEUR, $user->getRoles()) || 
-                in_array(ConstantsClass::ROLE_SECRETAIRE, $user->getRoles())) 
+                in_array(ConstantsClass::ROLE_SECRETAIRE, $user->getRoles()) || 
+                in_array(ConstantsClass::ROLE_PHARMACIEN, $user->getRoles()))
                 {
                     #ses factures du jours
                     $facturesDuJour = $this->factureRepository->findBy([
@@ -365,7 +568,8 @@ class AccueilController extends AbstractController
 
                 if (in_array(ConstantsClass::ROLE_REGIES_DES_RECETTES, $user->getRoles()) || 
                 in_array(ConstantsClass::ROLE_ADMINISTRATEUR, $user->getRoles()) || 
-                in_array(ConstantsClass::ROLE_SECRETAIRE, $user->getRoles())) 
+                in_array(ConstantsClass::ROLE_SECRETAIRE, $user->getRoles()) ||
+                in_array(ConstantsClass::ROLE_PHARMACIEN, $user->getRoles())) 
                 {
                     #ses factures du jours de la caisiere
                     $facturesDuJourCaissiere = $this->factureRepository->findBy([
@@ -373,7 +577,8 @@ class AccueilController extends AbstractController
                         'annulee' => 0
                     ], ['dateFactureAt' => 'DESC']);
                 }
-                elseif(in_array(ConstantsClass::ROLE_CAISSIERE, $user->getRoles()))
+                elseif(in_array(ConstantsClass::ROLE_CAISSIERE_ACCUEIL, $user->getRoles()) ||
+                in_array(ConstantsClass::ROLE_CAISSIERE_PHARMACIE, $user->getRoles()))
                 {
                     #ses factures du jours de la caisiere
                     $facturesDuJourCaissiere = $this->factureRepository->findBy([
@@ -417,8 +622,7 @@ class AccueilController extends AbstractController
                     'factureAnnulee' => 0,
 
                 ]);
-            } 
-            
+            }   
             
         }
         else

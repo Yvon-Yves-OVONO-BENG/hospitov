@@ -20,7 +20,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class MesConsultationsDuJourController extends AbstractController
 {
     public function __construct(
-        protected ConsultationRepository $consultationRepository
+        private ConsultationRepository $consultationRepository
     )
     {}
 

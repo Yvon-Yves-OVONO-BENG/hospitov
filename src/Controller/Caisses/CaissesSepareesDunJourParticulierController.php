@@ -23,10 +23,10 @@ class CaissesSepareesDunJourParticulierController extends AbstractController
 {
     public function __construct(
         private TranslatorInterface $translator,
-        protected FactureRepository $factureRepository,
-        protected TypeProduitRepository $typeProduitRepository,
-        protected ModePaiementRepository $modePaiementRepository,
-        protected LigneDeFactureRepository $ligneDeFactureRepository,
+        private FactureRepository $factureRepository,
+        private TypeProduitRepository $typeProduitRepository,
+        private ModePaiementRepository $modePaiementRepository,
+        private LigneDeFactureRepository $ligneDeFactureRepository,
     )
     {}
 
@@ -57,7 +57,9 @@ class CaissesSepareesDunJourParticulierController extends AbstractController
         {
             $dateDuJour = date_create($request->request->get('dateDuJour'));
             
-            $recettesDuJour = $this->ligneDeFactureRepository->recetteDunJourParticulier($dateDuJour);
+            // $recettesDuJour = $this->ligneDeFactureRepository->recetteDunJourParticulier($dateDuJour);
+
+            $recettesDuJour = $this->factureRepository->recetteDujour($dateDuJour);
 
             $recettesKitDuJour = $this->factureRepository->kitsVenduParCaissiereDunJourParticulier($dateDuJour);
 
@@ -77,8 +79,8 @@ class CaissesSepareesDunJourParticulierController extends AbstractController
             'facturesDuJour' => $facturesDuJour,
             'recettesDuJour' => $recettesDuJour,
             'recettesKitDuJour' => $recettesKitDuJour,
-            'dossier' => $this->translator->trans("Caisses"),
-            'route' => $this->translator->trans("Caisses séparées d'uu jour particulier")
+            'dossier' => $this->translator->trans('Caisses séparées'),
+            'route' => $this->translator->trans("*D'un jour particulier"),
         ]);
     }
 }

@@ -19,9 +19,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class ActiverGainController extends AbstractController
 {
     public function __construct(
-        protected EntityManagerInterface $em,
-        protected TranslatorInterface $translator,
-        protected GainRepository $gainRepository
+        private EntityManagerInterface $em,
+        private TranslatorInterface $translator,
+        private GainRepository $gainRepository
     )
     {}
 

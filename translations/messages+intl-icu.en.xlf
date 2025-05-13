@@ -1353,9 +1353,9 @@
         <source>Pas encore livrée</source>
         <target>__Pas encore livrée</target>
       </trans-unit>
-      <trans-unit id="RoQr.m_" resname="Commande de l'Centre de Santé Privé Lucelle">
-        <source>Commande de l'Centre de Santé Privé Lucelle</source>
-        <target>__Commande de l'Centre de Santé Privé Lucelle</target>
+      <trans-unit id="RoQr.m_" resname="Commande de l'CENTRE DE SANTE PRIVE LUCELLE">
+        <source>Commande de l'CENTRE DE SANTE PRIVE LUCELLE</source>
+        <target>__Commande de l'CENTRE DE SANTE PRIVE LUCELLE</target>
       </trans-unit>
       <trans-unit id="zExCS1c" resname="Téléphone">
         <source>Téléphone</source>

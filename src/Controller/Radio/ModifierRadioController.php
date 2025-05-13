@@ -22,10 +22,10 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class ModifierRadioController extends AbstractController
 {
     public function __construct(
-        protected StrService $strService,
-        protected EntityManagerInterface $em,
-        protected TranslatorInterface $translator,
-        protected ProduitRepository $produitRepository,
+        private StrService $strService,
+        private EntityManagerInterface $em,
+        private TranslatorInterface $translator,
+        private ProduitRepository $produitRepository,
     )
     {}
 

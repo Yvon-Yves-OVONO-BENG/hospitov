@@ -7,7 +7,7 @@
 			{% if is_granted('ROLE_DIRECTEUR') or is_granted('ROLE_ADMINISTRATEUR') or is_granted('ROLE_PHARMACIEN') or is_granted('ROLE_PHARMACIEN') or is_granted('ROLE_SECRETAIRE') %}
 				<th>{% trans %}Rétirer des Etagères{% endtrans %}</th>
 			{% endif %}
-			{% if is_granted('ROLE_DIRECTEUR') or is_granted('ROLE_ADMINISTRATEUR') or is_granted('ROLE_PHARMACIEN') or is_granted('ROLE_CAISSIERE') or is_granted('ROLE_PHARMACIEN') or is_granted('ROLE_SECRETAIRE') %}
+			{% if is_granted('ROLE_DIRECTEUR') or is_granted('ROLE_ADMINISTRATEUR') or is_granted('ROLE_PHARMACIEN') or is_granted('ROLE_CAISSIERE_ACCUEIL') or is_granted('ROLE_CAISSIERE_PHARMACIE') or is_granted('ROLE_PHARMACIEN') or is_granted('ROLE_SECRETAIRE') %}
 				<th>{% trans %}Opérations{% endtrans %}</th>
 			{% endif %}
 		</tr>
@@ -20,7 +20,7 @@
 			{% if is_granted('ROLE_DIRECTEUR') or is_granted('ROLE_ADMINISTRATEUR') or is_granted('ROLE_PHARMACIEN') or is_granted('ROLE_PHARMACIEN') or is_granted('ROLE_SECRETAIRE') %}
 				<th>{% trans %}Rétirer des Etagères{% endtrans %}</th>
 			{% endif %}
-			{% if is_granted('ROLE_DIRECTEUR') or is_granted('ROLE_ADMINISTRATEUR') or is_granted('ROLE_PHARMACIEN') or is_granted('ROLE_CAISSIERE') or is_granted('ROLE_PHARMACIEN')  %}
+			{% if is_granted('ROLE_DIRECTEUR') or is_granted('ROLE_ADMINISTRATEUR') or is_granted('ROLE_PHARMACIEN') or is_granted('ROLE_CAISSIERE_ACCUEIL') or is_granted('ROLE_CAISSIERE_PHARMACIE') or is_granted('ROLE_PHARMACIEN')  %}
 				<th>{% trans %}Opérations{% endtrans %}</th>
 			{% endif %}
 		</tr>
@@ -54,7 +54,7 @@
 					{# <form action="{{ path ('ajout_produit_panier', {'slug': produit.slug, 'position': 'listeProduit' } )}}" method="post" class="needs-validation" novalidate> #}
 					
 					<td>
-						{% if is_granted('ROLE_CAISSIERE')  %}
+						{% if is_granted('ROLE_CAISSIERE_ACCUEIL') or is_granted('ROLE_CAISSIERE_PHARMACIE')  %}
 								<div style="display: flex !important; justify-content: space-between !important;">
 									<input type="number" value="1" min="1" step="1" class="form-control text-center quantite" id="validationCustom05" required="required" placeholder="Veuillez saisir la quantité">
 									<input type="hidden" id="typeProduit" value="produit">

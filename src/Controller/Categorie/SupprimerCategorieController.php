@@ -19,9 +19,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class SupprimerCategorieController extends AbstractController
 {
     public function __construct(
-        protected EntityManagerInterface $em,
-        protected TranslatorInterface $translator,
-        protected CategorieRepository $categorieRepository
+        private EntityManagerInterface $em,
+        private TranslatorInterface $translator,
+        private CategorieRepository $categorieRepository
     )
     {}
 

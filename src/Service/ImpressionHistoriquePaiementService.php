@@ -12,8 +12,8 @@ use App\Entity\ElementsPiedDePage\PDF;
 class ImpressionHistoriquePaiementService extends FPDF
 {
     public function __construct(
-        protected EntetePaysage $entetePaysage, 
-        protected EntetePortraitFacture $entetePortraitFacture,
+        private EntetePaysage $entetePaysage, 
+        private EntetePortraitFacture $entetePortraitFacture,
         )
     {
     }

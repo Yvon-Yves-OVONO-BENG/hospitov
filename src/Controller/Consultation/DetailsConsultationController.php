@@ -24,12 +24,12 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class DetailsConsultationController extends AbstractController
 {
     public function __construct(
-        protected StrService $strService,
-        protected EntityManagerInterface $em,
-        protected UserRepository $userRepository,
-        protected TranslatorInterface $translator,
-        protected GenreRepository $genreRepository,
-        protected ConsultationRepository $consultationRepository,
+        private StrService $strService,
+        private EntityManagerInterface $em,
+        private UserRepository $userRepository,
+        private TranslatorInterface $translator,
+        private GenreRepository $genreRepository,
+        private ConsultationRepository $consultationRepository,
     )
     {}
 

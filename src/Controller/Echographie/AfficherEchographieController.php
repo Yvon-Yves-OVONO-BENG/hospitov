@@ -20,9 +20,9 @@ use Symfony\Contracts\Translation\TranslatorInterface;
 class AfficherEchographieController extends AbstractController
 {
     public function __construct(
-        protected PanierService $panierService,
-        protected TranslatorInterface $translator,
-        protected ProduitRepository $echographieRepository
+        private PanierService $panierService,
+        private TranslatorInterface $translator,
+        private ProduitRepository $echographieRepository
     )
     {}
 

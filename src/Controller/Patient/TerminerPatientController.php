@@ -20,14 +20,14 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class TerminerPatientController extends AbstractController
 {
     public function __construct(
-        protected EntityManagerInterface $em,
-        protected TranslatorInterface $translator,
-        protected PatientRepository $patientRepository
+        private EntityManagerInterface $em,
+        private TranslatorInterface $translator,
+        private PatientRepository $patientRepository
     )
     {}
 
     #[Route('/terminer-patient', name: 'terminer_patient', methods: 'POST')]
-    public function terminerPatient(Request $request): JsonResponse
+    public function terminerPatient(Request $request): Response
     {
         # je récupère ma session
         $maSession = $request->getSession();

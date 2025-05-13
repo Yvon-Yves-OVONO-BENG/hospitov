@@ -19,8 +19,8 @@ use Symfony\Contracts\Translation\TranslatorInterface;
 class ListeModeleController extends AbstractController
 {
     public function __construct(
-        protected TranslatorInterface $translator,
-        protected ModeleRepository $modeleRepository,
+        private TranslatorInterface $translator,
+        private ModeleRepository $modeleRepository,
     )
     {}
 

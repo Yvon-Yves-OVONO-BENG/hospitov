@@ -20,9 +20,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class ListeFactureAnnuleeController extends AbstractController
 {
     public function __construct(
-        protected FactureRepository $factureRepository, 
-        protected TranslatorInterface $translator,
-        protected EtatFactureRepository $etatFactureRepository)
+        private FactureRepository $factureRepository, 
+        private TranslatorInterface $translator,
+        private EtatFactureRepository $etatFactureRepository)
     {}
 
     #[Route('/liste-facture-annulee', name: 'liste_facture_annulee')]

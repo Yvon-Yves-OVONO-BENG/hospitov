@@ -20,12 +20,12 @@ use Symfony\Component\Security\Csrf\CsrfTokenManagerInterface;
 class AffichageModificationMotDePasseController extends AbstractController
 {
     public function __construct(
-        protected EntityManagerInterface $em,
-        protected UserRepository $userRepository,
-        protected SessionService $sessionService,
-        protected TranslatorInterface $translator,
-        protected CsrfTokenManagerInterface $csrfTokenManager,
-        protected UserPasswordHasherInterface $userPasswordHasher,
+        private EntityManagerInterface $em,
+        private UserRepository $userRepository,
+        private SessionService $sessionService,
+        private TranslatorInterface $translator,
+        private CsrfTokenManagerInterface $csrfTokenManager,
+        private UserPasswordHasherInterface $userPasswordHasher,
     )
     {}
 

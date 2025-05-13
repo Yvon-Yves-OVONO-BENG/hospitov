@@ -10,7 +10,7 @@ use App\Entity\ElementsPiedDePage\PaginationPaysage;
 class ImpressionEtatDeVenteService extends FPDF
 {
     public function __construct(
-        protected EntetePaysagePaginantion $entetePaysagePagination, 
+        private EntetePaysagePaginantion $entetePaysagePagination, 
         )
     {
     }

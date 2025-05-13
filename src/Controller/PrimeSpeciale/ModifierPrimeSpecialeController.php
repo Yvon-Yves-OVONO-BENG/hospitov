@@ -21,11 +21,11 @@ use Symfony\Component\Security\Csrf\CsrfTokenManagerInterface;
 class ModifierPrimeSpecialeController extends AbstractController
 {
     public function __construct(
-        protected StrService $strService,
-        protected EntityManagerInterface $em,
-        protected TranslatorInterface $translator,
-        protected PrimeSpecialeRepository $primeSpecialeRepository,
-        protected CsrfTokenManagerInterface $csrfTokenManager,
+        private StrService $strService,
+        private EntityManagerInterface $em,
+        private TranslatorInterface $translator,
+        private PrimeSpecialeRepository $primeSpecialeRepository,
+        private CsrfTokenManagerInterface $csrfTokenManager,
     )
     {}
 

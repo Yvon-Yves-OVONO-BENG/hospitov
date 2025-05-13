@@ -23,10 +23,10 @@ class CaissesSepareesDuJourController extends AbstractController
 {
     public function __construct(
         private TranslatorInterface $translator,
-        protected FactureRepository $factureRepository,
-        protected TypeProduitRepository $typeProduitRepository,
-        protected ModePaiementRepository $modePaiementRepository,
-        protected LigneDeFactureRepository $ligneDeFactureRepository,
+        private FactureRepository $factureRepository,
+        private TypeProduitRepository $typeProduitRepository,
+        private ModePaiementRepository $modePaiementRepository,
+        private LigneDeFactureRepository $ligneDeFactureRepository,
     )
     {}
 
@@ -47,7 +47,7 @@ class CaissesSepareesDuJourController extends AbstractController
         $maSession->set('suppression', null);
         
         #la date du jour
-        $aujourdhui = new DateTime('now');
+        $aujourdhui = new DateTime('today');
         
         $recettesDuJour = $this->factureRepository->recetteDujour($aujourdhui);
         // dd($recettesDuJour);
@@ -66,8 +66,8 @@ class CaissesSepareesDuJourController extends AbstractController
             'facturesDuJour' => $facturesDuJour,
             'recettesDuJour' => $recettesDuJour,
             'recettesKitDuJour' => $recettesKitDuJour,
-            'dossier' => $this->translator->trans("Caisses"),
-            'route' => $this->translator->trans("Caisses séparées du jour")
+            'dossier' => $this->translator->trans('Caisses séparées'),
+            'route' => $this->translator->trans('Du jour'),
         ]);
     }
 }

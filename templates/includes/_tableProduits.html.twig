@@ -9,7 +9,7 @@
 			{% if is_granted('ROLE_DIRECTEUR') or is_granted('ROLE_ADMINISTRATEUR') or is_granted('ROLE_PHARMACIEN') or is_granted('ROLE_PHARMACIEN') or is_granted('ROLE_SECRETAIRE') %}
 				<th>{% trans %}Rétirer des Etagères{% endtrans %}</th>
 			{% endif %}
-			{% if is_granted('ROLE_DIRECTEUR') or is_granted('ROLE_ADMINISTRATEUR') or is_granted('ROLE_PHARMACIEN') or is_granted('ROLE_CAISSIERE') or is_granted('ROLE_PHARMACIEN') or is_granted('ROLE_SECRETAIRE') %}
+			{% if is_granted('ROLE_DIRECTEUR') or is_granted('ROLE_ADMINISTRATEUR') or is_granted('ROLE_PHARMACIEN') or is_granted('ROLE_CAISSIERE_ACCUEIL') or is_granted('ROLE_CAISSIERE_PHARMACIE') or is_granted('ROLE_PHARMACIEN') or is_granted('ROLE_SECRETAIRE') %}
 				<th>{% trans %}Opérations{% endtrans %}</th>
 			{% endif %}
 		</tr>
@@ -24,7 +24,7 @@
 			{% if is_granted('ROLE_DIRECTEUR') or is_granted('ROLE_ADMINISTRATEUR') or is_granted('ROLE_PHARMACIEN') or is_granted('ROLE_PHARMACIEN') or is_granted('ROLE_SECRETAIRE') %}
 				<th>{% trans %}Rétirer des Etagères{% endtrans %}</th>
 			{% endif %}
-			{% if is_granted('ROLE_DIRECTEUR') or is_granted('ROLE_ADMINISTRATEUR') or is_granted('ROLE_PHARMACIEN') or is_granted('ROLE_CAISSIERE') or is_granted('ROLE_PHARMACIEN')  %}
+			{% if is_granted('ROLE_DIRECTEUR') or is_granted('ROLE_ADMINISTRATEUR') or is_granted('ROLE_PHARMACIEN') or is_granted('ROLE_CAISSIERE_ACCUEIL') or is_granted('ROLE_CAISSIERE_PHARMACIE') or is_granted('ROLE_PHARMACIEN')  %}
 				<th>{% trans %}Opérations{% endtrans %}</th>
 			{% endif %}
 		</tr>
@@ -53,7 +53,7 @@
 					<td style="text-align: left !important;">
 						<span class="tag tag-dark">{{ produit.libelle }}</span><br>
 						<br>
-						{% if produit.lot.quantite > 0 %}
+						{% if produit.lot ? produit.lot.quantite > 0 %}
 							<button type="button" class="btn btn-primary mt-1 mb-1 me-3">
 								<span>{% trans %}Quantité en stock{% endtrans %}</span>
 								<span class="badge bg-white text-dark">{{ produit.lot.quantite - produit.lot.vendu  }}</span>
@@ -61,11 +61,11 @@
 							{% else %}
 							<button type="button" class="btn btn-danger mt-1 mb-1 me-3">
 								<span>{% trans %}Quantité en stock{% endtrans %}</span>
-								<span class="badge bg-white text-dark">{{ produit.lot.quantite - produit.lot.vendu  }}</span>
+								<span class="badge bg-white text-dark">{{ produit.lot ? (produit.lot.quantite - produit.lot.vendu)  }}</span>
 							</button>
 						{% endif %}
 						
-						{% if is_granted('ROLE_CAISSIERE') or is_granted('ROLE_SECRETAIRE') or is_granted('ROLE_PHARMACIEN') or is_granted('ROLE_DIRECTEUR') or is_granted('ROLE_ADMINISTRATEUR') %}
+						{% if is_granted('ROLE_CAISSIERE_ACCUEIL') or is_granted('ROLE_CAISSIERE_PHARMACIE') or is_granted('ROLE_SECRETAIRE') or is_granted('ROLE_PHARMACIEN') or is_granted('ROLE_DIRECTEUR') or is_granted('ROLE_ADMINISTRATEUR') %}
 							{% if  dateDiff <= 0 %}
 								<span class="badge bg-danger mt-2">{% trans %}Ce produit est déja périmé{% endtrans %}</span>
 							{% endif %}
@@ -97,12 +97,12 @@
 					{# <form action="{{ path ('ajout_produit_panier', {'slug': produit.slug, 'position': 'listeProduit' } )}}" method="post" class="needs-validation" novalidate> #}
 					
 					<td>
-						{% if is_granted('ROLE_CAISSIERE')  %}
-							{% if produit.lot.quantite > 0 and dateDiff > 0 %}
+						{% if is_granted('ROLE_CAISSIERE_ACCUEIL') or is_granted('ROLE_CAISSIERE_PHARMACIE')  %}
+							{% if produit.lot ? (produit.lot.quantite > 0 and dateDiff > 0) %}
 								<div style="display: flex !important; justify-content: space-between !important;">
 									<input type="number" value="1" min="1" step="1" class="form-control text-center quantite" id="validationCustom05" required="required" placeholder="Veuillez saisir la quantité">
 									<input type="hidden" id="typeProduit" value="produit">
-									<button class="btn btn-outline-primary btn-md btn-block ajout-produit-panier" data-produit-id="{{ produit.id }}" data-bs-toggle="tooltip" title="{% trans %}Ajouter{% endtrans %} {{ produit.libelle }} {% trans %}dans la facture{% endtrans %}"><i class="si si-plus"></i></button>
+									<button class="btn btn-outline-primary ajout-produit-panier" data-produit-id="{{ produit.id }}" data-bs-toggle="tooltip" title="{% trans %}Ajouter{% endtrans %} {{ produit.libelle }} {% trans %}dans la facture{% endtrans %}"><i class="ri-add-line"></i></button>
 								</div>
 							{% endif %}
 	

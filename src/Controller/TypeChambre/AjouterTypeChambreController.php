@@ -22,10 +22,10 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class AjouterTypeChambreController extends AbstractController
 {
     public function __construct(
-        protected StrService $strService,
-        protected EntityManagerInterface $em,
-        protected TranslatorInterface $translator,
-        protected TypeChambreRepository $typeChambreRepository
+        private StrService $strService,
+        private EntityManagerInterface $em,
+        private TranslatorInterface $translator,
+        private TypeChambreRepository $typeChambreRepository
     )
     {}
 

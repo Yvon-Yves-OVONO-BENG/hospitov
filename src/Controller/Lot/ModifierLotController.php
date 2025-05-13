@@ -23,10 +23,10 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class ModifierLotController extends AbstractController
 {
     public function __construct(
-        protected StrService $strService,
-        protected EntityManagerInterface $em,
-        protected TranslatorInterface $translator,
-        protected LotRepository $lotRepository,
+        private StrService $strService,
+        private EntityManagerInterface $em,
+        private TranslatorInterface $translator,
+        private LotRepository $lotRepository,
     )
     {}
 

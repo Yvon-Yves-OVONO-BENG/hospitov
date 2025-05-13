@@ -18,7 +18,7 @@ class SupprimerFichierExamenController extends AbstractController
     #[Route('/supprimer-fichier-examen/{id}', name: 'supprimer_fichier_examen', methods: ['POST', 'DELETE'])]
     public function SupprimerFichierExamen(Request $request, FichierResultatExamen $fichierResultatExamen, EntityManagerInterface $em): Response
     {
-       if (!$this->getUser()) 
+        if (!$this->getUser()) 
         {
             return new JsonResponse(['message' => 'Accès réfusé'], 403);
         }

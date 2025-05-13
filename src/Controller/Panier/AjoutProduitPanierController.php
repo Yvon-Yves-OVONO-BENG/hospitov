@@ -19,10 +19,10 @@ use Symfony\Component\HttpFoundation\Request;
 class AjoutProduitPanierController extends AbstractController
 {
     public function __construct(
-        protected RequestStack $request,
-        protected PanierService $panierService, 
-        protected TranslatorInterface $translator,
-        protected ProduitRepository $produitRepository, 
+        private RequestStack $request,
+        private PanierService $panierService, 
+        private TranslatorInterface $translator,
+        private ProduitRepository $produitRepository, 
         )
     {}
 
@@ -53,11 +53,11 @@ class AjoutProduitPanierController extends AbstractController
         
         if ($produit) 
         {
-            $this->addFlash('info', $this->translator->trans('Produit ajouté dans le panier avec succès !'));
+            $this->addFlash('info', $this->translator->trans('Produit ajouté dans la facture avec succès !'));
         } 
         else 
         {
-            $this->addFlash('info', $this->translator->trans('Kit ajouté dans le panier avec succès !'));
+            $this->addFlash('info', $this->translator->trans('Kit ajouté dans la facture avec succès !'));
         }
     
         return new JsonResponse(['success' => true ]);

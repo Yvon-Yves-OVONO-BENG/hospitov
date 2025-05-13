@@ -12,8 +12,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class RechercheModeleController extends AbstractController
 {
     public function __construct(
-        protected MarqueRepository $marqueRepository, 
-        protected ModeleRepository $modeleRepository, 
+        private MarqueRepository $marqueRepository, 
+        private ModeleRepository $modeleRepository, 
         )
     {}
 

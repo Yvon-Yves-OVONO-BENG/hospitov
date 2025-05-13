@@ -52,7 +52,7 @@
 								{% trans %}Imprimer tous les kits{% endtrans %}
 							</a>
 						{% endif %}
-						{% if is_granted('ROLE_CAISSIERE') or is_granted('ROLE_ADMINISTRATEUR') %}
+						{% if is_granted('ROLE_CAISSIERE_ACCUEIL') or is_granted('ROLE_CAISSIERE_PHARMACIE') or is_granted('ROLE_ADMINISTRATEUR') %}
 							<a href="{{ path ('afficher_produits') }}" class="btn btn-primary"><i class="ri-eye-line me-2"></i>
 								{% trans %}Afficher produit{% endtrans %}
 							</a>
@@ -91,7 +91,7 @@
 											</td>
 											<td>
 												{# <form action="{{ path ('ajout_produit_panier', {'slug': kit.slug, 'position': 'listeKit' } )}}" method="post" class="needs-validation" novalidate> #}
-													{% if is_granted('ROLE_CAISSIERE')  %}
+													{% if is_granted('ROLE_CAISSIERE_ACCUEIL') or is_granted('ROLE_CAISSIERE_PHARMACIE') %}
 														<input type="hidden" name="qte" value="1" min="1" step="1" class="form-control" id="validationCustom05" required="required" placeholder="Veuillez saisir la quantité">
 														<input type="hidden" id="typeProduit" value="kit">
 														<button type="submit" name="ajoutPanier" class="btn btn-outline-primary ajout-produit-panier" data-produit-id="{{ kit.id }}" data-bs-toggle="tooltip" title="{% trans %}Ajouter{% endtrans %} {{ kit.libelle }} {% trans %}dans la facture{% endtrans %}"><i class="si si-plus me-2"></i>Ajouter le kit dans la facture</button>

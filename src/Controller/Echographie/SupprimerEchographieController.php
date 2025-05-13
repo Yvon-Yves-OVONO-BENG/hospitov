@@ -19,9 +19,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class SupprimerEchographieController extends AbstractController
 {
     public function __construct(
-        protected EntityManagerInterface $em,
-        protected TranslatorInterface $translator,
-        protected ProduitRepository $produitRepository
+        private EntityManagerInterface $em,
+        private TranslatorInterface $translator,
+        private ProduitRepository $produitRepository
     ){}
 
     #[Route('/supprimer-echographie/{slug}', name: 'supprimer_echographie')]

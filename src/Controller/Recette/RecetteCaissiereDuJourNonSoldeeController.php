@@ -21,8 +21,8 @@ class RecetteCaissiereDuJourNonSoldeeController extends AbstractController
 {
     public function __construct(
         private TranslatorInterface $translator,
-        protected FactureRepository $factureRepository,
-        protected HistoriquePaiementRepository $historiquePaiementRepository,
+        private FactureRepository $factureRepository,
+        private HistoriquePaiementRepository $historiquePaiementRepository,
     )
     {}
 

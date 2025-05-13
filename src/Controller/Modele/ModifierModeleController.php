@@ -21,10 +21,10 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class ModifierModeleController extends AbstractController
 {
     public function __construct(
-        protected StrService $strService,
-        protected EntityManagerInterface $em,
-        protected TranslatorInterface $translator,
-        protected ModeleRepository $modeleRepository,
+        private StrService $strService,
+        private EntityManagerInterface $em,
+        private TranslatorInterface $translator,
+        private ModeleRepository $modeleRepository,
     )
     {}
     

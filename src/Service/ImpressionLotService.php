@@ -10,7 +10,7 @@ use DateTime;
 class ImpressionLotService extends FPDF
 {
     public function __construct( 
-        protected EntetePortraitPagination $entetePortraitPagination,
+        private EntetePortraitPagination $entetePortraitPagination,
         )
     {
     }

@@ -18,8 +18,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class DetailsCommandeController extends AbstractController
 {
     public function __construct(
-        protected TranslatorInterface $translator,
-        protected CommandeRepository $commandeRepository,
+        private TranslatorInterface $translator,
+        private CommandeRepository $commandeRepository,
     )
     {}
 

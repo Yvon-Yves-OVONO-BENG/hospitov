@@ -19,8 +19,8 @@ use Symfony\Component\HttpFoundation\Request;
 class ImprimerHistoriqueFactureController extends AbstractController
 {
     public function __construct(
-        protected ImpressionHistoriqueService $impressionHistoriqueService, 
-        protected FactureRepository $factureRepository)
+        private ImpressionHistoriqueService $impressionHistoriqueService, 
+        private FactureRepository $factureRepository)
     {
         
     }

@@ -2,33 +2,41 @@
 
 namespace App\Controller\Panier;
 
+use App\Entity\Produit;
 use App\Service\PanierService;
 use App\Repository\ProduitRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Contracts\Translation\TranslatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class SupprimerProduitDuPanierController extends AbstractController
 {
     public function __construct(
-        protected PanierService $panierService,
-        protected TranslatorInterface $translator,
-        protected ProduitRepository $produitRepository, 
+        private PanierService $panierService,
+        private TranslatorInterface $translator,
+        private ProduitRepository $produitRepository, 
         )
     {}
 
     #[Route('/supprimer-produit-du-panier/{slug}', name: 'supprimer_produit_du_panier')]
-    public function supprimer(Request $request, string $slug)
+    public function supprimer(Request $request, string $slug, Produit $produit): Response
     {
         # je récupère ma session
         $maSession = $request->getSession();
         $maSession->set('produitsManquants', null);
 
-        if(!$maSession)
+        if (!$this->getUser()) 
         {
-            return $this->redirectToRoute("app_logout");
+            return $this->redirectToRoute('app_logout');
         }
+        
+        // if (!$this->isCsrfTokenValid('delete'.$produit->getId(), $request->request->get('_token'))) 
+        // {
+        //     return new Response('Token CSRF invalide', 400);
+        // }
 
         $produit = $this->produitRepository->findOneBySlug([
             'slug' => $slug

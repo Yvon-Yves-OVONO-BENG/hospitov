@@ -12,9 +12,9 @@ use App\Service\EntetePortraitPagination;
 class ImpressionDesKitsService extends FPDF
 {
     public function __construct( 
-        protected BlocChiffreService $blocChiffreService,
-        protected LigneDeKitRepository $ligneDeKitRepository,
-        protected EntetePortraitPagination $entetePortraitPagination,
+        private BlocChiffreService $blocChiffreService,
+        private LigneDeKitRepository $ligneDeKitRepository,
+        private EntetePortraitPagination $entetePortraitPagination,
         )
     {}
 

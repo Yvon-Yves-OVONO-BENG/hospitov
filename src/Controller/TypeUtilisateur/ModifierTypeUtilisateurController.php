@@ -22,10 +22,10 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class ModifierTypeUtilisateurController extends AbstractController
 {
     public function __construct(
-        protected StrService $strService,
-        protected EntityManagerInterface $em,
-        protected TranslatorInterface $translator,
-        protected TypeUtilisateurRepository $typeUtilisateurRepository,
+        private StrService $strService,
+        private EntityManagerInterface $em,
+        private TranslatorInterface $translator,
+        private TypeUtilisateurRepository $typeUtilisateurRepository,
     )
     {}
 

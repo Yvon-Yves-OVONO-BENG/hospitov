@@ -19,8 +19,8 @@ use Symfony\Component\HttpFoundation\Request;
 class ImpressionProduitsPerimesController extends AbstractController
 {
     public function __construct(
-        protected ProduitRepository $produitRepository,
-        protected ImpressionProduitsPerimesService $impressionProduitsPerimesService
+        private ProduitRepository $produitRepository,
+        private ImpressionProduitsPerimesService $impressionProduitsPerimesService
     )
     {}
 

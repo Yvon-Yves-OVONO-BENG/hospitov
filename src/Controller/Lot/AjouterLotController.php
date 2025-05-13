@@ -23,10 +23,10 @@ use Symfony\Contracts\Translation\TranslatorInterface;
 class AjouterLotController extends AbstractController
 {
     public function __construct(
-        protected StrService $strService,
-        protected LotRepository $lotRepository,
-        protected EntityManagerInterface $em,
-        protected TranslatorInterface $translator,
+        private StrService $strService,
+        private LotRepository $lotRepository,
+        private EntityManagerInterface $em,
+        private TranslatorInterface $translator,
     )
     {}
 

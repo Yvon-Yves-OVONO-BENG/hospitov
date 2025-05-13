@@ -22,9 +22,9 @@ use Symfony\Component\HttpFoundation\Request;
 class ValiderFactureController extends AbstractController
 {
     public function __construct(
-        protected FactureRepository $factureRepository, 
-        protected EtatFactureRepository $etatFactureRepository, 
-        protected EntityManagerInterface $em)
+        private FactureRepository $factureRepository, 
+        private EtatFactureRepository $etatFactureRepository, 
+        private EntityManagerInterface $em)
     {}
 
     #[Route('/valider-facture/{slug}', name: 'valider_facture')]

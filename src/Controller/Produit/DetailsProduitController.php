@@ -12,7 +12,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class DetailsProduitController extends AbstractController
 {
     public function __construct(
-        protected ProduitRepository $produitRepository)
+        private ProduitRepository $produitRepository)
     {}
 
     #[Route('/details-produit/{slug}', name: 'details_produit')]

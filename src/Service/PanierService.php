@@ -8,8 +8,8 @@ use Symfony\Component\HttpFoundation\RequestStack;
 class PanierService
 {
     public function __construct(
-        protected RequestStack $request,
-        protected ProduitRepository $produitRepository, 
+        private RequestStack $request,
+        private ProduitRepository $produitRepository, 
         )
     {
     }

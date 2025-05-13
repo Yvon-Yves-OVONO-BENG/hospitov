@@ -24,8 +24,8 @@ use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInt
 class UtilisateurType extends AbstractType
 {
     public function __construct(
-        protected TranslatorInterface $translator,
-        protected TokenStorageInterface $tokenStorage
+        private TranslatorInterface $translator,
+        private TokenStorageInterface $tokenStorage
         )
     {}
     

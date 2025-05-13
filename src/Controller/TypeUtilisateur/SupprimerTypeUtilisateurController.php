@@ -19,9 +19,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class SupprimerTypeUtilisateurController extends AbstractController
 {
     public function __construct(
-        protected EntityManagerInterface $em,
-        protected TranslatorInterface $translator,
-        protected TypeUtilisateurRepository $typeUtilisateurRepository
+        private EntityManagerInterface $em,
+        private TranslatorInterface $translator,
+        private TypeUtilisateurRepository $typeUtilisateurRepository
     ){}
 
     #[Route('/supprimer-typeUtilisateur/{slug}', name: 'supprimer_typeUtilisateur')]

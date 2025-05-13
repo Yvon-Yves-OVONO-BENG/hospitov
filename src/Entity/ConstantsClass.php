@@ -9,7 +9,8 @@ class ConstantsClass
     public const ROLE_PHARMACIEN = 'ROLE_PHARMACIEN';
     public const ROLE_REGIES_DES_RECETTES = 'ROLE_REGIES_DES_RECETTES';
     public const ROLE_SECRETAIRE = 'ROLE_SECRETAIRE';
-    public const ROLE_CAISSIERE = 'ROLE_CAISSIERE';
+    public const ROLE_CAISSIERE_ACCUEIL = 'ROLE_CAISSIERE_ACCUEIL';
+    public const ROLE_CAISSIERE_PHARMACIE = 'ROLE_CAISSIERE_PHARMACIE';
     public const ROLE_GESTIONNAIRE = 'ROLE_GESTIONNAIRE';
     public const ROLE_PARAMETRES_VITAUX = 'ROLE_PARAMETRES_VITAUX';
     public const ROLE_MEDECIN = 'ROLE_MEDECIN';
@@ -21,7 +22,8 @@ class ConstantsClass
     public const PHARMACIEN = 'PHARMACIEN';
     public const REGIES_DES_RECETTES = 'REGIES DES RECETTES';
     public const SECRETAIRE = 'SECRETAIRE';
-    public const CAISSIERE = 'CAISSIERE';
+    public const CAISSIERE_ACCUEIL = 'CAISSIERE ACCUEIL';
+    public const CAISSIERE_PHARMACIE = 'CAISSIERE PHARMACIE';
     public const PARAMETRES_VITAUX = 'PARAMETRES VITAUX';
     public const MEDECIN = 'MEDECIN';
     public const LABORANTIN = 'LABORANTIN';

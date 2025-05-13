@@ -19,9 +19,9 @@ use Symfony\Contracts\Translation\TranslatorInterface;
 class AfficherProduitsPerimesController extends AbstractController
 {
     public function __construct(
-        protected TranslatorInterface $translator,
-        protected ProduitRepository $produitRepository,
-        protected ImpressionProduitsPerimesService $impressionProduitsPerimesService
+        private TranslatorInterface $translator,
+        private ProduitRepository $produitRepository,
+        private ImpressionProduitsPerimesService $impressionProduitsPerimesService
     )
     {}
 

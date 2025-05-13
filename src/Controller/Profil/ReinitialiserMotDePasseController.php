@@ -21,11 +21,11 @@ use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 class ReinitialiserMotDePasseController extends AbstractController
 {
     public function __construct(
-        protected EntityManagerInterface $em,
-        protected UserRepository $userRepository,
-        protected TranslatorInterface $translator,
+        private EntityManagerInterface $em,
+        private UserRepository $userRepository,
+        private TranslatorInterface $translator,
         private ParameterBagInterface $parametres,
-        protected UserPasswordHasherInterface $userPasswordHasher,
+        private UserPasswordHasherInterface $userPasswordHasher,
     )
     {}
 

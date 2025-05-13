@@ -21,11 +21,11 @@ use Symfony\Component\Security\Csrf\CsrfTokenManagerInterface;
 class ModifierRetenueController extends AbstractController
 {
     public function __construct(
-        protected StrService $strService,
-        protected EntityManagerInterface $em,
-        protected TranslatorInterface $translator,
-        protected RetenueRepository $retenueRepository,
-        protected CsrfTokenManagerInterface $csrfTokenManager,
+        private StrService $strService,
+        private EntityManagerInterface $em,
+        private TranslatorInterface $translator,
+        private RetenueRepository $retenueRepository,
+        private CsrfTokenManagerInterface $csrfTokenManager,
     )
     {}
 

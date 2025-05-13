@@ -19,9 +19,9 @@ use Symfony\Component\HttpFoundation\Request;
 class ImpressionFicheDeVenteController extends AbstractController
 {
     public function __construct(
-        protected FactureRepository $factureRepository,
-        protected UserRepository $userRepository,
-        protected ImpressionFicheDeVenteService $impressionFicheDeVenteService
+        private FactureRepository $factureRepository,
+        private UserRepository $userRepository,
+        private ImpressionFicheDeVenteService $impressionFicheDeVenteService
     )
     {}
 
@@ -45,7 +45,8 @@ class ImpressionFicheDeVenteController extends AbstractController
          */
         $user = $this->getUser();
 
-        if (in_array(ConstantsClass::ROLE_CAISSIERE, $user->getRoles())) 
+        if ($user && (in_array(ConstantsClass::ROLE_CAISSIERE_ACCUEIL, $user->getRoles()) 
+            || in_array(ConstantsClass::ROLE_CAISSIERE_PHARMACIE, $user->getRoles())))
         {
             $caissiere = $this->userRepository->find($user->getId());
         } 
@@ -188,7 +189,8 @@ class ImpressionFicheDeVenteController extends AbstractController
 
             $etatFacture = null;
             #ses factures du jours
-            if (in_array(ConstantsClass::ROLE_CAISSIERE, $user->getRoles())) 
+            if ($user && (in_array(ConstantsClass::ROLE_CAISSIERE_ACCUEIL, $user->getRoles()) 
+            || in_array(ConstantsClass::ROLE_CAISSIERE_PHARMACIE, $user->getRoles()))) 
             {
                 $facturesDuJour = $this->factureRepository->facturePeriode($caissiere, $etatFacture, $dateDebut, $dateFin);
             } 
@@ -322,7 +324,8 @@ class ImpressionFicheDeVenteController extends AbstractController
             $aujourdhui = date_create(date_format(new DateTime('now'), 'Y-m-d'), timezone_open('Pacific/Nauru'));
 
             #ses factures du jours
-            if (in_array(ConstantsClass::ROLE_CAISSIERE, $user->getRoles())) 
+            if ($user && (in_array(ConstantsClass::ROLE_CAISSIERE_ACCUEIL, $user->getRoles()) 
+            || in_array(ConstantsClass::ROLE_CAISSIERE_PHARMACIE, $user->getRoles())))
             {
                 $facturesDuJour = $this->factureRepository->findBy([
                     'caissiere' => $user,

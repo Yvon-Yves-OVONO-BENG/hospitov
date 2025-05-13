@@ -23,10 +23,10 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class PrendreParametreController extends AbstractController
 {
     public function __construct(
-        protected EntityManagerInterface $em,
-        protected UserRepository $userRepository,
-        protected TranslatorInterface $translator,
-        protected GenreRepository $genreRepository,
+        private EntityManagerInterface $em,
+        private UserRepository $userRepository,
+        private TranslatorInterface $translator,
+        private GenreRepository $genreRepository,
     )
     {}
 

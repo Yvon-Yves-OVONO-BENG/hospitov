@@ -18,8 +18,8 @@ use Symfony\Component\HttpFoundation\Request;
 class ImprimerLotController extends AbstractController
 {
     public function __construct(
-        protected LotRepository $lotRepository,
-        protected ImpressionLotService $impressionLotService, 
+        private LotRepository $lotRepository,
+        private ImpressionLotService $impressionLotService, 
         )
     {}
 

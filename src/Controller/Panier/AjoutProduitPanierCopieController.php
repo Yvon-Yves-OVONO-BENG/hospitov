@@ -19,10 +19,10 @@ use Symfony\Component\HttpFoundation\Request;
 class AjoutProduitPanierCopieController extends AbstractController
 {
     public function __construct(
-        protected RequestStack $request,
-        protected PanierService $panierService, 
-        protected TranslatorInterface $translator,
-        protected ProduitRepository $produitRepository, 
+        private RequestStack $request,
+        private PanierService $panierService, 
+        private TranslatorInterface $translator,
+        private ProduitRepository $produitRepository, 
         )
     {}
 

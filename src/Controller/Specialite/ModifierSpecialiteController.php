@@ -23,11 +23,11 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class ModifierSpecialiteController extends AbstractController
 {
     public function __construct(
-        protected StrService $strService,
-        protected EntityManagerInterface $em,
-        protected UserRepository $userRepository,
-        protected TranslatorInterface $translator,
-        protected SpecialiteRepository $specialiteRepository,
+        private StrService $strService,
+        private EntityManagerInterface $em,
+        private UserRepository $userRepository,
+        private TranslatorInterface $translator,
+        private SpecialiteRepository $specialiteRepository,
     )
     {}
 

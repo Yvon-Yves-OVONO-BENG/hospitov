@@ -12,23 +12,23 @@ class EntetePaysagePaginantion
 
 	public function entetePaysagePagination(PaginationPaysage $pdf): PaginationPaysage
 	{
-		$pdf->Image('../public/assets/images/logoLucelle.png', 130, 12, 25);
-		$pdf->Image('../public/images/logoLucelle.png', 190, 90, 150);
+		// $pdf->Image('../public/assets/images/logoLucelle.png', 130, 12, 25);
+		// $pdf->Image('../public/images/logoLucelle.png', 190, 90, 150);
 		$pdf->SetFont('Helvetica', 'B', 12);
 		// fond de couleur gris (valeurs en RGB)
 		$pdf->setFillColor(230, 230, 230);
 		// position du coin supérieur gauche par rapport à la marge gauche (mm)
 		
 		$pdf->SetX(20);
-		$pdf->Cell(70, 4, utf8_decode("REPUBLIQUE DU CAMEROUN"), 0, 0, 'C', 0);
+		$pdf->Cell(70, 4, utf8_decode("CENTRE DE SANTE PRIVE LUCELLE"), 0, 0, 'C', 0);
 		$pdf->Cell(120, 4, '', 0, 0, 'L', 0);
-		$pdf->Cell(70, 4, utf8_decode("REPUBLIC OF CAMEROON"), 0, 1, 'C', 0);
+		$pdf->Cell(70, 4, utf8_decode("LUCELLE PRIVATE HEALTH CENTER"), 0, 1, 'C', 0);
 
-		$pdf->SetFont('Helvetica', 'B', 7);
-		$pdf->SetX(20);
-		$pdf->Cell(70, 4, utf8_decode("Paix - Travail - Patrie"), 0, 0, 'C', 0);
-		$pdf->Cell(120, 4, '', 0, 0, 'L', 0);
-		$pdf->Cell(70, 4, utf8_decode("Peace - Work - Fatherland"), 0, 1, 'C', 0);
+		// $pdf->SetFont('Helvetica', 'B', 7);
+		// $pdf->SetX(20);
+		// $pdf->Cell(70, 4, utf8_decode("Paix - Travail - Patrie"), 0, 0, 'C', 0);
+		// $pdf->Cell(120, 4, '', 0, 0, 'L', 0);
+		// $pdf->Cell(70, 4, utf8_decode("Peace - Work - Fatherland"), 0, 1, 'C', 0);
 
 		$pdf->SetX(20);
 		$pdf->SetFont('Helvetica', 'B', 8);
@@ -37,16 +37,16 @@ class EntetePaysagePaginantion
 		$pdf->Cell(70, 2, '*********', 0, 1, 'C', 0);
 
 		#################################
-		$pdf->SetX(20);
-		$pdf->Cell(70, 4, utf8_decode('Ministère de la Santé Publique'), 0, 0, 'C', 0);
-		$pdf->Cell(120, 4, '', 0, 0, 'L', 0);
-		$pdf->Cell(70, 4, utf8_decode('Ministry of Public Health'), 0, 1, 'C', 0);
+		// $pdf->SetX(20);
+		// $pdf->Cell(70, 4, utf8_decode('Ministère de la Santé Publique'), 0, 0, 'C', 0);
+		// $pdf->Cell(120, 4, '', 0, 0, 'L', 0);
+		// $pdf->Cell(70, 4, utf8_decode('Ministry of Public Health'), 0, 1, 'C', 0);
 
-		$pdf->SetX(20);
-		$pdf->SetFont('Helvetica', 'B', 8);
-		$pdf->Cell(70, 2, '*********', 0, 0, 'C', 0);
-		$pdf->Cell(119, 2, '', 0, 0, 'L', 0);
-		$pdf->Cell(70, 2, '*********', 0, 1, 'C', 0);
+		// $pdf->SetX(20);
+		// $pdf->SetFont('Helvetica', 'B', 8);
+		// $pdf->Cell(70, 2, '*********', 0, 0, 'C', 0);
+		// $pdf->Cell(119, 2, '', 0, 0, 'L', 0);
+		// $pdf->Cell(70, 2, '*********', 0, 1, 'C', 0);
 
 		####################################
 		// $pdf->SetX(20);
@@ -85,10 +85,22 @@ class EntetePaysagePaginantion
 		// $pdf->Cell(70, 2, '*********', 0, 1, 'C', 0);
 		########################################
 
+		// $pdf->SetX(20);
+		// $pdf->Cell(70, 4, utf8_decode("CENTRE DE SANTE PRIVE LUCELLE"), 0, 0, 'C', 0);
+		// $pdf->Cell(120, 4, '', 0, 0, 'L', 0);
+		// $pdf->Cell(70, 4, utf8_decode('LUCELLE PRIVATE HEALTH CENTER'), 0, 1, 'C', 0);
+
+		// $pdf->SetX(20);
+		// $pdf->SetFont('Helvetica', 'B', 8);
+		// $pdf->Cell(70, 2, '*********', 0, 0, 'C', 0);
+		// $pdf->Cell(119, 2, '', 0, 0, 'L', 0);
+		// $pdf->Cell(70, 2, '*********', 0, 1, 'C', 0);
+
+		################################
 		$pdf->SetX(20);
-		$pdf->Cell(70, 4, utf8_decode("Centre de Santé Privé Lucelle"), 0, 0, 'C', 0);
+		$pdf->Cell(70, 4, utf8_decode('670 57 03 40 / 683 80 62 67 / 687 36 53 15'), 0, 0, 'C', 0);
 		$pdf->Cell(120, 4, '', 0, 0, 'L', 0);
-		$pdf->Cell(70, 4, utf8_decode('Lucelle Private Health Center'), 0, 1, 'C', 0);
+		$pdf->Cell(70, 4, utf8_decode('670 57 03 40 / 683 80 62 67 / 687 36 53 15'), 0, 1, 'C', 0);
 
 		$pdf->SetX(20);
 		$pdf->SetFont('Helvetica', 'B', 8);
@@ -98,9 +110,9 @@ class EntetePaysagePaginantion
 
 		################################
 		$pdf->SetX(20);
-		$pdf->Cell(70, 4, utf8_decode('BP : x- xx, Tel : 670 57 03 40 / 683 80 62 67 / 687 36 53 15'), 0, 0, 'C', 0);
+		$pdf->Cell(70, 4, utf8_decode('BP : '), 0, 0, 'C', 0);
 		$pdf->Cell(120, 4, '', 0, 0, 'L', 0);
-		$pdf->Cell(70, 4, utf8_decode('Po.Box : x- xx, Tel : 670 57 03 40 / 683 80 62 67 / 687 36 53 15'), 0, 1, 'C', 0);
+		$pdf->Cell(70, 4, utf8_decode('Po.Box : '), 0, 1, 'C', 0);
 
 		$pdf->SetX(20);
 		$pdf->SetFont('Helvetica', 'B', 8);

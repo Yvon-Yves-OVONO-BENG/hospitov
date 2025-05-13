@@ -10,6 +10,7 @@ parameters:
     photoProduit.upload_directory: '%kernel.project_dir%/public/images/photoProduits'
     photoUsers.upload_directory: '%kernel.project_dir%/public/images/photoUsers'
     uploads_directory: '%kernel.project_dir%/public/fichiersExamens'
+    uploads_dir: '%kernel.project_dir%/public/images/photosBatiments'
 
 
 services:

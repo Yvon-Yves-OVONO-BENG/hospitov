@@ -19,11 +19,11 @@ use Symfony\Contracts\Translation\TranslatorInterface;
 class AjoutQuantiteProduitService
 {
     public function __construct(
-        protected Security $security, 
-        protected RequestStack $request,
-        protected EntityManagerInterface $em, 
-        protected PanierService $panierService,
-        protected TranslatorInterface $translator, 
+        private Security $security, 
+        private RequestStack $request,
+        private EntityManagerInterface $em, 
+        private PanierService $panierService,
+        private TranslatorInterface $translator, 
         )
     {}
 

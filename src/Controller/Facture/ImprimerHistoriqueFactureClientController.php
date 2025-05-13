@@ -19,9 +19,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class ImprimerHistoriqueFactureClientController extends AbstractController
 {
     public function __construct(
-        protected ImpressionHistoriqueService $impressionHistoriqueService, 
-        protected FactureRepository $commandeRepository, 
-        protected UserRepository $userRepository)
+        private ImpressionHistoriqueService $impressionHistoriqueService, 
+        private FactureRepository $commandeRepository, 
+        private UserRepository $userRepository)
     {
         
     }

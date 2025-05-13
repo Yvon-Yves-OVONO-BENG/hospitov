@@ -2,17 +2,17 @@
 
 namespace App\Controller\Caisses;
 
-use App\Repository\FactureRepository;
-use App\Repository\LigneDeFactureRepository;
-use App\Repository\ModePaiementRepository;
-use App\Repository\TypeProduitRepository;
 use DateTime;
+use App\Repository\FactureRepository;
+use App\Repository\TypeProduitRepository;
+use App\Repository\ModePaiementRepository;
+use App\Repository\LigneDeFactureRepository;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
+use Symfony\Contracts\Translation\TranslatorInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Contracts\Translation\TranslatorInterface;
 
 /**
  * @IsGranted("ROLE_USER", message="Accès refusé. Espace reservé uniquement aux abonnés")
@@ -23,10 +23,10 @@ class CaissesSepareesDunePeriodeController extends AbstractController
 {
     public function __construct(
         private TranslatorInterface $translator,
-        protected FactureRepository $factureRepository,
-        protected TypeProduitRepository $typeProduitRepository,
-        protected ModePaiementRepository $modePaiementRepository,
-        protected LigneDeFactureRepository $ligneDeFactureRepository,
+        private FactureRepository $factureRepository,
+        private TypeProduitRepository $typeProduitRepository,
+        private ModePaiementRepository $modePaiementRepository,
+        private LigneDeFactureRepository $ligneDeFactureRepository,
     )
     {}
 
@@ -59,7 +59,8 @@ class CaissesSepareesDunePeriodeController extends AbstractController
             $dateDebut = date_create($request->request->get('dateDebut'));
             $dateFin = date_create($request->request->get('dateFin'));
             
-            $recettesDuJour = $this->ligneDeFactureRepository->recetteDunePeriode($dateDebut, $dateFin);
+            // $recettesDuJour = $this->ligneDeFactureRepository->recetteDunePeriode($dateDebut, $dateFin);
+            $recettesDuJour = $this->factureRepository->recetteDunePeriode($dateDebut, $dateFin);
 
             $recettesKitDuJour = $this->factureRepository->kitsVenduParCaissiereDunePeriode($dateDebut, $dateFin);
 
@@ -79,8 +80,8 @@ class CaissesSepareesDunePeriodeController extends AbstractController
             'facturesDuJour' => $facturesDuJour,
             'recettesDuJour' => $recettesDuJour,
             'recettesKitDuJour' => $recettesKitDuJour,
-            'dossier' => $this->translator->trans("Caisses"),
-            'route' => $this->translator->trans("Caisses séparées d'une période")
+            'dossier' => $this->translator->trans('Caisses séparées'),
+            'route' => $this->translator->trans("D'une période"),
         ]);
     }
 }

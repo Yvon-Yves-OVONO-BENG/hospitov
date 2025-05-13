@@ -18,7 +18,7 @@
         <div class="app-brand ms-3">
             <a href="javascript:void(0);" class="d-lg-block d-none" style="font-weight: bold; font-size: 25px; text-align:center; color: #ffffff !important; ">
                 <img src="{{ asset ('assets/images/logoLucelle.jpg') }}" class="logo" alt="logo Lucelle">
-                Centre de Santé Privé Lucelle                      
+                CENTRE DE SANTE PRIVE LUCELLE                      
             </a>
             <a href="javascript:void(0);" class="d-lg-none d-md-block">
                 <img src="{{ asset ('assets/images/logoLucelle.jpg') }}" class="logo" alt="logo Lucelle">
@@ -38,7 +38,7 @@
             <!-- Header actions starts -->
             <div class="d-lg-flex d-none gap-2">
 
-                {% if is_granted('ROLE_CAISSIERE') %}
+                {% if is_granted('ROLE_CAISSIERE_ACCUEIL') or is_granted('ROLE_CAISSIERE_PHARMACIE')%}
                     
                     <div class="dropdown">
 

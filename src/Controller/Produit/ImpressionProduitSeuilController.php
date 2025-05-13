@@ -20,10 +20,10 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class ImpressionProduitSeuilController extends AbstractController
 {
     public function __construct(
-        protected FactureRepository $factureRepository,
-        protected ProduitRepository $produitRepository,
-        protected LigneDeFactureRepository $ligneDeFactureRepository,
-        protected ImpressionProduitSeuilService $impressionProduitSeuilService
+        private FactureRepository $factureRepository,
+        private ProduitRepository $produitRepository,
+        private LigneDeFactureRepository $ligneDeFactureRepository,
+        private ImpressionProduitSeuilService $impressionProduitSeuilService
     )
     {}
 

@@ -28,7 +28,7 @@ class LigneDeFactureRepository extends ServiceEntityRepository
 {
     public function __construct(
         ManagerRegistry $registry,
-        protected EntityManagerInterface $em)
+        private EntityManagerInterface $em)
     {
         parent::__construct($registry, LigneDeFacture::class);
     }

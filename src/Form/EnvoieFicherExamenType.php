@@ -13,8 +13,8 @@ use Symfony\Contracts\Translation\TranslatorInterface;
 class EnvoieFicherExamenType extends AbstractType
 {
     public function __construct(
-        protected UserRepository $userRepository,
-        protected TranslatorInterface $translator,
+        private UserRepository $userRepository,
+        private TranslatorInterface $translator,
         )
     {}
     

@@ -20,10 +20,10 @@ use Symfony\Component\HttpFoundation\Request;
 class AjoutQuantiteProduitPanierCopieController extends AbstractController
 {
     public function __construct(
-        protected RequestStack $request,
-        protected PanierService $panierService, 
-        protected TranslatorInterface $translator, 
-        protected AjoutQuantiteProduitService $ajoutQuantiteProduitService,
+        private RequestStack $request,
+        private PanierService $panierService, 
+        private TranslatorInterface $translator, 
+        private AjoutQuantiteProduitService $ajoutQuantiteProduitService,
         )
     {}
 

@@ -109,22 +109,43 @@
 					{% endif %}
 
 					<div class="card">
-						<div class="card-header d-flex align-items-center justify-content-between">
+						<div class="card-header">
+							<div class="row">
+								<div class="col-md-4">
+									<h5 class="card-title">
+										
+										{% if seuil == 0 %}
+											<span> {% trans %}Produit(s) enregistré(s){% endtrans %}</span>
+										{% endif %}
+										{% if seuil == 1 %}
+											<span> {% trans %}Produit(s) seuil enregistré(s){% endtrans %}</span>
+										{% endif %}
+										{% if seuil == 2 %}
+											<span> {% trans %}Produit(s) périmés enregistré(s){% endtrans %}</span>
+										{% endif %}
+										
+									</h5>
+								</div>
+								<div class="col-md-4"></div>
+								<div class="col-md-4">
+									<h5 class="card-title">
+										<button type="button" class="btn btn-primary mt-1 mb-1 me-3">
+											<span class="badge bg-white text-dark">{{ produits|length|number_format }}</span>
+											{% if seuil == 0 %}
+												<span> {% trans %}produit(s) enregistré(s){% endtrans %}</span>
+											{% endif %}
+											{% if seuil == 1 %}
+												<span> {% trans %}produit(s) seuil enregistré(s){% endtrans %}</span>
+											{% endif %}
+											{% if seuil == 2 %}
+												<span> {% trans %}produit(s) périmés enregistré(s){% endtrans %}</span>
+											{% endif %}
+										</button>
+									</h5>
+								</div>
+							</div>
 							
-							<h5 class="card-title">
-								<button type="button" class="btn btn-primary mt-1 mb-1 me-3">
-									<span class="badge bg-white text-dark">{{ produits|length|number_format }}</span>
-									{% if seuil == 0 %}
-										<span> {% trans %}produit(s) enregistré(s){% endtrans %}</span>
-									{% endif %}
-									{% if seuil == 1 %}
-										<span> {% trans %}produit(s) seuil enregistré(s){% endtrans %}</span>
-									{% endif %}
-									{% if seuil == 2 %}
-										<span> {% trans %}produit(s) périmés enregistré(s){% endtrans %}</span>
-									{% endif %}
-								</button>
-							</h5>
+
 							{% if is_granted('ROLE_PHARMACIEN') or is_granted('ROLE_DIRECTEUR') or is_granted('ROLE_ADMINISTRATEUR') or is_granted('ROLE_SECRETAIRE')  %}
 								{% if seuil == 0 %}
 									<a href="{{ path ('ajouter_produit') }}" class="btn btn-primary ms-auto">

@@ -18,9 +18,9 @@ use Symfony\Component\Security\Http\Attribute\IsGranted;
 class AfficherProduitController extends AbstractController
 {
     public function __construct(
-        protected PanierService $panierService,
-        protected TranslatorInterface $translator,
-        protected ProduitRepository $produitRepository,
+        private PanierService $panierService,
+        private TranslatorInterface $translator,
+        private ProduitRepository $produitRepository,
     )
     {}
 
@@ -85,7 +85,8 @@ class AfficherProduitController extends AbstractController
         $aujourdhui = new DateTime('now');
         
         #je récupère tous les produits
-        if ($this->getUser() && in_array(ConstantsClass::ROLE_CAISSIERE, $this->getUser()->getRoles())) 
+        if ($this->getUser() && (in_array(ConstantsClass::ROLE_CAISSIERE_ACCUEIL, $this->getUser()->getRoles()) ||
+        in_array(ConstantsClass::ROLE_CAISSIERE_PHARMACIE, $this->getUser()->getRoles()))) 
         {
             $produits = $this->produitRepository->findBy([
                 'kit' => 0,

@@ -25,13 +25,13 @@ use Symfony\Component\HttpFoundation\Request;
 class ImprimerLesFacturesController extends AbstractController
 {
     public function __construct(
-        protected UserRepository $userRepository,
-        protected FactureRepository $factureRepository,
-        protected PatientRepository $patientRepository,
-        protected EtatFactureRepository $etatFactureRepository,
-        protected ImpressionLesFacturesService $impressionLesFacturesService,
-        protected LigneDeFactureRepository $ligneDeFactureRepository, 
-        protected ImpressionDesFactureService $impressionDesFactureService, 
+        private UserRepository $userRepository,
+        private FactureRepository $factureRepository,
+        private PatientRepository $patientRepository,
+        private EtatFactureRepository $etatFactureRepository,
+        private ImpressionLesFacturesService $impressionLesFacturesService,
+        private LigneDeFactureRepository $ligneDeFactureRepository, 
+        private ImpressionDesFactureService $impressionDesFactureService, 
         )
     {}
     
@@ -62,7 +62,8 @@ class ImprimerLesFacturesController extends AbstractController
         if ($aujourdhui == 1) 
         {
             #si l'utilisateur connecté est une caissière
-            if ($user && in_array(ConstantsClass::ROLE_CAISSIERE, $user->getRoles())) 
+            if ($user && (in_array(ConstantsClass::ROLE_CAISSIERE_ACCUEIL, $user->getRoles()) 
+            || in_array(ConstantsClass::ROLE_CAISSIERE_PHARMACIE, $user->getRoles()))) 
             {
                 #je récupère ses factures du jour de la BD
                 $factures = $this->factureRepository->findBy([
@@ -86,7 +87,8 @@ class ImprimerLesFacturesController extends AbstractController
         elseif($toutes == 1) 
         {
             #si l'utilisateur connecté est une caissière
-            if ($user && in_array(ConstantsClass::ROLE_CAISSIERE, $user->getRoles())) 
+            if ($user && (in_array(ConstantsClass::ROLE_CAISSIERE_ACCUEIL, $user->getRoles()) 
+            || in_array(ConstantsClass::ROLE_CAISSIERE_PHARMACIE, $user->getRoles())))
             {
                 #je récupère toutes ses factures
                 $factures = $this->factureRepository->findBy([
@@ -107,7 +109,8 @@ class ImprimerLesFacturesController extends AbstractController
         elseif ($periode == 1) 
         {
             #si la caissière est connectée
-            if ($user && in_array(ConstantsClass::ROLE_CAISSIERE, $user->getRoles())) 
+            if ($user && (in_array(ConstantsClass::ROLE_CAISSIERE_ACCUEIL, $user->getRoles()) 
+            || in_array(ConstantsClass::ROLE_CAISSIERE_PHARMACIE, $user->getRoles()))) 
             {
                 #si mon post a la variable "impressionFacturePeriode"
                 if ($request->request->has('impressionFacturePeriode')) 

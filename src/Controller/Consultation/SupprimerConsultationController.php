@@ -19,9 +19,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class SupprimerConsultationController extends AbstractController
 {
     public function __construct(
-        protected EntityManagerInterface $em,
-        protected TranslatorInterface $translator,
-        protected ConsultationRepository $consultationRepository
+        private EntityManagerInterface $em,
+        private TranslatorInterface $translator,
+        private ConsultationRepository $consultationRepository
     ){}
 
     #[Route('/supprimer-consultation/{slug}', name: 'supprimer_consultation')]

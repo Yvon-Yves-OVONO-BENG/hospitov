@@ -19,9 +19,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class SupprimerPrimeSpecialeController extends AbstractController
 {
     public function __construct(
-        protected EntityManagerInterface $em,
-        protected TranslatorInterface $translator,
-        protected PrimeSpecialeRepository $primeSpecialeRepository
+        private EntityManagerInterface $em,
+        private TranslatorInterface $translator,
+        private PrimeSpecialeRepository $primeSpecialeRepository
     )
     {}
 

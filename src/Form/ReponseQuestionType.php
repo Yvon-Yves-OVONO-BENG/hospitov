@@ -15,7 +15,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 class ReponseQuestionType extends AbstractType
 {
     public function __construct(
-        protected TranslatorInterface $translator,
+        private TranslatorInterface $translator,
         )
     {}
     

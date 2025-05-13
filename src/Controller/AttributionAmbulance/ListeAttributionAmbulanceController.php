@@ -19,8 +19,8 @@ use Symfony\Contracts\Translation\TranslatorInterface;
 class ListeAttributionAmbulanceController extends AbstractController
 {
     public function __construct(
-        protected TranslatorInterface $translator,
-        protected AttributionAmbulanceRepository $attributionAmbulanceRepository
+        private TranslatorInterface $translator,
+        private AttributionAmbulanceRepository $attributionAmbulanceRepository
     )
     {}
 

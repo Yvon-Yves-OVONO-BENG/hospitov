@@ -17,7 +17,7 @@ use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 class CommandeType extends AbstractType
 {
     public function __construct(
-        protected TranslatorInterface $translator,
+        private TranslatorInterface $translator,
         )
     {}
     

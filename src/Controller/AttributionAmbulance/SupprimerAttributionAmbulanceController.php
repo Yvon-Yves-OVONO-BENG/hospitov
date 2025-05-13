@@ -19,9 +19,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class SupprimerAttributionAmbulanceController extends AbstractController
 {
     public function __construct(
-        protected EntityManagerInterface $em,
-        protected TranslatorInterface $translator,
-        protected AttributionAmbulanceRepository $attributionAmbulanceRepository,
+        private EntityManagerInterface $em,
+        private TranslatorInterface $translator,
+        private AttributionAmbulanceRepository $attributionAmbulanceRepository,
     )
     {}
     

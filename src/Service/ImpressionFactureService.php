@@ -13,11 +13,10 @@ use App\Entity\ElementsPiedDePage\PDF;
 class ImpressionFactureService extends FPDF
 {
     public function __construct(
-        protected EntetePaysage $entetePaysage, 
-        protected EntetePortraitFacture $entetePortraitFacture,
+        private EntetePaysage $entetePaysage, 
+        private EntetePortraitFacture $entetePortraitFacture,
         )
-    {
-    }
+    { }
 
     public function impressionFacture($facture, $detailsFacture): PDF
     {
@@ -28,7 +27,7 @@ class ImpressionFactureService extends FPDF
 
         $pdf->SetLeftMargin(10);
 
-        $positionY = 50;
+        $positionY = 30;
         $pdf->SetXY(15, $positionY);
 
         // $pdf->Image('../public/images/qrcode/'.$facture->getQrCode(), 10, 40, 500);
@@ -65,21 +64,24 @@ class ImpressionFactureService extends FPDF
             }
             else 
             {
-                $pdf->Cell(62, 5, utf8_decode("Prescrit par :  ".$facture->getPrescripteur()->getPrescripteur()), 0, 1, 'R', 0);
+                $pdf->Cell(62, 5, utf8_decode("Prescrit par :  ".$facture->getPrescripteur()->getNom()), 0, 1, 'R', 0);
             }
             
             
             $pdf->SetX(15);
-            $pdf->Cell(0, 5, utf8_decode("Date de naissance : ".date_format($facture->getPatient()->getDateNaissanceAt(), 'd-m-Y')), 0, 1, 'L', 0);
+            $pdf->Cell(0, 5, utf8_decode("Date de naissance : ".$facture->getPatient()->getDateNaissanceAt()->format('d/m/Y')), 0, 1, 'L', 0);
 
             $pdf->SetX(15);
-            $pdf->Cell(0, 5, utf8_decode("Ville : ".$facture->getPatient()->getVilleResidence()), 0, 1, 'L', 0);
+            $pdf->Cell(0, 5, utf8_decode("Ville : ".$facture->getPatient()->getVilleResidence() ? $facture->getPatient()->getVilleResidence() :"" ), 0, 1, 'L', 0);
+
+            $pays = $facture->getPatient()->getPays();
+            $nomPays = $pays ? $pays->getPays() : "Pas renseigné";
 
             $pdf->SetX(15);
-            $pdf->Cell(0, 5, utf8_decode("Pays : ".$facture->getPatient()->getPays()->getPays()), 0, 1, 'L', 0);
+            $pdf->Cell(0, 5, utf8_decode("Pays : ".$nomPays), 0, 1, 'L', 0);
 
             $pdf->SetX(15);
-            $pdf->Cell(0, 5, utf8_decode("Téléphone : ".$facture->getContactPatient()), 0, 1, 'L', 0);
+            $pdf->Cell(0, 5, utf8_decode("Téléphone : ".$facture->getContactPatient() ? $facture->getContactPatient() :"Pas renseigné"), 0, 1, 'L', 0);
         } 
         else 
         {
@@ -89,7 +91,7 @@ class ImpressionFactureService extends FPDF
             if ($facture->getPrescripteur()) 
             {
                 $pdf->SetFont('Arial', 'B', 10);
-                $pdf->Cell(62, 5, utf8_decode("Prescrit par :  ".$facture->getPrescripteur()->getPrescripteur()), 0, 1, 'R', 0);
+                $pdf->Cell(62, 5, utf8_decode("Prescrit par :  ".$facture->getPrescripteur()->getNom()), 0, 1, 'R', 0);
                 
             }
            
@@ -266,8 +268,6 @@ class ImpressionFactureService extends FPDF
 
         }
         
-        
-
         $pdf->Ln(-5);
         $pdf->SetX($pdf->GetX() + 15);
         $pdf->SetY($pdf->GetY() + 15);

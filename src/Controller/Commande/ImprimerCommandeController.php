@@ -20,9 +20,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class ImprimerCommandeController extends AbstractController
 {
     public function __construct(
-        protected CommandeRepository $commandeRepository,
-        protected ImpressionCommandeService $impressionCommandeService, 
-        protected ImpressionListeDesCommandesService $impressionListeDesCommandesService, 
+        private CommandeRepository $commandeRepository,
+        private ImpressionCommandeService $impressionCommandeService, 
+        private ImpressionListeDesCommandesService $impressionListeDesCommandesService, 
         )
     {}
 

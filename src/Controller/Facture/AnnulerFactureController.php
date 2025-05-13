@@ -21,10 +21,10 @@ use Symfony\Component\HttpFoundation\Request;
 class AnnulerFactureController extends AbstractController
 {
     public function __construct(
-        protected FactureRepository $factureRepository, 
-        protected ProduitRepository $produitRepository,
-        protected EtatFactureRepository $etatFactureRepository, 
-        protected EntityManagerInterface $em)
+        private FactureRepository $factureRepository, 
+        private ProduitRepository $produitRepository,
+        private EtatFactureRepository $etatFactureRepository, 
+        private EntityManagerInterface $em)
     {}
 
     #[Route('/annuler-facture/{slug}', name: 'annuler_facture')]

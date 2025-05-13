@@ -22,11 +22,11 @@ use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 class ModifierUtilisateurController extends AbstractController
 {
     public function __construct(
-        protected StrService $strService,
-        protected EntityManagerInterface $em,
-        protected UserRepository $userRepository,
-        protected UserRepository $profilRepository,
-        protected TranslatorInterface $translator,
+        private StrService $strService,
+        private EntityManagerInterface $em,
+        private UserRepository $userRepository,
+        private UserRepository $profilRepository,
+        private TranslatorInterface $translator,
     )
     {}
     

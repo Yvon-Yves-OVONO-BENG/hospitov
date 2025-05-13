@@ -19,7 +19,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class MesConsultationsController extends AbstractController
 {
     public function __construct(
-        protected ConsultationRepository $consultationRepository
+        private ConsultationRepository $consultationRepository
     )
     {}
 

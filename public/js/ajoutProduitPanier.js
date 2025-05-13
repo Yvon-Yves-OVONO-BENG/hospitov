@@ -22,21 +22,31 @@
 					var response = JSON.parse(xhr.responseText);
 					if (response.success) 
 					{
-						notif({
-							msg: "<b>Produit ajouté au panier avec succès !</b>",
-							type: "success",
-							position: "left",
-							width: 500,
-							height: 60,
-							autohide: true
-							});
+						// notif({
+						// 	msg: "<b>Produit ajouté au panier avec succès !</b>",
+						// 	type: "success",
+						// 	position: "left",
+						// 	width: 500,
+						// 	height: 60,
+						// 	autohide: true
+						// 	});
 
-							updateCartCount();
+						Swal.fire({
+							toast: true,
+							icon: 'success',
+							title: "<b>Produit ajouté dans la facture avec succès !</b>",
+							position: 'top-start',
+							showConfirmButton: false,
+							timer: 6000,
+							timerProgressBar: true
+						});
+
+						updateCartCount();
 					}
 					else 
 					{
 						notif({
-							msg: "<b>Erreur lors de l'ajout du produit au panier !</b>",
+							msg: "<b>Erreur lors de l'ajout du produit dans la facture !</b>",
 							type: "danger",
 							position: "left",
 							width: 500,

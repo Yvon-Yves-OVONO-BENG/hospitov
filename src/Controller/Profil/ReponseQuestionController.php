@@ -22,10 +22,10 @@ use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
 class ReponseQuestionController extends AbstractController
 {
     public function __construct(
-        protected EntityManagerInterface $em,
-        protected TranslatorInterface $translator,
+        private EntityManagerInterface $em,
+        private TranslatorInterface $translator,
         private ParameterBagInterface $parametres,
-        protected ReponseQuestionRepository $reponseQuestionRepository
+        private ReponseQuestionRepository $reponseQuestionRepository
     )
     {}
 

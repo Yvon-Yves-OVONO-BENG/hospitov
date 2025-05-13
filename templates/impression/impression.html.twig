@@ -7,7 +7,7 @@
 			
 		<div class="col-sm-12  mb-5">
             
-            {% if is_granted('ROLE_CAISSIERE') %}
+            {% if is_granted('ROLE_CAISSIERE_ACCUEIL') or is_granted('ROLE_CAISSIERE_PHARMACIE') %}
                 {% include "includes/_impressionCaissiere.html.twig" %}
             {% endif %}
 

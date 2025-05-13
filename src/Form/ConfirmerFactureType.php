@@ -21,9 +21,9 @@ use Symfony\Component\Form\Extension\Core\Type\NumberType;
 class ConfirmerFactureType extends AbstractType
 {
     public function __construct(
-        protected TranslatorInterface $translator,
-        protected PatientRepository $patientRepository,
-        protected ModePaiementRepository $modePaiementRepository
+        private TranslatorInterface $translator,
+        private PatientRepository $patientRepository,
+        private ModePaiementRepository $modePaiementRepository
         )
     {}
     

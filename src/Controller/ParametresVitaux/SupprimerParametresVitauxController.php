@@ -19,9 +19,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class SupprimerParametresVitauxController extends AbstractController
 {
     public function __construct(
-        protected EntityManagerInterface $em,
-        protected TranslatorInterface $translator,
-        protected ParametresVitauxRepository $parametresVitauxRepository
+        private EntityManagerInterface $em,
+        private TranslatorInterface $translator,
+        private ParametresVitauxRepository $parametresVitauxRepository
     ){}
 
     #[Route('/supprimer-parametres-vitaux/{slug}', name: 'supprimer_parametres_vitaux')]

@@ -33,8 +33,21 @@
 		<link rel="stylesheet" href="{{ asset ('assets/vendor/datatables/dataTables.bs5-custom.css')}}">
 		<link rel="stylesheet" href="{{ asset ('assets/vendor/datatables/buttons/dataTables.bs5-custom.css')}}">
 
+		<!-- Data table css AZEA -->
+		<link href="{{ asset ('assets/plugins/datatables/DataTables/css/dataTables.bootstrap4.min.css')}}" rel="stylesheet" />
+		<link href="{{ asset ('assets/plugins/datatables/Responsive/css/responsive.bootstrap4.min.css')}}" rel="stylesheet" />
+		<!-- Data table css -->
+		<link href="{{ asset ('assets/plugins/datatables/DataTables/css/dataTables.bootstrap5.css')}}" rel="stylesheet" />
+		<link href="{{ asset ('assets/plugins/datatables/Buttons/css/buttons.bootstrap5.min.css')}}"  rel="stylesheet">
+		<link href="{{ asset ('assets/plugins/datatables/Responsive/css/responsive.bootstrap5.min.css')}}" rel="stylesheet" />
+
+
+
     	<!-- Uploader CSS -->
     	<link rel="stylesheet" href="{{ asset ('assets/vendor/dropzone/dropzone.min.css')}}">
+
+		<!-- INTERNAL Select2 css -->
+		<link href="{{ asset ('assets/plugins/select2/select2.min.css')}}" rel="stylesheet" />
 
 		<!-- INTERNAL File Uploads css-->
         <link href="{{ asset ('assets/plugins/fileupload/css/fileupload.css')}}" rel="stylesheet" type="text/css" />
@@ -102,12 +115,12 @@
 				
 				<!-- Main container starts -->
 				<div class="main-container">
-					{% if is_granted('ROLE_ADMINISTRATEUR') %}
+					{% if is_granted('ROLE_ADMINISTRATEUR') or is_granted('ROLE_HOSPITALISATION') or is_granted('ROLE_PHARMACIEN') %}
 						{% include "includes/_menuAdmin.html.twig" %}
 					{% endif %}
 
-					{% if is_granted('ROLE_CAISSIERE') %}
-						{% include "includes/_menuCaissiere.html.twig" %}
+					{% if is_granted('ROLE_CAISSIERE_ACCUEIL') %}
+						{% include "includes/_menuCaissiereAccueil.html.twig" %}
 					{% endif %}
 
 					{% if is_granted('ROLE_CAISSIERE_PHARMACIE') %}
@@ -133,6 +146,7 @@
 					{% if is_granted('ROLE_COMPTABLE') %}
 						{% include "includes/_menuComptable.html.twig" %}
 					{% endif %}
+
 
 					<!-- App container starts -->
 					<div class="app-container">
@@ -308,6 +322,10 @@
     	<script src="{{ asset ('assets/vendor/apex/apexcharts.min.js') }}"></script>
     	<script src="{{ asset ('assets/vendor/apex/custom/rooms/admissions.js') }}"></script>
 
+		<!-- INTERNAL Select2 js -->
+		<script src="{{ asset ('assets/plugins/select2/select2.full.min.js') }}"></script>
+		<script src="{{ asset ('assets/js/select2.js') }}"></script>
+
 
 		<!-- DataTable Buttons -->
 		<script src="{{ asset ('assets/vendor/datatables/buttons/dataTables.buttons.min.js') }}"></script>
@@ -318,6 +336,22 @@
 		<script src="{{ asset ('assets/vendor/datatables/buttons/buttons.html5.min.js') }}"></script>
 		<script src="{{ asset ('assets/vendor/datatables/buttons/buttons.print.min.js') }}"></script>
 		<script src="{{ asset ('assets/vendor/datatables/buttons/buttons.colVis.min.js') }}"></script>
+
+
+		<!-- INTERNAL Data tables -->
+		<script src="{{ asset ('assets/plugins/datatables/DataTables/js/jquery.dataTables.js')}}"></script>
+		<script src="{{ asset ('assets/plugins/datatables/DataTables/js/dataTables.bootstrap5.js')}}"></script>
+		<script src="{{ asset ('assets/plugins/datatables/Buttons/js/dataTables.buttons.min.js')}}"></script>
+		<script src="{{ asset ('assets/plugins/datatables/Buttons/js/buttons.bootstrap4.min.js')}}"></script>
+		<script src="{{ asset ('assets/plugins/datatables/JSZip/jszip.min.js')}}"></script>
+		<script src="{{ asset ('assets/plugins/datatables/pdfmake/pdfmake.min.js')}}"></script>
+		<script src="{{ asset ('assets/plugins/datatables/pdfmake/vfs_fonts.js')}}"></script>
+		<script src="{{ asset ('assets/plugins/datatables/Buttons/js/buttons.html5.min.js')}}"></script>
+		<script src="{{ asset ('assets/plugins/datatables/Buttons/js/buttons.print.min.js')}}"></script>
+		<script src="{{ asset ('assets/plugins/datatables/Buttons/js/buttons.colVis.min.js')}}"></script>
+		<script src="{{ asset ('assets/plugins/datatables/Responsive/js/dataTables.responsive.min.js')}}"></script>
+		<script src="{{ asset ('assets/plugins/datatables/Responsive/js/responsive.bootstrap5.min.js')}}"></script>
+		<script src="{{ asset ('assets/js/datatables.js')}}"></script>
 
 		{# <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> #}
 

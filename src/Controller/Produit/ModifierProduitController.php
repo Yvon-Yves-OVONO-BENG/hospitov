@@ -25,11 +25,11 @@ use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
 class ModifierProduitController extends AbstractController
 {
     public function __construct(
-        protected StrService $strService,
-        protected EntityManagerInterface $em,
-        protected TranslatorInterface $translator,
+        private StrService $strService,
+        private EntityManagerInterface $em,
+        private TranslatorInterface $translator,
         private ParameterBagInterface $parametres,
-        protected ProduitRepository $produitRepository,
+        private ProduitRepository $produitRepository,
     )
     {}
 

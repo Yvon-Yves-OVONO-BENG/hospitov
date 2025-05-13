@@ -20,7 +20,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class AfficherConsultationDuJourController extends AbstractController
 {
     public function __construct(
-        protected ConsultationRepository $consultationRepository
+        private ConsultationRepository $consultationRepository
     )
     {}
 
@@ -65,7 +65,7 @@ class AfficherConsultationDuJourController extends AbstractController
             #je récupère toutes les consultations
             $consultations = $this->consultationRepository->findAll();
         } 
-        elseif($this->getUser() && in_array(ConstantsClass::ROLE_INFIRMIERE_AIDE_SOIGNANTE, $this->getUser()->getRoles()))
+        elseif($this->getUser() && in_array(ConstantsClass::ROLE_PARAMETRES_VITAUX, $this->getUser()->getRoles()))
         {
             #je récupère les consultations de l'infirmière/aide-soignante
             $consultations = $this->consultationRepository->findBy([

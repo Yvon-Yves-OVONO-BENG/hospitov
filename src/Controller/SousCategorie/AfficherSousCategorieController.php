@@ -18,7 +18,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class AfficherSousCategorieController extends AbstractController
 {
     public function __construct(
-        protected SousCategorieRepository $sousCategorieRepository
+        private SousCategorieRepository $sousCategorieRepository
     )
     {}
 

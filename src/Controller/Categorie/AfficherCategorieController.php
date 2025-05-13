@@ -19,7 +19,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class AfficherCategorieController extends AbstractController
 {
     public function __construct(
-        protected CategorieRepository $categorieRepository
+        private CategorieRepository $categorieRepository
     )
     {}
 

@@ -15,8 +15,8 @@ use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 class ConsultationType extends AbstractType
 {
     public function __construct(
-        protected UserRepository $userRepository,
-        protected TranslatorInterface $translator,
+        private UserRepository $userRepository,
+        private TranslatorInterface $translator,
         )
     {}
     

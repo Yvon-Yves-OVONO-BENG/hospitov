@@ -20,9 +20,9 @@ use Symfony\Contracts\Translation\TranslatorInterface;
 class AfficherRadioController extends AbstractController
 {
     public function __construct(
-        protected PanierService $panierService,
-        protected TranslatorInterface $translator,
-        protected ProduitRepository $radioRepository,
+        private PanierService $panierService,
+        private TranslatorInterface $translator,
+        private ProduitRepository $radioRepository,
     )
     {}
 

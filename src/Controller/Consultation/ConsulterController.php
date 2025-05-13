@@ -27,13 +27,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class ConsulterController extends AbstractController
 {
     public function __construct(
-        protected EntityManagerInterface $em,
-        protected UserRepository $userRepository,
-        protected TranslatorInterface $translator,
-        protected GenreRepository $genreRepository,
-        protected ProduitRepository $produitRepository,
-        protected ConsultationRepository $consultationRepository,
-        protected LigneConsultationRepository $ligneConsultationRepository,
+        private EntityManagerInterface $em,
+        private UserRepository $userRepository,
+        private TranslatorInterface $translator,
+        private GenreRepository $genreRepository,
+        private ProduitRepository $produitRepository,
+        private ConsultationRepository $consultationRepository,
+        private LigneConsultationRepository $ligneConsultationRepository,
     )
     {}
 

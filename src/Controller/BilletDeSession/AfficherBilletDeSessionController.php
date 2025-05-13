@@ -20,9 +20,9 @@ use Symfony\Contracts\Translation\TranslatorInterface;
 class AfficherBilletDeSessionController extends AbstractController
 {
     public function __construct(
-        protected PanierService $panierService,
-        protected TranslatorInterface $translator,
-        protected ProduitRepository $produitRepository
+        private PanierService $panierService,
+        private TranslatorInterface $translator,
+        private ProduitRepository $produitRepository
     )
     {}
 

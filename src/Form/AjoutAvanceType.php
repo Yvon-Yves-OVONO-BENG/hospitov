@@ -16,7 +16,7 @@ use Symfony\Component\Form\Extension\Core\Type\NumberType;
 class AjoutAvanceType extends AbstractType
 {
     public function __construct(
-        protected TranslatorInterface $translator,
+        private TranslatorInterface $translator,
         )
     {}
 

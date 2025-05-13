@@ -20,10 +20,10 @@ use Symfony\Component\Security\Csrf\CsrfTokenManagerInterface;
 class AjouterGainController extends AbstractController
 {
     public function __construct(
-        protected StrService $strService,
-        protected EntityManagerInterface $em,
-        protected TranslatorInterface $translator,
-        protected CsrfTokenManagerInterface $csrfTokenManager,
+        private StrService $strService,
+        private EntityManagerInterface $em,
+        private TranslatorInterface $translator,
+        private CsrfTokenManagerInterface $csrfTokenManager,
     )
     {}
 

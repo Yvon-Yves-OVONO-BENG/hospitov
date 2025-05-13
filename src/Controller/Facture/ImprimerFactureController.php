@@ -21,11 +21,11 @@ use Symfony\Component\HttpFoundation\Request;
 class ImprimerFactureController extends AbstractController
 {
     public function __construct(
-        protected FactureRepository $factureRepository,
-        protected PatientRepository $patientRepository,
-        protected ImpressionFactureService $impressionFactureService,
-        protected LigneDeFactureRepository $ligneDeFactureRepository, 
-        protected ImpressionDesFactureService $impressionDesFactureService, 
+        private FactureRepository $factureRepository,
+        private PatientRepository $patientRepository,
+        private ImpressionFactureService $impressionFactureService,
+        private LigneDeFactureRepository $ligneDeFactureRepository, 
+        private ImpressionDesFactureService $impressionDesFactureService, 
         )
     {}
     

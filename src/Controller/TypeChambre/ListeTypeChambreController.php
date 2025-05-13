@@ -19,8 +19,8 @@ use Symfony\Contracts\Translation\TranslatorInterface;
 class ListeTypeChambreController extends AbstractController
 {
     public function __construct(
-        protected TranslatorInterface $translator,
-        protected TypeChambreRepository $typeChambreRepository
+        private TranslatorInterface $translator,
+        private TypeChambreRepository $typeChambreRepository
     )
     {}
 
@@ -65,7 +65,8 @@ class ListeTypeChambreController extends AbstractController
             #je récupère toutes les categories
             $typeChambres = $this->typeChambreRepository->findAll();
         } 
-        elseif($this->getUser() && in_array(ConstantsClass::ROLE_GESTIONNAIRE, $this->getUser()->getRoles()) )
+        elseif($this->getUser() && (in_array(ConstantsClass::ROLE_GESTIONNAIRE, $this->getUser()->getRoles()) || 
+        in_array(ConstantsClass::ROLE_HOSPITALISATION, $this->getUser()->getRoles())))
         {
             #je récupère toutes les categories
             $typeChambres = $this->typeChambreRepository->findBy([

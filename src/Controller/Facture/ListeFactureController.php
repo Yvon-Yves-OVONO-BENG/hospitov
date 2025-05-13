@@ -22,9 +22,9 @@ class ListeFactureController extends AbstractController
 {
     public function __construct(
         private TranslatorInterface $translator,
-        protected UserRepository $userRepository, 
-        protected FactureRepository $factureRepository, 
-        protected EtatFactureRepository $etatFactureRepository,
+        private UserRepository $userRepository, 
+        private FactureRepository $factureRepository, 
+        private EtatFactureRepository $etatFactureRepository,
         )
     {}
 
@@ -72,7 +72,7 @@ class ListeFactureController extends AbstractController
         
         $roles = $user->getRoles();
 
-        if ($user && in_array(ConstantsClass::ROLE_CAISSIERE, $roles) ) 
+        if ($user && (in_array(ConstantsClass::ROLE_CAISSIERE_ACCUEIL, $roles) || in_array(ConstantsClass::ROLE_CAISSIERE_PHARMACIE, $roles) ) ) 
         {
             $caissiere = $this->userRepository->find($user->getId());
             

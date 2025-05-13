@@ -12,7 +12,7 @@ use Symfony\Contracts\Translation\TranslatorInterface;
 class ModifierMotDePasseType extends AbstractType
 {
     public function __construct(
-        protected TranslatorInterface $translator)
+        private TranslatorInterface $translator)
     {}
 
 

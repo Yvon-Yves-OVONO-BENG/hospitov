@@ -19,9 +19,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class ActiverBulletinDePaieController extends AbstractController
 {
     public function __construct(
-        protected EntityManagerInterface $em,
-        protected TranslatorInterface $translator,
-        protected BulletinSalaireRepository $bulletinSalaireRepository
+        private EntityManagerInterface $em,
+        private TranslatorInterface $translator,
+        private BulletinSalaireRepository $bulletinSalaireRepository
     )
     {}
 

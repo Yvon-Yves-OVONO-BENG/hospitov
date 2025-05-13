@@ -19,9 +19,6 @@ class Hospitalisation
     #[ORM\ManyToOne(inversedBy: 'hospitalisations')]
     private ?Patient $patient = null;
 
-    #[ORM\ManyToOne(inversedBy: 'hospitalisations')]
-    private ?Chambre $chambre = null;
-
     #[ORM\Column(type: Types::DATE_MUTABLE, nullable: true)]
     private ?\DateTimeInterface $dateEntreeAt = null;
 
@@ -43,6 +40,15 @@ class Hospitalisation
     #[ORM\OneToMany(targetEntity: HospitalisationDailyReport::class, mappedBy: 'hospitalisation')]
     private Collection $hospitalisationDailyReports;
 
+    #[ORM\Column(length: 255)]
+    private ?string $slug = null;
+
+    #[ORM\ManyToOne(inversedBy: 'hospitalisations')]
+    private ?Lit $lit = null;
+
+    #[ORM\ManyToOne(inversedBy: 'hospitalisations')]
+    private ?User $enregistrePar = null;
+
     public function __construct()
     {
         $this->hospitalisationDailyReports = new ArrayCollection();
@@ -61,18 +67,6 @@ class Hospitalisation
     public function setPatient(?Patient $patient): static
     {
         $this->patient = $patient;
-
-        return $this;
-    }
-
-    public function getChambre(): ?Chambre
-    {
-        return $this->chambre;
-    }
-
-    public function setChambre(?Chambre $chambre): static
-    {
-        $this->chambre = $chambre;
 
         return $this;
     }
@@ -175,6 +169,42 @@ class Hospitalisation
                 $hospitalisationDailyReport->setHospitalisation(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getSlug(): ?string
+    {
+        return $this->slug;
+    }
+
+    public function setSlug(string $slug): static
+    {
+        $this->slug = $slug;
+
+        return $this;
+    }
+
+    public function getLit(): ?Lit
+    {
+        return $this->lit;
+    }
+
+    public function setLit(?Lit $lit): static
+    {
+        $this->lit = $lit;
+
+        return $this;
+    }
+
+    public function getEnregistrePar(): ?User
+    {
+        return $this->enregistrePar;
+    }
+
+    public function setEnregistrePar(?User $enregistrePar): static
+    {
+        $this->enregistrePar = $enregistrePar;
 
         return $this;
     }

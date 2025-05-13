@@ -23,10 +23,10 @@ use Symfony\Contracts\Translation\TranslatorInterface;
 class ExamenController extends AbstractController
 {
     public function __construct(
-        protected TranslatorInterface $translator,
-        protected EntityManagerInterface $em,
-        protected PatientRepository $patientRepository,
-        protected ConsultationRepository $consultationRepository
+        private TranslatorInterface $translator,
+        private EntityManagerInterface $em,
+        private PatientRepository $patientRepository,
+        private ConsultationRepository $consultationRepository
     )
     {}
 

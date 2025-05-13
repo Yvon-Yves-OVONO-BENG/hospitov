@@ -22,10 +22,10 @@ use Symfony\Contracts\Translation\TranslatorInterface;
 class AjouterSpecialiteController extends AbstractController
 {
     public function __construct(
-        protected StrService $strService,
-        protected EntityManagerInterface $em,
-        protected UserRepository $userRepository,
-        protected TranslatorInterface $translator,
+        private StrService $strService,
+        private EntityManagerInterface $em,
+        private UserRepository $userRepository,
+        private TranslatorInterface $translator,
     )
     {}
 

@@ -17,8 +17,8 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 class ParametreType extends AbstractType
 {
     public function __construct(
-        protected UserRepository $userRepository,
-        protected TranslatorInterface $translator,
+        private UserRepository $userRepository,
+        private TranslatorInterface $translator,
         )
     {}
     

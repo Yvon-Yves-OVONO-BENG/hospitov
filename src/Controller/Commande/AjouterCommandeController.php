@@ -21,9 +21,9 @@ use Symfony\Contracts\Translation\TranslatorInterface;
 class AjouterCommandeController extends AbstractController
 {
     public function __construct(
-        protected EntityManagerInterface $em,
-        protected TranslatorInterface $translator,
-        protected CommandeRepository $commandeRepository
+        private EntityManagerInterface $em,
+        private TranslatorInterface $translator,
+        private CommandeRepository $commandeRepository
     )
     {}
 

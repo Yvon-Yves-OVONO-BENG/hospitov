@@ -19,8 +19,8 @@ use Symfony\Contracts\Translation\TranslatorInterface;
 class ListeBatimentController extends AbstractController
 {
     public function __construct(
-        protected TranslatorInterface $translator,
-        protected BatimentRepository $batimentRepository
+        private TranslatorInterface $translator,
+        private BatimentRepository $batimentRepository
     )
     {}
 
@@ -65,7 +65,8 @@ class ListeBatimentController extends AbstractController
             #je récupère toutes les categories
             $batiments = $this->batimentRepository->findAll();
         } 
-        elseif($this->getUser() && in_array(ConstantsClass::ROLE_GESTIONNAIRE, $this->getUser()->getRoles())) 
+        elseif($this->getUser() && (in_array(ConstantsClass::ROLE_GESTIONNAIRE, $this->getUser()->getRoles()) || 
+        in_array(ConstantsClass::ROLE_HOSPITALISATION, $this->getUser()->getRoles()))) 
         {
             #je récupère toutes les categories
             $batiments = $this->batimentRepository->findBy([

@@ -6,6 +6,7 @@ use App\Entity\Batiment;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Vich\UploaderBundle\Form\Type\VichImageType;
+use Symfony\Component\Validator\Constraints\File;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Contracts\Translation\TranslatorInterface;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -13,7 +14,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 class BatimentType extends AbstractType
 {
     public function __construct(
-        protected TranslatorInterface $translator,
+        private TranslatorInterface $translator,
         )
     {}
     
@@ -38,8 +39,19 @@ class BatimentType extends AbstractType
                 'image_uri' => true,
                 'attr' => [
                     'class' => 'dropify'
-                ]
+                ],
+                'constraints' => [
+                    new File([
+                        'maxSize' => '1M',
+                        'mimeTypes' => [
+                            'image/jpeg',
+                            'image/png',
+                        ],
+                        'mimeTypesMessage' => 'Veuillez uploader une image JPEG ou PNG valide dont la capasité est inférieure à 1Mo.',
+                    ])
+                ],
             ])
+
         ;
     }
 

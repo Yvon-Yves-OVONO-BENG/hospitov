@@ -19,9 +19,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class ActiverModeleController extends AbstractController
 {
     public function __construct(
-        protected EntityManagerInterface $em,
-        protected TranslatorInterface $translator,
-        protected ModeleRepository $modeleRepository
+        private EntityManagerInterface $em,
+        private TranslatorInterface $translator,
+        private ModeleRepository $modeleRepository
     )
     {}
 

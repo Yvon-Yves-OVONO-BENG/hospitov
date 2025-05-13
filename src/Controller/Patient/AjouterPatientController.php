@@ -22,10 +22,10 @@ use Symfony\Contracts\Translation\TranslatorInterface;
 class AjouterPatientController extends AbstractController
 {
     public function __construct(
-        protected StrService $strService,
-        protected PatientRepository $patientRepository,
-        protected EntityManagerInterface $em,
-        protected TranslatorInterface $translator,
+        private StrService $strService,
+        private PatientRepository $patientRepository,
+        private EntityManagerInterface $em,
+        private TranslatorInterface $translator,
     )
     {}
 

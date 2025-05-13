@@ -29,14 +29,14 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class ConfirmerFactureController extends AbstractController
 {
     public function __construct( 
-        protected EntityManagerInterface $em, 
-        protected PanierService $panierService, 
-        protected TranslatorInterface $translator,
-        protected EtatFactureRepository $etatFactureRepository, 
-        protected ProduitRepository $produitRepository,  
-        protected FactureRepository $factureRepository,
-        protected LigneDeFactureRepository $ligneDeFactureRepository,
-        protected ImpressionFactureService $impressionFactureService,
+        private EntityManagerInterface $em, 
+        private PanierService $panierService, 
+        private TranslatorInterface $translator,
+        private EtatFactureRepository $etatFactureRepository, 
+        private ProduitRepository $produitRepository,  
+        private FactureRepository $factureRepository,
+        private LigneDeFactureRepository $ligneDeFactureRepository,
+        private ImpressionFactureService $impressionFactureService,
         )
     {}
 

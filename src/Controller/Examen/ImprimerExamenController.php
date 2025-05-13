@@ -18,8 +18,8 @@ use Symfony\Component\HttpFoundation\Request;
 class ImprimerExamenController extends AbstractController
 {
     public function __construct(
-        protected ImpressionDesExamensService $impressionDesExamensService,
-        protected ProduitRepository $produitRepository)
+        private ImpressionDesExamensService $impressionDesExamensService,
+        private ProduitRepository $produitRepository)
     {}
 
     #[Route('/imprimer-examen', name: 'imprimer_examen')]

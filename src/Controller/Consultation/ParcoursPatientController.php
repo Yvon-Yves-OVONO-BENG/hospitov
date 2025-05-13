@@ -24,10 +24,10 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class ParcoursPatientController extends AbstractController
 {
     public function __construct(
-        protected EntityManagerInterface $em,
-        protected UserRepository $userRepository,
-        protected PatientRepository $patientRepository,
-        protected ConsultationRepository $consultationRepository,
+        private EntityManagerInterface $em,
+        private UserRepository $userRepository,
+        private PatientRepository $patientRepository,
+        private ConsultationRepository $consultationRepository,
     )
     {}
 

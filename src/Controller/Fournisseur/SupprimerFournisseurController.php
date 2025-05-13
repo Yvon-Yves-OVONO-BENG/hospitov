@@ -19,9 +19,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class SupprimerFournisseurController extends AbstractController
 {
     public function __construct(
-        protected EntityManagerInterface $em,
-        protected TranslatorInterface $translator,
-        protected FournisseurRepository $fournisseurRepository
+        private EntityManagerInterface $em,
+        private TranslatorInterface $translator,
+        private FournisseurRepository $fournisseurRepository
     )
     {}
 

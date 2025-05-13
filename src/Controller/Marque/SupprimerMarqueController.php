@@ -19,9 +19,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class SupprimerMarqueController extends AbstractController
 {
     public function __construct(
-        protected EntityManagerInterface $em,
-        protected TranslatorInterface $translator,
-        protected MarqueRepository $marqueRepository
+        private EntityManagerInterface $em,
+        private TranslatorInterface $translator,
+        private MarqueRepository $marqueRepository
     ){}
 
     #[Route('/supprimer-marque/{slug}', name: 'supprimer_marque')]

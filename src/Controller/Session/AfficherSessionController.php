@@ -21,9 +21,9 @@ use Symfony\Contracts\Translation\TranslatorInterface;
 class AfficherSessionController extends AbstractController
 {
     public function __construct(
-        protected PanierService $panierService,
-        protected TranslatorInterface $translator,
-        protected BilletDeSessionRepository $billetDeSessionRepository
+        private PanierService $panierService,
+        private TranslatorInterface $translator,
+        private BilletDeSessionRepository $billetDeSessionRepository
     )
     {}
 

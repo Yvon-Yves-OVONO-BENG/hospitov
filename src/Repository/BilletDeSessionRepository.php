@@ -122,6 +122,18 @@ class BilletDeSessionRepository extends ServiceEntityRepository
         ->getOneOrNullResult();
     }
 
+
+    public function dernierBilletDeSession(Patient $patient)
+    {
+        return $this->createQueryBuilder('b')
+        ->where('b.patient = :patient')
+        ->setParameter('patient', $patient)
+        ->orderBy('b.dateBilletDeSessionAt', 'DESC')
+        ->setMaxResults(1)
+        ->getQuery()
+        ->getOneOrNullResult();
+    }
+
     //    /**
     //     * @return BilletDeSession[] Returns an array of BilletDeSession objects
     //     */
