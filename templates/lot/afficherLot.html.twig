@@ -77,7 +77,7 @@
 									<span> {% trans %}lot(s) enregistré(s){% endtrans %}</span>
 								</button>
 							</h5>
-							{% if is_granted('ROLE_ADMINISTRATEUR') %}
+							{% if is_granted('ROLE_ADMINISTRATEUR') or is_granted('ROLE_PHARMACIEN') %}
 								<a href="{{ path ('ajouter_lot') }}" class="btn btn-primary">
 									<i class="fe fe-plus me-2"></i>
 									{% trans %}Ajouter un lot{% endtrans %}

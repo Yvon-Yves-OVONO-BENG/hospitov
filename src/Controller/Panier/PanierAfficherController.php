@@ -328,7 +328,7 @@ class PanierAfficherController extends AbstractController
                     
                     $facture->setPatient($patient);
                 } 
-                else 
+                elseif($facture->getNomPatient())
                 {
                     #je fabrique mon code
                     $characts   = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';	
@@ -365,6 +365,11 @@ class PanierAfficherController extends AbstractController
                     $this->em->persist($patient);
 
                     $facture->setPatient($patient);
+                }
+                else
+                {
+                    $facture->setNomPatient('Patient')
+                    ->setContactPatient('xxxxxx');
                 }
                 
                 $facture->setCaissiere($user)
@@ -408,7 +413,9 @@ class PanierAfficherController extends AbstractController
                                     ->setPaye(1)
                                     ->setRealise(0)
                                     ->setDatePrescriptionAt(new DateTime())
-                                    ->setSlug(uniqid('', true));
+                                    ->setSlug(uniqid('', true))
+                                    ->setDatePrescriptionAt(new DateTime('today'))
+                                    ;
 
                     $this->em->persist($resultatExamen);
                 }
@@ -452,6 +459,7 @@ class PanierAfficherController extends AbstractController
                                     ->setRealise(0)
                                     ->setPatient($patient)
                                     ->setSlug(uniqid('', true))
+                                    ->setDatePrescriptionAt(new DateTime('today'))
                                     ;
 
                     $this->em->persist($resultatExamen);
@@ -551,7 +559,8 @@ class PanierAfficherController extends AbstractController
                         if(count($produitsManquants) != 0 )
                         {
                             #j'affiche le message de confirmation d'ajout
-                            $this->addFlash('danger', $this->translator->trans('Le kit : '.$panierProduit->produit->getLibelle()." est incomplet !"));
+                            $this->addFlash('error', $this->translator->trans('Le kit : 
+                            '.$panierProduit->produit->getLibelle()." est incomplet !"));
                             
                             $maSession->set('produitsManquants', $produitsManquants);
                             
@@ -612,7 +621,7 @@ class PanierAfficherController extends AbstractController
                 #j'affecte 1 à ma variable pour afficher le message
                 $maSession->set('ajout', 1);
 
-                return  $this->redirectToRoute('details_facture', [ 'slug' => $slug.$id, 'm' => 1 ]);
+                return  $this->redirectToRoute('details_facture', [ 'slug' => $facture->getSlug(), 'm' => 1 ]);
                 
             }
         }

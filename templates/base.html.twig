@@ -115,7 +115,7 @@
 				
 				<!-- Main container starts -->
 				<div class="main-container">
-					{% if is_granted('ROLE_ADMINISTRATEUR') or is_granted('ROLE_HOSPITALISATION') or is_granted('ROLE_PHARMACIEN') %}
+					{% if is_granted('ROLE_ADMINISTRATEUR') or is_granted('ROLE_HOSPITALISATION') or is_granted('ROLE_PHARMACIEN') or is_granted('ROLE_REGIES_DES_RECETTES') %}
 						{% include "includes/_menuAdmin.html.twig" %}
 					{% endif %}
 

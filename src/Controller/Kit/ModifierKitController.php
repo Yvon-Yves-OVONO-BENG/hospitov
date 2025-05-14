@@ -46,7 +46,6 @@ class ModifierKitController extends AbstractController
             'slug' => $slug
         ]);
         
-        
         #je lie mon formulaire à ma nouvelle instance
         $form = $this->createForm(KitType::class, $kit);
 

@@ -83,18 +83,24 @@
 							{% endif %}
 						{% endif %}
 					</td>
-					{% if is_granted('ROLE_DIRECTEUR') or is_granted('ROLE_ADMINISTRATEUR') or is_granted('ROLE_PHARMACIEN') or is_granted('ROLE_PHARMACIEN') %}
+					{% if is_granted('ROLE_DIRECTEUR') or is_granted('ROLE_ADMINISTRATEUR') or is_granted('ROLE_PHARMACIEN') %}
 				
-						<td>
-							<div class="form-group">
+						<td class="text-center">
+							{# <div class="form-group">
 								<label class="custom-switch">
 									<input type="checkbox" class="custom-switch-input" data-id="{{ produit.id }}" {% if produit.retire %}checked{% endif %} >
 									<span class="custom-switch-indicator custom-switch-indicator-lg"></span>
 								</label>
+							</div> #}
+
+							<div class="form-check form-switch">
+								<input class="form-check-input retirer-toggle" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+								data-id="{{ produit.id }}" {% if produit.retire %}checked=""{% endif %}
+								data-url="{{ path ('retirer_produit') }}">
+								<label class="form-check-label" for="flexSwitchCheckChecked"></label>
 							</div>
 						</td>
 					{% endif %}
-					{# <form action="{{ path ('ajout_produit_panier', {'slug': produit.slug, 'position': 'listeProduit' } )}}" method="post" class="needs-validation" novalidate> #}
 					
 					<td>
 						{% if is_granted('ROLE_CAISSIERE_ACCUEIL') or is_granted('ROLE_CAISSIERE_PHARMACIE')  %}
@@ -146,3 +152,4 @@
 		
 	</tbody>
 </table>
+<script src="{{ asset ('js/retireProduit.js')}}"></script>

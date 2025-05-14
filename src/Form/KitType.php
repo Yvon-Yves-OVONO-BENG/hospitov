@@ -22,7 +22,7 @@ class KitType extends AbstractType
     {
         $builder
             ->add('libelle', TextType::class, [
-                'label' => false,
+                'label' => $this->translator->trans("Intitulé du kit"),
                 'required' => true,
                 'attr' => [
                     'class' => 'form-control',

@@ -85,8 +85,9 @@
                 <td class="infoTable">
                     
                     <span class="badge bg-primary">{% trans %}Net à payer : {% endtrans %} {{ facture.netApayer|number_format }}FCFA</span> <br>
-                    <span class="badge bg-success">{% trans %}Avance : {% endtrans %} {{ facture.avance|number_format }}FCFA</span> <br>
-                    <span class="badge bg-danger">{% trans %}Reste : {% endtrans %} {{ (facture.netApayer - facture.avance)|number_format  }} FCFA</span>
+                    <span class="badge bg-success">{% trans %}Avance du jour : {% endtrans %} {{ facture.avance|number_format }}FCFA</span> <br>
+                    <span class="badge bg-info">{% trans %}Total avance : {% endtrans %} {{ (facture.netApayer - facture.reste)|number_format }}FCFA</span> <br>
+                    <span class="badge bg-danger">{% trans %}Reste : {% endtrans %} {{ (facture.reste)|number_format  }} FCFA</span>
                 </td>
                 <td class="infoTable">
                     {% if facture.modePaiement.modePaiement == 'CASH' %}

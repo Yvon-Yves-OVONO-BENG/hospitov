@@ -1,62 +1,22 @@
-let collection, boutonAjout, boutonEnregistrement, span;
-    window.onload = () => {
-        collection = document.querySelector("#kit");
-        span = collection.querySelector("span");
+document.addEventListener('DOMContentLoaded', function () {
+    let container = document.getElementById('kit_produits_container');
+    let addButton = document.getElementById('add_item');
 
-        collection.style = "text-align: center; width: 10px; ";
-        collection.style.display = "inline-block";
-        collection.style.display = "";
- 
-        boutonAjout = document.createElement("button");
+    let index = container.querySelectorAll('.kit-produit-item').length;
+    let prototype = container.dataset.prototype;
 
-        boutonAjout.className = "ajout-kit btn btn-outline-primary";
-        boutonAjout.innerText = "Ajouter un produit";
-        boutonAjout.style.marginTop = "10px";
-        boutonAjout.style.display = "inline-block";
-        
-        let nouveauBouton = span.append(boutonAjout);
+    addButton.addEventListener('click', () => {
+        let newForm = prototype.replace(/_name_/g, index);
+        let div = document.createElement('div');
+        div.classList.add('kit-produit-item');
+        div.innerHTML = newForm + '<button type="button" class="btn btn-danger remove-item">Supprimer</button>';
+        container.appendChild(div);
+        index++;
+    });
 
-        collection.dataset.index = collection.querySelectorAll("input").length;
-        boutonAjout.addEventListener("click", function(){
-            addButton(collection, nouveauBouton);
-        });
-
-        
-    }
-
-    function addButton(collection, nouveauBouton)
-    {
-        let prototype = collection.dataset.prototype;
-
-        let index = collection.dataset.index;
-
-        prototype = prototype.replace(/__name__/g, index);
-
-        let content = document.createElement("html");
-        content.innerHTML = prototype;
-
-        let newForm = content.querySelector("div");
-        
-
-        newForm.style = "margin-top: 15px";
-
-        let boutonSuppr = document.createElement("button");
-
-        boutonSuppr.type = "button";
-        boutonSuppr.className = "col-md-12";
-        boutonSuppr.className = "btn btn-outline-danger";
-        boutonSuppr.id = "delete-kit-" + index;
-        boutonSuppr.innerText = "Supprimer ce produit";
-        boutonSuppr.style.marginTop = "10px";
-        boutonSuppr.style.display = "inline-block";
-
-        newForm.append(boutonSuppr);
-        collection.dataset.index++;
-        
-        let boutonAjout = collection.querySelector(".ajout-kit");
-
-        span.insertBefore(newForm, boutonAjout);
-        boutonSuppr.addEventListener("click", function(){
-            this.previousElementSibling.parentElement.remove();
-        })
-    }
+    container.addEventListener('click', function (e) {
+        if (e.target && e.target.classList.contains('remove-item')) {
+            e.target.closest('.kit-produit-item').remove();
+        }
+    });
+});

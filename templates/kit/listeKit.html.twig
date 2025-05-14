@@ -106,7 +106,8 @@
 														<div class="dropdown-menu border-primary">
 															<a class="dropdown-item" href="{{ path ('imprimer_kit', {'slug': kit.slug }) }}" target="_blank"><i class="ri-printer-line me-2"></i> {% trans %}Imprimer{% endtrans %}</a>
 															<a class="dropdown-item" href="{{ path ('details_kit', {'slug': kit.slug })}}"><i class="ri-eye-line me-2"></i> {% trans %}Détails{% endtrans %}</a>
-															<a class="dropdown-item" href="{{ path ('afficher_kit', {'slug': kit.slug })}}"><i class="ri-edit-box-line me-2"></i> {% trans %}Modifier{% endtrans %}</a>
+															<a class="dropdown-item" href="{{ path ('afficher_kit', {'slug': kit.slug })}}"><i class="ri-edit-box-line me-2"></i> {% trans %}Afficher{% endtrans %}</a>
+															<a class="dropdown-item" href="{{ path ('modifier_kit', {'slug': kit.slug })}}"><i class="ri-edit-box-line me-2"></i> {% trans %}Modifier{% endtrans %}</a>
 															<a class="dropdown-item" href="javascript:void(0);" 
 															onclick="swal({
 																'title': 'Attention', 

@@ -37,7 +37,7 @@ class LigneDeKitType extends AbstractType
                 },
             ])
             ->add('quantite', TextType::class, [
-                'label' => false,
+                'label' => $this->translator->trans("Quantité"),
                 'required' => true,
                 'attr' => [
                     'class' => 'form-control',

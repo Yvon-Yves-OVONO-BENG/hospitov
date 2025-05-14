@@ -38,6 +38,13 @@ class ListeFactureController extends AbstractController
         {
             return $this->redirectToRoute("app_logout");
         }
+
+        if ($a == 0 || $m == 0 || $solde == 0) 
+        {
+            $maSession->set('ajout', null);
+            $maSession->set('suppression', null);
+            $maSession->set('misAjour', null);
+        }
         
         #je teste si le témoin n'est pas vide pour savoir s'il vient de la mise à jour
         if ($a == 1) 
@@ -45,6 +52,7 @@ class ListeFactureController extends AbstractController
             #mes variables témoin pour afficher les sweetAlert
             $maSession->set('ajout', null);
             $maSession->set('suppression', null);
+            $maSession->set('misAjour', null);
         }
 
         #je teste si le témoin n'est pas vide pour savoir s'il vient de la mise à jour
@@ -61,6 +69,7 @@ class ListeFactureController extends AbstractController
             #mes variables témoin pour afficher les sweetAlert
             $maSession->set('ajout', 1);
             $maSession->set('suppression', null);
+            $maSession->set('misAjour', null);
             
         }
 

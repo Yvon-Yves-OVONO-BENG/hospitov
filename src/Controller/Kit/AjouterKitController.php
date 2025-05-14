@@ -103,6 +103,7 @@ class AjouterKitController extends AbstractController
                     ->setCarnet(0)
                     ->setEchographie(0)
                     ->setExamen(0)
+                    ->setRetire(0)
                     ->setKit(1)
                     ->setRadio(0)
                     ->setSupprime(0)

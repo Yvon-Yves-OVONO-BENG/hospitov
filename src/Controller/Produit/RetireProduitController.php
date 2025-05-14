@@ -5,6 +5,7 @@ namespace App\Controller\Produit;
 use App\Repository\ProduitRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Contracts\Translation\TranslatorInterface;
@@ -25,24 +26,17 @@ class RetireProduitController extends AbstractController
     )
     {}
 
-    #[Route('/retirer-produit', name: 'retirer_produit', methods: 'POST')]
-    public function retirerProduit(Request $request): JsonResponse
+    #[Route('/retirer-produit', name: 'retirer_produit')]
+    public function retirerProduit(Request $request)
     {
-        # je récupère ma session
-        $maSession = $request->getSession();
-
-        if(!$maSession)
+        if(!$this->getUser())
         {
             return $this->redirectToRoute("app_logout");
         }
         
-        #mes variables témoin pour afficher les sweetAlert
-        $maSession->set('ajout', null);
-        $maSession->set('suppression', null);
+        $id = $request->request->get('id');
         
-        $produitId = (int)$request->request->get('produit_id');
-        
-        $produit = $this->produitRepository->find($produitId);
+        $produit = $this->produitRepository->find($id);
         
         if ($produit->isRetire() == 0) 
         {
@@ -58,6 +52,6 @@ class RetireProduitController extends AbstractController
         $this->em->flush();
 
         #je retourne à la liste des catégories
-        return new JsonResponse(['success' => true, 'retire' => $produit->isRetire() ]);
+        return new JsonResponse(['success' => true, 'retirer' => $produit->isRetire() ]);
     }
 }

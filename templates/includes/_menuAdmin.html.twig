@@ -133,6 +133,40 @@
 						<li>
 							<a href="{{ path ('liste_examen', {'a': 1 }) }}">{% trans %}Afficher{% endtrans %}</a>
 						</li>
+						
+					</ul>
+				</li>
+
+				<li class="treeview">
+					<a href="#!">
+						<i class="ri-microscope-line"></i>
+						<span class="menu-text">{% trans %}Les résultats Examens{% endtrans %}</span>
+					</a>
+					<ul class="treeview-menu">
+						<li>
+							<a href="{{ path ('resultats_examen', {'resultatExamen': 'examensFaits'})}}">
+							<i class="ri-stethoscope-line"></i>
+							<span class="menu-text">{% trans %}Les examens faits{% endtrans %}</span>
+							</a>
+						</li>
+						<li>
+							<a href="{{ path ('resultats_examen', {'resultatExamen': 'pasEncoreFaits'})}}">
+							<i class="ri-stethoscope-line"></i>
+							<span class="menu-text">{% trans %}Les examens en attente{% endtrans %}</span>
+							</a>
+						</li>
+						<li>
+							<a href="{{ path ('resultats_examen', {'resultatExamen': 'tousLesExamens'})}}">
+							<i class="ri-stethoscope-line"></i>
+							<span class="menu-text">{% trans %}Tous les examens{% endtrans %}</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+							<i class="ri-stethoscope-line"></i>
+							<span class="menu-text">{% trans %}Historique des examen{% endtrans %}</span>
+							</a>
+						</li>
 					</ul>
 				</li>
 			{% endif %}
@@ -230,7 +264,7 @@
 					</ul>
 				</li>
 			{% endif %}
-			{% if is_granted('ROLE_ADMINISTRATEUR') or is_granted('ROLE_PHARMACIEN') %}
+			{% if is_granted('ROLE_ADMINISTRATEUR') or is_granted('ROLE_PHARMACIEN') or is_granted('ROLE_REGIES_DES_RECETTES') %}
 				{% if is_granted('ROLE_ADMINISTRATEUR')  %}
 					<li class="treeview">
 						<a href="#!">
@@ -289,98 +323,118 @@
 						</ul>
 					</li>
 				{% endif %}
-				<li class="treeview">
-					<a href="#!">
-						<i class="ri-inbox-line"></i>
-						<span class="menu-text">{% trans %}Lots{% endtrans %}</span>
-					</a>
-					<ul class="treeview-menu">
-						<li>
-							<a href="{{ path ('ajouter_lot') }}">{% trans %}Ajouter{% endtrans %}</a>
-						</li>
-						<li>
-							<a href="{{ path ('afficher_lot', {'a': 1 }) }}">{% trans %}Afficher{% endtrans %}</a>
-						</li>
-					</ul>
-				</li>
-				<li class="treeview">
-					<a href="#!">
-						<i class="ri-inbox-line"></i>
-						<span class="menu-text">{% trans %}Produits{% endtrans %}</span>
-					</a>
-					<ul class="treeview-menu">
-						<li>
-							<a href="{{ path ('ajouter_produit') }}">{% trans %}Ajouter{% endtrans %}</a>
-						</li>
-						<li>
-							<a href="{{ path ('afficher_produits', {'a': 1 }) }}">{% trans %}Afficher les produits{% endtrans %}</a>
-						</li>
-						<li>
-							<a href="{{ path ('afficher_produits_seuil', {'a': 1 }) }}">{% trans %}Afficher les produits seuil{% endtrans %}</a>
-						</li>
-						<li>
-							<a href="{{ path ('afficher_produits_perimes', {'a': 1 }) }}">{% trans %}Afficher les produits périmés{% endtrans %}</a>
-						</li>
-					</ul>
-				</li>
-				<li class="treeview">
-					<a href="#!">
-						<i class="ri-inbox-line"></i>
-						<span class="menu-text">{% trans %}Kits{% endtrans %}</span>
-					</a>
-					<ul class="treeview-menu">
-						<li>
-							<a href="{{ path ('ajouter_kit') }}">{% trans %}Ajouter{% endtrans %}</a>
-						</li><li>
-							<a href="{{ path ('liste_kit', {'a': 1 }) }}">{% trans %}Afficher{% endtrans %}</a>
-						</li>
-					</ul>
-				</li>
 
-				{% if is_granted('ROLE_ADMINISTRATEUR') %}
+				{% if is_granted('ROLE_ADMINISTRATEUR') or is_granted('ROLE_PHARMACIEN') %}
 					<li class="treeview">
 						<a href="#!">
 							<i class="ri-inbox-line"></i>
-							<span class="menu-text">{% trans %}Fournisseurs{% endtrans %}</span>
+							<span class="menu-text">{% trans %}Lots{% endtrans %}</span>
 						</a>
 						<ul class="treeview-menu">
 							<li>
-								<a href="{{ path ('ajouter_fournisseur') }}">{% trans %}Ajouter{% endtrans %}</a>
+								<a href="{{ path ('ajouter_lot') }}">{% trans %}Ajouter{% endtrans %}</a>
 							</li>
 							<li>
-								<a href="{{ path ('afficher_fournisseur', {'a': 1 }) }}">{% trans %}Afficher{% endtrans %}</a>
+								<a href="{{ path ('afficher_lot', {'a': 1 }) }}">{% trans %}Afficher{% endtrans %}</a>
 							</li>
-							
 						</ul>
 					</li>
 					<li class="treeview">
 						<a href="#!">
 							<i class="ri-inbox-line"></i>
-							<span class="menu-text">{% trans %}Commandes{% endtrans %}</span>
+							<span class="menu-text">{% trans %}Produits{% endtrans %}</span>
 						</a>
 						<ul class="treeview-menu">
 							<li>
-								<a href="{{ path ('ajouter_commande') }}">{% trans %}Ajouter{% endtrans %}</a>
+								<a href="{{ path ('ajouter_produit') }}">{% trans %}Ajouter{% endtrans %}</a>
 							</li>
 							<li>
-								<a href="{{ path ('liste_commande', {'a': 1 }) }}">{% trans %}Afficher{% endtrans %}</a>
+								<a href="{{ path ('afficher_produits', {'a': 1 }) }}">{% trans %}Afficher les produits{% endtrans %}</a>
 							</li>
+							<li>
+								<a href="{{ path ('afficher_produits_seuil', {'a': 1 }) }}">{% trans %}Afficher les produits seuil{% endtrans %}</a>
+							</li>
+							<li>
+								<a href="{{ path ('afficher_produits_perimes', {'a': 1 }) }}">{% trans %}Afficher les produits périmés{% endtrans %}</a>
+							</li>
+						</ul>
+					</li>
+					<li class="treeview">
+						<a href="#!">
+							<i class="ri-inbox-line"></i>
+							<span class="menu-text">{% trans %}Kits{% endtrans %}</span>
+						</a>
+						<ul class="treeview-menu">
+							<li>
+								<a href="{{ path ('ajouter_kit') }}">{% trans %}Ajouter{% endtrans %}</a>
+							</li><li>
+								<a href="{{ path ('liste_kit', {'a': 1 }) }}">{% trans %}Afficher{% endtrans %}</a>
+							</li>
+						</ul>
+					</li>
+				{% endif %}
+				{% if is_granted('ROLE_ADMINISTRATEUR') or is_granted('ROLE_REGIES_DES_RECETTES') %}
+					{% if is_granted('ROLE_ADMINISTRATEUR') %}
+						<li class="treeview">
+							<a href="#!">
+								<i class="ri-inbox-line"></i>
+								<span class="menu-text">{% trans %}Fournisseurs{% endtrans %}</span>
+							</a>
+							<ul class="treeview-menu">
+								<li>
+									<a href="{{ path ('ajouter_fournisseur') }}">{% trans %}Ajouter{% endtrans %}</a>
+								</li>
+								<li>
+									<a href="{{ path ('afficher_fournisseur', {'a': 1 }) }}">{% trans %}Afficher{% endtrans %}</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="treeview">
+							<a href="#!">
+								<i class="ri-inbox-line"></i>
+								<span class="menu-text">{% trans %}Commandes{% endtrans %}</span>
+							</a>
+							<ul class="treeview-menu">
+								<li>
+									<a href="{{ path ('ajouter_commande') }}">{% trans %}Ajouter{% endtrans %}</a>
+								</li>
+								<li>
+									<a href="{{ path ('liste_commande', {'a': 1 }) }}">{% trans %}Afficher{% endtrans %}</a>
+								</li>
+							</ul>
+						</li>
+					{% endif %}
+
+					
+					<li class="treeview">
+						<a href="#!">
+							<i class="ri-inbox-line"></i>
+							<span class="menu-text">{% trans %}Caisses séparées{% endtrans %}</span>
+						</a>
+						<ul class="treeview-menu">
+							<li>
+								<a href="{{ path ('caisses_separees_du_jour') }}">{% trans %}Du jour{% endtrans %}</a>
+							</li>
+							<li>
+								<a href="{{ path ('caisses_separees_d_un_jour_particulier') }}">{% trans %}D'un jour particulier{% endtrans %}</a>
+							</li>
+							<li>
+								<a href="{{ path ('caisses_separees_d_une_periode') }}">{% trans %}D'une période donnée{% endtrans %}</a>
+							</li>
+							
 						</ul>
 					</li>
 
 					<li class="treeview">
 						<a href="#!">
 							<i class="ri-inbox-line"></i>
-							<span class="menu-text">{% trans %}Factures & recettes{% endtrans %}</span>
+							<span class="menu-text">{% trans %}Recettes{% endtrans %}</span>
 						</a>
 						<ul class="treeview-menu">
-							<li>
-								<a href="{{ path ('liste_facture', {'a': 1})}}">{% trans %}Factures{% endtrans %}</a>
-							</li>
-							<li>
-								<a href="{{ path ('liste_facture_annulee')}}">{% trans %}Factures annulées{% endtrans %}</a>
-							</li>
-							
+							{# <li>
+								<a href="{{ path ('recette_caissiere_du_jour') }}"><i class="si si-wallet me-2"></i> {% trans %}Recettes du jour{% endtrans %}</a>
+							</li> #}
 							<li>
 								<a href="{{ path ('recette_caissiere_du_jour_soldee') }}">{% trans %}Recettes du jour soldées{% endtrans %}</a>
 							</li>
@@ -390,75 +444,75 @@
 							<li>
 								<a href="{{ path ('recettes') }}">{% trans %}Toutes les recettes{% endtrans %}</a>
 							</li>
+						</ul>
+					<li>
+
+					<li class="treeview">
+						<a href="#!">
+							<i class="ri-inbox-line"></i>
+							<span class="menu-text">{% trans %}Factures{% endtrans %}</span>
+						</a>
+						<ul class="treeview-menu">
 							<li>
-								<a href="#!">
-									{% trans %}Caisses séparées{% endtrans %}
-									<i class="ri-arrow-right-s-line"></i>
-								</a>
-								<ul class="treeview-menu">
-									<li>
-										<a href="{{ path ('caisses_separees_du_jour') }}">{% trans %}Du jour{% endtrans %}</a>
-									</li>
-									<li>
-										<a href="{{ path ('caisses_separees_d_un_jour_particulier') }}">{% trans %}D'un jour particulier{% endtrans %}</a>
-									</li>
-									<li>
-										<a href="{{ path ('caisses_separees_d_une_periode') }}">{% trans %}D'une période donnée{% endtrans %}</a>
-									</li>
-									
-								</ul>
+								<a href="{{ path ('liste_facture', {'a': 1})}}">{% trans %}Factures{% endtrans %}</a>
 							</li>
+							<li>
+								<a href="{{ path ('liste_facture_annulee')}}">{% trans %}Factures annulées{% endtrans %}</a>
+							</li>
+							
 						</ul>
 					</li>
 				{% endif %}
-				<li>
-					<a href="{{ path ('impression') }}">
-					<i class="ri-auction-line"></i>
-					<span class="menu-text">{% trans %}Impressions{% endtrans %}</span>
-					</a>
-				</li>
+				{% if is_granted('ROLE_ADMINISTRATEUR') or is_granted('ROLE_PHARMACIEN') %}
+					<li>
+						<a href="{{ path ('impression') }}">
+						<i class="ri-auction-line"></i>
+						<span class="menu-text">{% trans %}Impressions{% endtrans %}</span>
+						</a>
+					</li>
+				{% endif %}
 				{% if is_granted('ROLE_ADMINISTRATEUR') %}
-				<li class="treeview">
-					<a href="#!">
-						<i class="ri-group-2-line"></i>
-						<span class="menu-text">{% trans %}Ressources humaines{% endtrans %}</span>
-					</a>
-					<ul class="treeview-menu">
-						{# <li>
-							<a href="{{ path ('generer_bulletin_salaire_de_paie') }}">{% trans %}Générer Bulletin{% endtrans %}</a>
-						</li> #}
-						<li>
-							<a href="{{ path ('approbation') }}">{% trans %}Approbations{% endtrans %}</a>
-						</li>
-						<li>
-							<a href="{{ path ('salaire') }}">{% trans %}Salaire{% endtrans %}</a>
-						</li>
-						<li>
-							<a href="{{ path ('presents')}}">{% trans %}Présents{% endtrans %}</a>
-						</li>
-						
-						<li>
-							<a href="{{ path ('en_conges')}}">{% trans %}En congés{% endtrans %}</a>
-						</li>
-					</ul>
-				</li>
-				<li class="treeview">
-					<a href="#!">
-						<i class="ri-group-2-line"></i>
-						<span class="menu-text">{% trans %}Eléments du bulletin{% endtrans %}</span>
-					</a>
-					<ul class="treeview-menu">
-						<li>
-							<a href="{{ path ('afficher_gain') }}">{% trans %}Gains{% endtrans %}</a>
-						</li>
-						<li>
-							<a href="{{ path ('afficher_retenue') }}">{% trans %}Retenues{% endtrans %}</a>
-						</li>
-						<li>
-							<a href="{{ path ('afficher_prime_speciale') }}">{% trans %}Prime spéciale{% endtrans %}</a>
-						</li>
-					</ul>
-				</li>
+					<li class="treeview">
+						<a href="#!">
+							<i class="ri-group-2-line"></i>
+							<span class="menu-text">{% trans %}Ressources humaines{% endtrans %}</span>
+						</a>
+						<ul class="treeview-menu">
+							{# <li>
+								<a href="{{ path ('generer_bulletin_salaire_de_paie') }}">{% trans %}Générer Bulletin{% endtrans %}</a>
+							</li> #}
+							<li>
+								<a href="{{ path ('approbation') }}">{% trans %}Approbations{% endtrans %}</a>
+							</li>
+							<li>
+								<a href="{{ path ('salaire') }}">{% trans %}Salaire{% endtrans %}</a>
+							</li>
+							<li>
+								<a href="{{ path ('presents')}}">{% trans %}Présents{% endtrans %}</a>
+							</li>
+							
+							<li>
+								<a href="{{ path ('en_conges')}}">{% trans %}En congés{% endtrans %}</a>
+							</li>
+						</ul>
+					</li>
+					<li class="treeview">
+						<a href="#!">
+							<i class="ri-group-2-line"></i>
+							<span class="menu-text">{% trans %}Eléments du bulletin{% endtrans %}</span>
+						</a>
+						<ul class="treeview-menu">
+							<li>
+								<a href="{{ path ('afficher_gain') }}">{% trans %}Gains{% endtrans %}</a>
+							</li>
+							<li>
+								<a href="{{ path ('afficher_retenue') }}">{% trans %}Retenues{% endtrans %}</a>
+							</li>
+							<li>
+								<a href="{{ path ('afficher_prime_speciale') }}">{% trans %}Prime spéciale{% endtrans %}</a>
+							</li>
+						</ul>
+					</li>
 				{% endif %}
 			{% endif %}
 			
