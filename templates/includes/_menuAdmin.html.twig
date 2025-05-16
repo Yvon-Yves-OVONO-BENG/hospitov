@@ -264,7 +264,7 @@
 					</ul>
 				</li>
 			{% endif %}
-			{% if is_granted('ROLE_ADMINISTRATEUR') or is_granted('ROLE_PHARMACIEN') or is_granted('ROLE_REGIES_DES_RECETTES') %}
+			{% if is_granted('ROLE_ADMINISTRATEUR') or is_granted('ROLE_PHARMACIEN') or is_granted('ROLE_REGIES_DES_RECETTES') or is_granted('ROLE_COMPTABLE') %}
 				{% if is_granted('ROLE_ADMINISTRATEUR')  %}
 					<li class="treeview">
 						<a href="#!">
@@ -361,7 +361,7 @@
 					</li>
 					<li class="treeview">
 						<a href="#!">
-							<i class="ri-inbox-line"></i>
+							<i class="ri-notion-fill"></i>
 							<span class="menu-text">{% trans %}Kits{% endtrans %}</span>
 						</a>
 						<ul class="treeview-menu">
@@ -373,7 +373,7 @@
 						</ul>
 					</li>
 				{% endif %}
-				{% if is_granted('ROLE_ADMINISTRATEUR') or is_granted('ROLE_REGIES_DES_RECETTES') %}
+				{% if is_granted('ROLE_ADMINISTRATEUR') or is_granted('ROLE_REGIES_DES_RECETTES') or is_granted('ROLE_COMPTABLE') %}
 					{% if is_granted('ROLE_ADMINISTRATEUR') %}
 						<li class="treeview">
 							<a href="#!">
@@ -406,25 +406,26 @@
 						</li>
 					{% endif %}
 
-					
-					<li class="treeview">
-						<a href="#!">
-							<i class="ri-inbox-line"></i>
-							<span class="menu-text">{% trans %}Caisses séparées{% endtrans %}</span>
-						</a>
-						<ul class="treeview-menu">
-							<li>
-								<a href="{{ path ('caisses_separees_du_jour') }}">{% trans %}Du jour{% endtrans %}</a>
-							</li>
-							<li>
-								<a href="{{ path ('caisses_separees_d_un_jour_particulier') }}">{% trans %}D'un jour particulier{% endtrans %}</a>
-							</li>
-							<li>
-								<a href="{{ path ('caisses_separees_d_une_periode') }}">{% trans %}D'une période donnée{% endtrans %}</a>
-							</li>
-							
-						</ul>
-					</li>
+					{% if is_granted('ROLE_ADMINISTRATEUR') or is_granted('ROLE_REGIES_DES_RECETTES') %}
+						<li class="treeview">
+							<a href="#!">
+								<i class="ri-inbox-line"></i>
+								<span class="menu-text">{% trans %}Caisses séparées{% endtrans %}</span>
+							</a>
+							<ul class="treeview-menu">
+								<li>
+									<a href="{{ path ('caisses_separees_du_jour') }}">{% trans %}Du jour{% endtrans %}</a>
+								</li>
+								<li>
+									<a href="{{ path ('caisses_separees_d_un_jour_particulier') }}">{% trans %}D'un jour particulier{% endtrans %}</a>
+								</li>
+								<li>
+									<a href="{{ path ('caisses_separees_d_une_periode') }}">{% trans %}D'une période donnée{% endtrans %}</a>
+								</li>
+								
+							</ul>
+						</li>
+					{% endif %}
 
 					<li class="treeview">
 						<a href="#!">
@@ -436,10 +437,10 @@
 								<a href="{{ path ('recette_caissiere_du_jour') }}"><i class="si si-wallet me-2"></i> {% trans %}Recettes du jour{% endtrans %}</a>
 							</li> #}
 							<li>
-								<a href="{{ path ('recette_caissiere_du_jour_soldee') }}">{% trans %}Recettes du jour soldées{% endtrans %}</a>
+								<a href="{{ path ('recette_caissiere_du_jour_soldee') }}">{% trans %}Du jour soldées{% endtrans %}</a>
 							</li>
 							<li>
-								<a href="{{ path ('recette_caissiere_du_jour_non_soldee') }}">{% trans %}Recettes du jour non soldées{% endtrans %}</a>
+								<a href="{{ path ('recette_caissiere_du_jour_non_soldee') }}">{% trans %}Du jour non soldées{% endtrans %}</a>
 							</li>
 							<li>
 								<a href="{{ path ('recettes') }}">{% trans %}Toutes les recettes{% endtrans %}</a>
@@ -447,22 +448,25 @@
 						</ul>
 					<li>
 
-					<li class="treeview">
-						<a href="#!">
-							<i class="ri-inbox-line"></i>
-							<span class="menu-text">{% trans %}Factures{% endtrans %}</span>
-						</a>
-						<ul class="treeview-menu">
-							<li>
-								<a href="{{ path ('liste_facture', {'a': 1})}}">{% trans %}Factures{% endtrans %}</a>
-							</li>
-							<li>
-								<a href="{{ path ('liste_facture_annulee')}}">{% trans %}Factures annulées{% endtrans %}</a>
-							</li>
-							
-						</ul>
-					</li>
+					{% if is_granted('ROLE_ADMINISTRATEUR') or is_granted('ROLE_REGIES_DES_RECETTES') %}
+						<li class="treeview">
+							<a href="#!">
+								<i class="ri-inbox-line"></i>
+								<span class="menu-text">{% trans %}Factures{% endtrans %}</span>
+							</a>
+							<ul class="treeview-menu">
+								<li>
+									<a href="{{ path ('liste_facture', {'a': 1})}}">{% trans %}Factures{% endtrans %}</a>
+								</li>
+								<li>
+									<a href="{{ path ('liste_facture_annulee')}}">{% trans %}Factures annulées{% endtrans %}</a>
+								</li>
+								
+							</ul>
+						</li>
+					{% endif %}
 				{% endif %}
+
 				{% if is_granted('ROLE_ADMINISTRATEUR') or is_granted('ROLE_PHARMACIEN') %}
 					<li>
 						<a href="{{ path ('impression') }}">

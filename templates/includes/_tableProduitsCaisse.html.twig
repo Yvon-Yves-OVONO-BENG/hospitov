@@ -8,7 +8,8 @@
 				<th>{% trans %}Rétirer des Etagères{% endtrans %}</th>
 			{% endif %}
 			{% if is_granted('ROLE_DIRECTEUR') or is_granted('ROLE_ADMINISTRATEUR') or is_granted('ROLE_PHARMACIEN') or is_granted('ROLE_CAISSIERE_ACCUEIL') or is_granted('ROLE_CAISSIERE_PHARMACIE') or is_granted('ROLE_PHARMACIEN') or is_granted('ROLE_SECRETAIRE') %}
-				<th>{% trans %}Opérations{% endtrans %}</th>
+				<th>{% trans %}Quantité{% endtrans %}</th>
+				<th class="text-end">{% trans %}Ajout panier{% endtrans %}</th>
 			{% endif %}
 		</tr>
 	</thead>
@@ -21,7 +22,8 @@
 				<th>{% trans %}Rétirer des Etagères{% endtrans %}</th>
 			{% endif %}
 			{% if is_granted('ROLE_DIRECTEUR') or is_granted('ROLE_ADMINISTRATEUR') or is_granted('ROLE_PHARMACIEN') or is_granted('ROLE_CAISSIERE_ACCUEIL') or is_granted('ROLE_CAISSIERE_PHARMACIE') or is_granted('ROLE_PHARMACIEN')  %}
-				<th>{% trans %}Opérations{% endtrans %}</th>
+				<th>{% trans %}Quantité{% endtrans %}</th>
+				<th class="text-end">{% trans %}Ajout panier{% endtrans %}</th>
 			{% endif %}
 		</tr>
 	</tfoot>
@@ -53,11 +55,11 @@
 					{% endif %}
 					{# <form action="{{ path ('ajout_produit_panier', {'slug': produit.slug, 'position': 'listeProduit' } )}}" method="post" class="needs-validation" novalidate> #}
 					
-					<td>
+					<td colspan="2">
 						{% if is_granted('ROLE_CAISSIERE_ACCUEIL') or is_granted('ROLE_CAISSIERE_PHARMACIE')  %}
 								<div style="display: flex !important; justify-content: space-between !important;">
-									<input type="number" value="1" min="1" step="1" class="form-control text-center quantite" id="validationCustom05" required="required" placeholder="Veuillez saisir la quantité">
 									<input type="hidden" id="typeProduit" value="produit">
+									<input type="number" value="1" min="1" step="1" class="form-control text-center quantite" id="validationCustom05" required="required" placeholder="Veuillez saisir la quantité">
 									<button class="btn btn-outline-primary btn-md btn-block ajout-produit-panier" data-produit-id="{{ produit.id }}" data-bs-toggle="tooltip" title="{% trans %}Ajouter{% endtrans %} {{ produit.libelle }} {% trans %}dans la facture{% endtrans %}">
 										<i class="ri-add-circle-line"></i>
 									</button>

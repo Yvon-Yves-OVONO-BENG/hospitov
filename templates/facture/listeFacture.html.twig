@@ -84,7 +84,7 @@
 
 								<h5 class="card-title">
 									<button type="button" class="btn btn-danger mt-1 mb-1 me-3">
-										<span class="badge bg-white text-dark">{{ factures.factures | length }}</span>
+										<span class="badge bg-white text-dark">{{ factures | length|number_format }}</span>
 										<span> {% trans %}facture(s) annulée(s){% endtrans %}</span>
 									</button>
 								</h5>

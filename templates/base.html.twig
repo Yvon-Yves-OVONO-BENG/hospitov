@@ -115,7 +115,12 @@
 				
 				<!-- Main container starts -->
 				<div class="main-container">
-					{% if is_granted('ROLE_ADMINISTRATEUR') or is_granted('ROLE_HOSPITALISATION') or is_granted('ROLE_PHARMACIEN') or is_granted('ROLE_REGIES_DES_RECETTES') %}
+					{% if is_granted('ROLE_ADMINISTRATEUR') 
+					or is_granted('ROLE_HOSPITALISATION') 
+					or is_granted('ROLE_PHARMACIEN') 
+					or is_granted('ROLE_REGIES_DES_RECETTES') 
+					or is_granted('ROLE_COMPTABLE')
+					%}
 						{% include "includes/_menuAdmin.html.twig" %}
 					{% endif %}
 
@@ -141,10 +146,6 @@
 
 					{% if is_granted('ROLE_LABORANTIN') %}
 						{% include "includes/_menuLaborantin.html.twig" %}
-					{% endif %}
-
-					{% if is_granted('ROLE_COMPTABLE') %}
-						{% include "includes/_menuComptable.html.twig" %}
 					{% endif %}
 
 

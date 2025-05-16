@@ -42,7 +42,7 @@ class ImpressionFicheDeVenteService extends FPDF
 
         $pdf->SetLeftMargin(10);
 
-        $positionY = 50;
+        $positionY = 35;
         // $pdf->Ln(5);
         $pdf->SetXY(15, $positionY);
 
@@ -99,7 +99,6 @@ class ImpressionFicheDeVenteService extends FPDF
             $pdf->Cell(0, 5, 'Date : '.date_format(new DateTime('now'), 'd-m-Y H:i:s'), 0, 1, 'C', 0);
         }
         
-        $pdf->Ln(10);
         $pdf->SetX(15);
         $pdf->SetFont('Arial', 'B', 12);
 
@@ -166,11 +165,11 @@ class ImpressionFicheDeVenteService extends FPDF
             $pdf = $this->basTableau($pdf, $montantCreditDuJour, $montantAvanceCreditDuJour, ($montantCreditDuJour-$montantAvanceCreditDuJour));
         }
 
-        $pdf->Ln(5);
         $pdf->SetX(15);
         $pdf->SetFont('Arial', 'B', 12);
         $pdf->Cell(0, 5, "RECAPITULATIF", 0, 1, 'C', 0);
-
+        
+        $pdf->Ln();
         $pdf->SetX(15);
         $pdf->SetFillColor(240,240,240);
         $pdf->SetFont('Arial', 'B', 12);
@@ -188,14 +187,14 @@ class ImpressionFicheDeVenteService extends FPDF
         $pdf->Cell(60, 5, utf8_decode(number_format($montantAvanceCashDuJour, 0, '', ' ')), 1, 0, 'C');
         $pdf->Cell(60, 5, utf8_decode(number_format(($montantCashDuJour - $montantAvanceCashDuJour), 0, '', ' ')), 1, 1, 'C');
 
-        $pdf->SetX(15);
-        $pdf->SetFont('Arial', 'B', 12);
-        $pdf->Cell(60, 5, utf8_decode('PRIS EN CHARGE'), 1, 0, 'C', true);
-        $pdf->SetFont('Arial', '', 10);
-        $pdf->Cell(30, 5, utf8_decode(number_format($nombrePrisEnChargeDuJour, 0, '', ' ')), 1, 0, 'C');
-        $pdf->Cell(60, 5, utf8_decode(number_format($montantPrisEnChargeDuJour, 0, '', ' ')), 1, 0, 'C');
-        $pdf->Cell(60, 5, utf8_decode(number_format($montantAvancePrisEnChargeDuJour, 0, '', ' ')), 1, 0, 'C');
-        $pdf->Cell(60, 5, utf8_decode(number_format(($montantPrisEnChargeDuJour - $montantAvancePrisEnChargeDuJour), 0, '', ' ')), 1, 1, 'C');
+        // $pdf->SetX(15);
+        // $pdf->SetFont('Arial', 'B', 12);
+        // $pdf->Cell(60, 5, utf8_decode('PRIS EN CHARGE'), 1, 0, 'C', true);
+        // $pdf->SetFont('Arial', '', 10);
+        // $pdf->Cell(30, 5, utf8_decode(number_format($nombrePrisEnChargeDuJour, 0, '', ' ')), 1, 0, 'C');
+        // $pdf->Cell(60, 5, utf8_decode(number_format($montantPrisEnChargeDuJour, 0, '', ' ')), 1, 0, 'C');
+        // $pdf->Cell(60, 5, utf8_decode(number_format($montantAvancePrisEnChargeDuJour, 0, '', ' ')), 1, 0, 'C');
+        // $pdf->Cell(60, 5, utf8_decode(number_format(($montantPrisEnChargeDuJour - $montantAvancePrisEnChargeDuJour), 0, '', ' ')), 1, 1, 'C');
 
         $pdf->SetX(15);
         $pdf->SetFont('Arial', 'B', 12);

@@ -8,13 +8,13 @@
                                 <div class="col-md-4">
                                     <h5 class="card-title">{% trans %}Recettes du jour{% endtrans %} : {{ aujourdhui|date('d-m-Y') }}</h5>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-4 text-center">
                                     <a href="{{ path ('liste_facture', {'solde': 1}) }}" class="btn btn-outline-primary">
                                         <i class="ri-money-dollar-circle-line"></i>
                                         {% trans %}Régler une facture{% endtrans %}
                                     </a>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-4 text-end">
                                     <a href="{{ path ('impression_fiche_de_vente') }}" target="_blank" class="btn btn-outline-primary btn-pill">
                                         <i class="ri-printer-line"></i>
                                         {% trans %}Imprimer la fiche de vente{% endtrans %}

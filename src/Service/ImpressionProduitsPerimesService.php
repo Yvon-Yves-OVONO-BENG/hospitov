@@ -30,7 +30,7 @@ class ImpressionProduitsPerimesService extends FPDF
 
         $pdf->SetLeftMargin(10);
 
-        $positionY = 50;
+        $positionY = 25;
         $pdf->Ln(15);
         $pdf->SetXY(15, $positionY);
 

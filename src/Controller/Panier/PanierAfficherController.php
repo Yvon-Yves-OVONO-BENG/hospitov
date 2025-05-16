@@ -50,7 +50,7 @@ class PanierAfficherController extends AbstractController
         # je récupère ma session
         $maSession = $request->getSession();
         
-        if(!$maSession)
+        if(!$this->getUser())
         {
             return $this->redirectToRoute("app_logout");
         }
@@ -228,7 +228,7 @@ class PanierAfficherController extends AbstractController
                  * @var Facture
                  */
                 $facture = $form->getData();
-                
+                //dd($facture->getAvance());
                 #je set l'état de facture en fonction du mode de paiement
                 switch ($facture->getModePaiement()->getModePaiement()) 
                 {
@@ -278,8 +278,8 @@ class PanierAfficherController extends AbstractController
                     
                 }
 
+                $produitsManquants = [];
                 // 4. Nous allons la lier avec l'utilisateur actuellement connecté (Security)
-                
                 #je fabrique mon slug
                 $characts    = 'abcdefghijklmnopqrstuvwxyz#{};()';
                 $characts   .= 'ABCDEFGHIJKLMNOPQRSTUVWXYZ#{};()';	
@@ -364,7 +364,6 @@ class PanierAfficherController extends AbstractController
 
                     $this->em->persist($patient);
 
-                    $facture->setPatient($patient);
                 }
                 else
                 {
@@ -378,7 +377,7 @@ class PanierAfficherController extends AbstractController
                         ->setReference($reference)
                         ->setSlug($slug.$id)
                         ->setAnnulee(0);
-
+                        
                 if ($facture->getModePaiement()->getModePaiement() == ConstantsClass::PRIS_EN_CHARGE) 
                 {
                     $facture->setReste(($this->panierService->getTotal() + (($this->panierService->getTotal() * 20)/100)) - $facture->getAvance());
@@ -400,70 +399,6 @@ class PanierAfficherController extends AbstractController
                 
                 $this->em->persist($historiquePaiement);
 
-                #je déclare une nouvelle instance resultat examen
-                $resultatExamen = new ResultatExamen;
-
-                #si le patient est existe
-                if ($facture->getPatient()) 
-                {
-                    #je récupère sa session
-                    $derniereSession = $this->billetDeSessionRepository->findDerniereSessionDuPatient($facture->getPatient());
-
-                    $resultatExamen->setBilletDeSession($derniereSession)
-                                    ->setPaye(1)
-                                    ->setRealise(0)
-                                    ->setDatePrescriptionAt(new DateTime())
-                                    ->setSlug(uniqid('', true))
-                                    ->setDatePrescriptionAt(new DateTime('today'))
-                                    ;
-
-                    $this->em->persist($resultatExamen);
-                }
-                else
-                {
-                    #je fabrique mon code
-                    $characts   = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';	
-                    $characts   .= '1234567890'; 
-                    $code      = ''; 
-            
-                    for($i=0;$i < 5;$i++) 
-                    { 
-                        $code .= substr($characts,rand()%(strlen($characts)),1); 
-                    }
-
-                    //////j'extrait le dernier patient de la table
-                    $dernierPatient = $this->patientRepository->findBy([],['id' => 'DESC'],1,0);
-
-                    if(!$dernierPatient)
-                    {
-                        $id = 1;
-                    }
-                    else
-                    {
-                        /////je récupère l'id du dernier produit
-                        $id = $dernierPatient[0]->getId();
-
-                    }
-
-                    $patient = new Patient;
-                    $patient->setCode('PAT-'.$code.$id)
-                    ->setNom($facture->getNomPatient())
-                    ->setTelephone($facture->getContactPatient())
-                    ->setSlug(uniqid("", true))
-                    ->setTermine(0)
-                    ;
-
-                    $this->em->persist($patient);
-                    
-                    $resultatExamen->setPaye(1)
-                                    ->setRealise(0)
-                                    ->setPatient($patient)
-                                    ->setSlug(uniqid('', true))
-                                    ->setDatePrescriptionAt(new DateTime('today'))
-                                    ;
-
-                    $this->em->persist($resultatExamen);
-                }
                 
                 // 5. Nous allons parcourir les produits qui sont dans le panier (PanierService)
                 foreach ($this->panierService->getDetailsPanierProduits() as $panierProduit) 
@@ -491,10 +426,29 @@ class PanierAfficherController extends AbstractController
                         $this->em->persist($billetDeSession);
                     }
                     
+                    #je déclare une nouvelle instance resultat examen
+                    $resultatExamen = new ResultatExamen;
+                        
+                    $resultatExamen->setPaye(1)
+                                    ->setRealise(0)
+                                    ->setDatePrescriptionAt(new DateTime())
+                                    ->setSlug(uniqid('', true))
+                                    ->setDatePrescriptionAt(new DateTime('today'))
+                                    ;
 
                     #si le produit est un examen
                     if ($panierProduit->produit->isExamen() == 1) 
                     {
+                        if ($facture->getPatient()) 
+                        {
+                           #je récupère sa session
+                            $derniereSession = $this->billetDeSessionRepository->findDerniereSessionDuPatient($facture->getPatient());
+                            
+                            $resultatExamen->setBilletDeSession($derniereSession);
+                        }
+                        
+                        $this->em->persist($resultatExamen);
+                        
                         #je déclare une nouvelle instance liste examens à faire
                         $listeExamenAFaire = new ListeExamensAFaire;
 
@@ -539,6 +493,13 @@ class PanierAfficherController extends AbstractController
                                 if (($ligneDeKit->getProduit()->getLot()->getQuantite() - $ligneDeKit->getProduit()->getLot()->getVendu()) == 0) 
                                 {
                                     $produitsManquants[] = $ligneDeKit->getProduit();
+
+                                    $produitsArray = array_map(function ($p) {
+                                        return [
+                                            'id' => $p->getId(),
+                                            'libelle' => $p->getLibelle(),
+                                        ];
+                                    }, $produitsManquants);
                                 } 
                                 else 
                                 {
@@ -551,18 +512,16 @@ class PanierAfficherController extends AbstractController
                                     $ligneDeKit->getProduit()->getLot()->setVendu($nouvelleQuaniteVenduLot);
                                     $this->em->persist($ligneDeKit->getProduit()->getLot());
                                 }
-
                             }  
-                            
                         }
 
                         if(count($produitsManquants) != 0 )
                         {
-                            #j'affiche le message de confirmation d'ajout
+                            #j'affiche le message d'erreur qui affiche les produits manquants
                             $this->addFlash('error', $this->translator->trans('Le kit : 
                             '.$panierProduit->produit->getLibelle()." est incomplet !"));
                             
-                            $maSession->set('produitsManquants', $produitsManquants);
+                            $maSession->set('produitsManquants', $produitsArray);
                             
                             return $this->redirectToRoute('panier_afficher');
                         }
@@ -630,8 +589,8 @@ class PanierAfficherController extends AbstractController
         return $this->render("panier/afficherPanier.html.twig",[
             'licence' => 1,
             'total' => $total,
-            'produits' => $detailsPanier,
             'panierVide' => false,
+            'produits' => $detailsPanier,
             'confirmerFactureForm' => $form->createView(),
             'dossier' => $this->translator->trans('Panier'),
             'route' => $this->translator->trans('Produits du panier'),

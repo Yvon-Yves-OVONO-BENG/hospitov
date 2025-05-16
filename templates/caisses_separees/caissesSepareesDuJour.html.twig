@@ -154,7 +154,7 @@
                                             </td>
 
                                             <td class="infoTable" style="vertical-align: middle !important;">
-                                                <h5><span class="badge badge-default">{{ recetteDuJour.montant }} FCFA</span></h5>
+                                                <h5><span class="badge bg-dark">{{ recetteDuJour.montant }} FCFA</span></h5>
                                             </td>
                                             
                                         </tr>
@@ -171,11 +171,18 @@
             <div class="col-xl-12 col-lg-12 col-md-12 mb-2">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="page-title mb-0 text-primary"><i class="fa fa-money me-2"></i>{% trans %}Recettes des kits du jour{% endtrans %} : {{ aujourdhui|date('d-m-Y') }}</h4>
-                        <button type="button" class="btn btn-primary mt-1 mb-1 me-3">
-                            <span class="badge bg-white text-dark">{{ recettesKitDuJour | length }}</span>
-                            <span>{% trans %}enregistrée(s){% endtrans %}</span>
-                        </button>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4 class="page-title mb-0 text-primary"><i class="fa fa-money me-2"></i>{% trans %}Recettes des kits du jour{% endtrans %} : {{ aujourdhui|date('d-m-Y') }}</h4>
+                            </div>
+                            <div class="col-md-6 text-end">
+                                <button type="button" class="btn btn-primary mt-1 mb-1 me-3">
+                                    <span class="badge bg-white text-dark">{{ recettesKitDuJour | length }}</span>
+                                    <span>{% trans %}enregistrée(s){% endtrans %}</span>
+                                </button>
+                            </div>
+                        </div>
+                        
                     </div>
                 
                     <div class="card-body">
@@ -260,7 +267,7 @@
                                                 <span class="badge bg-primary rounded-pill">{{ recetteKitDuJour.nombre  }}</span>
                                             </td>
                                             <td class="infoTable" style="vertical-align: middle !important;">
-                                                <h5><span class="badge badge-default">{{ recetteKitDuJour.montant }} FCFA</span></h5>
+                                                <h5><span class="badge bg-dark">{{ recetteKitDuJour.montant }} FCFA</span></h5>
                                             </td>
                                             
                                         </tr>
@@ -277,12 +284,19 @@
             <div class="col-xl-12 col-lg-12 col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title mb-0 text-primary"><i class="si si-wallet"></i> {% trans %}Les factures du jour {% endtrans %} : {{ aujourdhui|date('d-m-Y') }}
-                        </h4>
-                        <button type="button" class="btn btn-primary mt-1 mb-1 me-3">
-                            <span class="badge bg-white text-dark">{{ facturesDuJour | length }}</span>
-                            <span>{% trans %}facture(s) enregistrée(s){% endtrans %}</span>
-                        </button>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4 class="card-title mb-0 text-primary"><i class="si si-wallet"></i> {% trans %}Les factures du jour {% endtrans %} : {{ aujourdhui|date('d-m-Y') }}
+                                </h4>
+                            </div>
+                            <div class="col-md-6 text-end">
+                                <button type="button" class="btn btn-primary mt-1 mb-1 me-3">
+                                    <span class="badge bg-white text-dark">{{ facturesDuJour | length }}</span>
+                                    <span>{% trans %}facture(s) enregistrée(s){% endtrans %}</span>
+                                </button>
+                            </div>
+                            
+                        </div>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
@@ -371,12 +385,12 @@
                                             <td class="infoTable">{{ facture.netApayer }}FCFA</td>
                                             <td class="infoTable">
                                                 {% if facture.modePaiement.modePaiement == 'CASH' %}
-                                                    <span class="badge bg-success-light border-primary fs-11">{{ facture.modePaiement.modePaiement }}</span>
+                                                    <span class="badge bg-success border-primary fs-11">{{ facture.modePaiement.modePaiement }}</span>
                                                     {% else %}
                                                     {% if facture.modePaiement.modePaiement == 'CRÉDIT' %}
-                                                        <span class="badge bg-danger-light border-danger fs-11">{{ facture.modePaiement.modePaiement }}</span>
+                                                        <span class="badge bg-danger border-danger fs-11">{{ facture.modePaiement.modePaiement }}</span>
                                                         {% else %}
-                                                            <span class="badge bg-primary-light border-primary fs-11">{{ facture.modePaiement.modePaiement }}</span>
+                                                            <span class="badge bg-primary border-primary fs-11">{{ facture.modePaiement.modePaiement }}</span>
                                                     {% endif %}
                                                 {% endif %}
                                                 
@@ -384,14 +398,14 @@
                                             
                                             <td class="infoTable">
                                                 {% if facture.etatFacture.etatFacture == 'SOLDE' %}
-                                                    <span class="badge badge-gradient-success mt-2">{{ facture.etatFacture.etatFacture }}</span>
+                                                    <span class="badge bg-success mt-2">{{ facture.etatFacture.etatFacture }}</span>
                                                     {% else %}
-                                                    <span class="badge badge-gradient-danger mt-2">{{ facture.etatFacture.etatFacture }}</span>
+                                                    <span class="badge bg-danger mt-2">{{ facture.etatFacture.etatFacture }}</span>
                                                 {% endif %}
                                             </td>
                                             <td class="infoTable">
                                                 <div class="btn-group">
-                                                    <a href="javascript:void(0);" class="btn btn-light" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><i class="fe fe-more-vertical"></i></a>
+                                                    <a href="javascript:void(0);" class="btn btn-light" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><i class="fe fe-more-vertical"></i>Options</a>
                                                     <div class="dropdown-menu border-primary">
                                                         {% if not is_granted('ROLE_CAISSIERE') %}
                                                             <a class="dropdown-item" href="{{ path('details_facture', {'slug': facture.slug }) }}"><i class="fe fe-eye me-2"></i> Détails</a>

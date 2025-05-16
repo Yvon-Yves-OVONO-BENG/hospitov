@@ -29,7 +29,7 @@ class ImpressionProduitsService extends FPDF
 
         $pdf->SetLeftMargin(10);
 
-        $positionY = 50;
+        $positionY = 25;
         $pdf->Ln(5);
         $pdf->SetXY(15, $positionY);
 

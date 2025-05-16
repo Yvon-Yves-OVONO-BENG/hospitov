@@ -2,6 +2,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const quantites = document.querySelectorAll(".quantite");
     const boutonMettreAjour = document.getElementById("mettreAjour");
+    console.log(boutonMettreAjour);
     
     ////fonction qui vérifie si la valeur de l'un des champ est inférieure à 0
     function verifieValeurChamp(){
@@ -24,7 +25,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
     ///j'initialise la vérification
     verifieValeurChamp();
+
 });
-
-
-

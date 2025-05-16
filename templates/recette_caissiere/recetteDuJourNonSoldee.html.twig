@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-   {% trans %}Liste des recettes du jour{% endtrans %}
+   {% trans %}Recettes du jour non soldées{% endtrans %}
 {% endblock %}
 
 {% block stylesheets %}
@@ -30,109 +30,101 @@
 {% block body %}
 	<div class="row gx-3">
 			
-		<div class="col-sm-12 mb-1">
+		<div class="col-md-12 mb-2">
 			<div class="card">
-				<div class="card-header d-flex align-items-center justify-content-between">
-					<h5 class="page-title mb-0 text-primary">
-						{% if is_granted('ROLE_PHARMACIEN') or is_granted('ROLE_REGIES_DES_RECETTES') or is_granted('ROLE_ADMINISTRATEUR') %}
-					
-							{% trans %}Recettes du jour non soldés{% endtrans %}
+				<div class="card-header">
+					<div class="row">
+						<div class="col-md-6">
+							{% if is_granted('ROLE_PHARMACIEN') or is_granted('ROLE_REGIES_DES_RECETTES') or is_granted('ROLE_ADMINISTRATEUR') %}
+								<h5 class="card-title text-primary">
 							
-						{% endif %}
-					</h5>
-
-					<h5 class="page-title mb-0 text-primary">
+									{% trans %}Recettes du jour non soldés{% endtrans %}
+									
+								</h5>
+							{% endif %}
+						</div>
+						<div class="col-md-6 text-end">
+							<h5 class="page-title mb-0 text-primary">
 						
-						<button type="button" class="btn btn-primary mt-1 mb-1 me-3">
-							<span>{% trans %}Recette du jour non soldé{% endtrans %}</span>
-							<span class="badge bg-white text-dark">{{ recetteDuJourNonSolde }} FCFA</span>
-						</button>
-							
-					</h5>
+								<button type="button" class="btn btn-primary mt-1 mb-1 me-3">
+									<span>{% trans %}Recette du jour non soldé{% endtrans %}</span>
+									<span class="badge bg-white text-dark">{{ recetteDuJourNonSolde }} FCFA</span>
+								</button>
+									
+							</h5>
 
 
-					<h5 class="page-title mb-0 text-primary">
-						{% if is_granted('ROLE_CAISSIERE') or is_granted('ROLE_ADMINISTRATEUR') %}
-							<a href="{{ path ('afficher_produits') }}" class="btn btn-outline-primary"><i class="ri-eye-line me-2"></i>
-								{% trans %}Afficher produit{% endtrans %}
-							</a>
-						{% endif %}
+							<h5 class="page-title mb-0 text-primary">
+								{% if is_granted('ROLE_CAISSIERE') or is_granted('ROLE_ADMINISTRATEUR') %}
+									<a href="{{ path ('afficher_produits') }}" class="btn btn-outline-primary"><i class="ri-eye-line me-2"></i>
+										{% trans %}Afficher produit{% endtrans %}
+									</a>
+								{% endif %}
+							</h5>
+						</div>
 					</div>
+
 				</div>
 			</div>
+		</div>
+
+		<div class="col-md-12 mb-2">
 					
 			<div class="card">
-				<div class="card-header d-flex align-items-center justify-content-between">
-					<div class="col-xl-8 col-lg-8 col-md-8">
-						<h5 class="page-title mb-0 text-primary">
-							
-						</h5>
-					</div>
-					<div class="col-xl-4 col-lg-4 col-md-4 text-right">
-						<button type="button" class="btn btn-primary mt-1 mb-1 me-3">
-							<span>{% trans %}Recette du jour {% endtrans %}</span>
-							<span class="badge bg-white text-dark">{{ recetteDuJourNonSolde }} FCFA</span>
-						</button>
-					</div>
-				</div>
-				<div class="table-responsive">
-					<table id="basicExample" class="table m-0 table-hover align-middle">
-						<thead>
-							<tr>
-								<th>{% trans %}N°{% endtrans %}</th>
-								<th>{% trans %}Photo{% endtrans %}</th>
-								<th>{% trans %}Caissière{% endtrans %}</th>
-								<th>{% trans %}Recette{% endtrans %}</th>
-								<th>{% trans %}Mode paiement{% endtrans %}</th>
-								<th>{% trans %}Nombre{% endtrans %}</th>
-								<th>{% trans %}Opérations{% endtrans %}</th>
-							</tr>
-						</thead>
-						<tfoot>
-							<tr>
-								<th>{% trans %}N°{% endtrans %}</th>
-								<th>{% trans %}Photo{% endtrans %}</th>
-								<th>{% trans %}Caissière{% endtrans %}</th>
-								<th>{% trans %}Recette{% endtrans %}</th>
-								<th>{% trans %}Mode paiement{% endtrans %}</th>
-								<th>{% trans %}Nombre{% endtrans %}</th>
-								<th>{% trans %}Opérations{% endtrans %}</th>
-							</tr>
-						</tfoot>
-						<tbody>
-							{% set i = 1 %}
-							{% for recette in recettesDuJourNonSolde %}
+				<div class="card-body">
+					<div class="table-responsive">
+						<table id="basicExample" class="table m-0 table-hover align-middle">
+							<thead>
 								<tr>
-									<td>{{ i }}</td>
-									<td>
-										<img class="avatat avatar-md brround me-2" src="{{ recette.PHOTO ? asset('images/photoUsers/' ~ recette.PHOTO) : asset('images/photoUsers/user.png')}}" alt="img">
-
-									</td>
-
-									<td>
-										<a class="font-weight-normal1" href="">{{ recette.CAISSIERE }}</a>
-									</td>
-									<td>
-										<a class="font-weight-normal1" href="">{{ recette.SOMME }} FCFA</a>
-									</td>
-									<td>
-										<a class="font-weight-normal1" href="">{{ recette.PAIEMENT }} </a>
-									</td>
-
-									<td>
-										<a class="font-weight-normal1" href="">{{ recette.NOMBRE }} </a>
-									</td>
-									
-									<td>
-										<a href="{{ path ('impression_fiche_de_vente', {'id': recette.id }) }}" target="_blank" class="btn btn-outline-primary" data-bs-toggle="tooltip" title="{% trans %}Imprimer{% endtrans %}"><i class="fe fe-printer"></i></a>
-									</td>
+									<th>{% trans %}N°{% endtrans %}</th>
+									<th>{% trans %}Caissière{% endtrans %}</th>
+									<th>{% trans %}Recette{% endtrans %}</th>
+									<th>{% trans %}Mode paiement{% endtrans %}</th>
+									<th>{% trans %}Nombre{% endtrans %}</th>
+									<th>{% trans %}Opérations{% endtrans %}</th>
 								</tr>
-								{% set i = i + 1 %}
-							{% endfor %}
-							
-							
-						</tbody>
-					</table>
+							</thead>
+							<tfoot>
+								<tr>
+									<th>{% trans %}N°{% endtrans %}</th>
+									<th>{% trans %}Caissière{% endtrans %}</th>
+									<th>{% trans %}Recette{% endtrans %}</th>
+									<th>{% trans %}Mode paiement{% endtrans %}</th>
+									<th>{% trans %}Nombre{% endtrans %}</th>
+									<th>{% trans %}Opérations{% endtrans %}</th>
+								</tr>
+							</tfoot>
+							<tbody>
+								{% set i = 1 %}
+								{% for recette in recettesDuJourNonSolde %}
+									<tr>
+										<td>{{ i }}</td>
+
+										<td>
+											<a class="font-weight-normal1" href="">{{ recette.CAISSIERE }}</a>
+										</td>
+										<td>
+											<a class="font-weight-normal1" href="">{{ recette.SOMME }} FCFA</a>
+										</td>
+										<td>
+											<a class="font-weight-normal1" href="">{{ recette.PAIEMENT }} </a>
+										</td>
+
+										<td>
+											<a class="font-weight-normal1" href="">{{ recette.NOMBRE }} </a>
+										</td>
+										
+										<td>
+											<a href="{{ path ('impression_fiche_de_vente', {'id': recette.id }) }}" target="_blank" class="btn btn-outline-primary" data-bs-toggle="tooltip" title="{% trans %}Imprimer{% endtrans %}"><i class="ri-printer-line"></i></a>
+										</td>
+									</tr>
+									{% set i = i + 1 %}
+								{% endfor %}
+								
+								
+							</tbody>
+						</table>
+					</div>
 				</div>
 			</div>
 			

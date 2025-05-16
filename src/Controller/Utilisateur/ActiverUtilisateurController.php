@@ -31,7 +31,7 @@ class ActiverUtilisateurController extends AbstractController
         # je récupère ma session
         $maSession = $request->getSession();
 
-        if(!$maSession)
+        if(!$this->getUser())
         {
             return $this->redirectToRoute("app_logout");
         }

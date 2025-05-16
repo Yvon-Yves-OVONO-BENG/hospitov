@@ -25,9 +25,9 @@ use Symfony\Component\Form\Extension\Core\Type\NumberType;
 class ConfirmerPanierType extends AbstractType
 {
     public function __construct(
-        private TranslatorInterface $translator,
-        private PatientRepository $patientRepository,
-        private ModePaiementRepository $modePaiementRepository
+        protected TranslatorInterface $translator,
+        protected PatientRepository $patientRepository,
+        protected ModePaiementRepository $modePaiementRepository
         )
     {}
     
@@ -37,7 +37,7 @@ class ConfirmerPanierType extends AbstractType
         $builder
             ->add('nomPatient', TextType::class, [
                 'label' => $this->translator->trans("Nom pour la facture"),
-                'required' => false,
+                'required' => true,
                 'attr' => [
                     'class' => "form-control",
                     'placeholder' => $this->translator->trans("Nom pour la facture"),
@@ -46,14 +46,14 @@ class ConfirmerPanierType extends AbstractType
             ])
             ->add('contactPatient', TextType::class, [
                 'label' => $this->translator->trans("Numéro de téléphone"),
-                'required' => false,
+                'required' => true,
                 'attr' => [
                     'class' => "form-control",
                     'placeholder' => $this->translator->trans("Numéro de téléphone"),
                 ]
             ])
             ->add('avance', NumberType::class, [
-                'label' => false,
+                'label' => $this->translator->trans("Avance de la facture"),
                 'required' => true,
                 'attr' => [
                     'min' => 0,
@@ -78,7 +78,7 @@ class ConfirmerPanierType extends AbstractType
                 'choice_label' => 'modePaiement',
                 'required' => true,
                 'attr' => [
-                    'class' => 'form-control select2-show-search',
+                    'class' => 'form-control',
                     'placeholder' => $this->translator->trans('- - -'),
                 ],
                 'query_builder' => function(ModePaiementRepository $modePaiementRepository){
@@ -86,20 +86,20 @@ class ConfirmerPanierType extends AbstractType
                     return $modePaiementRepository->createQueryBuilder('m')->where('m.supprime = 0')->orderBy('m.modePaiement');
                 },
             ])
-            ->add('patient', EntityType::class, [
-                'class' => Patient::class,
-                'choice_label' => 'nom',
-                'required' => false,
-                'placeholder' => $this->translator->trans('- - -'),
-                'attr' => [
-                    'class' => 'form-control select2-show-search',
-                    'value' => 'Client',
-                ],
-                'query_builder' => function(PatientRepository $patientRepository){
+            // ->add('patient', EntityType::class, [
+            //     'class' => Patient::class,
+            //     'choice_label' => 'nom',
+            //     'required' => false,
+            //     'placeholder' => $this->translator->trans('- - -'),
+            //     'attr' => [
+            //         'class' => 'form-control',
+            //         'value' => 'Client',
+            //     ],
+            //     'query_builder' => function(PatientRepository $patientRepository){
                     
-                    return $patientRepository->createQueryBuilder('p')->andWhere('p.termine = 0')->orderBy('p.nom');
-                }
-            ])
+            //         return $patientRepository->createQueryBuilder('p')->andWhere('p.termine = 0')->orderBy('p.nom');
+            //     }
+            // ])
             ->add('prescripteur', EntityType::class, [
                 'class' => User::class,
                 'choice_label' => 'nom',
@@ -127,3 +127,6 @@ class ConfirmerPanierType extends AbstractType
         $resolver->setRequired('netApayer');
     }
 }
+
+           
+   

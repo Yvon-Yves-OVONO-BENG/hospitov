@@ -7,10 +7,14 @@
 	{
 		button.addEventListener('click', function() 
 		{
-			var produitId = this.dataset.produitId;
-			var quantiteInput = this.previousElementSibling;
-			var quantite = quantiteInput.value;
+			var row = this.closest('tr');//je récupère la ligne
 
+			var produitId = this.dataset.produitId;
+			var quantiteInput = row.querySelector('input[type="number"]'); //le input de la ligne
+			var quantite = quantiteInput.value;
+			console.log('Quantité : ', quantite);
+			console.log('Produit ID : ', produitId);
+			
 			///je cree un nouvel objet XMLHttpRequest
 			var xhr = new XMLHttpRequest();
 			xhr.open('POST', '/hospitov/public/ajout-produit-panier', true);

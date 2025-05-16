@@ -41,13 +41,16 @@
 						</h4>
 					
 						{% if is_granted('ROLE_PHARMACIEN') or is_granted('ROLE_ADMINISTRATEUR')%}
-							<a href="{{ path ('liste_kit') }}" class="btn btn-primary"><i class="fe fe-plus me-2"></i>
+							<a href="{{ path ('liste_kit') }}" class="btn btn-primary">
+								<i class="ri-notion-fill"></i>
 								{% trans %}Afficher les kits{% endtrans %}
 							</a>
-							<a href="{{ path ('ajouter_kit') }}" class="btn btn-primary"><i class="fe fe-plus me-2"></i>
+							<a href="{{ path ('ajouter_kit') }}" class="btn btn-primary">
+								<i class="ri-add-box-line"></i>
 								{% trans %}Ajouter un kit{% endtrans %}
 							</a>
-							<a href="{{ path ('imprimer_kit', {'slug': kit.slug }) }}" class="btn btn-primary" target="_blank"><i class="fe fe-printer me-2"></i>
+							<a href="{{ path ('imprimer_kit', {'slug': kit.slug }) }}" class="btn btn-primary" target="_blank">
+								<i class="ri-printer-line me-2"></i>
 								{% trans %}Imprimer{% endtrans %}
 							</a>
 						{% endif %}
@@ -82,7 +85,11 @@
 										<tr>
 											<td><span class="badge bg-info rounded-pill">{{ i }}</span></td>
 											<td>
-												<a class="font-weight-normal1" href="">{{ ligneDeKit.produit.libelle }}</a>
+												<a class="font-weight-normal1" href="">{{ ligneDeKit.produit.libelle }}</a> <br>
+												{% if (ligneDeKit.produit.lot.quantite - ligneDeKit.produit.lot.vendu) == 0 %}
+													<span class="badge bg-danger">{% trans %}Le stock de ce produit est épuisé{% endtrans %}</span>
+												{% endif %}
+												
 											</td>
 											<td>
 												<a class="font-weight-normal1" href=""><span class="badge bg-primary rounded-pill">{{ ligneDeKit.prix }} FCFA</span></a>
@@ -122,8 +129,6 @@
 										{% set i = i + 1 %}
 									{% endfor %}
 									
-									
-
 								</tbody>
 							</table>
 						</div>

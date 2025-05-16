@@ -61,7 +61,7 @@ class AccueilController extends AbstractController
         # je récupère ma session
         $maSession = $request->getSession();
 
-        if (!$maSession) 
+        if (!$this->getUser()) 
         {
             $this->redirectToRoute('app_logout');
         }
@@ -424,14 +424,16 @@ class AccueilController extends AbstractController
             if (in_array(ConstantsClass::ROLE_REGIES_DES_RECETTES, $user->getRoles()) || 
             in_array(ConstantsClass::ROLE_ADMINISTRATEUR, $user->getRoles()) || 
             in_array(ConstantsClass::ROLE_SECRETAIRE, $user->getRoles()) || 
-            in_array(ConstantsClass::ROLE_PHARMACIEN, $user->getRoles())
+            in_array(ConstantsClass::ROLE_PHARMACIEN, $user->getRoles()) || 
+            in_array(ConstantsClass::ROLE_COMPTABLE, $user->getRoles())
             ) 
             {
                 //2. Toutes Ses factures
                 if (in_array(ConstantsClass::ROLE_REGIES_DES_RECETTES, $user->getRoles()) || 
                 in_array(ConstantsClass::ROLE_ADMINISTRATEUR, $user->getRoles()) || 
                 in_array(ConstantsClass::ROLE_SECRETAIRE, $user->getRoles()) || 
-                in_array(ConstantsClass::ROLE_PHARMACIEN, $user->getRoles()))
+                in_array(ConstantsClass::ROLE_PHARMACIEN, $user->getRoles()) || 
+                in_array(ConstantsClass::ROLE_COMPTABLE, $user->getRoles()))
                 {
                     #ses factures du jours
                     $facturesDuJour = $this->factureRepository->findBy([
@@ -569,7 +571,8 @@ class AccueilController extends AbstractController
                 if (in_array(ConstantsClass::ROLE_REGIES_DES_RECETTES, $user->getRoles()) || 
                 in_array(ConstantsClass::ROLE_ADMINISTRATEUR, $user->getRoles()) || 
                 in_array(ConstantsClass::ROLE_SECRETAIRE, $user->getRoles()) ||
-                in_array(ConstantsClass::ROLE_PHARMACIEN, $user->getRoles())) 
+                in_array(ConstantsClass::ROLE_PHARMACIEN, $user->getRoles()) || 
+                in_array(ConstantsClass::ROLE_COMPTABLE, $user->getRoles())) 
                 {
                     #ses factures du jours de la caisiere
                     $facturesDuJourCaissiere = $this->factureRepository->findBy([

@@ -3,10 +3,8 @@
 namespace App\Service;
 
 use Fpdf\Fpdf;
-use App\Entity\User;
 use App\Service\EntetePaysage;
 use App\Service\EntetePortrait;
-use App\Entity\ElementsPiedDePage\PDF;
 use App\Entity\ElementsPiedDePage\Pagination;
 use DateTime;
 
@@ -34,7 +32,7 @@ class ImpressionEtatStockService extends FPDF
 
         $pdf->SetLeftMargin(10);
 
-        $positionY = 50;
+        $positionY = 25;
         $pdf->SetXY(15, $positionY);
 
         // $pdf->Image('../public/images/qrcode/'.$facture->getQrCode(), 10, 40, 500);
@@ -81,7 +79,7 @@ class ImpressionEtatStockService extends FPDF
             $pdf->Cell(10, 5, utf8_decode($i), 1, 0, 'C', true);
             $pdf->Cell(90, 5, utf8_decode($produit->getLibelle()), 1, 0, 'L', true);
 
-            if ($produit->getLot()->getDatePeremptionAt()) 
+            if ($produit->getLot()) 
             {
                 $pdf->Cell(25, 5, utf8_decode(date_format($produit->getLot()->getDatePeremptionAt(), 'd-m-Y')), 1, 0, 'C', true);
             } 
@@ -90,12 +88,22 @@ class ImpressionEtatStockService extends FPDF
                 $pdf->Cell(25, 5, utf8_decode("").' / '.utf8_decode(""), 1, 0, 'C', true);
             }
             
-            
-            $pdf->Cell(20, 5, utf8_decode(number_format($produit->getLot()->getQuantite(), 0, '', ' ')), 1, 0, 'C', true);
-            $pdf->Cell(20, 5, utf8_decode(number_format($produit->getLot()->getVendu(), 0, '', ' ')), 1, 0, 'C', true);
-            $pdf->Cell(20, 5, utf8_decode(number_format(($produit->getLot()->getQuantite() - $produit->getLot()->getVendu()), 0, '', ' ')), 1, 1, 'C', true);
+            if ($produit->getLot()) {
+                $pdf->Cell(20, 5, utf8_decode(number_format($produit->getLot()->getQuantite(), 0, '', ' ')), 1, 0, 'C', true);
+                $pdf->Cell(20, 5, utf8_decode(number_format($produit->getLot()->getVendu(), 0, '', ' ')), 1, 0, 'C', true);
+                $pdf->Cell(20, 5, utf8_decode(number_format(($produit->getLot()->getQuantite() - $produit->getLot()->getVendu()), 0, '', ' ')), 1, 1, 'C', true);
+                $montant += $produit->getLot()->getVendu() * $produit->getPrixVente();
+            } 
+            else 
+            {
+                $pdf->Cell(20, 5, utf8_decode(""), 1, 0, 'C', true);
+                $pdf->Cell(20, 5, utf8_decode(""), 1, 0, 'C', true);
+                $pdf->Cell(20, 5, utf8_decode(""), 1, 1, 'C', true);
 
-            $montant += $produit->getLot()->getVendu() * $produit->getPrixVente();
+            }
+            
+           
+            
             
         }
 

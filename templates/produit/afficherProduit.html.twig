@@ -67,43 +67,62 @@
 				<div class="col-sm-12 mb-5">
 					{% if is_granted('ROLE_PHARMACIEN') or is_granted('ROLE_DIRECTEUR') or is_granted('ROLE_ADMINISTRATEUR') or is_granted('ROLE_SECRETAIRE')  %}
 						<div class="card mb-3">
-							<div class="card-header d-flex align-items-center justify-content-between">
+							<div class="card-header">
+								<div class="row">
+									<div class="col-md-6">
+										<h5 class="card-title text-start">
+
+											{% if seuil == 0 %}
+												<span> {% trans %}Produit(s) enregistré(s){% endtrans %}</span>
+											{% endif %}
+											{% if seuil == 1 %}
+												<span> {% trans %}Produit(s) seuil enregistré(s){% endtrans %}</span>
+											{% endif %}
+											{% if seuil == 2 %}
+												<span> {% trans %}Produit(s) périmés enregistré(s){% endtrans %}</span>
+											{% endif %}
+
+										</h5>
+									</div>
+									<div class="col-md-6 text-end">
+										{% if seuil == 0 %}
+
+											<a href="{{ path ('afficher_produits_perimes', {'a': 1}) }}" class="btn btn-outline-danger btn-pill">
+												<i class="ri-eye-line"></i> 
+												{% trans %}Produits périmés{% endtrans %}
+											</a>
+
+											<a href="{{ path ('afficher_produits_seuil', {'a': 1}) }}" class="btn btn-outline-danger btn-pill">
+												<i class="ri-eye-line"></i> 
+												{% trans %}Produits seuil{% endtrans %}
+											</a>
+
+										{% endif %}
+
+										{% if seuil == 1 %}
+											<a href="{{ path ('afficher_produits', {'a': 1}) }}" class="btn btn-outline-primary btn-pill">
+												<i class="ri-eye-line"></i> 
+												{% trans %}Afficher les produits{% endtrans %}
+											</a>
+											<a href="{{ path ('afficher_produits_perimes', {'a': 1}) }}" class="btn btn-outline-danger btn-pill">
+												<i class="ri-eye-line"></i> 
+												{% trans %}Afficher les produits périmés{% endtrans %}
+											</a>
+										{% endif %}
+
+										{% if seuil == 2 %}
+											<a href="{{ path ('afficher_produits', {'a': 1}) }}" class="btn btn-outline-primary btn-pill">
+												<i class="ri-eye-line"></i> 
+												{% trans %}Afficher les produits{% endtrans %}
+											</a>
+											<a href="{{ path ('afficher_produits_seuil', {'a': 1}) }}" class="btn btn-outline-danger btn-pill">
+												<i class="ri-eye-line"></i> 
+												{% trans %}Afficher les produits seuil{% endtrans %}
+											</a>
+										{% endif %}
+									</div>
+								</div>
 								
-								{% if seuil == 0 %}
-
-									<a href="{{ path ('afficher_produits_perimes', {'a': 1}) }}" class="btn btn-outline-danger btn-pill">
-										<i class="ri-eye-line"></i> 
-										{% trans %}Produits périmés{% endtrans %}
-									</a>
-
-									<a href="{{ path ('afficher_produits_seuil', {'a': 1}) }}" class="btn btn-outline-danger btn-pill">
-										<i class="ri-eye-line"></i> 
-										{% trans %}Produits seuil{% endtrans %}
-									</a>
-
-								{% endif %}
-
-								{% if seuil == 1 %}
-									<a href="{{ path ('afficher_produits', {'a': 1}) }}" class="btn btn-outline-primary btn-pill">
-										<i class="ri-eye-line"></i> 
-										{% trans %}Afficher les produits{% endtrans %}
-									</a>
-									<a href="{{ path ('afficher_produits_perimes', {'a': 1}) }}" class="btn btn-outline-danger btn-pill">
-										<i class="ri-eye-line"></i> 
-										{% trans %}Afficher les produits périmés{% endtrans %}
-									</a>
-								{% endif %}
-
-								{% if seuil == 2 %}
-									<a href="{{ path ('afficher_produits', {'a': 1}) }}" class="btn btn-outline-primary btn-pill">
-										<i class="ri-eye-line"></i> 
-										{% trans %}Afficher les produits{% endtrans %}
-									</a>
-									<a href="{{ path ('afficher_produits_seuil', {'a': 1}) }}" class="btn btn-outline-danger btn-pill">
-										<i class="ri-eye-line"></i> 
-										{% trans %}Afficher les produits seuil{% endtrans %}
-									</a>
-								{% endif %}
 							</div>
 						</div>
 					{% endif %}
@@ -114,21 +133,6 @@
 								<div class="col-md-4">
 									<h5 class="card-title">
 										
-										{% if seuil == 0 %}
-											<span> {% trans %}Produit(s) enregistré(s){% endtrans %}</span>
-										{% endif %}
-										{% if seuil == 1 %}
-											<span> {% trans %}Produit(s) seuil enregistré(s){% endtrans %}</span>
-										{% endif %}
-										{% if seuil == 2 %}
-											<span> {% trans %}Produit(s) périmés enregistré(s){% endtrans %}</span>
-										{% endif %}
-										
-									</h5>
-								</div>
-								<div class="col-md-4"></div>
-								<div class="col-md-4">
-									<h5 class="card-title">
 										<button type="button" class="btn btn-primary mt-1 mb-1 me-3">
 											<span class="badge bg-white text-dark">{{ produits|length|number_format }}</span>
 											{% if seuil == 0 %}
@@ -141,39 +145,43 @@
 												<span> {% trans %}produit(s) périmés enregistré(s){% endtrans %}</span>
 											{% endif %}
 										</button>
+										
 									</h5>
+								</div>
+								<div class="col-md-8 text-end">
+									{% if is_granted('ROLE_PHARMACIEN') or is_granted('ROLE_DIRECTEUR') or is_granted('ROLE_ADMINISTRATEUR') or is_granted('ROLE_SECRETAIRE')  %}
+										{% if seuil == 0 %}
+											<a href="{{ path ('ajouter_produit') }}" class="btn btn-primary ms-auto">
+												<i class="ri-add-box-line"></i>
+												{% trans %}Ajouter un produit{% endtrans %}
+											</a>
+
+											<a href="{{ path ('impression_produits') }}" class="btn btn-primary ms-auto" target="_blank">
+												<i class="ri-printer-line"></i>
+												{% trans %}Imprimer tous les produits{% endtrans %}
+											</a>
+										{% endif %}
+
+										{% if seuil == 1 %}
+											<a href="{{ path ('impression_produit_seuil') }}" target="_blank" class="btn btn-outline-danger btn-pill">
+												<i class="ri-printer-line"></i>
+												{% trans %}Imprimer les produits seuils{% endtrans %}
+											</a>
+										{% endif %}
+
+										{% if seuil == 2 %}
+											<a href="{{ path ('impression_produits_perimes') }}" target="_blank" class="btn btn-outline-danger btn-pill">
+												<i class="ri-printer-line"></i>
+												{% trans %}Imprimer les produits périmés{% endtrans %}
+											</a>
+										{% endif %}
+
+									{% endif %}
 								</div>
 							</div>
 							
 
-							{% if is_granted('ROLE_PHARMACIEN') or is_granted('ROLE_DIRECTEUR') or is_granted('ROLE_ADMINISTRATEUR') or is_granted('ROLE_SECRETAIRE')  %}
-								{% if seuil == 0 %}
-									<a href="{{ path ('ajouter_produit') }}" class="btn btn-primary ms-auto">
-										<i class="ri-add-box-line"></i>
-										{% trans %}Ajouter un produit{% endtrans %}
-									</a>
-
-									<a href="{{ path ('impression_produits') }}" class="btn btn-primary ms-auto" target="_blank">
-										<i class="ri-printer-line"></i>
-										{% trans %}Imprimer tous les produits{% endtrans %}
-									</a>
-								{% endif %}
-
-								{% if seuil == 1 %}
-									<a href="{{ path ('impression_produit_seuil') }}" target="_blank" class="btn btn-outline-danger btn-pill">
-										<i class="ri-printer-line"></i>
-										{% trans %}Imprimer les produits seuils{% endtrans %}
-									</a>
-								{% endif %}
-
-								{% if seuil == 2 %}
-									<a href="{{ path ('impression_produits_perimes') }}" target="_blank" class="btn btn-outline-danger btn-pill">
-										<i class="ri-printer-line"></i>
-										{% trans %}Imprimer les produits périmés{% endtrans %}
-									</a>
-								{% endif %}
-
-							{% endif %}
+							
 								
 						</div>
 					<div class="card-body">

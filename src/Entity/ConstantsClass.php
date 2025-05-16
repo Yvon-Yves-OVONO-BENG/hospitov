@@ -16,6 +16,7 @@ class ConstantsClass
     public const ROLE_MEDECIN = 'ROLE_MEDECIN';
     public const ROLE_LABORANTIN = 'ROLE_LABORANTIN';
     public const ROLE_HOSPITALISATION = 'ROLE_HOSPITALISATION';
+    public const ROLE_COMPTABLE = 'ROLE_COMPTABLE';
 
     public const ADMINISTRATEUR = 'ADMINISTRATEUR';
     public const DIRECTEUR = 'DIRECTEUR';
@@ -28,6 +29,7 @@ class ConstantsClass
     public const MEDECIN = 'MEDECIN';
     public const LABORANTIN = 'LABORANTIN';
     public const HOSPITALISATION = 'HOSPITALISATION';
+    public const COMPTABLE = 'COMPTABLE';
 
     public const ERROR = 'ERROR';
     public const SUCCESS = 'SUCCESS';

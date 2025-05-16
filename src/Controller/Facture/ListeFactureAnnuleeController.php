@@ -31,7 +31,7 @@ class ListeFactureAnnuleeController extends AbstractController
         # je récupère ma session
         $maSession = $request->getSession();
 
-        if(!$maSession)
+        if(!$this->getUser())
         {
             return $this->redirectToRoute("app_logout");
         }
@@ -49,7 +49,7 @@ class ListeFactureAnnuleeController extends AbstractController
 
         return $this->render('facture/listeFacture.html.twig', [
             'licence' => 1,
-            'factures' => compact("factures"),
+            'factures' => $factures,
             'etatFactures' => $etatFactures,
             'factureAnnulee' => 1,
             'dossier' => $this->translator->trans("Facture"),

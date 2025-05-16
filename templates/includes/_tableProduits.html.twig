@@ -106,8 +106,8 @@
 						{% if is_granted('ROLE_CAISSIERE_ACCUEIL') or is_granted('ROLE_CAISSIERE_PHARMACIE')  %}
 							{% if produit.lot ? (produit.lot.quantite > 0 and dateDiff > 0) %}
 								<div style="display: flex !important; justify-content: space-between !important;">
-									<input type="number" value="1" min="1" step="1" class="form-control text-center quantite" id="validationCustom05" required="required" placeholder="Veuillez saisir la quantité">
 									<input type="hidden" id="typeProduit" value="produit">
+									<input type="number" value="1" min="1" step="1" class="form-control text-center quantite" id="validationCustom05" required="required" placeholder="Veuillez saisir la quantité">
 									<button class="btn btn-outline-primary ajout-produit-panier" data-produit-id="{{ produit.id }}" data-bs-toggle="tooltip" title="{% trans %}Ajouter{% endtrans %} {{ produit.libelle }} {% trans %}dans la facture{% endtrans %}"><i class="ri-add-line"></i></button>
 								</div>
 							{% endif %}

@@ -40,7 +40,7 @@
                 {% include "includes/_accueilCaissierePharmacie.html.twig" %}
             {% endif %}
 
-			{% if is_granted('ROLE_REGIES_DES_RECETTES') %}
+			{% if is_granted('ROLE_REGIES_DES_RECETTES') or is_granted('ROLE_COMPTABLE') %}
                 {% include "includes/_accueilRegiesDesRecettes.html.twig" %}
             {% endif %}
 

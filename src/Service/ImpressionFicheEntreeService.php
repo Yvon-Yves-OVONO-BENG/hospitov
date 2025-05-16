@@ -29,7 +29,7 @@ class ImpressionFicheEntreeService extends FPDF
 
         $pdf->SetLeftMargin(10);
 
-        $positionY = 50;
+        $positionY = 25;
         $pdf->SetXY(15, $positionY);
 
         // $pdf->Image('../public/images/qrcode/'.$facture->getQrCode(), 10, 40, 500);
@@ -77,20 +77,39 @@ class ImpressionFicheEntreeService extends FPDF
             $pdf->SetX(25);
             $pdf->Cell(10, 5, utf8_decode($i), 1, 0, 'C', true);
             $pdf->Cell(50, 5, utf8_decode($produit->getLibelle()), 1, 0, 'L', true);
-            $pdf->Cell(20, 5, utf8_decode(number_format($produit->getLot()->getQuantite(), 0, '', ' ')), 1, 0, 'C', true);
-            $pdf->Cell(15, 5, utf8_decode(number_format($produit->getLot()->getPrixAchat(), 0, '', ' ')), 1, 0, 'C', true);
-            $pdf->Cell(15, 5, utf8_decode(number_format($produit->getLot()->getPrixVente(), 0, '', ' ')), 1, 0, 'C', true);
-            $pdf->Cell(30, 5, utf8_decode(number_format(($produit->getLot()->getPrixVente() - $produit->getLot()->getPrixAchat()), 0, '', ' ')), 1, 0, 'C', true);
-            $pdf->Cell(15, 5, utf8_decode(number_format($produit->getLot()->getVendu(), 0, '', ' ')), 1, 0, 'C', true);
-            $pdf->Cell(15, 5, utf8_decode(number_format(($produit->getLot()->getQuantite()-$produit->getLot()->getVendu()), 0, '', ' ')), 1, 0, 'C', true);
-            $pdf->Cell(25, 5, utf8_decode(number_format(($produit->getLot()->getVendu() * $produit->getLot()->getPrixVente()), 0, '', ' ')), 1, 0, 'C', true);
-            $pdf->Cell(25, 5, utf8_decode(number_format(($produit->getLot()->getVendu() * $produit->getLot()->getPrixAchat()), 0, '', ' ')), 1, 0, 'C', true);
-            $pdf->Cell(25, 5, utf8_decode(number_format(($produit->getLot()->getVendu() * $produit->getLot()->getPrixVente()) - ($produit->getLot()->getVendu() * $produit->getLot()->getPrixAchat()), 0, '', ' ')), 1, 1, 'C', true);
 
-            $venduPv += ($produit->getLot()->getVendu() * $produit->getLot()->getPrixVente());
-            $venduPa += ($produit->getLot()->getVendu() * $produit->getLot()->getPrixAchat());
-            $gain += (($produit->getLot()->getVendu() * $produit->getLot()->getPrixVente()) - ($produit->getLot()->getVendu() * $produit->getLot()->getPrixAchat()));
+            if ($produit->getLot()) 
+            {
+                $pdf->Cell(20, 5, utf8_decode(number_format($produit->getLot()->getQuantite(), 0, '', ' ')), 1, 0, 'C', true);
+                $pdf->Cell(15, 5, utf8_decode(number_format($produit->getLot()->getPrixAchat(), 0, '', ' ')), 1, 0, 'C', true);
+                $pdf->Cell(15, 5, utf8_decode(number_format($produit->getLot()->getPrixVente(), 0, '', ' ')), 1, 0, 'C', true);
+                $pdf->Cell(30, 5, utf8_decode(number_format(($produit->getLot()->getPrixVente() - $produit->getLot()->getPrixAchat()), 0, '', ' ')), 1, 0, 'C', true);
+                $pdf->Cell(15, 5, utf8_decode(number_format($produit->getLot()->getVendu(), 0, '', ' ')), 1, 0, 'C', true);
+                $pdf->Cell(15, 5, utf8_decode(number_format(($produit->getLot()->getQuantite()-$produit->getLot()->getVendu()), 0, '', ' ')), 1, 0, 'C', true);
+                $pdf->Cell(25, 5, utf8_decode(number_format(($produit->getLot()->getVendu() * $produit->getLot()->getPrixVente()), 0, '', ' ')), 1, 0, 'C', true);
+                $pdf->Cell(25, 5, utf8_decode(number_format(($produit->getLot()->getVendu() * $produit->getLot()->getPrixAchat()), 0, '', ' ')), 1, 0, 'C', true);
+                $pdf->Cell(25, 5, utf8_decode(number_format(($produit->getLot()->getVendu() * $produit->getLot()->getPrixVente()) - ($produit->getLot()->getVendu() * $produit->getLot()->getPrixAchat()), 0, '', ' ')), 1, 1, 'C', true);
 
+                $venduPv += ($produit->getLot()->getVendu() * $produit->getLot()->getPrixVente());
+                $venduPa += ($produit->getLot()->getVendu() * $produit->getLot()->getPrixAchat());
+                $gain += (($produit->getLot()->getVendu() * $produit->getLot()->getPrixVente()) - ($produit->getLot()->getVendu() * $produit->getLot()->getPrixAchat()));
+
+            } 
+            else 
+            {
+                $pdf->Cell(20, 5, utf8_decode(""), 1, 0, 'C', true);
+                $pdf->Cell(15, 5, utf8_decode(""), 1, 0, 'C', true);
+                $pdf->Cell(15, 5, utf8_decode(""), 1, 0, 'C', true);
+                $pdf->Cell(30, 5, utf8_decode(""), 1, 0, 'C', true);
+                $pdf->Cell(15, 5, utf8_decode(""), 1, 0, 'C', true);
+                $pdf->Cell(15, 5, utf8_decode(""), 1, 0, 'C', true);
+                $pdf->Cell(25, 5, utf8_decode(""), 1, 0, 'C', true);
+                $pdf->Cell(25, 5, utf8_decode(""), 1, 0, 'C', true);
+                $pdf->Cell(25, 5, utf8_decode(""), 1, 1, 'C', true);
+
+            }
+            
+            
             $i++;
         }
 

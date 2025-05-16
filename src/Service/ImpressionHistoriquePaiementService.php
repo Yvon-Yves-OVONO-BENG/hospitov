@@ -44,7 +44,7 @@ class ImpressionHistoriquePaiementService extends FPDF
         $pdf->Cell(50, 5, 'INVOICE PAYMENT HISTORY', 0, 0, 'L', 0);
 
         $pdf->SetFont('Arial', 'B', 8);
-        $pdf->Cell(30, 5, 'PAR : ', 0, 0, 'R', 0);
+        $pdf->Cell(70, 5, 'PAR : ', 0, 0, 'R', 0);
         $pdf->Cell(50, 5, $facture->getCaissiere() ? utf8_decode($facture->getCaissiere()->getNom()) : "CAISSIERE", 0, 1, 'L', 0);
 
         
@@ -57,14 +57,14 @@ class ImpressionHistoriquePaiementService extends FPDF
             $pdf->SetX(15);
             $pdf->Cell(0, 5, utf8_decode("Nom du client :".$facture->getPatient()->getNom()), 0, 1, 'L', 0);
             
-            $pdf->SetX(15);
-            $pdf->Cell(0, 5, utf8_decode("Date de naissance : ".date_format($facture->getPatient()->getDateNaissanceAt(), 'd-m-Y')), 0, 1, 'L', 0);
+            // $pdf->SetX(15);
+            // $pdf->Cell(0, 5, utf8_decode("Date de naissance : ".date_format($facture->getPatient()->getDateNaissanceAt(), 'd-m-Y')), 0, 1, 'L', 0);
 
-            $pdf->SetX(15);
-            $pdf->Cell(0, 5, utf8_decode("Ville : ".$facture->getPatient()->getVilleResidence()), 0, 1, 'L', 0);
+            // $pdf->SetX(15);
+            // $pdf->Cell(0, 5, utf8_decode("Ville : ".$facture->getPatient()->getVilleResidence()), 0, 1, 'L', 0);
 
-            $pdf->SetX(15);
-            $pdf->Cell(0, 5, utf8_decode("Pays : ".$facture->getPatient()->getPays()->getPays()), 0, 1, 'L', 0);
+            // $pdf->SetX(15);
+            // $pdf->Cell(0, 5, utf8_decode("Pays : ".$facture->getPatient()->getPays()->getPays()), 0, 1, 'L', 0);
 
             $pdf->SetX(15);
             $pdf->Cell(0, 5, utf8_decode("Téléphone : ".$facture->getPatient()->getTelephone()), 0, 1, 'L', 0);
@@ -95,10 +95,10 @@ class ImpressionHistoriquePaiementService extends FPDF
         $pdf->SetFont('Arial', 'B', 10);
         $pdf->Cell(0, 5, utf8_decode($facture->getModePaiement() ? $facture->getModePaiement()->getModePaiement() : ""), 0, 1, 'L', 0);
 
-        $pdf->SetX(15);
-        $pdf->Cell(75, 5, utf8_decode("Cette facture s'élève à un montant de : "), 0, 0, 'L', 0);
-        $pdf->SetFont('Arial', 'B', 10);
-        $pdf->Cell(0, 5, utf8_decode(number_format($facture->getNetApayer(), 0, '', ' ')." FCFA"), 0, 1, 'L', 0);
+        // $pdf->SetX(15);
+        // $pdf->Cell(75, 5, utf8_decode("Cette facture s'élève à un montant de : "), 0, 0, 'L', 0);
+        // $pdf->SetFont('Arial', 'B', 10);
+        // $pdf->Cell(0, 5, utf8_decode(number_format($facture->getNetApayer(), 0, '', ' ')." FCFA"), 0, 1, 'L', 0);
 
         $positionY = 80;
         $pdf->SetFont('Arial', 'B', 10);
@@ -130,24 +130,24 @@ class ImpressionHistoriquePaiementService extends FPDF
             $pdf->Cell(7, 5, utf8_decode($i), 1, 0, 'C', true);
             $pdf->Cell(40, 5, utf8_decode(number_format($historiqueFactur->getMontantAvance(), 0, '', ' ')), 1, 0, 'C', true);
             $pdf->Cell(95, 5, utf8_decode($historiqueFactur->getRecuPar()->getNom()), 1, 0, 'C', true);
-            $pdf->Cell(40, 5, utf8_decode(date_format($historiqueFactur->getDateAvanceAt(), 'd-m-Y H:i:s')), 1, 1, 'C', true);
+            $pdf->Cell(40, 5, utf8_decode(date_format($historiqueFactur->getDateAvanceAt(), 'd/m/Y')), 1, 1, 'C', true);
         
             $i++;
             
         }
 
-        $pdf->SetX(15);
-        $pdf->SetFont('Arial', 'B', 10);
-        $pdf->Cell(142, 5, utf8_decode('Montant HT'), 0, 0, 'R');
-        $pdf->Cell(40, 5, utf8_decode(number_format($facture->getNetApayer(), 0, '', ' ')), 1, 1, 'C');
+        // $pdf->SetX(15);
+        // $pdf->SetFont('Arial', 'B', 10);
+        // $pdf->Cell(142, 5, utf8_decode('Montant HT'), 0, 0, 'R');
+        // $pdf->Cell(40, 5, utf8_decode(number_format($facture->getNetApayer(), 0, '', ' ')), 1, 1, 'C');
 
-        $pdf->SetX(15);
-        $pdf->Cell(142, 5, utf8_decode('TVA'), 0, 0, 'R');
-        $pdf->Cell(40, 5, utf8_decode("0%"), 1, 1, 'C');
+        // $pdf->SetX(15);
+        // $pdf->Cell(142, 5, utf8_decode('TVA'), 0, 0, 'R');
+        // $pdf->Cell(40, 5, utf8_decode("0%"), 1, 1, 'C');
 
-        $pdf->SetX(15);
-        $pdf->Cell(142, 5, utf8_decode('Montant TTC'), 0, 0, 'R');
-        $pdf->Cell(40, 5, utf8_decode(number_format($facture->getNetApayer(), 0, '', ' ')), 1, 1, 'C');
+        // $pdf->SetX(15);
+        // $pdf->Cell(142, 5, utf8_decode('Montant TTC'), 0, 0, 'R');
+        // $pdf->Cell(40, 5, utf8_decode(number_format($facture->getNetApayer(), 0, '', ' ')), 1, 1, 'C');
 
         $pdf->SetFont('Arial', 'B', 12);
         $pdf->SetX(15);

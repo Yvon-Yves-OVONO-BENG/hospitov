@@ -4,13 +4,14 @@ namespace App\Controller\Panier;
 
 use App\Service\PanierService;
 use App\Repository\ProduitRepository;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Contracts\Translation\TranslatorInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\JsonResponse;
-use Symfony\Component\HttpFoundation\Request;
 
 /**
  * @IsGranted("ROLE_USER", message="Accès refusé. Espace reservé uniquement aux abonnés")
@@ -27,12 +28,12 @@ class AjoutProduitPanierController extends AbstractController
     {}
 
     #[Route('/ajout-produit-panier', name: 'ajout_produit_panier', methods:"POST")]
-    public function ajoutProduitPanier(Request $request): JsonResponse
+    public function ajoutProduitPanier(Request $request): Response
     {
         # je récupère ma session
         $maSession = $request->getSession();
 
-        if(!$maSession)
+        if(!$this->getUser())
         {
             return $this->redirectToRoute("app_logout");
         }
@@ -42,7 +43,7 @@ class AjoutProduitPanierController extends AbstractController
         $maSession->set('suppression', null);
 
         $produitId = (int)$request->request->get('produit_id');
-        $quantite = (int)$request->request->get('quantite', 1);
+        $quantite = (int)$request->request->get('quantite');
         
         // 0. Sécurisation : est-ce que le produit existe ?
         $produit = $this->produitRepository->find($produitId); 

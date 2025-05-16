@@ -14,13 +14,13 @@
                                     {% endif %}
                                 {% endif %}
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-4 text-center">
                                 <button type="button" class="btn btn-primary mt-1 mb-1 me-3">
                                     <span class="badge bg-white text-dark">{{ recettesDuJour | length }}</span>
                                     <span>{% trans %}enregistrée(s){% endtrans %}</span>
                                 </button>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-4 text-end">
                                 {% set recetteDuJour = 0 %}
                                 {% for factureDuJour in facturesDuJour %}
                                     {% set recetteDuJour = recetteDuJour + factureDuJour.avance %}
@@ -157,7 +157,7 @@
                                     {% endif %}
                                 {% endif %}
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-4 text-end">
                                 <button type="button" class="btn btn-primary mt-1 mb-1 me-3">
                                     <span class="badge bg-white text-dark">{{ recettesKitDuJour | length }}</span>
                                     <span>{% trans %}enregistrée(s){% endtrans %}</span>
@@ -267,16 +267,17 @@
                     <div class="card-header">
                         <div class="row">
                             <div class="col-md-8">
-                            {% if dateDuJour %}
-                                <h4 class="card-title mb-0 text-primary"><i class="si si-wallet"></i> {% trans %}Les factures du {% endtrans %} : {{ dateDuJour|date('d-m-Y') }}</h4>
-                                {% else %}
-                                {% if aujourdhui %}
-                                <h4 class="card-title mb-0 text-primary"><i class="si si-wallet"></i> {% trans %}Les factures du jour {% endtrans %} : {{ aujourdhui|date('d-m-Y') }}</h4>
-                                {% else %}
-                                <h4 class="card-title mb-0 text-primary"><i class="si si-wallet"></i> {% trans %}Les factures allant du {% endtrans %} : {{ dateDebut|date('d-m-Y') }} {% trans %}au{% endtrans %} {{ dateFin|date('d-m-Y') }}</h4>
+                                {% if dateDuJour %}
+                                    <h4 class="card-title mb-0 text-primary"><i class="si si-wallet"></i> {% trans %}Les factures du {% endtrans %} : {{ dateDuJour|date('d-m-Y') }}</h4>
+                                    {% else %}
+                                    {% if aujourdhui %}
+                                    <h4 class="card-title mb-0 text-primary"><i class="si si-wallet"></i> {% trans %}Les factures du jour {% endtrans %} : {{ aujourdhui|date('d-m-Y') }}</h4>
+                                    {% else %}
+                                    <h4 class="card-title mb-0 text-primary"><i class="si si-wallet"></i> {% trans %}Les factures allant du {% endtrans %} : {{ dateDebut|date('d-m-Y') }} {% trans %}au{% endtrans %} {{ dateFin|date('d-m-Y') }}</h4>
+                                    {% endif %}
                                 {% endif %}
-                            {% endif %}
-                            <div class="col-md-4 text-right">
+                            </div>
+                            <div class="col-md-4 text-end">
                                 <button type="button" class="btn btn-primary mt-1 mb-1 me-3">
                                     <span class="badge bg-white text-dark">{{ facturesDuJour | length }}</span>
                                     <span>{% trans %}facture(s) enregistrée(s){% endtrans %}</span>
@@ -345,7 +346,6 @@
                                         <th class="wd-25p border-bottom-0">
                                             <i class="fa fa-config"></i> Options
                                         </th>
-                                        
                                         
                                     </tr>
                                 </tfoot>

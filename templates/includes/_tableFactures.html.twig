@@ -70,7 +70,7 @@
                 <td class="infoTable">
 
                     <button type="button" class="btn btn-primary btn-sm btn-block position-relative me-5 mb-2">
-                        {{ facture.reference }}
+                        {{ facture.reference ? facture.reference : "" }}
                     </button> <br>
                     Par : {{ facture.caissiere ? facture.caissiere.nom : " " }}
                         

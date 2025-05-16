@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-   {% trans %}Liste des recettes du jour{% endtrans %}
+   {% trans %}Liste des recettes{% endtrans %}
 {% endblock %}
 
 {% block stylesheets %}
@@ -31,134 +31,80 @@
 {% block body %}
 <!-- Row starts -->
 	<div class="row gx-3">
-		<div class="col-sm-12  mb-5">
+		<div class="col-sm-12 mb-2">
 			<div class="card">
-				<div class="card-header d-flex align-items-center justify-content-between">
-					<h3 class="page-title mb-0 text-primary">
-						{% trans %}Toutes les recettes{% endtrans %}
-					</h3>
-					<h3 class="card-title">
-						{% if is_granted('ROLE_REGIES_DES_RECETTES') or is_granted('ROLE_ADMINISTRATEUR') %}
-								
-							<button class="btn btn-outline-primary">
-								<span>{% trans %}Nombres de recettes{% endtrans %}</span>
-								<span class="badge  bg-primary rounded-pill">{{ nombreRecettes|length }}</span>
-							</button>
-						{% endif %}
-					</h3>
-					<h3 class="card-title">
-						{% if is_granted('ROLE_CAISSIERE') or is_granted('ROLE_ADMINISTRATEUR')%}
-							<a href="{{ path ('afficher_produits') }}" class="btn btn-outline-primary"><i class="fe fe-eye me-2"></i>
-								{% trans %}Afficher produit{% endtrans %}
-							</a>
-						{% endif %}
-					</h3>
+				<div class="card-header">
+					<div class="row">
+						<div class="col-md-6">
+							<h3 class="card-title mb-0 text-primary">
+								{% trans %}Toutes les recettes{% endtrans %}
+							</h3>
+						</div>
+						<div class="col-md-6 text-end">
+							<h3 class="card-title">
+								{% if is_granted('ROLE_REGIES_DES_RECETTES') or is_granted('ROLE_ADMINISTRATEUR') %}
+									<button class="btn btn-outline-primary">
+										<span>{% trans %}Nombres de recettes{% endtrans %}</span>
+										<span class="badge  bg-primary rounded-pill">{{ nombreRecettes|length }}</span>
+									</button>
+								{% endif %}
+							</h3>
+							<h3 class="card-title">
+								{% if is_granted('ROLE_CAISSIERE') or is_granted('ROLE_ADMINISTRATEUR')%}
+									<a href="{{ path ('afficher_produits') }}" class="btn btn-outline-primary"><i class="fe fe-eye me-2"></i>
+										{% trans %}Afficher produit{% endtrans %}
+									</a>
+								{% endif %}
+							</h3>
+						</div>
+					</div>
+					
 				</div>
+			</div>
+		</div>
 
-				<!--Row-->
-				<div class="row">
-					<div class="col-xl-12 col-lg-12 col-md-12">
-						<div class="card border-primary">
-							<div class="card-header">
-								<div class="col-xl-6 col-lg-6 col-md-6">
-									
+		<div class="col-xl-12 col-lg-12 col-md-12">
+			<div class="card">
+				<div class="card-header">
+					<div class="row">
+						<div class="col-xl-4 col-lg-4 col-md-4">
+							<h4 class="card-title mb-0 text-primary">
+								{% trans %}Recettes d'une période{% endtrans %}
+							</h4>
+						</div>
+						<div class="col-xl-8 col-lg-8 col-md-8 text-center">
+							<form method="post" action="{{ path ('recette_periode') }}" class="row g-3 needs-validation" novalidate>
+								<div class="col-md-4 position-relative">
+									<input type="date" name="dateDebut" class="form-control" id="validationCustom01" required>
+									<div class="invalid-feedback">
+										{% trans %}Champ requis{% endtrans %}
+									</div>
 								</div>
-								<div class="col-xl-6 col-lg-6 col-md-6">
-									<form method="post" action="{{ path ('recette_periode') }}" class="row g-3 needs-validation" novalidate>
-										<div class="col-md-4 position-relative">
-										<input type="date" name="dateDebut" class="form-control" id="validationCustom01" required>
-										<div class="invalid-feedback">
-											{% trans %}Champ requis{% endtrans %}
-										</div>
-										</div>
-										<div class="col-md-4 position-relative">
-										<input type="date" name="dateFin" class="form-control" id="validationCustom01" required>
-										<div class="invalid-feedback">
-											{% trans %}Champ requis{% endtrans %}
-										</div>
-										</div>
-										<div class="col-md-4">
-										<button class="btn btn-outline-primary" type="submit" name="impressionFicheVente"><i class="si si-eye me-2"></i>{% trans %}Afficher{% endtrans %}</button>
-										</div>
-									</form>
+								<div class="col-md-4 position-relative">
+									<input type="date" name="dateFin" class="form-control" id="validationCustom01" required>
+									<div class="invalid-feedback">
+										{% trans %}Champ requis{% endtrans %}
+									</div>
 								</div>
-							</div>
-							<div class="card-body">
-								<div class="table-responsive">
-									<table id="basicExample" class="table m-0 table-hover table-striped align-middle">
-										<thead>
-											<tr>
-												<th>{% trans %}N°{% endtrans %}</th>
-												<th>{% trans %}Photo{% endtrans %}</th>
-												<th>{% trans %}Caissière{% endtrans %}</th>
-												<th>{% trans %}Recette{% endtrans %}</th>
-												<th>{% trans %}Mode paiement{% endtrans %}</th>
-												<th>{% trans %}Nombre{% endtrans %}</th>
-												<th>{% trans %}Opérations{% endtrans %}</th>
-											</tr>
-										</thead>
-										<tfoot>
-											<tr>
-												<th>{% trans %}N°{% endtrans %}</th>
-												<th>{% trans %}Photo{% endtrans %}</th>
-												<th>{% trans %}Caissière{% endtrans %}</th>
-												<th>{% trans %}Recette{% endtrans %}</th>
-												<th>{% trans %}Mode paiement{% endtrans %}</th>
-												<th>{% trans %}Nombre{% endtrans %}</th>
-												<th>{% trans %}Opérations{% endtrans %}</th>
-											</tr>
-										</tfoot>
-										<tbody>
-											{% set i = 1 %}
-											{% for recette in recettes %}
-												<tr>
-													<td>{{ i }}</td>
-													<td>
-														<img class="img-shadow img-2x rounded-5 me-1" src="{{ recette.PHOTO ? asset('images/photoUsers/' ~ recette.PHOTO) : asset('images/photoUsers/user.png')}}" alt="{{ recette.CAISSIERE }}">
-														
-													</td>
-
-													<td>
-														<a class="font-weight-normal1" href="">{{ recette.CAISSIERE }}</a>
-													</td>
-													<td>
-														<a class="font-weight-normal1" href="">{{ recette.SOMME }} FCFA</a>
-													</td>
-													<td>
-														{% if recette.PAIEMENT == 'CASH' %}
-															<span class="badge bg-success border-primary fs-11">{{ recette.PAIEMENT }}</span>
-															{% else %}
-															{% if recette.PAIEMENT == 'CRÉDIT' %}
-																<span class="badge bg-danger border-danger fs-11">{{ recette.PAIEMENT }}</span>
-																{% else %}
-																<span class="badge bg-primary border-primary fs-11">{{ recette.PAIEMENT }}</span>
-															
-															{% endif %}
-														{% endif %}
-													</td>
-
-													<td>
-														<a class="font-weight-normal1" href="">{{ recette.NOMBRE }} </a>
-													</td>
-													
-													<td>
-														<a href="{{ path ('impression_fiche_de_vente', {'recette': recette.id }) }}" target="_blank" class="btn btn-outline-primary" data-bs-toggle="tooltip" title="{% trans %}Imprimer{% endtrans %}">
-															<i class="ri-printer-line me-2"></i>{% trans %}Imprimer{% endtrans %}
-														</a>
-													</td>
-												</tr>
-												{% set i = i + 1 %}
-											{% endfor %}
-											
-											
-										</tbody>
-									</table>
+								<div class="col-md-4">
+									<button class="btn btn-outline-primary" type="submit" name="impressionFicheVente"><i class="si si-eye me-2"></i>{% trans %}Afficher{% endtrans %}</button>
 								</div>
-							</div>
+							</form>
 						</div>
 					</div>
 				</div>
+				<div class="card-body">
+					<div class="table-responsive">
+
+						{% include "includes/_tableRecette.html.twig" %}
+
+
+					</div>
+				</div>
 			</div>
+		</div>
+	</div>
+</div>
 		</div>
 	</div>
 </div>

@@ -36,7 +36,8 @@
                                 </h5>
                             </div>
                             <div class="col-md-6" style="text-align: right !important;">
-                                <a href="{{ path ('liste_kit', {'a': 1 }) }}" class="btn btn-primary"><i class="fe fe-list me-2"></i>
+                                <a href="{{ path ('liste_kit', {'a': 1 }) }}" class="btn btn-primary">
+                                    <i class="ri-notion-fill"></i>
                                     {% trans %}Afficher les kits{% endtrans %}
                                 </a>
                             </div>
@@ -87,7 +88,7 @@
                                         {{ form_widget(formProduit.produitLigneDeKits.vars.prototype.quantite)|e('html_attr') }}
                                     </div>
                                     <div class='col-md-2'>
-                                        <button type='button' class='btn btn-danger remove-item'>Supprimer1</button>
+                                        <button type='button' class='btn btn-danger remove-item'>Supprimer</button>
                                     </div>
 
                                 </div>
@@ -98,9 +99,14 @@
                                 <div class="col-md-4"></div>
                                 <div class="col-md-4"></div>
                                 <div class="col-md-4 text-end">
-                                    <button type="button" id="add-produit" class="btn btn-primary mt-2">Ajouter un produit</button>
+                                    <button type="button" id="add-produit" class="btn btn-primary mt-2">
+                                        <i class="ri-add-box-line me-2"></i>{% trans %}Ajouter un produit{% endtrans %}
+                                    </button>
 
-                                    <button type="submit" class="btn btn-success mt-2">Enregistrer</button>
+                                    <button type="submit" class="btn btn-success mt-2">
+                                        <i class="ri-save-line"></i>
+                                        {% trans %}Enregistrer{% endtrans %}
+                                    </button>
                                 </div>
                             </div>
                             
