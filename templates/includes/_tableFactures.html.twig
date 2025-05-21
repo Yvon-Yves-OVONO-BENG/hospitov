@@ -103,7 +103,7 @@
                 </td>
                 
                 <td class="infoTable">
-                    {% if facture.netApayer - facture.avance == 0 %}
+                    {% if facture.reste == 0 %}
                         <span class="badge bg-success mt-2">{{ facture.etatFacture.etatFacture }}</span>
                         {% else %}
                         <span class="badge bg-danger mt-2">{{ facture.etatFacture.etatFacture }}</span>

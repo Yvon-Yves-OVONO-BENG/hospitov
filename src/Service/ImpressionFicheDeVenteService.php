@@ -165,11 +165,12 @@ class ImpressionFicheDeVenteService extends FPDF
             $pdf = $this->basTableau($pdf, $montantCreditDuJour, $montantAvanceCreditDuJour, ($montantCreditDuJour-$montantAvanceCreditDuJour));
         }
 
+        $pdf->Ln(10);
         $pdf->SetX(15);
         $pdf->SetFont('Arial', 'B', 12);
         $pdf->Cell(0, 5, "RECAPITULATIF", 0, 1, 'C', 0);
         
-        $pdf->Ln();
+        
         $pdf->SetX(15);
         $pdf->SetFillColor(240,240,240);
         $pdf->SetFont('Arial', 'B', 12);
@@ -206,13 +207,13 @@ class ImpressionFicheDeVenteService extends FPDF
         $pdf->Cell(60, 5, utf8_decode(number_format($montantAvanceCreditDuJour, 0, '', ' ')), 1, 0, 'C');
         $pdf->Cell(60, 5, utf8_decode(''), 1, 1, 'C');
 
-        // $pdf->SetX(15);
-        // $pdf->SetFont('Arial', 'B', 12);
-        // $pdf->Cell(60, 5, utf8_decode('TOTAUX'), 1, 0, 'C', true);
-        // $pdf->Cell(30, 5, utf8_decode(number_format(($nombreCashDuJour + $nombrePrisEnChargeDuJour + $nombreCreditDuJour), 0, '', ' ')), 1, 0, 'C', true);
-        // $pdf->Cell(60, 5, utf8_decode(number_format(($montantCashDuJour + $montantPrisEnChargeDuJour + $montantCreditDuJour), 0, '', ' ')), 1, 0, 'C', true);
-        // $pdf->Cell(60, 5, utf8_decode(number_format(($montantAvanceCashDuJour + $montantAvancePrisEnChargeDuJour + $montantAvanceCreditDuJour), 0, '', ' ')), 1, 0, 'C', true);
-        // $pdf->Cell(60, 5, utf8_decode(number_format(($montantCashDuJour - $montantAvanceCashDuJour + $montantPrisEnChargeDuJour - $montantAvancePrisEnChargeDuJour + $montantCreditDuJour - $montantAvanceCreditDuJour), 0, '', ' ')), 1, 1, 'C', true);
+        $pdf->SetX(15);
+        $pdf->SetFont('Arial', 'B', 12);
+        $pdf->Cell(60, 5, utf8_decode('TOTAUX'), 1, 0, 'C', true);
+        $pdf->Cell(30, 5, utf8_decode(number_format(($nombreCashDuJour + $nombreCreditDuJour), 0, '', ' ')), 1, 0, 'C', true);
+        $pdf->Cell(60, 5, utf8_decode(number_format(($montantCashDuJour + $montantCreditDuJour), 0, '', ' ')), 1, 0, 'C', true);
+        $pdf->Cell(60, 5, utf8_decode(number_format(($montantAvanceCashDuJour + $montantAvanceCreditDuJour), 0, '', ' ')), 1, 0, 'C', true);
+        $pdf->Cell(60, 5, utf8_decode(number_format(($montantCashDuJour - $montantAvanceCashDuJour + $montantCreditDuJour - $montantAvanceCreditDuJour), 0, '', ' ')), 1, 1, 'C', true);
 
         $pdf->Ln(10);
         $pdf->SetX(15);

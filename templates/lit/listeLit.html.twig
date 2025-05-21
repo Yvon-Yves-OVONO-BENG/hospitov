@@ -93,16 +93,16 @@
 												</td>
 												<td>
 													{% if lit.disponible == 1 %}
-														<span class="badge border border-danger text-danger">{% trans %}Occupé{% endtrans %}</span>
-														{% else %}
 														<span class="badge border border-success text-success">{% trans %}Libre{% endtrans %}</span>
+														{% else %}
+														<span class="badge border border-danger text-danger">{% trans %}Occupé{% endtrans %}</span>
 													{% endif %}
 												</td>
 												<td>
-													{% if lit.disponible == 0 %}
+													{% if lit.disponible == 1 %}
 														<div class="form-group">
 															<label class="custom-switch">
-																<input type="checkbox" class="custom-switch-input" data-id="{{ lit.id }}" {% if lit.enService == 1 %}checked {% else %}disabled{% endif %} >
+																<input type="checkbox" class="custom-switch-input" data-id="{{ lit.id }}" {% if lit.enService == 1 %}checked{% endif %} >
 																
 																<span class="custom-switch-indicator custom-switch-indicator-lg"></span>
 															</label>

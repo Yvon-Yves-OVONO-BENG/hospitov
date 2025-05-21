@@ -20,9 +20,12 @@ class HospitalisationType extends AbstractType
         $builder
             ->add('patient', EntityType::class, [
                 'class' => Patient::class,
-                'choice_label' => 'nom',
+                'choice_label' => function  (Patient $patient) {
+                    return $patient->getNom().' - '.$patient->getCode();
+                },
+
                 'required' => true,
-                'placeholder' => '- - -',
+                'placeholder' => 'Sélctionnez un patient',
                 'attr' => [
                     'class' => 'form-control select2-show-search',
                 ],
@@ -38,7 +41,7 @@ class HospitalisationType extends AbstractType
                 },
                 'query_builder' => function(EntityRepository $er){
                     return $er->createQueryBuilder('l')
-                    ->where('l.disponible = 0');
+                    ->where('l.disponible = 1');
                 },
                 'required' => true,
                 'placeholder' => 'Choisir un lit disponible',

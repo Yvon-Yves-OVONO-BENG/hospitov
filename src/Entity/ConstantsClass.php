@@ -17,7 +17,9 @@ class ConstantsClass
     public const ROLE_LABORANTIN = 'ROLE_LABORANTIN';
     public const ROLE_HOSPITALISATION = 'ROLE_HOSPITALISATION';
     public const ROLE_COMPTABLE = 'ROLE_COMPTABLE';
+    public const ROLE_ACCUEIL = 'ROLE_ACCUEIL';
 
+    public const ACCUEIL = 'ACCUEIL';
     public const ADMINISTRATEUR = 'ADMINISTRATEUR';
     public const DIRECTEUR = 'DIRECTEUR';
     public const PHARMACIEN = 'PHARMACIEN';

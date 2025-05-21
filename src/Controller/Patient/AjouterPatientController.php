@@ -6,19 +6,17 @@ use App\Entity\Patient;
 use App\Form\PatientType;
 use App\Repository\PatientRepository;
 use App\Service\StrService;
+use DateTime;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Contracts\Translation\TranslatorInterface;
+use Symfony\Component\Security\Http\Attribute\IsGranted;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
-/**
- * @IsGranted("ROLE_USER", message="Accès refusé. Espace reservé uniquement aux abonnés")
- *
- */
-#[Route('patient')]
+#[IsGranted('ROLE_USER')]
+#[Route('/patient')]
 class AjouterPatientController extends AbstractController
 {
     public function __construct(
@@ -85,6 +83,9 @@ class AjouterPatientController extends AbstractController
             #je met le nom de la Sous Categorie en CAPITAL LETTER
             $patient->setNom($this->strService->strToUpper($patient->getNom()))
                     ->setCode('PAT-'.$code.$id)
+                    ->setEnregistrePar($this->getUser())
+                    ->setDateEnregistrementAt(new DateTime('today'))
+                    ->setHeureEnregistrementAt(new DateTime('now'))
                     ->setTermine(0);
             
             # je prépare ma requête avec entityManager

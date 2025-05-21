@@ -12,6 +12,7 @@ use App\Repository\HospitalisationRepository;
 use App\Repository\LicenceRepository;
 use App\Repository\LigneDeFactureRepository;
 use App\Repository\LotRepository;
+use App\Repository\PatientRepository;
 use App\Repository\ProduitRepository;
 use App\Repository\ResultatExamenRepository;
 use App\Repository\UserRepository;
@@ -39,6 +40,7 @@ class AccueilController extends AbstractController
         private LotRepository $lotRepository,
         private TranslatorInterface $translator,
         private UserRepository $userRepository,
+        private PatientRepository $patientRepository,
         private LicenceRepository $licenceRepository,
         private ProduitRepository $produitRepository,
         private FactureRepository $factureRepository,
@@ -398,7 +400,6 @@ class AccueilController extends AbstractController
                 ]);
             }
 
-
             #POUR HOSPITALISATION
             if(in_array(ConstantsClass::ROLE_HOSPITALISATION, $this->getUser()->getRoles()))
             {
@@ -418,6 +419,19 @@ class AccueilController extends AbstractController
                     'hospitalisations' => $toutesLesHospitalisations,
                     'hospitalisationsDuJour' => $hospitalisationsDuJour,
                     'hospitalisationsSorties' => $hospitalisationsSorties,
+                ]);
+            }
+
+            #POUR ACCUEIL
+            if(in_array(ConstantsClass::ROLE_ACCUEIL, $this->getUser()->getRoles()))
+            {
+                #Les hospitalisations du jour 
+                $patients = $this->patientRepository->findAll();
+
+                return $this->render('accueil/index.html.twig', [
+                    'licence' => 1,
+                    'route' => 'accueil',
+                    'patients' => $patients,
                 ]);
             }
 

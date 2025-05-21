@@ -119,6 +119,7 @@ class AjoutAvanceController extends AbstractController
             ->setCaissiere($this->getUser())
             ->setReste($resteActuelle - $avance)
             ->setReference($reference)
+            ->setFactureMere($facture)
             ->setNetAPayer($facture->getNetAPayer())
             ->setSlug(uniqid('', true))
             ->setAnnulee(0)
@@ -156,9 +157,10 @@ class AjoutAvanceController extends AbstractController
             ######j'insère une nouvelle ligne dans la table historique paiement
             $historiquePaiement = new HistoriquePaiement;
 
-            $historiquePaiement->setFacture($facture)
+            $historiquePaiement->setFacture($newfacture)
             ->setMontantAvance($avance)
-            ->setDateAvanceAt(new DateTime('now'))
+            ->setDateAvanceAt(new DateTime('today'))
+            ->setHeureAvanceAt(new DateTime('now'))
             ->setRecuPar($this->getUser());
 
             ####SI LE NET A PAYER EST EGAL A LA NOUVELLE AVANCE, ON MET LA FACTURE A SOLDE

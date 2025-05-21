@@ -72,6 +72,10 @@
                 {% include "includes/_accueilHospitalisation.html.twig" %}
             {% endif %}
 
+			{% if is_granted('ROLE_ACCUEIL') %}
+                {% include "includes/_accueilAccueil.html.twig" %}
+            {% endif %}
+
 			{% else %}
 			{% include "includes/_licence.html.twig" %}
 		{% endif %}

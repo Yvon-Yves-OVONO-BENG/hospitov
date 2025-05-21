@@ -117,6 +117,7 @@
 				<div class="main-container">
 					{% if is_granted('ROLE_ADMINISTRATEUR') 
 					or is_granted('ROLE_HOSPITALISATION') 
+					or is_granted('ROLE_ACCUEIL') 
 					or is_granted('ROLE_PHARMACIEN') 
 					or is_granted('ROLE_REGIES_DES_RECETTES') 
 					or is_granted('ROLE_COMPTABLE')
@@ -461,5 +462,9 @@
 				</script>
 			{% endif %}
 		{% endif %}
+
+		{# AFFICHAGE DES patients #}
+		<script src="{{ asset ('js/patients.js')}}"></script>
+		<script src="{{ asset ('js/impressionPatients.js')}}"></script>
     </body>
 </html>

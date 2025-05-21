@@ -48,17 +48,19 @@
 										<span>{% trans %}Nombres de recettes{% endtrans %}</span>
 										<span class="badge  bg-primary rounded-pill">{{ nombreRecettes|length }}</span>
 									</button>
+
+									{% if is_granted('ROLE_CAISSIERE_ACCUEIL') or is_granted('ROLE_CAISSIERE_PHARMACIE') or is_granted('ROLE_ADMINISTRATEUR') %}
+										<a href="{{ path ('afficher_produits') }}" class="btn btn-outline-primary"><i class="fe fe-eye me-2"></i>
+											{% trans %}Afficher produit{% endtrans %}
+										</a>
+									{% endif %}
 								</div>
 							</div>
 							
 							
 						{% endif %}
 
-						{% if is_granted('ROLE_CAISSIERE_ACCUEIL') or is_granted('ROLE_CAISSIERE_PHARMACIE') or is_granted('ROLE_ADMINISTRATEUR') %}
-							<a href="{{ path ('afficher_produits') }}" class="btn btn-outline-primary"><i class="fe fe-eye me-2"></i>
-								{% trans %}Afficher produit{% endtrans %}
-							</a>
-						{% endif %}
+						
 						
 					</div>
 			</div>

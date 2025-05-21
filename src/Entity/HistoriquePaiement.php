@@ -2,9 +2,11 @@
 
 namespace App\Entity;
 
-use App\Repository\HistoriquePaiementRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\Collection;
+use App\Repository\HistoriquePaiementRepository;
+use Doctrine\Common\Collections\ArrayCollection;
 
 #[ORM\Entity(repositoryClass: HistoriquePaiementRepository::class)]
 class HistoriquePaiement
@@ -25,6 +27,13 @@ class HistoriquePaiement
 
     #[ORM\ManyToOne(inversedBy: 'historiquePaiements')]
     private ?User $recuPar = null;
+
+    #[ORM\Column(type: Types::TIME_MUTABLE)]
+    private ?\DateTimeInterface $heureAvanceAt = null;
+    
+
+   
+
 
     public function getId(): ?int
     {
@@ -75,6 +84,30 @@ class HistoriquePaiement
     public function setRecuPar(?User $recuPar): static
     {
         $this->recuPar = $recuPar;
+
+        return $this;
+    }
+
+    // public function getFactureMere(): ?Facture
+    // {
+    //     return $this->factureMere;
+    // }
+
+    // public function setFactureMere(?Facture $factureMere): static
+    // {
+    //     $this->factureMere = $factureMere;
+
+    //     return $this;
+    // }
+
+    public function getHeureAvanceAt(): ?\DateTimeInterface
+    {
+        return $this->heureAvanceAt;
+    }
+
+    public function setHeureAvanceAt(\DateTimeInterface $heureAvanceAt): static
+    {
+        $this->heureAvanceAt = $heureAvanceAt;
 
         return $this;
     }

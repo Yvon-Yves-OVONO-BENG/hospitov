@@ -14,8 +14,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
  * @IsGranted("ROLE_USER", message="Accès refusé. Espace reservé uniquement aux abonnés")
  *
  */
-#[Route('primeSpeciale')]
-
+#[Route('/primeSpeciale')]
 class AfficherPrimeSpecialeController extends AbstractController
 {
     public function __construct(

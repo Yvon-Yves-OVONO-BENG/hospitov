@@ -70,6 +70,15 @@ class Patient
     #[ORM\OneToMany(targetEntity: ResultatExamen::class, mappedBy: 'patient')]
     private Collection $resultatExamens;
 
+    #[ORM\Column(type: Types::DATE_MUTABLE)]
+    private ?\DateTimeInterface $dateEnregistrementAt = null;
+
+    #[ORM\Column(type: Types::TIME_MUTABLE)]
+    private ?\DateTimeInterface $heureEnregistrementAt = null;
+
+    #[ORM\ManyToOne(inversedBy: 'patients')]
+    private ?User $enregistrePar = null;
+
     public function __construct()
     {
         $this->factures = new ArrayCollection();
@@ -367,6 +376,42 @@ class Patient
                 $resultatExamen->setPatient(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getDateEnregistrementAt(): ?\DateTimeInterface
+    {
+        return $this->dateEnregistrementAt;
+    }
+
+    public function setDateEnregistrementAt(\DateTimeInterface $dateEnregistrementAt): static
+    {
+        $this->dateEnregistrementAt = $dateEnregistrementAt;
+
+        return $this;
+    }
+
+    public function getHeureEnregistrementAt(): ?\DateTimeInterface
+    {
+        return $this->heureEnregistrementAt;
+    }
+
+    public function setHeureEnregistrementAt(\DateTimeInterface $heureEnregistrementAt): static
+    {
+        $this->heureEnregistrementAt = $heureEnregistrementAt;
+
+        return $this;
+    }
+
+    public function getEnregistrePar(): ?User
+    {
+        return $this->enregistrePar;
+    }
+
+    public function setEnregistrePar(?User $enregistrePar): static
+    {
+        $this->enregistrePar = $enregistrePar;
 
         return $this;
     }

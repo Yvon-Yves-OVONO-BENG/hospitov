@@ -133,6 +133,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\OneToMany(targetEntity: Hospitalisation::class, mappedBy: 'enregistrePar')]
     private Collection $hospitalisations;
 
+    #[ORM\OneToMany(targetEntity: Patient::class, mappedBy: 'enregistrePar')]
+    private Collection $patients;
+
     public function __construct()
     {
         $this->factures = new ArrayCollection();
@@ -150,6 +153,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         $this->billetDeSessions = new ArrayCollection();
         $this->prescripteurs = new ArrayCollection();
         $this->hospitalisations = new ArrayCollection();
+        $this->patients = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -887,6 +891,36 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
             // set the owning side to null (unless already changed)
             if ($hospitalisation->getEnregistrePar() === $this) {
                 $hospitalisation->setEnregistrePar(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Patient>
+     */
+    public function getPatients(): Collection
+    {
+        return $this->patients;
+    }
+
+    public function addPatient(Patient $patient): static
+    {
+        if (!$this->patients->contains($patient)) {
+            $this->patients->add($patient);
+            $patient->setEnregistrePar($this);
+        }
+
+        return $this;
+    }
+
+    public function removePatient(Patient $patient): static
+    {
+        if ($this->patients->removeElement($patient)) {
+            // set the owning side to null (unless already changed)
+            if ($patient->getEnregistrePar() === $this) {
+                $patient->setEnregistrePar(null);
             }
         }
 

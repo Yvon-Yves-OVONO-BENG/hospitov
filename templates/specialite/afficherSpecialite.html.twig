@@ -78,10 +78,10 @@
 											<td>{{ i }}</td>
 											<td>{{ specialite.specialite }}</td>
 											<td>
-												<img src="{{ specialite.chefDeDepartement.photo ? asset ('images/photoUsers/' ~ specialite.chefDeDepartement.photo ) : asset ('assets/images/administrateur.png')}}" class="img-shadow img-2x rounded-5 me-1"
-												alt="{{ specialite.chefDeDepartement.nom }}">
+												<img src="{{ specialite.chefDeDepartement ? asset ('images/photoUsers/' ~ specialite.chefDeDepartement.photo ) : asset ('assets/images/administrateur.png')}}" class="img-shadow img-2x rounded-5 me-1"
+												alt="{{ specialite.chefDeDepartement ? specialite.chefDeDepartement.nom : ""}}">
 											
-												{{ specialite.chefDeDepartement.nom }}
+												{{ specialite.chefDeDepartement ? specialite.chefDeDepartement.nom : "Pas attribué" }}
 											</td>
 											<td>
 											<div class="stacked-images">

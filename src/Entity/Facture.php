@@ -70,11 +70,63 @@ class Facture
     #[ORM\ManyToOne(inversedBy: 'prescripteurs')]
     private ?User $prescripteur = null;
 
+    #[ORM\OneToMany(targetEntity: HistoriquePaiement::class, mappedBy: 'factureMere')]
+    private Collection $historiquePaiementsMere;
+
+    // === 1. Relation vers la facture mère ===
+    #[ORM\ManyToOne(targetEntity: self::class, inversedBy: 'sousPaiements')]
+    #[ORM\JoinColumn(name: 'facture_mere_id', referencedColumnName: 'id', nullable: true)]
+    private ?self $factureMere = null;
+
+    // === 2. Collection des sous-factures ===
+    #[ORM\OneToMany(mappedBy: 'factureMere', targetEntity: self::class)]
+    private Collection $sousPaiements;
+
+
     public function __construct()
     {
+        $this->sousPaiements = new ArrayCollection();
         $this->ligneDeFactures = new ArrayCollection();
         $this->historiquePaiements = new ArrayCollection();
+        $this->historiquePaiementsMere = new ArrayCollection();
     }
+
+     // === Getters/Setters pour factureMere ===
+     public function getFactureMere(): ?self
+     {
+         return $this->factureMere;
+     }
+ 
+     public function setFactureMere(?self $factureMere): self
+     {
+         $this->factureMere = $factureMere;
+         return $this;
+     }
+ 
+     // === Getters/Setters pour sousPaiements ===
+     public function getSousPaiements(): Collection
+     {
+         return $this->sousPaiements;
+     }
+ 
+     public function addSousPaiement(self $paiement): self
+     {
+         if (!$this->sousPaiements->contains($paiement)) {
+             $this->sousPaiements[] = $paiement;
+             $paiement->setFactureMere($this);
+         }
+         return $this;
+     }
+ 
+     public function removeSousPaiement(self $paiement): self
+     {
+         if ($this->sousPaiements->removeElement($paiement)) {
+             if ($paiement->getFactureMere() === $this) {
+                 $paiement->setFactureMere(null);
+             }
+         }
+         return $this;
+     }
 
     public function getId(): ?int
     {
@@ -332,5 +384,15 @@ class Facture
 
         return $this;
     }
+
+    /**
+     * @return Collection<int, HistoriquePaiement>
+     */
+    public function getHistoriquePaiementsMere(): Collection
+    {
+        return $this->historiquePaiementsMere;
+    }
+
+
 
 }

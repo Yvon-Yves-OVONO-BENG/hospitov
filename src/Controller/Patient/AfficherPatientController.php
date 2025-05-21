@@ -8,15 +8,11 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Contracts\Translation\TranslatorInterface;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
+use Symfony\Component\Security\Http\Attribute\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
-/**
- * @IsGranted("ROLE_USER", message="Accès refusé. Espace reservé uniquement aux abonnés")
- *
- */
-#[Route('patient')]
-
+#[IsGranted('ROLE_USER')]
+#[Route('/patient')]
 class AfficherPatientController extends AbstractController
 {
     public function __construct(
@@ -70,12 +66,12 @@ class AfficherPatientController extends AbstractController
         #je récupère toutes les patients
         $patients = $this->patientRepository->findAll();
         
-        foreach ($patients as $patient) 
-        {
-            $patient->setSlug(uniqid('', true));
-            $this->em->persist($patient);
+        // foreach ($patients as $patient) 
+        // {
+        //     $patient->setSlug(uniqid('', true));
+        //     $this->em->persist($patient);
 
-        }
+        // }
         $this->em->flush();
         #j'envoie mon tableau des categories à mon rendu twig pour affichage
         return $this->render('patient/afficherPatient.html.twig', [

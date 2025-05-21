@@ -148,8 +148,10 @@ class AjouterUtilisateurController extends AbstractController
                 case ConstantsClass::COMPTABLE:
                     $utilisateur->setRoles([ConstantsClass::ROLE_COMPTABLE]);
                     break;
-    
-                    
+
+                case ConstantsClass::ACCUEIL:
+                    $utilisateur->setRoles([ConstantsClass::ROLE_ACCUEIL]);
+                    break;  
             }
 
             $typeUtilisateu = $utilisateur->getTypeUtilisateur();
